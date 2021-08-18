@@ -1,6 +1,6 @@
 import { GlobalCounter } from "../../src/samples/GlobalCounter";
 
-describe("test setup and teardown", () => {
+describe.skip("test setup and teardown", () => {
     let globalCounter: GlobalCounter;
     beforeAll(() => {
         globalCounter = new GlobalCounter();

@@ -8,9 +8,10 @@ module.exports = {
   testTimeout: 5000,
   testPathIgnorePatterns: ["fixtures"],
   globals: {},
-  setupFilesAfterEnv: ["jest-allure/dist/setup"],
+  setupFilesAfterEnv: ["jest-allure/dist/setup",],
   reporters: ["default", "jest-allure"],
-  "testRunner": "jest-jasmine2",
+  testRunner: "jest-jasmine2",
+  // setupFilesAfterEnv: ["<rootDir>/path/to/allure-report.js"],
 };
 /*
 // jest.config.ts

@@ -1,3 +1,3 @@
-test('should be false', () => {
+test.skip('should be false', () => {
     expect(false).toBeFalsy();
 });

@@ -15,7 +15,7 @@ describe.skip("failing asyng tests", () => {
     });
 });
 
-describe("async test with done", () => {
+describe.skip("async test with done", () => {
     let returnedValue!: string;
 
     beforeEach((done: jest.DoneCallback) => {
@@ -34,7 +34,7 @@ describe("async test with done", () => {
     });
 });
 
-describe("async test", () => {
+describe.skip("async test", () => {
     it("should wait 1 second for promise to resolve", async () => {
         let asyncWithPromise = new AsyncWithPromise();
         console.log(`1. calling delayedPromise`);

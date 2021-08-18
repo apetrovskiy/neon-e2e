@@ -11,7 +11,7 @@ defineFeature(feature, (test) => {
         passwordValidator = new PasswordValidator();
     });
 
-    test("Entering a correct password", ({ given, when, then }) => {
+    test.skip("Entering a correct password", ({ given, when, then }) => {
         given("I have previously created a password", () => {
             passwordValidator.setPassword("1234");
         });
