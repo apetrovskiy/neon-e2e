@@ -6,25 +6,25 @@ Modify the .env file or use the environment variables exactly like those that ar
 
 ### Prerequisites
 Ubuntu 21.04
-'''
+```
 brew install python
 sudo apt install pipenv
 sudo apt install python3-behave
 brew install allure
-'''
+```
 
 ### Initialization
-'''
+```
 cd neon-e2e
 pipenv sync
 pipenv shell
-'''
+```
 
 ### Run
-'''
+```
 behave
 allure serve
-'''
+```
 
 ## Node.js
 
@@ -32,14 +32,14 @@ allure serve
 TBD
 
 ### Initialization
-'''
+```
 npm i
-'''
+```
 
 ### Run
-'''
+```
 npm test
-'''
+```
 
 
 ## REMIX EXAMPLE PROJECT
