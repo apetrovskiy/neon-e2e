@@ -12,6 +12,12 @@ sudo apt install pipenv
 sudo apt install python3-behave
 brew install allure
 ```
+Mac OSX 11
+```
+brew install python
+brew install pipenv
+brew install allure
+```
 
 ### Initialization
 ```
