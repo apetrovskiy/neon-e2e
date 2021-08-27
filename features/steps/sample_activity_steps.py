@@ -1,4 +1,5 @@
 from behave import given, then, when
+from web3 import Web3
 
 
 @given(u'there is user Alice in Ethereum')
