@@ -1,6 +1,6 @@
 import { defineFeature, loadFeature } from "jest-cucumber";
 import { AccountFactory } from "../../src/helpers/create_account";
-const feature = loadFeature("specs/features/sample-activity.feature");
+const feature = loadFeature("features/sample-activity.feature");
 import Web3 from 'web3';
 // const web3 = new Web3(process.env.RPC_URL);
 // const Web3 = require('web3');
