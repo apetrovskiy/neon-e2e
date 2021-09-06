@@ -10,6 +10,15 @@ Ubuntu 21.04
 brew install python
 sudo apt install pipenv
 sudo apt install python3-behave
+sudo apt install -y python3-bitarray
+brew install allure
+
+pip install lru-dict
+```
+Mac OSX 11
+```
+brew install python
+brew install pipenv
 brew install allure
 ```
 
