@@ -9,7 +9,8 @@ on:
         required: true
         default: 'warning'
       tags:
-        description: 'Test scenario tags' 
+        description: 'Test scenario tags'
+      network:
 
 jobs:
   build:
@@ -36,13 +37,16 @@ jobs:
         pip install pipenv
         pipenv sync
         # pip install -r requirements.txt
+        echo "trying pipenv shell..."
         pipenv shell
+        echo "after pipenv shell"
     - name: Lint with flake8
       run: |
         flake8 .
     - name: Test with pytest
       if: always()
       run: |
+        echo "trying pwd..."
         pwd
         pytest --alluredir=allure-results
 #     - name: Analysing the code with pylint
