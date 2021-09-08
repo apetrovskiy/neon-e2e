@@ -2,14 +2,53 @@
 ## Settings
 Modify the .env file or use the environment variables exactly like those that are in the .env file
 
+## Python
 
-## Packages
+### Prerequisites
+Ubuntu 21.04
+```
+brew install python
+sudo apt install pipenv
+sudo apt install python3-behave
+sudo apt install -y python3-bitarray
+brew install allure
+
+pip install lru-dict
+```
+Mac OSX 11
+```
+brew install python
+brew install pipenv
+brew install allure
+```
+
+### Initialization
+```
+cd neon-e2e
+pipenv sync
+pipenv shell
+```
+
+### Run
+```
+behave
+allure serve
+```
+
+## Node.js
+
+### Prerequisites
+TBD
+
+### Initialization
+```
 npm i
+```
 
-
-#
-#
-#
+### Run
+```
+npm test
+```
 
 
 ## REMIX EXAMPLE PROJECT
