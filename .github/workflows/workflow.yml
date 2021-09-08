@@ -11,7 +11,8 @@ on:
       tags:
         description: 'Test scenario tags'
       network:
-        description: 'Network'
+        description: 'Network (devnet, testnet, internal.testnet, neonswap.live, ropsten, rinkeby)'
+        default: 'devnet'
 
 jobs:
   build:
@@ -20,6 +21,17 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+  
+    - name: Switch to network of choice
+      run: |
+        echo "Log level: ${{ github.event.inputs.logLevel }}"
+        echo "Tags: ${{ github.event.inputs.tags }}"
+        echo "Network: ${{ github.event.inputs.network }}"
+        echo "==================== 2 =================="
+        echo $INPUT_NETWORK
+        echo "./.env.$INPUT_NETWORK"
+        cp "./.env.${{ github.event.inputs.network }}" ./.env
+        cat ./.env 
 
   python:
     runs-on: ubuntu-latest
