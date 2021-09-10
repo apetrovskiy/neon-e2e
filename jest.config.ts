@@ -5,7 +5,7 @@ module.exports = {
   preset: "ts-jest",
   testEnvironment: "node",
   testMatch: ["**/*.steps.ts", "**/*.spec.ts"],
-  testTimeout: 5000,
+  testTimeout: 30000,
   testPathIgnorePatterns: ["fixtures"],
   globals: {},
   setupFilesAfterEnv: ["jest-allure/dist/setup",],

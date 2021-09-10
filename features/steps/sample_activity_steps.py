@@ -2,21 +2,22 @@ from behave import given, then, when
 from web3 import Web3
 
 
-@given(u'there is user Alice in Ethereum')
+@given(u'there is user Alice in Ethereum network')
 def step_impl(context):
-    # raise NotImplementedError(u'STEP: Given there is user Alice in Ethereum')
+    # raise NotImplementedError(u'STEP: Given there is user Alice in Ethereum network')
     pass
 
 
-@given(u'there is user Bob in Ethereum')
+@given(u'there is user Bob in Ethereum network')
 def step_impl(context):
-    # raise NotImplementedError(u'STEP: Given there is user Bob in Ethereum')
+    # raise NotImplementedError(u'STEP: Given there is user Bob in Ethereum network')
     pass
 
 
-@when(u'user A sends Eth to user B')
-def step_impl(context):
-    # raise NotImplementedError(u'STEP: When user A sends Eth to user B')
+@when(u'user Alice sends (.*) Eth to user Bob')
+def step_impl(context, eth_number):
+    print(f"Eth number = {eth_number}")
+    # raise NotImplementedError(u'STEP: When user Alice sends Eth to user Bob')
     pass
 
 
