@@ -2,7 +2,8 @@ import { config } from "dotenv";
 
 config();
 
-let Web3 = require("web3");
+// let Web3 = require("web3");
+import Web3 from "web3";
 // ganache local blockchain
 let url_ganache = "http://127.0.0.1:7545";
 
@@ -13,11 +14,11 @@ let url_infura =
 // using geth
 let url_geth = "http://127.0.0.1:8545";
 
-let url_evm = process.env.HTTP_URL;
+let url_evm = process.env.HTTP_URL === undefined ? "" : process.env.HTTP_URL;
 
-// let web3 = new Web3(url_ganache);
-// let web3 = new Web3(url_infura);
-// let web3 = new Web3(url_geth);
-// let web3 = new Web3(url_evm);
+let web3 = new Web3(url_ganache);
+web3 = new Web3(url_infura);
+web3 = new Web3(url_geth);
+web3 = new Web3(url_evm);
 
-// console.log(web3);
+console.log(web3);

@@ -11,8 +11,9 @@ import { config } from "dotenv";
 // const web3 = new Web3(url_evm);
 
 defineFeature(feature, (test) => {
-  let userA: Account | any;
-  let userB: Account | any;
+  let userAlice: Account | any;
+  let userBob: Account | any;
+  const w3 = getWeb3();
   ``;
 
   function getWeb3() {
@@ -27,40 +28,31 @@ defineFeature(feature, (test) => {
     //   console.log("BEFORE ALL");
     // });
     given("there is user Alice in Ethereum network", async () => {
-      userA = new AccountFactory().create();
-      console.log(`user A: ${userA}`);
-      const w3 = getWeb3();
-      const balance = await w3.eth.getBalance(userA.address);
+      userAlice = new AccountFactory().create();
+      console.log(`user A: ${userAlice}`);
+      const balance = await w3.eth.getBalance(userAlice.address);
       console.log(`user A balanse = ${balance}`);
-
-      /*
-            var getBalance = async function () {
-                await w3.eth.getBalance(userA.address).then(console.log);
-            };
-            await getBalance();
-            */
     });
     given("there is user Bob in Ethereum network", async () => {
-      userB = new AccountFactory().create();
-      console.log(`user B: ${userB}`);
-      const w3 = getWeb3();
-      const balance = await w3.eth.getBalance(userB.address);
+      userBob = new AccountFactory().create();
+      console.log(`user B: ${userBob}`);
+      const balance = await w3.eth.getBalance(userBob.address);
       console.log(`user B balanse = ${balance}`);
     });
     when(/^user Alice sends (\d+) Eth to user Bob$/, (ethNumber: number) => {
       const deploy = async () => {
         console.log(
-          `Attempting to make transaction from ${userA.address} to ${userB.address}`
+          `Attempting to make transaction from ${userAlice.address} to ${userBob.address}`
         );
         const w3 = getWeb3();
         const createTransaction = await w3.eth.accounts.signTransaction(
           {
-            from: userA.address,
-            to: userB.address,
+            from: userAlice.address,
+            to: userBob.address,
             value: w3.utils.toWei(ethNumber.toString(), "ether"),
             gas: "4294967295",
           },
-          userA.privateKey
+          userAlice.privateKey
         );
 
         // Deploy transaction
@@ -78,11 +70,15 @@ defineFeature(feature, (test) => {
 
       console.log("when");
     });
-    then("the recipient has balance increased", () => {
+    then("the recipient has balance increased",async () => {
       console.log("then 1");
+      const balance = await w3.eth.getBalance(userBob.address);
+      console.log(`user B balanse = ${balance}`);
     });
-    then("the sender has balance decreased", () => {
+    then("the sender has balance decreased", async() => {
       console.log("then 2");
+      const balance = await w3.eth.getBalance(userAlice.address);
+      console.log(`user A balanse = ${balance}`);
     });
   });
 });
