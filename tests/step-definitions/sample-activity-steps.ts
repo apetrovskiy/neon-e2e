@@ -1,6 +1,3 @@
-// import { defineFeature, loadFeature } from "jest-cucumber";
-// import { AccountFactory } from "../helpers/create_account";
-// const feature = loadFeature("features/sample-activity.feature");
 import Web3 from 'web3';
 // import { Accounts} from "web3-eth-accounts";
 import { Account } from 'web3-core';
@@ -55,34 +52,28 @@ When('user Alice sends {int} Eth to user Bob', function (ethNumber: number) {
   // console.log(ethNumber);
   // return 'pending';
   const deploy = async () => {
-    console.log(
-      `Attempting to make transaction from ${userAlice.address} to ${userBob.address}`
-    );
+    console.log(`Attempting to make transaction from ${userAlice.address} to ${userBob.address}`);
     const w3 = getWeb3();
     const createTransaction = await w3.eth.accounts.signTransaction(
       {
         from: userAlice.address,
         to: userBob.address,
-        value: w3.utils.toWei(ethNumber.toString(), "ether"),
-        gas: "4294967295",
+        value: w3.utils.toWei(ethNumber.toString(), 'ether'),
+        gas: '4294967295'
       },
       userAlice.privateKey
     );
 
     // Deploy transaction
-    const createReceipt = await w3.eth.sendSignedTransaction(
-      createTransaction.rawTransaction!
-    );
+    const createReceipt = await w3.eth.sendSignedTransaction(createTransaction.rawTransaction!);
 
-    console.log(
-      `Transaction successful with hash: ${createReceipt.transactionHash}`
-    );
+    console.log(`Transaction successful with hash: ${createReceipt.transactionHash}`);
   };
   deploy()
-      .then(() => console.log("SUCCESS"))
-      .catch((err) => console.error(err));
+    .then(() => console.log('SUCCESS'))
+    .catch((err) => console.error(err));
 
-  console.log("when");
+  console.log('when');
 });
 
 // ? Then the recipient has balance increased
@@ -91,7 +82,7 @@ When('user Alice sends {int} Eth to user Bob', function (ethNumber: number) {
 Then('the recipient has balance increased', async () => {
   // // Write code here that turns the phrase above into concrete actions
   // return 'pending';
-  console.log("then 1");
+  console.log('then 1');
   const balance = await w3.eth.getBalance(userBob.address);
   console.log(`user B balanse = ${balance}`);
 });
@@ -102,7 +93,7 @@ Then('the recipient has balance increased', async () => {
 Then('the sender has balance decreased', async () => {
   // // Write code here that turns the phrase above into concrete actions
   // return 'pending';
-  console.log("then 2");
+  console.log('then 2');
   const balance = await w3.eth.getBalance(userAlice.address);
   console.log(`user A balanse = ${balance}`);
 });
