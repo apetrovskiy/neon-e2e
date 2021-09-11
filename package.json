@@ -1,9 +1,16 @@
 {
-  "name": "cucumber-typescript-template",
+  "name": "neon-e2e",
   "version": "1.0.0",
-  "description": "[Cucumber-js](https://github.com/cucumber/cucumber-js) using Typescript. Features #are defined with [Gherkin](https://cucumber.io/docs/gherkin/reference/).",
-  "author": "Daniel Montesinos <damonpam@gmail.com>",
-  "private": true,
+  "description": "End-to-end API and Web tests for EVM",
+  "author": "Alexander Petrovskiy <apetrovskiy@hotmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neonlabsorg/neon-e2e.git"
+  },
+  "bugs": {
+    "url": "https://github.com/neonlabsorg/neon-e2e/issues"
+  },
+  "homepage": "https://github.com/neonlabsorg/neon-e2e#readme",
   "license": "ISC",
   "config": {
     "cucumber": "--require-module=ts-node/register --require-module=tsconfig-paths/register --require=tests/**/*.ts --format=tests/support/allure-reporter.ts:report/dummy.txt"
@@ -39,6 +46,7 @@
     "tsconfig-paths": "^3.9.0",
     "typescript": "^4.2.3",
     "wait-for-expect": "^3.0.2",
+    "web3": "^1.5.2",
     "winston": "^3.3.3"
   },
   "devDependencies": {
