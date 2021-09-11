@@ -1,6 +1,6 @@
 {
   "hooks": {
-    "pre-commit": "tsc && lint-staged --no-verify && yarn dictionary --no-verify && git add ./dictionary --no-verify",
+    "pre-commit": "tsc && lint-staged && yarn dictionary && git add ./dictionary",
     "post-commit": "git update-index --again"
   }
 }
