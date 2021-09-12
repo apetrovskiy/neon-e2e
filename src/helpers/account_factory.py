@@ -7,7 +7,7 @@ class AccountFactory():
         url = config.HTTP_URL
         w3 = Web3(HTTPProvider(url))
         print(w3)
-        if id == None or id == '':
+        if id is None or id == '':
             return w3.eth.account.create()
         else:
             w3.eth.account.create(id)

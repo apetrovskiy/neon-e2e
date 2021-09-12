@@ -70,6 +70,7 @@ def step_transaction(context, eth_number: str):
                data=b'')
     print(f"transaction: {txn}")
 
+    signed_txn: str
     try:
         signed_txn = w3.eth.signTransaction(txn,
                                             str(data.user_alice.privateKey))
