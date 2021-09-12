@@ -1,72 +1,122 @@
 from config import config
+from dataclasses import dataclass
 from behave import given, then, when
 from src.helpers.account_factory import AccountFactory
 from web3 import Web3
+
+ETHER = "ether"
 
 
 def get_web3():
     return Web3(Web3.HTTPProvider(config.HTTP_URL))
 
 
-user_alice: object
-user_bob: object
-global initial_balance_alice
-global initial_balance_bob
+@dataclass
+class Data(object):
+    user_alice: object
+    user_bob: object
+    initial_balance_alice: int
+    initial_balance_bob: int
+
+
+data = Data(None, None, 0, 0)
+w3 = get_web3()
 
 
 @given(
     u'there is user Alice in Ethereum network with the initial balance {initial_balance}Ξ'
 )
-def step_user_alice_initial_balance(context, initial_balance):
-    print(f"user A the initial balance expected: {initial_balance}")
-    user_alice = AccountFactory().create()
-    balance = get_web3().eth.get_balance(user_alice.address)
-    ethers_amount = get_web3().fromWei(balance, "ether")
-    print(ethers_amount)
-    initial_balance_alice = balance
-    print(initial_balance_alice)
-    print(type(initial_balance))
-    print(type(ethers_amount))
+def step_user_alice_initial_balance(context, initial_balance: str):
+    data.user_alice = AccountFactory().create()
+    print(f"user A: {data.user_alice.address}")
+    balance = w3.eth.get_balance(data.user_alice.address)
+    ethers_amount = w3.fromWei(balance, ETHER)
+    print(f"user A balance = {balance}")
+    print(f"user A balance in ETH = {ethers_amount}")
+    data.initial_balance_alice = balance
     assert initial_balance == str(ethers_amount)
 
 
 @given(
     u'there is user Bob in Ethereum network with the initial balance {initial_balance}Ξ'
 )
-def step_user_bob_initial_balance(context, initial_balance):
-    print(f"user B the initial balance expected: {initial_balance}")
-    user_bob = AccountFactory().create()
-    balance = get_web3().eth.get_balance(user_bob.address)
-    ethers_amount = get_web3().fromWei(balance, "ether")
-    print(ethers_amount)
-    initial_balance_bob = balance
-    print(initial_balance_bob)
-    print(type(initial_balance))
-    print(type(ethers_amount))
+def step_user_bob_initial_balance(context, initial_balance: str):
+    data.user_bob = AccountFactory().create()
+    print(f"user B: {data.user_bob.address}")
+    balance = w3.eth.get_balance(data.user_bob.address)
+    ethers_amount = w3.fromWei(balance, ETHER)
+    print(f"user B balance = {balance}")
+    print(f"user B balance in ETH = {ethers_amount}")
+    data.initial_balance_bob = balance
     assert initial_balance == str(ethers_amount)
 
 
 @when(u'user Alice sends {eth_number}Ξ to user Bob')
-def step_transaction(context, eth_number):
-    print(f"Eth number = {eth_number}")
-    # raise NotImplementedError(u'STEP: When user Alice sends Eth to user Bob')
-    pass
+def step_transaction(context, eth_number: str):
+    print(
+        f"Attempting to send {eth_number}Ξ from {data.user_alice.address} to {data.user_bob.address}"
+    )
+
+    print(f"value = {w3.toWei(eth_number, ETHER)}")
+    print(f"gas price = {w3.eth.gas_price}")
+    print(f"private key = {data.user_alice.privateKey}")
+    print(f"coinbase = {data.user_alice.address}")
+    print(f"nonce = {w3.eth.get_transaction_count(data.user_alice.address)}")
+    txn = dict(nonce=w3.eth.get_transaction_count(data.user_alice.address),
+               to=str(data.user_bob.address),
+               value=w3.toWei(eth_number, ETHER),
+               gas=4294967295,
+               gasPrice=w3.eth.gas_price,
+               data=b'')
+    print(f"transaction: {txn}")
+
+    try:
+        signed_txn = w3.eth.signTransaction(txn,
+                                            str(data.user_alice.privateKey))
+    except Exception as e:
+        print(e)
+
+    # Deploy transaction
+    create_receipt = w3.eth.send_raw_transaction(signed_txn.rawTransaction)
+
+    print(
+        f"Transaction successful with hash: {create_receipt.transactionHash}")
+
+    print('when is finished')
 
 
 @then(u'the recipient has balance increased by {eth_number}Ξ')
-def step_user_bob_result(context, eth_number):
-    # raise NotImplementedError(
-    # u'STEP: Then the recipient has balance increased')
-    pass
+def step_user_bob_result(context, eth_number: str):
+    balance = w3.eth.get_balance(data.user_bob.address)
+
+    print(f"initial user B balance {data.initial_balance_bob}")
+    print(f"amount {w3.toWei(eth_number, ETHER)}")
+    print(f"resulting user B balance {balance}")
+
+    expected_balance = data.initial_balance_bob + w3.toWei(eth_number, ETHER)
+    assert balance == expected_balance
 
 
 @then(u'the sender has balance decreased more than by {eth_number}Ξ')
 def step_user_alice_result(context, eth_number):
-    # raise NotImplementedError(u'STEP: Then the sender has balance decreased')
-    pass
+    balance = w3.eth.get_balance(data.user_alice.address)
+
+    print(f"initial user A balance {data.initial_balance_alice}")
+    print(f"amount {w3.toWei(eth_number, ETHER)}")
+    print(f"resulting user A balance {balance}")
+
+    expected_balance = data.initial_balance_alice - w3.toWei(eth_number, ETHER)
+    assert balance <= expected_balance
 
 
 @then(u'the sender has balance decreased by {eth_number}Ξ')
 def step_user_alice_no_changes(context, eth_number):
-    # raise NotImplementedError(u'STEP: Then the sender has balance decreased')
-    pass
+    balance = w3.eth.get_balance(data.user_alice.address)
+
+    print(f"initial user A balance {data.initial_balance_alice}")
+    print(f"amount {w3.toWei(eth_number, ETHER)}")
+    print(f"resulting user A balance {balance}")
+
+    expected_balance = data.initial_balance_alice - get_web3.toWei(
+        eth_number, ETHER)
+    assert balance == expected_balance

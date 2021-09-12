@@ -24,7 +24,7 @@ Given('there is user Alice in Ethereum network with the initial balance {int}Ξ'
   logger.notice(`user A: ${userAlice.address}`);
   const balance = await w3.eth.getBalance(userAlice.address);
   const ethersAmount = w3.utils.fromWei(balance, unit.ether);
-  logger.notice(`user A balanse = ${balance}`);
+  logger.notice(`user A balance = ${balance}`);
   logger.notice(`user A balance in ETH = ${ethersAmount}`);
   initialBalanceAlice = balance;
   expect(ethersAmount, expectations.INITIAL_AMOUNT_SHOULD_BE).to.be.equal(initialBalance.toString());
@@ -35,7 +35,7 @@ Given('there is user Bob in Ethereum network with the initial balance {int}Ξ', 
   logger.notice(`user B: ${userBob.address}`);
   const balance = await w3.eth.getBalance(userBob.address);
   const ethersAmount = w3.utils.fromWei(balance, unit.ether);
-  logger.notice(`user B balanse = ${balance}`);
+  logger.notice(`user B balance = ${balance}`);
   logger.notice(`user B balance in ETH = ${ethersAmount}`);
   initialBalanceBob = balance;
   expect(ethersAmount, expectations.INITIAL_AMOUNT_SHOULD_BE).to.be.equal(initialBalance.toString());
@@ -44,7 +44,6 @@ Given('there is user Bob in Ethereum network with the initial balance {int}Ξ', 
 When('user Alice sends {int}Ξ to user Bob', async (ethNumber: number) => {
   const deploy = async () => {
     logger.notice(`Attempting to send ${ethNumber}Ξ from ${userAlice.address} to ${userBob.address}`);
-    const w3 = getWeb3();
     const createTransaction = await w3.eth.accounts.signTransaction(
       {
         from: userAlice.address,
@@ -69,7 +68,6 @@ When('user Alice sends {int}Ξ to user Bob', async (ethNumber: number) => {
 
 Then('the recipient has balance increased by {int}Ξ', async (ethNumber: number) => {
   const balance = await w3.eth.getBalance(userBob.address);
-  const ethersAmount = w3.utils.fromWei(balance, unit.ether);
 
   logger.notice(`initial user B balance ${initialBalanceBob}`);
   logger.notice(`amount ${w3.utils.toWei(ethNumber.toString())}`);
@@ -81,24 +79,22 @@ Then('the recipient has balance increased by {int}Ξ', async (ethNumber: number)
 
 Then('the sender has balance decreased more than by {int}Ξ', async (ethNumber: number) => {
   const balance = await w3.eth.getBalance(userAlice.address);
-  const ethersAmount = w3.utils.fromWei(balance, unit.ether);
 
   logger.notice(`initial user A balance ${initialBalanceAlice}`);
   logger.notice(`amount ${w3.utils.toWei(ethNumber.toString())}`);
   logger.notice(`resulting user A balance ${balance}`);
 
-  const expectedBalance = +initialBalanceBob - +w3.utils.toWei(ethNumber.toString());
+  const expectedBalance = +initialBalanceAlice - +w3.utils.toWei(ethNumber.toString());
   expect(+balance, expectations.BALANCE_SHOULD_BE_LESS_THAN).to.be.lessThan(expectedBalance);
 });
 
 Then('the sender has balance decreased by {int}Ξ', async (ethNumber: number) => {
   const balance = await w3.eth.getBalance(userAlice.address);
-  const ethersAmount = w3.utils.fromWei(balance, unit.ether);
 
   logger.notice(`initial user A balance ${initialBalanceAlice}`);
   logger.notice(`amount ${w3.utils.toWei(ethNumber.toString())}`);
   logger.notice(`resulting user A balance ${balance}`);
 
-  const expectedBalance = +initialBalanceBob - +w3.utils.toWei(ethNumber.toString());
+  const expectedBalance = +initialBalanceAlice - +w3.utils.toWei(ethNumber.toString());
   expect(+balance, expectations.BALANCE_SHOULD_BE_EQUAL).to.be.equal(expectedBalance);
 });
