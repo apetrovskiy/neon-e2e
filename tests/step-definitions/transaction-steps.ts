@@ -1,7 +1,7 @@
 import Web3 from 'web3';
 import { Account } from 'web3-core';
 import { Given, Then, When } from 'cucumber';
-import { AccountFactory } from 'src/helpers/create_account';
+import { AccountFactory } from 'src/helpers/account-factory';
 import { logger } from 'src/utils/logger';
 import { expect } from 'chai';
 import { expectations } from 'src/constants/assert-messages';
