@@ -1,13 +1,9 @@
 import Web3 from 'web3';
-// import { Accounts} from "web3-eth-accounts";
 import { Account } from 'web3-core';
 import { config } from 'dotenv';
-
-// ? Given there is user Alice in Ethereum network
-// Undefined. Implement with the following snippet:
-
 import { Given, Then, When } from 'cucumber';
 import { AccountFactory } from 'src/helpers/create_account';
+import { logger } from 'src/utils/logger';
 
 function getWeb3() {
   config();
@@ -21,38 +17,22 @@ let userBob: Account;
 const w3 = getWeb3();
 
 Given('there is user Alice in Ethereum network', async () => {
-  // // Write code here that turns the phrase above into concrete actions
-  // return 'pending';
   userAlice = new AccountFactory().create();
-  console.log(`user A: ${userAlice}`);
+  logger.notice(`user A: ${userAlice.address}`);
   const balance = await w3.eth.getBalance(userAlice.address);
-  console.log(`user A balanse = ${balance}`);
+  logger.notice(`user A balanse = ${balance}`);
 });
-
-// ? And there is user Bob in Ethereum network
-// Undefined. Implement with the following snippet:
 
 Given('there is user Bob in Ethereum network', async () => {
-  // // Write code here that turns the phrase above into concrete actions
-  // return 'pending';
   userBob = new AccountFactory().create();
-  console.log(`user B: ${userBob}`);
+  logger.notice(`user B: ${userBob.address}`);
   const balance = await w3.eth.getBalance(userBob.address);
-  console.log(`user B balanse = ${balance}`);
+  logger.notice(`user B balanse = ${balance}`);
 });
 
-// ? When user Alice sends 1 Eth to user Bob
-// Undefined. Implement with the following snippet:
-
-When('user Alice sends {int} Eth to user Bob', function (ethNumber: number) {
-  // // When('{ProductName} {ProductName} {ProductName} {float} {ProductName} {ProductName} {ProductName} {ProductName}', function (ProductName, ProductName2, ProductName3, float, ProductName4, ProductName5, ProductName6, ProductName7) {
-  // // When('{ProductName} {ProductName} {ProductName} {ProductName} {ProductName} {ProductName} {ProductName} {ProductName}', function (ProductName, ProductName2, ProductName3, ProductName4, ProductName5, ProductName6, ProductName7, ProductName8) {
-  // // Write code here that turns the phrase above into concrete actions
-  // // eslint-disable-next-line no-console
-  // console.log(ethNumber);
-  // return 'pending';
+When('user Alice sends {int} Eth to user Bob', async (ethNumber: number) => {
   const deploy = async () => {
-    console.log(`Attempting to make transaction from ${userAlice.address} to ${userBob.address}`);
+    logger.notice(`Attempting to make transaction from ${userAlice.address} to ${userBob.address}`);
     const w3 = getWeb3();
     const createTransaction = await w3.eth.accounts.signTransaction(
       {
@@ -67,33 +47,21 @@ When('user Alice sends {int} Eth to user Bob', function (ethNumber: number) {
     // Deploy transaction
     const createReceipt = await w3.eth.sendSignedTransaction(createTransaction.rawTransaction!);
 
-    console.log(`Transaction successful with hash: ${createReceipt.transactionHash}`);
+    logger.notice(`Transaction successful with hash: ${createReceipt.transactionHash}`);
   };
-  deploy()
-    .then(() => console.log('SUCCESS'))
+  await deploy()
+    .then(() => logger.notice('SUCCESS'))
     .catch((err) => console.error(err));
 
-  console.log('when');
+  logger.notice('when is finished');
 });
-
-// ? Then the recipient has balance increased
-// Undefined. Implement with the following snippet:
 
 Then('the recipient has balance increased', async () => {
-  // // Write code here that turns the phrase above into concrete actions
-  // return 'pending';
-  console.log('then 1');
   const balance = await w3.eth.getBalance(userBob.address);
-  console.log(`user B balanse = ${balance}`);
+  logger.notice(`user B balanse = ${balance}`);
 });
 
-// ? And the sender has balance decreased
-// Undefined. Implement with the following snippet:
-
 Then('the sender has balance decreased', async () => {
-  // // Write code here that turns the phrase above into concrete actions
-  // return 'pending';
-  console.log('then 2');
   const balance = await w3.eth.getBalance(userAlice.address);
-  console.log(`user A balanse = ${balance}`);
+  logger.notice(`user A balanse = ${balance}`);
 });
