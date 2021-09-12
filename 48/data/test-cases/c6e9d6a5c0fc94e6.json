@@ -1,0 +1,186 @@
+{
+  "uid" : "c6e9d6a5c0fc94e6",
+  "name" : "a user to user failed transaction",
+  "fullName" : "features/transaction.feature:transaction:a user to user failed transaction",
+  "historyId" : "52f0e342c8c61c8a8125f48173d3818c",
+  "time" : {
+    "start" : 1631467788091,
+    "stop" : 1631467799252,
+    "duration" : 11161
+  },
+  "description" : "",
+  "status" : "failed",
+  "statusMessage" : "Returned error: Block not available for slot 93714122",
+  "statusTrace" : "Error: Returned error: Block not available for slot 93714122\n    at Object.ErrorResponse (/home/runner/work/neon-e2e/neon-e2e/node_modules/web3-core-helpers/lib/errors.js:28:19)\n    at /home/runner/work/neon-e2e/neon-e2e/node_modules/web3-core-requestmanager/lib/index.js:302:36\n    at XMLHttpRequest.request.onreadystatechange (/home/runner/work/neon-e2e/neon-e2e/node_modules/web3-providers-http/lib/index.js:98:13)\n    at XMLHttpRequestEventTarget.dispatchEvent (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request-event-target.ts:44:13)\n    at XMLHttpRequest._setReadyState (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:219:8)\n    at XMLHttpRequest._onHttpResponseEnd (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:345:8)\n    at IncomingMessage.<anonymous> (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:311:39)\n    at IncomingMessage.emit (node:events:406:35)\n    at IncomingMessage.emit (node:domain:475:12)\n    at endReadableNT (node:internal/streams/readable:1343:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
+  "flaky" : false,
+  "newFailed" : true,
+  "beforeStages" : [ {
+    "time" : { },
+    "status" : "broken",
+    "steps" : [ {
+      "name" : "Before: tests/step-definitions/hooks.ts:9",
+      "time" : {
+        "start" : 1631467788091,
+        "stop" : 1631467788091,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "",
+    "status" : "failed",
+    "statusMessage" : "Returned error: Block not available for slot 93714122",
+    "statusTrace" : "Error: Returned error: Block not available for slot 93714122\n    at Object.ErrorResponse (/home/runner/work/neon-e2e/neon-e2e/node_modules/web3-core-helpers/lib/errors.js:28:19)\n    at /home/runner/work/neon-e2e/neon-e2e/node_modules/web3-core-requestmanager/lib/index.js:302:36\n    at XMLHttpRequest.request.onreadystatechange (/home/runner/work/neon-e2e/neon-e2e/node_modules/web3-providers-http/lib/index.js:98:13)\n    at XMLHttpRequestEventTarget.dispatchEvent (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request-event-target.ts:44:13)\n    at XMLHttpRequest._setReadyState (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:219:8)\n    at XMLHttpRequest._onHttpResponseEnd (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:345:8)\n    at IncomingMessage.<anonymous> (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:311:39)\n    at IncomingMessage.emit (node:events:406:35)\n    at IncomingMessage.emit (node:domain:475:12)\n    at endReadableNT (node:internal/streams/readable:1343:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
+    "steps" : [ {
+      "name" : "Given there is user Alice in Ethereum network with the initial balance <10>Ξ",
+      "time" : {
+        "start" : 1631467788092,
+        "stop" : 1631467792893,
+        "duration" : 4801
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And there is user Bob in Ethereum network with the initial balance <10>Ξ",
+      "time" : {
+        "start" : 1631467792893,
+        "stop" : 1631467798690,
+        "duration" : 5797
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When user Alice sends <11>Ξ to user Bob",
+      "time" : {
+        "start" : 1631467798690,
+        "stop" : 1631467799252,
+        "duration" : 562
+      },
+      "status" : "failed",
+      "statusMessage" : "Returned error: Block not available for slot 93714122",
+      "statusTrace" : "Error: Returned error: Block not available for slot 93714122\n    at Object.ErrorResponse (/home/runner/work/neon-e2e/neon-e2e/node_modules/web3-core-helpers/lib/errors.js:28:19)\n    at /home/runner/work/neon-e2e/neon-e2e/node_modules/web3-core-requestmanager/lib/index.js:302:36\n    at XMLHttpRequest.request.onreadystatechange (/home/runner/work/neon-e2e/neon-e2e/node_modules/web3-providers-http/lib/index.js:98:13)\n    at XMLHttpRequestEventTarget.dispatchEvent (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request-event-target.ts:44:13)\n    at XMLHttpRequest._setReadyState (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:219:8)\n    at XMLHttpRequest._onHttpResponseEnd (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:345:8)\n    at IncomingMessage.<anonymous> (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:311:39)\n    at IncomingMessage.emit (node:events:406:35)\n    at IncomingMessage.emit (node:domain:475:12)\n    at endReadableNT (node:internal/streams/readable:1343:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "Then the recipient has balance increased by 0Ξ",
+      "time" : {
+        "start" : 1631467799252,
+        "stop" : 1631467799252,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And the sender has balance decreased by 0Ξ",
+      "time" : {
+        "start" : 1631467799252,
+        "stop" : 1631467799252,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "1946"
+  }, {
+    "name" : "feature",
+    "value" : "transaction"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "amount",
+    "value" : "11"
+  }, {
+    "name" : "initial balance",
+    "value" : "10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "d5740979c60bebf8",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/47//#testresult/d5740979c60bebf8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1631462916770,
+          "stop" : 1631462932772,
+          "duration" : 16002
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "c6e9d6a5c0fc94e6.json",
+  "parameterValues" : [ "11", "10" ]
+}
