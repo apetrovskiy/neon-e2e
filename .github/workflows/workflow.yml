@@ -57,9 +57,7 @@ jobs:
     - name: Lint with flake8
       run: |
         pipenv run flake8 src
-        pipenv run flake8 specs
         pipenv run flake8 tests
-        pipenv run flake8 scripts
     - name: Test with pytest
       if: always()
       run: |
