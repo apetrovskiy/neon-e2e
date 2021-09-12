@@ -57,14 +57,13 @@ jobs:
     - name: Lint with flake8
       run: |
         pipenv run flake8 src
-        pipenv run flake8 specs
         pipenv run flake8 tests
-        pipenv run flake8 scripts
     - name: Test with pytest
       if: always()
       run: |
         pwd
-        pipenv run pytest --alluredir=allure-results
+        # pipenv run pytest --alluredir=report/allure-results
+        pipenv run behave -f allure_behave.formatter:AllureFormatter -o report/allure-results ./features --no-capture --no-capture-stderr
 
     - name: Look at Allure
       if: always()
@@ -76,7 +75,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: allure-results
-        path: allure-results
+        path: report/allure-results
 
   node:
     runs-on: ubuntu-latest
@@ -104,7 +103,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: allure-results
-        path: allure-results
+        path: report/allure-results
 
   allure:
     runs-on: ubuntu-latest
