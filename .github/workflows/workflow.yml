@@ -62,7 +62,8 @@ jobs:
       if: always()
       run: |
         pwd
-        pipenv run pytest --alluredir=report/allure-results
+        # pipenv run pytest --alluredir=report/allure-results
+        pipenv run behave -f allure_behave.formatter:AllureFormatter -o report/allure-results ./features
 
     - name: Look at Allure
       if: always()

@@ -30,7 +30,7 @@ Given('there is user Bob in Ethereum network', async () => {
   logger.notice(`user B balanse = ${balance}`);
 });
 
-When('user Alice sends {int} Eth to user Bob', async (ethNumber: number) => {
+When('user Alice sends {int}Ξ to user Bob', async (ethNumber: number) => {
   const deploy = async () => {
     logger.notice(`Attempting to make transaction from ${userAlice.address} to ${userBob.address}`);
     const w3 = getWeb3();
