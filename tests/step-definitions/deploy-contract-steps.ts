@@ -5,13 +5,14 @@ import { compileContract } from 'src/helpers/contract-compiler';
 import { readFileContent } from 'src/helpers/file-system';
 
 let contractText: string;
+let contractFilePath: string;
 
 Given("there is a contract '{}'", async (contractFileName: string) => {
   console.log('=================================================================');
   console.log(contractFileName);
   console.log('=================================================================');
   console.log(CONTRACTS_DIR);
-  const contractFilePath = path.resolve(CONTRACTS_DIR, contractFileName);
+  contractFilePath = path.resolve(CONTRACTS_DIR, contractFileName);
   console.log('=================================================================');
   console.log(contractFilePath);
   contractText = await readFileContent(contractFilePath);
@@ -20,7 +21,7 @@ Given("there is a contract '{}'", async (contractFileName: string) => {
 });
 
 When('compiling the contract', async () => {
-  const compiledContract = compileContract(contractText);
+  const compiledContract = compileContract(contractFilePath);
   console.log('=================================================================');
   console.log(compiledContract);
 });

@@ -8,6 +8,6 @@ Feature: deploy contract
     Examples:
       | contract file |
       | 1_Storage.sol |
-      | 2_Owner.sol   |
+      # | 2_Owner.sol   |
       | 3_Ballot.sol  |
       | proof.sol     |
