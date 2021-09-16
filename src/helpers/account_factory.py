@@ -10,7 +10,7 @@ class AccountFactory():
         if id is None or id == '':
             return w3.eth.account.create()
         else:
-            w3.eth.account.create(id)
+            return w3.eth.account.create(id)
 
     def create(self):
         return self.create_with_specific_id('')
