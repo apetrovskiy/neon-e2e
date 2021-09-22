@@ -1,17 +1,15 @@
 name: Python 3.8, Node.js 16, allure
 
-# on: [push]
 on:
+  push:
   workflow_dispatch:
     inputs:
-      logLevel:
-        description: 'Log level'     
-        required: true
-        default: 'warning'
       tags:
         description: 'Test scenario tags'
+        required: false
       network:
-        description: 'Network (devnet, testnet, internal.testnet, neonswap.live, ropsten, rinkeby)'
+        description: 'Network (devnet, testnet, internal.testnet, neonswap.live, aws, ropsten, rinkeby)'
+        required: true
         default: 'devnet'
 
 jobs:
@@ -24,14 +22,20 @@ jobs:
   
     - name: Switch to network of choice
       run: |
-        echo "Log level: ${{ github.event.inputs.logLevel }}"
         echo "Tags: ${{ github.event.inputs.tags }}"
         echo "Network: ${{ github.event.inputs.network }}"
-        echo "==================== 2 =================="
-        echo $INPUT_NETWORK
-        echo "./.env.$INPUT_NETWORK"
-        cp "./.env.${{ github.event.inputs.network }}" ./.env
-        cat ./.env 
+        if [ -z "${{ github.event.inputs.network }}" ]
+        then
+          NETWORK='devnet'
+        else
+          NETWORK="${{ github.event.inputs.network }}"
+        fi
+        echo "======================================"
+        echo "NETWORK=$NETWORK"
+        echo "INPUT_NETWORK=$INPUT_NETWORK"
+        echo "copying ./.env.$NETWORK to ./.env"
+        cp "./.env.$NETWORK" ./.env
+        cat ./.env
 
   python:
     runs-on: ubuntu-latest
@@ -53,14 +57,13 @@ jobs:
     - name: Lint with flake8
       run: |
         pipenv run flake8 src
-        pipenv run flake8 specs
         pipenv run flake8 tests
-        pipenv run flake8 scripts
     - name: Test with pytest
       if: always()
       run: |
         pwd
-        pipenv run pytest --alluredir=allure-results
+        # pipenv run pytest --alluredir=report/allure-results
+        pipenv run behave -f allure_behave.formatter:AllureFormatter -o report/allure-results ./features --no-capture --no-capture-stderr
 
     - name: Look at Allure
       if: always()
@@ -72,7 +75,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: allure-results
-        path: allure-results
+        path: report/allure-results
 
   node:
     runs-on: ubuntu-latest
@@ -100,7 +103,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: allure-results
-        path: allure-results
+        path: report/allure-results
 
   allure:
     runs-on: ubuntu-latest

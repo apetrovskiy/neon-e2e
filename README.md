@@ -1,3 +1,6 @@
+# Reports
+http://docs.neon-labs.org/neon-e2e/
+
 # Installation
 ## Settings
 Modify the .env file or use the environment variables exactly like those that are in the .env file
@@ -26,13 +29,12 @@ brew install allure
 ```
 cd neon-e2e
 pipenv sync
-pipenv shell
 ```
 
-### Run
+### Manual run
 ```
-behave
-allure serve
+pipenv run behave -f allure_behave.formatter:AllureFormatter -o report/allure-results ./features
+allure serve report/allure-results
 ```
 
 ## Node.js
@@ -45,9 +47,9 @@ TBD
 npm i
 ```
 
-### Run
+### Manual run
 ```
-npm test
+npm run report
 ```
 
 
