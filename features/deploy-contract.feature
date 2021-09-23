@@ -2,7 +2,8 @@ Feature: deploy contract
 
   Scenario Outline: simple contract deployment
     Given there is a contract '<contract file>'
-    When compiling the contract
+    And the contract is compiled
+    When the contract is deployed
     Then there is no errors
 
     Examples:

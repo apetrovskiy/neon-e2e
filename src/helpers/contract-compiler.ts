@@ -6,7 +6,7 @@
 /* eslint-disable no-console */
 import { CompileFailedError, CompileResult, compileSol } from 'solc-typed-ast';
 
-export const compileContract = (filename: string): CompileResult | void => {
+export const compileContract = (filename: string): CompileResult => {
   let result: CompileResult;
 
   try {
@@ -27,6 +27,7 @@ export const compileContract = (filename: string): CompileResult | void => {
     } else {
       console.error(error); //.message);
     }
+    throw new Error('Unable to compile contract');
   }
 };
 
