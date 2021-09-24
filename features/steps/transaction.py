@@ -70,18 +70,17 @@ def step_transaction(context, eth_number: str):
                data=b'')
     print(f"transaction: {txn}")
 
-    signed_txn: str
     try:
-        signed_txn = w3.eth.signTransaction(txn,
+        signed_txn: str = w3.eth.signTransaction(txn,
                                             str(data.user_alice.privateKey))
+
+        # Deploy transaction
+        create_receipt = w3.eth.send_raw_transaction(signed_txn.rawTransaction)
+
+        print(f"Transaction successful with hash: {create_receipt.transactionHash}")
+
     except Exception as e:
         print(e)
-
-    # Deploy transaction
-    create_receipt = w3.eth.send_raw_transaction(signed_txn.rawTransaction)
-
-    print(
-        f"Transaction successful with hash: {create_receipt.transactionHash}")
 
     print('when is finished')
 
