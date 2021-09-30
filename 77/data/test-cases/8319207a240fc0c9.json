@@ -1,0 +1,422 @@
+{
+  "uid" : "8319207a240fc0c9",
+  "name" : "a user to user successful transaction -- @1.1 ",
+  "fullName" : "transaction: a user to user successful transaction",
+  "historyId" : "f643c21b8775b0017cb9293a77768a4e",
+  "time" : {
+    "start" : 1633017815297,
+    "stop" : 1633017822546,
+    "duration" : 7249
+  },
+  "status" : "broken",
+  "statusMessage" : "UnboundLocalError: local variable 'signed_txn' referenced before assignment\n",
+  "statusTrace" : "  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"features/steps/transaction.py\", line 81, in step_transaction\n    create_receipt = w3.eth.send_raw_transaction(signed_txn.rawTransaction)\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "UnboundLocalError: local variable 'signed_txn' referenced before assignment\n",
+    "statusTrace" : "  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"features/steps/transaction.py\", line 81, in step_transaction\n    create_receipt = w3.eth.send_raw_transaction(signed_txn.rawTransaction)\n",
+    "steps" : [ {
+      "name" : "Given there is user Alice in Ethereum network with the initial balance 10Ξ",
+      "time" : {
+        "start" : 1633017815298,
+        "stop" : 1633017818507,
+        "duration" : 3209
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "create",
+        "time" : {
+          "start" : 1633017815298,
+          "stop" : 1633017815330,
+          "duration" : 32
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "create_with_specific_id",
+          "time" : {
+            "start" : 1633017815298,
+            "stop" : 1633017815329,
+            "duration" : 31
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "id",
+            "value" : "''"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "And there is user Bob in Ethereum network with the initial balance 10Ξ",
+      "time" : {
+        "start" : 1633017818508,
+        "stop" : 1633017821354,
+        "duration" : 2846
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "create",
+        "time" : {
+          "start" : 1633017818508,
+          "stop" : 1633017818514,
+          "duration" : 6
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "create_with_specific_id",
+          "time" : {
+            "start" : 1633017818508,
+            "stop" : 1633017818514,
+            "duration" : 6
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "id",
+            "value" : "''"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "When user Alice sends 1Ξ to user Bob",
+      "time" : {
+        "start" : 1633017821354,
+        "stop" : 1633017822545,
+        "duration" : 1191
+      },
+      "status" : "broken",
+      "statusMessage" : "UnboundLocalError: local variable 'signed_txn' referenced before assignment\n",
+      "statusTrace" : "  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"features/steps/transaction.py\", line 81, in step_transaction\n    create_receipt = w3.eth.send_raw_transaction(signed_txn.rawTransaction)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "Then the recipient has balance increased by 1Ξ",
+      "time" : {
+        "start" : 1633017822546,
+        "stop" : 1633017822546,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And the sender has balance decreased more than by 1Ξ",
+      "time" : {
+        "start" : 1633017822546,
+        "stop" : 1633017822546,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 9,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "transaction"
+  }, {
+    "name" : "framework",
+    "value" : "behave"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "amount",
+    "value" : "1"
+  }, {
+    "name" : "initial balance",
+    "value" : "10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 22,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 27
+      },
+      "items" : [ {
+        "uid" : "f7ab19cb0c368031",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/76//#testresult/f7ab19cb0c368031",
+        "status" : "failed",
+        "statusDetails" : "AssertionError\n",
+        "time" : {
+          "start" : 1633017285056,
+          "stop" : 1633017285751,
+          "duration" : 695
+        }
+      }, {
+        "uid" : "fb5e1bc5dac54afb",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/75//#testresult/fb5e1bc5dac54afb",
+        "status" : "broken",
+        "statusDetails" : "UnboundLocalError: local variable 'signed_txn' referenced before assignment\n",
+        "time" : {
+          "start" : 1633017214737,
+          "stop" : 1633017223328,
+          "duration" : 8591
+        }
+      }, {
+        "uid" : "b0128276ef0d199f",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/74//#testresult/b0128276ef0d199f",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.SSLError: HTTPSConnectionPool(host='v0_1_2.proxy.dev.neonlabs.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(\"hostname 'v0_1_2.proxy.dev.neonlabs.org' doesn't match 'dev.doc.neontest.xyz'\")))\n",
+        "time" : {
+          "start" : 1633015879936,
+          "stop" : 1633015881429,
+          "duration" : 1493
+        }
+      }, {
+        "uid" : "cb9d72bcd0fc17a2",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/73//#testresult/cb9d72bcd0fc17a2",
+        "status" : "broken",
+        "statusDetails" : "UnboundLocalError: local variable 'signed_txn' referenced before assignment\n",
+        "time" : {
+          "start" : 1633015778839,
+          "stop" : 1633015785651,
+          "duration" : 6812
+        }
+      }, {
+        "uid" : "dbc108485e3637be",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/72//#testresult/dbc108485e3637be",
+        "status" : "broken",
+        "statusDetails" : "UnboundLocalError: local variable 'signed_txn' referenced before assignment\n",
+        "time" : {
+          "start" : 1632676491400,
+          "stop" : 1632676499074,
+          "duration" : 7674
+        }
+      }, {
+        "uid" : "87fc6dcc54be8585",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/69//#testresult/87fc6dcc54be8585",
+        "status" : "failed",
+        "statusDetails" : "AssertionError\n",
+        "time" : {
+          "start" : 1632656238885,
+          "stop" : 1632656247016,
+          "duration" : 8131
+        }
+      }, {
+        "uid" : "38226d9b436b8926",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/68//#testresult/38226d9b436b8926",
+        "status" : "broken",
+        "statusDetails" : "UnboundLocalError: local variable 'signed_txn' referenced before assignment\n",
+        "time" : {
+          "start" : 1632588440312,
+          "stop" : 1632588456540,
+          "duration" : 16228
+        }
+      }, {
+        "uid" : "914bac51840f84ba",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/67//#testresult/914bac51840f84ba",
+        "status" : "broken",
+        "statusDetails" : "UnboundLocalError: local variable 'signed_txn' referenced before assignment\n",
+        "time" : {
+          "start" : 1632588161130,
+          "stop" : 1632588168728,
+          "duration" : 7598
+        }
+      }, {
+        "uid" : "b70768d2a532803",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/66//#testresult/b70768d2a532803",
+        "status" : "broken",
+        "statusDetails" : "UnboundLocalError: local variable 'signed_txn' referenced before assignment\n",
+        "time" : {
+          "start" : 1632588083944,
+          "stop" : 1632588091442,
+          "duration" : 7498
+        }
+      }, {
+        "uid" : "36785ccc2c9ca242",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/64//#testresult/36785ccc2c9ca242",
+        "status" : "broken",
+        "statusDetails" : "ValueError: {'code': -32000, 'message': \"HTTPConnectionPool(host='18.118.39.244', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc3b0d78a30>: Failed to establish a new connection: [Errno 111] Connection refused'))\"}\n",
+        "time" : {
+          "start" : 1632557333467,
+          "stop" : 1632557334312,
+          "duration" : 845
+        }
+      }, {
+        "uid" : "f8df61b346649c80",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/63//#testresult/f8df61b346649c80",
+        "status" : "failed",
+        "statusDetails" : "AssertionError\n",
+        "time" : {
+          "start" : 1632496454739,
+          "stop" : 1632496462661,
+          "duration" : 7922
+        }
+      }, {
+        "uid" : "71888ee2be21d031",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/62//#testresult/71888ee2be21d031",
+        "status" : "broken",
+        "statusDetails" : "ValueError: {'code': -32005, 'message': 'Node is behind by 39357 slots', 'data': {'numSlotsBehind': 39357}}\n",
+        "time" : {
+          "start" : 1632377160012,
+          "stop" : 1632377161526,
+          "duration" : 1514
+        }
+      }, {
+        "uid" : "49a056450b6bc638",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/60//#testresult/49a056450b6bc638",
+        "status" : "broken",
+        "statusDetails" : "ValueError: {'code': -32005, 'message': 'Node is behind by 93601 slots', 'data': {'numSlotsBehind': 93601}}\n",
+        "time" : {
+          "start" : 1632284496588,
+          "stop" : 1632284497751,
+          "duration" : 1163
+        }
+      }, {
+        "uid" : "cf189deb5a8377f",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/59//#testresult/cf189deb5a8377f",
+        "status" : "broken",
+        "statusDetails" : "UnboundLocalError: local variable 'signed_txn' referenced before assignment\n",
+        "time" : {
+          "start" : 1631771778217,
+          "stop" : 1631771785736,
+          "duration" : 7519
+        }
+      }, {
+        "uid" : "36d68c63c16dc4d1",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/58//#testresult/36d68c63c16dc4d1",
+        "status" : "broken",
+        "statusDetails" : "UnboundLocalError: local variable 'signed_txn' referenced before assignment\n",
+        "time" : {
+          "start" : 1631714099950,
+          "stop" : 1631714106718,
+          "duration" : 6768
+        }
+      }, {
+        "uid" : "e509a45b6d521ee",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/57//#testresult/e509a45b6d521ee",
+        "status" : "broken",
+        "statusDetails" : "UnboundLocalError: local variable 'signed_txn' referenced before assignment\n",
+        "time" : {
+          "start" : 1631708422180,
+          "stop" : 1631708429509,
+          "duration" : 7329
+        }
+      }, {
+        "uid" : "65f08fc87e7132ed",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/56//#testresult/65f08fc87e7132ed",
+        "status" : "broken",
+        "statusDetails" : "UnboundLocalError: local variable 'signed_txn' referenced before assignment\n",
+        "time" : {
+          "start" : 1631708221439,
+          "stop" : 1631708227968,
+          "duration" : 6529
+        }
+      }, {
+        "uid" : "9f3c711f179d93d0",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/55//#testresult/9f3c711f179d93d0",
+        "status" : "broken",
+        "statusDetails" : "UnboundLocalError: local variable 'signed_txn' referenced before assignment\n",
+        "time" : {
+          "start" : 1631698410287,
+          "stop" : 1631698427862,
+          "duration" : 17575
+        }
+      }, {
+        "uid" : "3a65dae3687573e2",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/54//#testresult/3a65dae3687573e2",
+        "status" : "broken",
+        "statusDetails" : "UnboundLocalError: local variable 'signed_txn' referenced before assignment\n",
+        "time" : {
+          "start" : 1631619951754,
+          "stop" : 1631619963250,
+          "duration" : 11496
+        }
+      }, {
+        "uid" : "b1b530755c4f97b0",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/53//#testresult/b1b530755c4f97b0",
+        "status" : "broken",
+        "statusDetails" : "UnboundLocalError: local variable 'signed_txn' referenced before assignment\n",
+        "time" : {
+          "start" : 1631605001898,
+          "stop" : 1631605010236,
+          "duration" : 8338
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "8319207a240fc0c9.json",
+  "parameterValues" : [ "1", "10" ]
+}
