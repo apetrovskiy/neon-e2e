@@ -1,0 +1,263 @@
+{
+  "uid" : "de7bcc036066c799",
+  "name" : "a user to user failed transaction",
+  "fullName" : "features/transaction.feature:transaction:a user to user failed transaction",
+  "historyId" : "bbf08a008da89ec70392041fcbf0ce4b",
+  "time" : {
+    "start" : 1633031661895,
+    "stop" : 1633031665263,
+    "duration" : 3368
+  },
+  "description" : "",
+  "status" : "failed",
+  "statusMessage" : "the initial amount should be set to: expected '10' to equal '100'",
+  "statusTrace" : "AssertionError: the initial amount should be set to: expected '10' to equal '100'\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:26:69\n    at Generator.next (<anonymous>)\n    at fulfilled (/home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : true,
+  "newFailed" : true,
+  "beforeStages" : [ {
+    "time" : { },
+    "status" : "broken",
+    "steps" : [ {
+      "name" : "Before: tests/step-definitions/hooks.ts:9",
+      "time" : {
+        "start" : 1633031661896,
+        "stop" : 1633031661896,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "",
+    "status" : "failed",
+    "statusMessage" : "the initial amount should be set to: expected '10' to equal '100'",
+    "statusTrace" : "AssertionError: the initial amount should be set to: expected '10' to equal '100'\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:26:69\n    at Generator.next (<anonymous>)\n    at fulfilled (/home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+    "steps" : [ {
+      "name" : "Given there is user Alice in Ethereum network with the initial balance <100>Ξ",
+      "time" : {
+        "start" : 1633031661896,
+        "stop" : 1633031665262,
+        "duration" : 3366
+      },
+      "status" : "failed",
+      "statusMessage" : "the initial amount should be set to: expected '10' to equal '100'",
+      "statusTrace" : "AssertionError: the initial amount should be set to: expected '10' to equal '100'\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:26:69\n    at Generator.next (<anonymous>)\n    at fulfilled (/home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "And there is user Bob in Ethereum network with the initial balance <100>Ξ",
+      "time" : {
+        "start" : 1633031665263,
+        "stop" : 1633031665263,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When user Alice sends <101>Ξ to user Bob",
+      "time" : {
+        "start" : 1633031665263,
+        "stop" : 1633031665263,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then the recipient has balance increased by 0Ξ",
+      "time" : {
+        "start" : 1633031665263,
+        "stop" : 1633031665263,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And the sender has balance decreased by 0Ξ",
+      "time" : {
+        "start" : 1633031665263,
+        "stop" : 1633031665263,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "1972"
+  }, {
+    "name" : "feature",
+    "value" : "transaction"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "amount",
+    "value" : "101"
+  }, {
+    "name" : "initial balance",
+    "value" : "100"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 6,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 10
+      },
+      "items" : [ {
+        "uid" : "5e45d6a258073e1e",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/91//#testresult/5e45d6a258073e1e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1633026225769,
+          "stop" : 1633026227049,
+          "duration" : 1280
+        }
+      }, {
+        "uid" : "8800642258001df0",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/90//#testresult/8800642258001df0",
+        "status" : "failed",
+        "statusDetails" : "Returned error: HTTPConnectionPool(host='18.118.39.244', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc3a7d13970>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+        "time" : {
+          "start" : 1633026214651,
+          "stop" : 1633026214950,
+          "duration" : 299
+        }
+      }, {
+        "uid" : "75632faef0c45d",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/87//#testresult/75632faef0c45d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1633024689886,
+          "stop" : 1633024691167,
+          "duration" : 1281
+        }
+      }, {
+        "uid" : "fa1acb7b46d85e8e",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/86//#testresult/fa1acb7b46d85e8e",
+        "status" : "failed",
+        "statusDetails" : "Returned error: Node is behind by 5732 slots",
+        "time" : {
+          "start" : 1633024652198,
+          "stop" : 1633024653166,
+          "duration" : 968
+        }
+      }, {
+        "uid" : "ca13ce7c8cccb7b",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/84//#testresult/ca13ce7c8cccb7b",
+        "status" : "failed",
+        "statusDetails" : "Returned error: Node is behind by 5404 slots",
+        "time" : {
+          "start" : 1633024528375,
+          "stop" : 1633024529403,
+          "duration" : 1028
+        }
+      }, {
+        "uid" : "8f4b4a7a2cf960f9",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/83//#testresult/8f4b4a7a2cf960f9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1633022550011,
+          "stop" : 1633022551317,
+          "duration" : 1306
+        }
+      }, {
+        "uid" : "7e9255f09a220f8c",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/82//#testresult/7e9255f09a220f8c",
+        "status" : "failed",
+        "statusDetails" : "Returned error: Node is behind by 224 slots",
+        "time" : {
+          "start" : 1633022512679,
+          "stop" : 1633022513701,
+          "duration" : 1022
+        }
+      }, {
+        "uid" : "2145222dc63787d1",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/79//#testresult/2145222dc63787d1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1633020819494,
+          "stop" : 1633020820692,
+          "duration" : 1198
+        }
+      }, {
+        "uid" : "eabebc816e69beff",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/78//#testresult/eabebc816e69beff",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '10' to equal '100'",
+        "time" : {
+          "start" : 1633017965663,
+          "stop" : 1633017968450,
+          "duration" : 2787
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "de7bcc036066c799.json",
+  "parameterValues" : [ "101", "100" ]
+}
