@@ -1,0 +1,282 @@
+{
+  "uid" : "586f1fe0314b8823",
+  "name" : "a user to user failed transaction -- @1.1 ",
+  "fullName" : "transaction: a user to user failed transaction",
+  "historyId" : "cbfee9b7458b6bb72d5fe59a14bd1d82",
+  "time" : {
+    "start" : 1633024772426,
+    "stop" : 1633024774186,
+    "duration" : 1760
+  },
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'function' object has no attribute 'toWei'\n",
+  "statusTrace" : "  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"features/steps/transaction.py\", line 116, in step_user_alice_no_changes\n    expected_balance = data.initial_balance_alice - get_web3.toWei(\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "AttributeError: 'function' object has no attribute 'toWei'\n",
+    "statusTrace" : "  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"features/steps/transaction.py\", line 116, in step_user_alice_no_changes\n    expected_balance = data.initial_balance_alice - get_web3.toWei(\n",
+    "steps" : [ {
+      "name" : "Given there is user Alice in Ethereum network with the initial balance 100Ξ",
+      "time" : {
+        "start" : 1633024772426,
+        "stop" : 1633024772647,
+        "duration" : 221
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "create",
+        "time" : {
+          "start" : 1633024772427,
+          "stop" : 1633024772433,
+          "duration" : 6
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "create_with_specific_id",
+          "time" : {
+            "start" : 1633024772427,
+            "stop" : 1633024772433,
+            "duration" : 6
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "id",
+            "value" : "''"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "And there is user Bob in Ethereum network with the initial balance 100Ξ",
+      "time" : {
+        "start" : 1633024772647,
+        "stop" : 1633024772863,
+        "duration" : 216
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "create",
+        "time" : {
+          "start" : 1633024772647,
+          "stop" : 1633024772653,
+          "duration" : 6
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "create_with_specific_id",
+          "time" : {
+            "start" : 1633024772647,
+            "stop" : 1633024772653,
+            "duration" : 6
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "id",
+            "value" : "''"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "When user Alice sends 100Ξ to user Bob",
+      "time" : {
+        "start" : 1633024772863,
+        "stop" : 1633024773779,
+        "duration" : 916
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then the recipient has balance increased by 0Ξ",
+      "time" : {
+        "start" : 1633024773779,
+        "stop" : 1633024773982,
+        "duration" : 203
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And the sender has balance decreased by 0Ξ",
+      "time" : {
+        "start" : 1633024773982,
+        "stop" : 1633024774186,
+        "duration" : 204
+      },
+      "status" : "broken",
+      "statusMessage" : "AttributeError: 'function' object has no attribute 'toWei'\n",
+      "statusTrace" : "  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"features/steps/transaction.py\", line 116, in step_user_alice_no_changes\n    expected_balance = data.initial_balance_alice - get_web3.toWei(\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 9,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "transaction"
+  }, {
+    "name" : "framework",
+    "value" : "behave"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "amount",
+    "value" : "100"
+  }, {
+    "name" : "initial balance",
+    "value" : "100"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 6,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 7
+      },
+      "items" : [ {
+        "uid" : "b73c8648eece8645",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/86//#testresult/b73c8648eece8645",
+        "status" : "broken",
+        "statusDetails" : "ValueError: {'code': -32005, 'message': 'Node is behind by 5832 slots', 'data': {'numSlotsBehind': 5832}}\n",
+        "time" : {
+          "start" : 1633024704691,
+          "stop" : 1633024705708,
+          "duration" : 1017
+        }
+      }, {
+        "uid" : "ca3e0deb6b28f1cc",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/84//#testresult/ca3e0deb6b28f1cc",
+        "status" : "broken",
+        "statusDetails" : "ValueError: {'code': -32005, 'message': 'Node is behind by 5512 slots', 'data': {'numSlotsBehind': 5512}}\n",
+        "time" : {
+          "start" : 1633024592100,
+          "stop" : 1633024593128,
+          "duration" : 1028
+        }
+      }, {
+        "uid" : "2830d5d5c406c0e5",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/83//#testresult/2830d5d5c406c0e5",
+        "status" : "broken",
+        "statusDetails" : "\nYou can implement step definitions for undefined steps with these snippets:\n\n@given(u'there is user Alice in Ethereum network with the initial balance 100Ξ')\ndef step_impl(context):\n    raise NotImplementedError(u'STEP: Given there is user Alice in Ethereum network with the initial balance 100Ξ')\n\n",
+        "time" : {
+          "start" : 1633022612117,
+          "stop" : 1633022612118,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "4427d76a6d119c4b",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/82//#testresult/4427d76a6d119c4b",
+        "status" : "broken",
+        "statusDetails" : "\nYou can implement step definitions for undefined steps with these snippets:\n\n@given(u'there is user Alice in Ethereum network with the initial balance 100Ξ')\ndef step_impl(context):\n    raise NotImplementedError(u'STEP: Given there is user Alice in Ethereum network with the initial balance 100Ξ')\n\n",
+        "time" : {
+          "start" : 1633022554837,
+          "stop" : 1633022554838,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "b2b00f1fe3e0cc68",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/79//#testresult/b2b00f1fe3e0cc68",
+        "status" : "broken",
+        "statusDetails" : "UnboundLocalError: local variable 'signed_txn' referenced before assignment\n",
+        "time" : {
+          "start" : 1633020860255,
+          "stop" : 1633020861486,
+          "duration" : 1231
+        }
+      }, {
+        "uid" : "e0e863267bc7c358",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/78//#testresult/e0e863267bc7c358",
+        "status" : "failed",
+        "statusDetails" : "AssertionError\n",
+        "time" : {
+          "start" : 1633018016493,
+          "stop" : 1633018019347,
+          "duration" : 2854
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "586f1fe0314b8823.json",
+  "parameterValues" : [ "100", "100" ]
+}
