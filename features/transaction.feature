@@ -9,9 +9,9 @@ Feature: transaction
 
     Examples:
       | initial balance | amount |
-      | 10              | 1      |
-      | 10              | 2      |
-      | 10              | 9      |
+      | 100             | 1      |
+      | 100             | 20     |
+      | 100             | 90     |
 
   Scenario Outline: a user to user failed transaction
     Given there is user Alice in Ethereum network with the initial balance <initial balance>Ξ
@@ -22,7 +22,7 @@ Feature: transaction
 
     Examples:
       | initial balance | amount |
-      # | 10              | 0      |
-      # | 10              | 0.1    |
-      | 10              | 10     |
-      | 10              | 11     |
+      # | 100             | 0      |
+      # | 100             | 0.1    |
+      | 100             | 100    |
+      | 100             | 101    |
