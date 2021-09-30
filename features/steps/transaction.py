@@ -36,7 +36,7 @@ def step_user_alice_initial_balance(context, initial_balance: str):
     assert initial_balance == str(ethers_amount)
 
 
-@given(u'there is user Bob in Ethereum network' +
+@given(u'there is user Bob in Ethereum network ' +
        u'with the initial balance {initial_balance}Ξ')
 def step_user_bob_initial_balance(context, initial_balance: str):
     data.user_bob = AccountFactory().create()
