@@ -23,8 +23,8 @@ data = Data(None, None, 0, 0)
 w3 = get_web3()
 
 
-@given(u'there is user Alice in Ethereum network \
-    with the initial balance {initial_balance}Ξ')
+@given(u'there is user Alice in Ethereum network ' +
+       u'with the initial balance {initial_balance}Ξ')
 def step_user_alice_initial_balance(context, initial_balance: str):
     data.user_alice = AccountFactory().create()
     print(f"user A: {data.user_alice.address}")
@@ -36,8 +36,8 @@ def step_user_alice_initial_balance(context, initial_balance: str):
     assert initial_balance == str(ethers_amount)
 
 
-@given(u'there is user Bob in Ethereum network \
-    with the initial balance {initial_balance}Ξ')
+@given(u'there is user Bob in Ethereum network' +
+       u'with the initial balance {initial_balance}Ξ')
 def step_user_bob_initial_balance(context, initial_balance: str):
     data.user_bob = AccountFactory().create()
     print(f"user B: {data.user_bob.address}")
