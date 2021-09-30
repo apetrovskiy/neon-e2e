@@ -1,0 +1,422 @@
+{
+  "uid" : "72da286b9c1763fb",
+  "name" : "a user to user successful transaction -- @1.1 ",
+  "fullName" : "transaction: a user to user successful transaction",
+  "historyId" : "f643c21b8775b0017cb9293a77768a4e",
+  "time" : {
+    "start" : 1633034733604,
+    "stop" : 1633034742207,
+    "duration" : 8603
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError\n",
+  "statusTrace" : "  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"features/steps/transaction.py\", line 93, in step_user_bob_result\n    assert balance == expected_balance\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError\n",
+    "statusTrace" : "  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"features/steps/transaction.py\", line 93, in step_user_bob_result\n    assert balance == expected_balance\n",
+    "steps" : [ {
+      "name" : "Given there is user Alice in Ethereum network with the initial balance 10Ξ",
+      "time" : {
+        "start" : 1633034733605,
+        "stop" : 1633034737217,
+        "duration" : 3612
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "create",
+        "time" : {
+          "start" : 1633034733605,
+          "stop" : 1633034733640,
+          "duration" : 35
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "create_with_specific_id",
+          "time" : {
+            "start" : 1633034733605,
+            "stop" : 1633034733639,
+            "duration" : 34
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "id",
+            "value" : "''"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "And there is user Bob in Ethereum network with the initial balance 10Ξ",
+      "time" : {
+        "start" : 1633034737218,
+        "stop" : 1633034740456,
+        "duration" : 3238
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "create",
+        "time" : {
+          "start" : 1633034737218,
+          "stop" : 1633034737227,
+          "duration" : 9
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "create_with_specific_id",
+          "time" : {
+            "start" : 1633034737219,
+            "stop" : 1633034737227,
+            "duration" : 8
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "id",
+            "value" : "''"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "When user Alice sends 1Ξ to user Bob",
+      "time" : {
+        "start" : 1633034740456,
+        "stop" : 1633034741817,
+        "duration" : 1361
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then the recipient has balance increased by 1Ξ",
+      "time" : {
+        "start" : 1633034741817,
+        "stop" : 1633034742206,
+        "duration" : 389
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError\n",
+      "statusTrace" : "  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"features/steps/transaction.py\", line 93, in step_user_bob_result\n    assert balance == expected_balance\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "And the sender has balance decreased more than by 1Ξ",
+      "time" : {
+        "start" : 1633034742207,
+        "stop" : 1633034742207,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 9,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "transaction"
+  }, {
+    "name" : "framework",
+    "value" : "behave"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "amount",
+    "value" : "1"
+  }, {
+    "name" : "initial balance",
+    "value" : "10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 10,
+        "broken" : 27,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 39
+      },
+      "items" : [ {
+        "uid" : "b9dedad28964be4d",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/104//#testresult/b9dedad28964be4d",
+        "status" : "failed",
+        "statusDetails" : "AssertionError\n",
+        "time" : {
+          "start" : 1633034753301,
+          "stop" : 1633034753889,
+          "duration" : 588
+        }
+      }, {
+        "uid" : "55b5920825959c3f",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/101//#testresult/55b5920825959c3f",
+        "status" : "failed",
+        "statusDetails" : "AssertionError\n",
+        "time" : {
+          "start" : 1633034480650,
+          "stop" : 1633034489188,
+          "duration" : 8538
+        }
+      }, {
+        "uid" : "51632310903a6ca6",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/98//#testresult/51632310903a6ca6",
+        "status" : "failed",
+        "statusDetails" : "AssertionError\n",
+        "time" : {
+          "start" : 1633033508346,
+          "stop" : 1633033529887,
+          "duration" : 21541
+        }
+      }, {
+        "uid" : "b20b39acf5e1a135",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/97//#testresult/b20b39acf5e1a135",
+        "status" : "failed",
+        "statusDetails" : "AssertionError\n",
+        "time" : {
+          "start" : 1633033462611,
+          "stop" : 1633033472751,
+          "duration" : 10140
+        }
+      }, {
+        "uid" : "581658fe71963d1c",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/96//#testresult/581658fe71963d1c",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='proxy.devnet.neonlabs.org', port=443): Read timed out. (read timeout=10)\n",
+        "time" : {
+          "start" : 1633033324556,
+          "stop" : 1633033389707,
+          "duration" : 65151
+        }
+      }, {
+        "uid" : "9c7ee063d4a41192",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/93//#testresult/9c7ee063d4a41192",
+        "status" : "failed",
+        "statusDetails" : "AssertionError\n",
+        "time" : {
+          "start" : 1633031655521,
+          "stop" : 1633031663442,
+          "duration" : 7921
+        }
+      }, {
+        "uid" : "c72429d601b693e2",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/92//#testresult/c72429d601b693e2",
+        "status" : "failed",
+        "statusDetails" : "AssertionError\n",
+        "time" : {
+          "start" : 1633031250007,
+          "stop" : 1633031257596,
+          "duration" : 7589
+        }
+      }, {
+        "uid" : "8cfde4526235657a",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/89//#testresult/8cfde4526235657a",
+        "status" : "broken",
+        "statusDetails" : "ValueError: {'code': -32005, 'message': 'Node is behind by 8152 slots', 'data': {'numSlotsBehind': 8152}}\n",
+        "time" : {
+          "start" : 1633025620705,
+          "stop" : 1633025622094,
+          "duration" : 1389
+        }
+      }, {
+        "uid" : "2f20e3233ca5a4b5",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/88//#testresult/2f20e3233ca5a4b5",
+        "status" : "broken",
+        "statusDetails" : "ValueError: {'code': -32005, 'message': 'Node is behind by 7728 slots', 'data': {'numSlotsBehind': 7728}}\n",
+        "time" : {
+          "start" : 1633025426575,
+          "stop" : 1633025427803,
+          "duration" : 1228
+        }
+      }, {
+        "uid" : "3203e9bd5057dfde",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/85//#testresult/3203e9bd5057dfde",
+        "status" : "broken",
+        "statusDetails" : "ValueError: {'code': -32005, 'message': 'Node is behind by 5732 slots', 'data': {'numSlotsBehind': 5732}}\n",
+        "time" : {
+          "start" : 1633024659319,
+          "stop" : 1633024660895,
+          "duration" : 1576
+        }
+      }, {
+        "uid" : "bc35312c6c91672a",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/80//#testresult/bc35312c6c91672a",
+        "status" : "broken",
+        "statusDetails" : "\nYou can implement step definitions for undefined steps with these snippets:\n\n@given(u'there is user Alice in Ethereum network with the initial balance 10Ξ')\ndef step_impl(context):\n    raise NotImplementedError(u'STEP: Given there is user Alice in Ethereum network with the initial balance 10Ξ')\n\n",
+        "time" : {
+          "start" : 1633022469984,
+          "stop" : 1633022469986,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "fdc070aee2422f60",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/77//#testresult/fdc070aee2422f60",
+        "status" : "broken",
+        "statusDetails" : "UnboundLocalError: local variable 'signed_txn' referenced before assignment\n",
+        "time" : {
+          "start" : 1633017815297,
+          "stop" : 1633017822546,
+          "duration" : 7249
+        }
+      }, {
+        "uid" : "f7ab19cb0c368031",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/76//#testresult/f7ab19cb0c368031",
+        "status" : "failed",
+        "statusDetails" : "AssertionError\n",
+        "time" : {
+          "start" : 1633017285056,
+          "stop" : 1633017285751,
+          "duration" : 695
+        }
+      }, {
+        "uid" : "fb5e1bc5dac54afb",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/75//#testresult/fb5e1bc5dac54afb",
+        "status" : "broken",
+        "statusDetails" : "UnboundLocalError: local variable 'signed_txn' referenced before assignment\n",
+        "time" : {
+          "start" : 1633017214737,
+          "stop" : 1633017223328,
+          "duration" : 8591
+        }
+      }, {
+        "uid" : "b0128276ef0d199f",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/74//#testresult/b0128276ef0d199f",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.SSLError: HTTPSConnectionPool(host='v0_1_2.proxy.dev.neonlabs.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(\"hostname 'v0_1_2.proxy.dev.neonlabs.org' doesn't match 'dev.doc.neontest.xyz'\")))\n",
+        "time" : {
+          "start" : 1633015879936,
+          "stop" : 1633015881429,
+          "duration" : 1493
+        }
+      }, {
+        "uid" : "cb9d72bcd0fc17a2",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/73//#testresult/cb9d72bcd0fc17a2",
+        "status" : "broken",
+        "statusDetails" : "UnboundLocalError: local variable 'signed_txn' referenced before assignment\n",
+        "time" : {
+          "start" : 1633015778839,
+          "stop" : 1633015785651,
+          "duration" : 6812
+        }
+      }, {
+        "uid" : "dbc108485e3637be",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/72//#testresult/dbc108485e3637be",
+        "status" : "broken",
+        "statusDetails" : "UnboundLocalError: local variable 'signed_txn' referenced before assignment\n",
+        "time" : {
+          "start" : 1632676491400,
+          "stop" : 1632676499074,
+          "duration" : 7674
+        }
+      }, {
+        "uid" : "87fc6dcc54be8585",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/69//#testresult/87fc6dcc54be8585",
+        "status" : "failed",
+        "statusDetails" : "AssertionError\n",
+        "time" : {
+          "start" : 1632656238885,
+          "stop" : 1632656247016,
+          "duration" : 8131
+        }
+      }, {
+        "uid" : "38226d9b436b8926",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/68//#testresult/38226d9b436b8926",
+        "status" : "broken",
+        "statusDetails" : "UnboundLocalError: local variable 'signed_txn' referenced before assignment\n",
+        "time" : {
+          "start" : 1632588440312,
+          "stop" : 1632588456540,
+          "duration" : 16228
+        }
+      }, {
+        "uid" : "914bac51840f84ba",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/67//#testresult/914bac51840f84ba",
+        "status" : "broken",
+        "statusDetails" : "UnboundLocalError: local variable 'signed_txn' referenced before assignment\n",
+        "time" : {
+          "start" : 1632588161130,
+          "stop" : 1632588168728,
+          "duration" : 7598
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "72da286b9c1763fb.json",
+  "parameterValues" : [ "1", "10" ]
+}
