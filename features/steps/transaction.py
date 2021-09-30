@@ -23,9 +23,8 @@ data = Data(None, None, 0, 0)
 w3 = get_web3()
 
 
-@given(
-    u'there is user Alice in Ethereum network with the initial balance {initial_balance}Ξ'
-)
+@given(u'there is user Alice in Ethereum network ' +
+       u'with the initial balance {initial_balance}Ξ')
 def step_user_alice_initial_balance(context, initial_balance: str):
     data.user_alice = AccountFactory().create()
     print(f"user A: {data.user_alice.address}")
@@ -37,9 +36,8 @@ def step_user_alice_initial_balance(context, initial_balance: str):
     assert initial_balance == str(ethers_amount)
 
 
-@given(
-    u'there is user Bob in Ethereum network with the initial balance {initial_balance}Ξ'
-)
+@given(u'there is user Bob in Ethereum network ' +
+       u'with the initial balance {initial_balance}Ξ')
 def step_user_bob_initial_balance(context, initial_balance: str):
     data.user_bob = AccountFactory().create()
     print(f"user B: {data.user_bob.address}")
@@ -53,9 +51,8 @@ def step_user_bob_initial_balance(context, initial_balance: str):
 
 @when(u'user Alice sends {eth_number}Ξ to user Bob')
 def step_transaction(context, eth_number: str):
-    print(
-        f"Attempting to send {eth_number}Ξ from {data.user_alice.address} to {data.user_bob.address}"
-    )
+    print(f"Attempting to send {eth_number}Ξ from \
+        {data.user_alice.address} to {data.user_bob.address}")
 
     print(f"value = {w3.toWei(eth_number, ETHER)}")
     print(f"gas price = {w3.eth.gas_price}")
@@ -70,18 +67,16 @@ def step_transaction(context, eth_number: str):
                data=b'')
     print(f"transaction: {txn}")
 
-    signed_txn: str
     try:
-        signed_txn = w3.eth.signTransaction(txn,
-                                            str(data.user_alice.privateKey))
+        signed_txn: str = w3.eth.signTransaction(
+            txn, str(data.user_alice.privateKey))
+        # Deploy transaction
+        create_receipt = w3.eth.send_raw_transaction(signed_txn.rawTransaction)
+
+        print(f"Transaction successful with hash: \
+            {create_receipt.transactionHash}")
     except Exception as e:
         print(e)
-
-    # Deploy transaction
-    create_receipt = w3.eth.send_raw_transaction(signed_txn.rawTransaction)
-
-    print(
-        f"Transaction successful with hash: {create_receipt.transactionHash}")
 
     print('when is finished')
 
