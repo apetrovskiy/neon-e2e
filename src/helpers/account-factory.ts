@@ -18,6 +18,7 @@ export class AccountFactory {
     const account = this.createWithSpecificId();
     logger.notice(`Account created = ${account.address}`);
     if (Config.network === Networks.internal_testnet) {
+      logger.notice(`Requesting faucet...`);
       await requestFaucet(account.address, Config.faucetQuotient * 10);
     }
     return account;

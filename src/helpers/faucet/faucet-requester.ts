@@ -10,8 +10,9 @@ import { FaucetRequest } from './faucet-request';
 
 export const requestFaucet = async (wallet: string, amount: number): Promise<void> => {
   const data: FaucetRequest = { amount: amount, wallet: wallet };
-  logger.notice(`URL: ${Config.baseUrl + Urls.request_erc20_tokens}`);
+  const url: string = Config.baseUrl + Urls.request_erc20_tokens;
+  logger.notice(`URL: ${url}`);
   logger.notice(`Wallet = ${data.wallet}, amount = ${data.amount}`);
-  const result = await axios.post(Config.baseUrl + Urls.request_erc20_tokens, data);
+  const result = await axios.post(url, data);
   logger.notice(result);
 };
