@@ -25,8 +25,8 @@ w3 = get_web3()
 
 @given(u'there is user Alice in Ethereum network ' +
        u'with the initial balance {initial_balance}Ξ')
-def step_user_alice_initial_balance(context, initial_balance: str):
-    data.user_alice = AccountFactory().create()
+async def step_user_alice_initial_balance(context, initial_balance: str):
+    data.user_alice = await AccountFactory().create()
     print(f"user A: {data.user_alice.address}")
     balance = w3.eth.get_balance(data.user_alice.address)
     ethers_amount = w3.fromWei(balance, ETHER)
@@ -38,8 +38,8 @@ def step_user_alice_initial_balance(context, initial_balance: str):
 
 @given(u'there is user Bob in Ethereum network ' +
        u'with the initial balance {initial_balance}Ξ')
-def step_user_bob_initial_balance(context, initial_balance: str):
-    data.user_bob = AccountFactory().create()
+async def step_user_bob_initial_balance(context, initial_balance: str):
+    data.user_bob = await AccountFactory().create()
     print(f"user B: {data.user_bob.address}")
     balance = w3.eth.get_balance(data.user_bob.address)
     ethers_amount = w3.fromWei(balance, ETHER)
