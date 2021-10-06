@@ -20,7 +20,7 @@ const balanceHelper = new Balance();
 const applyQuotient = (amount: number) => amount * quotient;
 
 Given('there is user Alice in Ethereum network with the initial balance {int}Ξ', async (initialBalance: number) => {
-  userAlice = new AccountFactory().create();
+  userAlice = await new AccountFactory().create();
   logger.notice(`user A: ${userAlice.address}`);
   initialBalanceAlice = await balanceHelper.getBalance(userAlice);
   const ethersAmount = balanceHelper.convertToEther(initialBalanceAlice);
@@ -30,7 +30,8 @@ Given('there is user Alice in Ethereum network with the initial balance {int}Ξ'
 });
 
 Given('there is user Bob in Ethereum network with the initial balance {int}Ξ', async (initialBalance: number) => {
-  userBob = new AccountFactory().create();
+  logger.notice('Creating a wallet');
+  userBob = await new AccountFactory().create();
   logger.notice(`user B: ${userBob.address}`);
   initialBalanceBob = await balanceHelper.getBalance(userBob);
   const ethersAmount = balanceHelper.convertToEther(initialBalanceBob);

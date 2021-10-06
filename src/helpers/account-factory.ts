@@ -1,15 +1,27 @@
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import { Config } from 'config/default';
 import { config } from 'dotenv';
+import { logger } from 'src/utils/logger';
 import Web3 from 'web3';
 // import { Accounts } from "web3-eth-accounts";
 import { Account } from 'web3-core';
 
+import { Networks } from './common/networks';
+import { requestFaucet } from './faucet/faucet-requester';
+
 export class AccountFactory {
-  create(): Account {
-    return this.createWithSpecificId();
+  async create(): Promise<Account> {
+    const account = this.createWithSpecificId();
+    logger.notice(`Account created = ${account.address}`);
+    if (Config.network === Networks.internal_testnet) {
+      logger.notice(`Requesting faucet...`);
+      await requestFaucet(account.address, Config.faucetQuotient * 10);
+    }
+    return account;
   }
 
   createWithSpecificId(id?: string): Account {
