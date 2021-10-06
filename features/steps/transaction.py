@@ -8,7 +8,7 @@ ETHER = "ether"
 
 
 def get_web3():
-    return Web3(Web3.HTTPProvider(config.HTTP_URL))
+    return Web3(Web3.HTTPProvider(config.PROXY_URL))
 
 
 @dataclass
@@ -50,7 +50,7 @@ async def step_user_bob_initial_balance(context, initial_balance: str):
 
 
 @when(u'user Alice sends {eth_number}Ξ to user Bob')
-def step_transaction(context, eth_number: str):
+async def step_transaction(context, eth_number: str):
     print(f"Attempting to send {eth_number}Ξ from \
         {data.user_alice.address} to {data.user_bob.address}")
 
@@ -82,7 +82,7 @@ def step_transaction(context, eth_number: str):
 
 
 @then(u'the recipient has balance increased by {eth_number}Ξ')
-def step_user_bob_result(context, eth_number: str):
+async def step_user_bob_result(context, eth_number: str):
     balance = w3.eth.get_balance(data.user_bob.address)
 
     print(f"initial user B balance {data.initial_balance_bob}")
@@ -94,7 +94,7 @@ def step_user_bob_result(context, eth_number: str):
 
 
 @then(u'the sender has balance decreased more than by {eth_number}Ξ')
-def step_user_alice_result(context, eth_number):
+async def step_user_alice_result(context, eth_number):
     balance = w3.eth.get_balance(data.user_alice.address)
 
     print(f"initial user A balance {data.initial_balance_alice}")
@@ -106,7 +106,7 @@ def step_user_alice_result(context, eth_number):
 
 
 @then(u'the sender has balance decreased by {eth_number}Ξ')
-def step_user_alice_no_changes(context, eth_number):
+async def step_user_alice_no_changes(context, eth_number):
     balance = w3.eth.get_balance(data.user_alice.address)
 
     print(f"initial user A balance {data.initial_balance_alice}")
