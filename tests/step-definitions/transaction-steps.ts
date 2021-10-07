@@ -9,6 +9,7 @@ import { Balance } from 'src/helpers/balance';
 import { Web3Helper } from 'src/helpers/web3-helper';
 import { TxHelper } from 'src/helpers/tx-helper';
 import { Config } from 'config/default';
+import { errorMessages } from 'src/constants/error-messages';
 
 let userAlice: Account;
 let userBob: Account;
@@ -52,7 +53,10 @@ When('user Alice sends {int}Ξ to user Bob', async (ethNumber: number) => {
   };
   await deploy()
     .then(() => logger.notice('SUCCESS'))
-    .catch((err) => console.error(err));
+    .catch((err) => {
+      console.error(err);
+      expect(err.message, expectations.ERROR_DURING_TRANSACTION).to.contain(errorMessages.INVALID_INSTRUCTION_DATA);
+    });
 
   logger.notice('when is finished');
 });
