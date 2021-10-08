@@ -6,8 +6,7 @@ import (
 	"testing"
 
 	"github.com/dailymotion/allure-go"
-	// "github.com/joho/godotenv"
-  "github.com/neonlabsorg/neon-e2e"
+	"github.com/neonlabsorg/neon-e2e"
 )
 
 var testData = []struct {
@@ -25,23 +24,14 @@ var testData = []struct {
 }
 
 func TestLoad(t *testing.T) {
-  readEnvVariables()
+	readEnvVariables()
 }
 
 func TestFrogJmp(t *testing.T) {
-	// _ = godotenv.Load("../../../../../../.env")
-	// _ = godotenv.Load("../../../../../../variables.env")
-	fmt.Println("=========222=========")
-	fmt.Println(os.Getenv("ALLURE_RESULTS_PATH"))
+
 	for _, td := range testData {
 		t.Run(fmt.Sprintf("Run, data = %o", td), func(t *testing.T) {
 			allure.Test(t, allure.Action(func() {
-
-				// _ = godotenv.Load("../../../../../../.env")
-				// _ = godotenv.Load("../../../../../../variables.env")
-				// fmt.Println("=========333=========")
-				// fmt.Println(os.Getenv("ALLURE_RESULTS_PATH"))
-
 				if td.out != SolutionFrogJmp(td.x, td.y, td.d) {
 					t.Errorf("FAIL!")
 				}
@@ -51,19 +41,10 @@ func TestFrogJmp(t *testing.T) {
 }
 
 func TestPassedExample(t *testing.T) {
-	// _ = godotenv.Load("../../../../../../.env")
-	// _ = godotenv.Load("../../../../../../variables.env")
-	fmt.Println("=========444=========")
-	fmt.Println(os.Getenv("ALLURE_RESULTS_PATH"))
+
 	allure.Test(t,
 		allure.Description("This is a test to show allure implementation with a passing test"),
 		allure.Action(func() {
-
-			// _ = godotenv.Load("../../../../../../.env")
-			// _ = godotenv.Load("../../../../../../variables.env")
-			// fmt.Println("=========555=========")
-			// fmt.Println(os.Getenv("ALLURE_RESULTS_PATH"))
-
 			s := "Hello world"
 			if len(s) == 0 {
 				t.Errorf("Expected 'hello world' string, but got %s ", s)
