@@ -2,7 +2,7 @@ package e2e
 
 import (
 	"fmt"
-	// "os"
+	"os"
 	"testing"
 
 	"github.com/dailymotion/allure-go"
@@ -23,11 +23,15 @@ var testData = []struct {
 	{100, 100, 2, 0},
 }
 
+func TestLoad(t *testing.T) {
+
+}
+
 func TestFrogJmp(t *testing.T) {
 	// _ = godotenv.Load("../../../../../../.env")
 	// _ = godotenv.Load("../../../../../../variables.env")
-	// fmt.Println("=========222=========")
-	// fmt.Println(os.Getenv("ALLURE_RESULTS_PATH"))
+	fmt.Println("=========222=========")
+	fmt.Println(os.Getenv("ALLURE_RESULTS_PATH"))
 	for _, td := range testData {
 		t.Run(fmt.Sprintf("Run, data = %o", td), func(t *testing.T) {
 			allure.Test(t, allure.Action(func() {
@@ -48,8 +52,8 @@ func TestFrogJmp(t *testing.T) {
 func TestPassedExample(t *testing.T) {
 	// _ = godotenv.Load("../../../../../../.env")
 	// _ = godotenv.Load("../../../../../../variables.env")
-	// fmt.Println("=========444=========")
-	// fmt.Println(os.Getenv("ALLURE_RESULTS_PATH"))
+	fmt.Println("=========444=========")
+	fmt.Println(os.Getenv("ALLURE_RESULTS_PATH"))
 	allure.Test(t,
 		allure.Description("This is a test to show allure implementation with a passing test"),
 		allure.Action(func() {
