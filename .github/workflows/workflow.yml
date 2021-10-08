@@ -1,4 +1,4 @@
-name: Python 3.8, Node.js 16, allure
+name: Python 3.8, Node.js 16, Go 1.17, allure
 
 on:
   push:
@@ -106,13 +106,6 @@ jobs:
     - name: Build
       if: always()
       run: |
-        # echo "github.com/onsi/ginkgo/ginkgo"
-        # go get github.com/onsi/ginkgo/ginkgo
-        # echo "github.com/onsi/gomega/..."
-        # go get github.com/onsi/gomega/...
-        # echo "github.com/dailymotion/allure-go"
-        # go get -u github.com/dailymotion/allure-go
-        # go get github.com/ethereum/go-ethereum
         echo "go mod download"
         go mod download
         echo "go install"
@@ -120,12 +113,6 @@ jobs:
         export ALLURE_RESULTS_PATH=report/allure-results
         GCO_ENABLED=0
         go mod vendor
-
-        echo "GOPATH"
-        echo $GOPATH
-        echo "GOROOT"
-        echo $GOROOT
-
         go build -v ./...
 
     - name: Test
@@ -142,7 +129,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: allure-results
-        path: allure-results
+        path: report/allure-results
 
   allure:
     runs-on: ubuntu-latest
