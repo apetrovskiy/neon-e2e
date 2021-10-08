@@ -1,9 +1,6 @@
 package NeonE2e
 
 import (
-	"fmt"
-	"os"
-
 	"github.com/joho/godotenv"
 )
 
