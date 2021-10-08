@@ -110,14 +110,15 @@ jobs:
         go mod download
         echo "go install"
         go install
-        export ALLURE_RESULTS_PATH=/home/runner/work/neon-e2e/neon-e2e/report
         GCO_ENABLED=0
         go mod vendor
         go build -v ./...
 
     - name: Test
       if: always()
-      run: go test -v ./...
+      run: |
+        export ALLURE_RESULTS_PATH=/home/runner/work/neon-e2e/neon-e2e/report
+        go test -v ./...
 
     - name: Look at Allure
       if: always()
