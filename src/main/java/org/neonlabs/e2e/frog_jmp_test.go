@@ -2,11 +2,9 @@ package e2e
 
 import (
 	"fmt"
-	"os"
 	"testing"
 
 	"github.com/dailymotion/allure-go"
-	"github.com/neonlabsorg/neon-e2e"
 )
 
 var testData = []struct {
