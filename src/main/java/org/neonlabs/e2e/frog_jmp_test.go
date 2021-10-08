@@ -7,6 +7,7 @@ import (
 
 	"github.com/dailymotion/allure-go"
 	// "github.com/joho/godotenv"
+  "github.com/neonlabsorg/neon-e2e"
 )
 
 var testData = []struct {
@@ -24,7 +25,7 @@ var testData = []struct {
 }
 
 func TestLoad(t *testing.T) {
-
+  readEnvVariables()
 }
 
 func TestFrogJmp(t *testing.T) {

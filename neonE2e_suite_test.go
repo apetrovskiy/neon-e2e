@@ -1,4 +1,4 @@
-package neonE2e_test
+package main
 
 import (
 	// "fmt"

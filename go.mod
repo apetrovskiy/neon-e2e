@@ -2,6 +2,8 @@ module github.com/neonlabsorg/neon-e2e
 
 go 1.17
 
+require github.com/joho/godotenv v1.4.0
+
 require (
 	github.com/btcsuite/btcd v0.20.1-beta // indirect
 	github.com/dailymotion/allure-go v0.5.5 // indirect
@@ -11,7 +13,6 @@ require (
 	github.com/go-task/slim-sprig v0.0.0-20210107165309-348f09dbbbc0 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/gopherjs/gopherjs v0.0.0-20190915194858-d3ddacdb130f // indirect
-	github.com/joho/godotenv v1.4.0 // indirect
 	github.com/jtolds/gls v4.20.0+incompatible // indirect
 	github.com/nxadm/tail v1.4.8 // indirect
 	github.com/onsi/ginkgo v1.16.4 // indirect
