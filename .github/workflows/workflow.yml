@@ -109,7 +109,8 @@ jobs:
         go get github.com/onsi/ginkgo/ginkgo
         go get github.com/onsi/gomega/...
         go get -u github.com/dailymotion/allure-go
-        go get github.com/ethereum/go-ethereum
+        # go get github.com/ethereum/go-ethereum
+        go mod download
         export ALLURE_RESULTS_PATH=report/allure-results
         GCO_ENABLED=0
         go mod vendor
