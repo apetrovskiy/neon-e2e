@@ -90,12 +90,60 @@ jobs:
         name: allure-results
         path: report/allure-results
 
+  golang:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ./.github/actions/allure-prep
+    - uses: ./.github/actions/switch-network
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      if: always()
+      with:
+        go-version: 1.17
+
+    - name: Build
+      if: always()
+      run: |
+        go get github.com/onsi/ginkgo/ginkgo
+        go get github.com/onsi/gomega/...
+        go get -u github.com/dailymotion/allure-go
+        go get github.com/ethereum/go-ethereum
+        export ALLURE_RESULTS_PATH=report/allure-results
+        GCO_ENABLED=0
+        go mod vendor
+
+        echo "GOPATH"
+        echo $GOPATH
+        echo "GOROOT"
+        echo $GOROOT
+
+        go build -v ./...
+
+    - name: Test
+      if: always()
+      run: go test -v ./...
+
+    - name: Look at Allure
+      if: always()
+      uses: ./.github/actions/allure-show
+
+    # TODO: de-duplicate
+    - name: Archive Allure results
+      if: always()
+      uses: actions/upload-artifact@v2
+      with:
+        name: allure-results
+        path: allure-results
+
   allure:
     runs-on: ubuntu-latest
     if: always()
     needs:
       - python
       - node
+      - golang
     steps:
 
     - name: Download all workflow run artifacts
