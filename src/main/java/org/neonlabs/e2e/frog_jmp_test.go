@@ -2,11 +2,11 @@ package e2e
 
 import (
 	"fmt"
-	"os"
+	// "os"
 	"testing"
 
 	"github.com/dailymotion/allure-go"
-	"github.com/joho/godotenv"
+	// "github.com/joho/godotenv"
 )
 
 var testData = []struct {
