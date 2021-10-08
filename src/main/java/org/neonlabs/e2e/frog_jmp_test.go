@@ -32,10 +32,10 @@ func TestFrogJmp(t *testing.T) {
 		t.Run(fmt.Sprintf("Run, data = %o", td), func(t *testing.T) {
 			allure.Test(t, allure.Action(func() {
 
-				_ = godotenv.Load("../../../../../../.env")
-				_ = godotenv.Load("../../../../../../variables.env")
-				fmt.Println("=========333=========")
-				fmt.Println(os.Getenv("ALLURE_RESULTS_PATH"))
+				// _ = godotenv.Load("../../../../../../.env")
+				// _ = godotenv.Load("../../../../../../variables.env")
+				// fmt.Println("=========333=========")
+				// fmt.Println(os.Getenv("ALLURE_RESULTS_PATH"))
 
 				if td.out != SolutionFrogJmp(td.x, td.y, td.d) {
 					t.Errorf("FAIL!")
@@ -46,18 +46,18 @@ func TestFrogJmp(t *testing.T) {
 }
 
 func TestPassedExample(t *testing.T) {
-	_ = godotenv.Load("../../../../../../.env")
-	_ = godotenv.Load("../../../../../../variables.env")
-	fmt.Println("=========444=========")
-	fmt.Println(os.Getenv("ALLURE_RESULTS_PATH"))
+	// _ = godotenv.Load("../../../../../../.env")
+	// _ = godotenv.Load("../../../../../../variables.env")
+	// fmt.Println("=========444=========")
+	// fmt.Println(os.Getenv("ALLURE_RESULTS_PATH"))
 	allure.Test(t,
 		allure.Description("This is a test to show allure implementation with a passing test"),
 		allure.Action(func() {
 
-			_ = godotenv.Load("../../../../../../.env")
-			_ = godotenv.Load("../../../../../../variables.env")
-			fmt.Println("=========555=========")
-			fmt.Println(os.Getenv("ALLURE_RESULTS_PATH"))
+			// _ = godotenv.Load("../../../../../../.env")
+			// _ = godotenv.Load("../../../../../../variables.env")
+			// fmt.Println("=========555=========")
+			// fmt.Println(os.Getenv("ALLURE_RESULTS_PATH"))
 
 			s := "Hello world"
 			if len(s) == 0 {
