@@ -23,6 +23,16 @@ export class AccountFactory {
     return account;
   }
 
+  createWithoutInitialBalance(): Account {
+    const account = this.createWithSpecificId();
+    logger.notice(`Account created = ${account.address}`);
+    // if (Config.faucetUrl) {
+    //   logger.notice(`Requesting faucet...`);
+    //   await requestFaucet(account.address, Config.faucetQuotient * 10);
+    // }
+    return account;
+  }
+
   createWithSpecificId(id?: string): Account {
     config();
     const url = process.env.PROXY_URL === undefined ? '' : process.env.PROXY_URL;
