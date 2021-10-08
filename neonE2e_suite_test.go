@@ -1,4 +1,4 @@
-package neon_e2e_test
+package neonE2e_test
 
 import (
 	"testing"
@@ -9,5 +9,5 @@ import (
 
 func TestNeonE2e(t *testing.T) {
 	RegisterFailHandler(Fail)
-	RunSpecs(t, "Neon-e2e Suite")
+	RunSpecs(t, "NeonE2e Suite")
 }

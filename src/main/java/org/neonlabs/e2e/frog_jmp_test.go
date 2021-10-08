@@ -1,4 +1,4 @@
-package a03frogjmp
+package e2e
 
 import "testing"
 

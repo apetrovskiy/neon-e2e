@@ -1,4 +1,4 @@
-package a03frogjmp
+package e2e
 
 // you can also use imports, for example:
 // import "fmt"
