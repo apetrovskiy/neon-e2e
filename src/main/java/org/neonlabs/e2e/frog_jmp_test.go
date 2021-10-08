@@ -21,10 +21,6 @@ var testData = []struct {
 	{100, 100, 2, 0},
 }
 
-func TestLoad(t *testing.T) {
-	readEnvVariables()
-}
-
 func TestFrogJmp(t *testing.T) {
 
 	for _, td := range testData {
