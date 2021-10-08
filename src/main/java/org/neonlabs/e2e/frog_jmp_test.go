@@ -24,10 +24,10 @@ var testData = []struct {
 }
 
 func TestFrogJmp(t *testing.T) {
-	_ = godotenv.Load("../../../../../../.env")
-	_ = godotenv.Load("../../../../../../variables.env")
-	fmt.Println("=========222=========")
-	fmt.Println(os.Getenv("ALLURE_RESULTS_PATH"))
+	// _ = godotenv.Load("../../../../../../.env")
+	// _ = godotenv.Load("../../../../../../variables.env")
+	// fmt.Println("=========222=========")
+	// fmt.Println(os.Getenv("ALLURE_RESULTS_PATH"))
 	for _, td := range testData {
 		t.Run(fmt.Sprintf("Run, data = %o", td), func(t *testing.T) {
 			allure.Test(t, allure.Action(func() {
