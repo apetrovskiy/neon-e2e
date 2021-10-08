@@ -28,9 +28,9 @@ func TestFrogJmp(t *testing.T) {
 			allure.Test(t, allure.Action(func() {
 				if td.out != SolutionFrogJmp(td.x, td.y, td.d) {
 
-					fmt.Println(GetConfig.NetworkId)
-					fmt.Println(GetConfig.ProxyURL)
-					fmt.Println(GetConfig.FaucetUrl)
+					fmt.Println(GetConfig().NetworkId)
+					fmt.Println(GetConfig().ProxyURL)
+					fmt.Println(GetConfig().FaucetUrl)
 
 					t.Errorf("FAIL!")
 				}
