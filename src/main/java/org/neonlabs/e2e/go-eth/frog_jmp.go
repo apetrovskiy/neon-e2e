@@ -1,4 +1,4 @@
-package e2e
+package go_eth
 
 // you can also use imports, for example:
 // import "fmt"
