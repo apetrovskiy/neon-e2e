@@ -1,6 +1,20 @@
 package go_eth
 
+import (
+	"log"
+	"os"
+	"regexp"
+	"strconv"
+
+	"github.com/joho/godotenv"
+)
+
 const projectDirName = "neon-e2e"
+
+type Config struct {
+	NetworkName, ProxyURL, NetworkId, CurrencySymbol, FaucetUrl string
+	FaucetQuotient                                              int
+}
 
 func loadEnv() {
 	projectName := regexp.MustCompile(`^(.*` + projectDirName + `)`)
@@ -21,17 +35,15 @@ func GetConfig() *Config {
 	proxyUrl := os.Getenv("PROXY_URL")
 	networkId := os.Getenv("NETWORK_ID")
 	currencySymbol := os.Getenv("CURRENCY_SYMBOL")
-	faucetQuotient := os.Getenv("FAUCET_QUOTIENT")
+	faucetQuotient, _ := strconv.Atoi(os.Getenv("FAUCET_QUOTIENT"))
 	faucetUrl := os.Getenv("FAUCET_URL")
 
 	return &Config{
-		DB: &DBConfig{
-			NetworkName:    networkName,
-			ProxyURL:       proxyUrl,
-			NetworkId:      networkId,
-			CurrencySymbol: currencySymbol,
-			FaucetQuotient: faucetQuotient,
-			FaucetUrl:      faucetUrl,
-		},
+		NetworkName:    networkName,
+		ProxyURL:       proxyUrl,
+		NetworkId:      networkId,
+		CurrencySymbol: currencySymbol,
+		FaucetQuotient: faucetQuotient,
+		FaucetUrl:      faucetUrl,
 	}
 }
