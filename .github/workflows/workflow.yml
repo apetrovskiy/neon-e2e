@@ -106,11 +106,17 @@ jobs:
     - name: Build
       if: always()
       run: |
+        echo "github.com/onsi/ginkgo/ginkgo"
         go get github.com/onsi/ginkgo/ginkgo
+        echo "github.com/onsi/gomega/..."
         go get github.com/onsi/gomega/...
+        echo "github.com/dailymotion/allure-go"
         go get -u github.com/dailymotion/allure-go
         # go get github.com/ethereum/go-ethereum
+        echo "go mod download"
         go mod download
+        echo "go install"
+        go install
         export ALLURE_RESULTS_PATH=report/allure-results
         GCO_ENABLED=0
         go mod vendor
