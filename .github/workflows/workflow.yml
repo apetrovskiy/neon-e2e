@@ -106,12 +106,12 @@ jobs:
     - name: Build
       if: always()
       run: |
-        echo "github.com/onsi/ginkgo/ginkgo"
-        go get github.com/onsi/ginkgo/ginkgo
-        echo "github.com/onsi/gomega/..."
-        go get github.com/onsi/gomega/...
-        echo "github.com/dailymotion/allure-go"
-        go get -u github.com/dailymotion/allure-go
+        # echo "github.com/onsi/ginkgo/ginkgo"
+        # go get github.com/onsi/ginkgo/ginkgo
+        # echo "github.com/onsi/gomega/..."
+        # go get github.com/onsi/gomega/...
+        # echo "github.com/dailymotion/allure-go"
+        # go get -u github.com/dailymotion/allure-go
         # go get github.com/ethereum/go-ethereum
         echo "go mod download"
         go mod download
