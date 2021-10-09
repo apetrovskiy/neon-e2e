@@ -4,7 +4,7 @@ Feature: deploy contract
     Given there is a contract '<contract file>'
     And the contract is compiled
     When the contract is deployed
-    Then there is no errors
+    Then there are no errors
 
     Examples:
       | contract file |

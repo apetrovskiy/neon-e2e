@@ -35,4 +35,4 @@ When('the contract is deployed', async () => {
   contract.methods.deploy(); //DeployOptions);
 });
 
-Then('there is no errors', async () => {});
+Then('there are no errors', async () => {});
