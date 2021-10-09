@@ -1,7 +1,6 @@
 package go_eth
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/dailymotion/allure-go"
