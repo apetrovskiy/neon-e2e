@@ -1,0 +1,377 @@
+{
+  "uid" : "70b8d41bf5cdbc41",
+  "name" : "a user to user failed transaction",
+  "fullName" : "features/transaction.feature:transaction:a user to user failed transaction",
+  "historyId" : "52f0e342c8c61c8a8125f48173d3818c",
+  "time" : {
+    "start" : 1633888263611,
+    "stop" : 1633888276613,
+    "duration" : 13002
+  },
+  "description" : "",
+  "status" : "failed",
+  "statusMessage" : "error happened during the operation: expected 'Returned error: Command \\'[\\'neon-cli\\', \\'--commitment=recent\\', \\'--url\\', \\'https://neon.rpcpool.com/\\', \\'--evm_loader=eeLSJgWzzxrqKv1UxtRVVH8FX3qCQWUs9QuAjJpETGU\\', \\'emulate\\', \\'88e2713c3d372e85251480051daa84648bd4db3d\\', \\'7f3a5ef0768141de7e6201f170d28181556a16f7\\', \\'none\\', \\'0x98a7d9b8314c0000\\']\\' returned non-zero exit status 1.' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'",
+  "statusTrace" : "AssertionError: error happened during the operation: expected 'Returned error: Command \\'[\\'neon-cli\\', \\'--commitment=recent\\', \\'--url\\', \\'https://neon.rpcpool.com/\\', \\'--evm_loader=eeLSJgWzzxrqKv1UxtRVVH8FX3qCQWUs9QuAjJpETGU\\', \\'emulate\\', \\'88e2713c3d372e85251480051daa84648bd4db3d\\', \\'7f3a5ef0768141de7e6201f170d28181556a16f7\\', \\'none\\', \\'0x98a7d9b8314c0000\\']\\' returned non-zero exit status 1.' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:58:69\n    at runNextTicks (node:internal/process/task_queues:61:5)\n    at listOnTimeout (node:internal/timers:526:9)\n    at processTimers (node:internal/timers:500:7)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "time" : { },
+    "status" : "broken",
+    "steps" : [ {
+      "name" : "Before: tests/step-definitions/hooks.ts:9",
+      "time" : {
+        "start" : 1633888263611,
+        "stop" : 1633888263611,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "",
+    "status" : "failed",
+    "statusMessage" : "error happened during the operation: expected 'Returned error: Command \\'[\\'neon-cli\\', \\'--commitment=recent\\', \\'--url\\', \\'https://neon.rpcpool.com/\\', \\'--evm_loader=eeLSJgWzzxrqKv1UxtRVVH8FX3qCQWUs9QuAjJpETGU\\', \\'emulate\\', \\'88e2713c3d372e85251480051daa84648bd4db3d\\', \\'7f3a5ef0768141de7e6201f170d28181556a16f7\\', \\'none\\', \\'0x98a7d9b8314c0000\\']\\' returned non-zero exit status 1.' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'",
+    "statusTrace" : "AssertionError: error happened during the operation: expected 'Returned error: Command \\'[\\'neon-cli\\', \\'--commitment=recent\\', \\'--url\\', \\'https://neon.rpcpool.com/\\', \\'--evm_loader=eeLSJgWzzxrqKv1UxtRVVH8FX3qCQWUs9QuAjJpETGU\\', \\'emulate\\', \\'88e2713c3d372e85251480051daa84648bd4db3d\\', \\'7f3a5ef0768141de7e6201f170d28181556a16f7\\', \\'none\\', \\'0x98a7d9b8314c0000\\']\\' returned non-zero exit status 1.' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:58:69\n    at runNextTicks (node:internal/process/task_queues:61:5)\n    at listOnTimeout (node:internal/timers:526:9)\n    at processTimers (node:internal/timers:500:7)",
+    "steps" : [ {
+      "name" : "Given there is user Alice in Ethereum network with the initial balance <10>Ξ",
+      "time" : {
+        "start" : 1633888263612,
+        "stop" : 1633888268246,
+        "duration" : 4634
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And there is user Bob in Ethereum network with the initial balance <10>Ξ",
+      "time" : {
+        "start" : 1633888268246,
+        "stop" : 1633888274005,
+        "duration" : 5759
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When user Alice sends <11>Ξ to user Bob",
+      "time" : {
+        "start" : 1633888274005,
+        "stop" : 1633888276612,
+        "duration" : 2607
+      },
+      "status" : "failed",
+      "statusMessage" : "error happened during the operation: expected 'Returned error: Command \\'[\\'neon-cli\\', \\'--commitment=recent\\', \\'--url\\', \\'https://neon.rpcpool.com/\\', \\'--evm_loader=eeLSJgWzzxrqKv1UxtRVVH8FX3qCQWUs9QuAjJpETGU\\', \\'emulate\\', \\'88e2713c3d372e85251480051daa84648bd4db3d\\', \\'7f3a5ef0768141de7e6201f170d28181556a16f7\\', \\'none\\', \\'0x98a7d9b8314c0000\\']\\' returned non-zero exit status 1.' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'",
+      "statusTrace" : "AssertionError: error happened during the operation: expected 'Returned error: Command \\'[\\'neon-cli\\', \\'--commitment=recent\\', \\'--url\\', \\'https://neon.rpcpool.com/\\', \\'--evm_loader=eeLSJgWzzxrqKv1UxtRVVH8FX3qCQWUs9QuAjJpETGU\\', \\'emulate\\', \\'88e2713c3d372e85251480051daa84648bd4db3d\\', \\'7f3a5ef0768141de7e6201f170d28181556a16f7\\', \\'none\\', \\'0x98a7d9b8314c0000\\']\\' returned non-zero exit status 1.' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:58:69\n    at runNextTicks (node:internal/process/task_queues:61:5)\n    at listOnTimeout (node:internal/timers:526:9)\n    at processTimers (node:internal/timers:500:7)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "Then the recipient has balance increased by 0Ξ",
+      "time" : {
+        "start" : 1633888276612,
+        "stop" : 1633888276613,
+        "duration" : 1
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And the sender has balance decreased by 0Ξ",
+      "time" : {
+        "start" : 1633888276613,
+        "stop" : 1633888276613,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "2205"
+  }, {
+    "name" : "feature",
+    "value" : "transaction"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "amount",
+    "value" : "11"
+  }, {
+    "name" : "initial balance",
+    "value" : "10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 78,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 26,
+        "unknown" : 0,
+        "total" : 104
+      },
+      "items" : [ {
+        "uid" : "6e2d94a9d1ecd751",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/168//#testresult/6e2d94a9d1ecd751",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1633888155960,
+          "stop" : 1633888156650,
+          "duration" : 690
+        }
+      }, {
+        "uid" : "46f706673eee10f6",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/166//#testresult/46f706673eee10f6",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 404",
+        "time" : {
+          "start" : 1633888145005,
+          "stop" : 1633888145514,
+          "duration" : 509
+        }
+      }, {
+        "uid" : "5b36959161f0b07a",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/165//#testresult/5b36959161f0b07a",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1633767073784,
+          "stop" : 1633767074462,
+          "duration" : 678
+        }
+      }, {
+        "uid" : "b0e809bd6ca3c492",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/164//#testresult/b0e809bd6ca3c492",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1633766911770,
+          "stop" : 1633766912231,
+          "duration" : 461
+        }
+      }, {
+        "uid" : "fe11417966e5903e",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/163//#testresult/fe11417966e5903e",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1633766676132,
+          "stop" : 1633766676835,
+          "duration" : 703
+        }
+      }, {
+        "uid" : "c285d479f7747081",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/161//#testresult/c285d479f7747081",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1633766644781,
+          "stop" : 1633766645266,
+          "duration" : 485
+        }
+      }, {
+        "uid" : "3c3afa2ec87fdf8f",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/159//#testresult/3c3afa2ec87fdf8f",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1633751941735,
+          "stop" : 1633751942238,
+          "duration" : 503
+        }
+      }, {
+        "uid" : "9535785f18d8fa0f",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/158//#testresult/9535785f18d8fa0f",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1633751792834,
+          "stop" : 1633751793368,
+          "duration" : 534
+        }
+      }, {
+        "uid" : "858fcef14ea57263",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/157//#testresult/858fcef14ea57263",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1633751714416,
+          "stop" : 1633751715085,
+          "duration" : 669
+        }
+      }, {
+        "uid" : "cd9db631c93d6e11",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/156//#testresult/cd9db631c93d6e11",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1633717339832,
+          "stop" : 1633717340516,
+          "duration" : 684
+        }
+      }, {
+        "uid" : "8aedd8e906fcbfbb",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/155//#testresult/8aedd8e906fcbfbb",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1633717210088,
+          "stop" : 1633717210789,
+          "duration" : 701
+        }
+      }, {
+        "uid" : "569e151169167ab7",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/154//#testresult/569e151169167ab7",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1633716340312,
+          "stop" : 1633716340837,
+          "duration" : 525
+        }
+      }, {
+        "uid" : "61228158beca132c",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/153//#testresult/61228158beca132c",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1633709582785,
+          "stop" : 1633709583482,
+          "duration" : 697
+        }
+      }, {
+        "uid" : "2771de6b360112d1",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/152//#testresult/2771de6b360112d1",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1633708990935,
+          "stop" : 1633708991740,
+          "duration" : 805
+        }
+      }, {
+        "uid" : "6fcbb16be6674ccd",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/151//#testresult/6fcbb16be6674ccd",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1633706848723,
+          "stop" : 1633706849212,
+          "duration" : 489
+        }
+      }, {
+        "uid" : "6e399133c9ba183c",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/150//#testresult/6e399133c9ba183c",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1633706623883,
+          "stop" : 1633706624581,
+          "duration" : 698
+        }
+      }, {
+        "uid" : "26ec27cd0f4f2dca",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/149//#testresult/26ec27cd0f4f2dca",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1633705789565,
+          "stop" : 1633705790250,
+          "duration" : 685
+        }
+      }, {
+        "uid" : "9f5a16bcc5013100",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/148//#testresult/9f5a16bcc5013100",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1633705545700,
+          "stop" : 1633705546495,
+          "duration" : 795
+        }
+      }, {
+        "uid" : "8ec9a93902ad8698",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/147//#testresult/8ec9a93902ad8698",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1633705364235,
+          "stop" : 1633705364774,
+          "duration" : 539
+        }
+      }, {
+        "uid" : "3d0390bda5e467d3",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/146//#testresult/3d0390bda5e467d3",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1633704381526,
+          "stop" : 1633704382191,
+          "duration" : 665
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "70b8d41bf5cdbc41.json",
+  "parameterValues" : [ "11", "10" ]
+}
