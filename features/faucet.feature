@@ -17,5 +17,5 @@ Feature: faucet
 
     Examples:
       | initial balance | amount | total |
-      | 1               | 1      | 2     |
+      | 2               | 3      | 5     |
       | 10              | 10     | 20    |
