@@ -22,7 +22,8 @@
     "test": "cucumber-js features/**/*.feature $npm_package_config_cucumber",
     "steps-usage": "yarn dry-run --format usage:report/usage.txt --format usage | grep 'UNUSED' || echo 'Good!'",
     "dry-run": "cucumber-js features/**/*.feature $npm_package_config_cucumber --dry-run",
-    "report": "allure generate report/allure-results -o report/allure-report && allure open report/allure-report"
+    "report": "allure generate report/allure-results -o report/allure-report && allure open report/allure-report",
+    "cypress:open": "./node_modules/.bin/cypress open"
   },
   "dependencies": {
     "@hqoss/guards": "^0.0.3",
@@ -48,6 +49,7 @@
     "ts-node": "^9.1.1",
     "tsconfig-paths": "^3.9.0",
     "typescript": "^4.2.3",
+    "unzip-crx-3": "^0.2.0",
     "wait-for-expect": "^3.0.2",
     "web3": "^1.5.2",
     "winston": "^3.3.3"
@@ -57,6 +59,8 @@
     "@typescript-eslint/eslint-plugin": "^4.19.0",
     "@typescript-eslint/parser": "^4.19.0",
     "allure-decorators": "^2.0.0-beta.13",
+    "cypress": "^8.6.0",
+    "cypress-browser-extension-plugin": "^0.1.0",
     "eslint": "^7.24.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-import-resolver-typescript": "^2.4.0",
@@ -69,6 +73,7 @@
     "gherkin-lint": "^4.2.1",
     "husky": "^4.0.0",
     "lint-staged": "^10.5.4",
-    "prettier": "^2.2.0"
+    "prettier": "^2.2.0",
+    "unzip-crx": "^0.2.0"
   }
 }
