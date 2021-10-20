@@ -1,0 +1,376 @@
+{
+  "uid" : "6b7593821854ac27",
+  "name" : "a user to user successful transaction",
+  "fullName" : "features/transaction.feature:transaction:a user to user successful transaction",
+  "historyId" : "90b8dcbcdc4cfde35e119df99631b02f",
+  "time" : {
+    "start" : 1634761490875,
+    "stop" : 1634761491576,
+    "duration" : 701
+  },
+  "description" : "",
+  "status" : "failed",
+  "statusMessage" : "Request failed with status code 500",
+  "statusTrace" : "Error: Request failed with status code 500\n    at createError (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/adapters/http.js:293:11)\n    at IncomingMessage.emit (node:events:402:35)\n    at IncomingMessage.emit (node:domain:475:12)\n    at endReadableNT (node:internal/streams/readable:1343:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
+  "flaky" : true,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "time" : { },
+    "status" : "broken",
+    "steps" : [ {
+      "name" : "Before: tests/step-definitions/hooks.ts:9",
+      "time" : {
+        "start" : 1634761490876,
+        "stop" : 1634761490876,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "",
+    "status" : "failed",
+    "statusMessage" : "Request failed with status code 500",
+    "statusTrace" : "Error: Request failed with status code 500\n    at createError (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/adapters/http.js:293:11)\n    at IncomingMessage.emit (node:events:402:35)\n    at IncomingMessage.emit (node:domain:475:12)\n    at endReadableNT (node:internal/streams/readable:1343:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
+    "steps" : [ {
+      "name" : "Given there is user Alice in Ethereum network with the initial balance <10>Ξ",
+      "time" : {
+        "start" : 1634761490876,
+        "stop" : 1634761491575,
+        "duration" : 699
+      },
+      "status" : "failed",
+      "statusMessage" : "Request failed with status code 500",
+      "statusTrace" : "Error: Request failed with status code 500\n    at createError (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/adapters/http.js:293:11)\n    at IncomingMessage.emit (node:events:402:35)\n    at IncomingMessage.emit (node:domain:475:12)\n    at endReadableNT (node:internal/streams/readable:1343:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "And there is user Bob in Ethereum network with the initial balance <10>Ξ",
+      "time" : {
+        "start" : 1634761491575,
+        "stop" : 1634761491575,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When user Alice sends <9>Ξ to user Bob",
+      "time" : {
+        "start" : 1634761491575,
+        "stop" : 1634761491576,
+        "duration" : 1
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then the recipient has balance increased by <9>Ξ",
+      "time" : {
+        "start" : 1634761491576,
+        "stop" : 1634761491576,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And the sender has balance decreased more than by <9>Ξ",
+      "time" : {
+        "start" : 1634761491576,
+        "stop" : 1634761491576,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "2493"
+  }, {
+    "name" : "feature",
+    "value" : "transaction"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "amount",
+    "value" : "9"
+  }, {
+    "name" : "initial balance",
+    "value" : "10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 80,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 35,
+        "unknown" : 0,
+        "total" : 115
+      },
+      "items" : [ {
+        "uid" : "d3992f5ddd72f140",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/180//#testresult/d3992f5ddd72f140",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1634760938900,
+          "stop" : 1634760939469,
+          "duration" : 569
+        }
+      }, {
+        "uid" : "52449500d2ecbc27",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/179//#testresult/52449500d2ecbc27",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1634760913739,
+          "stop" : 1634760914444,
+          "duration" : 705
+        }
+      }, {
+        "uid" : "b51e475b35b7ac91",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/177//#testresult/b51e475b35b7ac91",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1634723886977,
+          "stop" : 1634723887462,
+          "duration" : 485
+        }
+      }, {
+        "uid" : "186d4bca3de77103",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/176//#testresult/186d4bca3de77103",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1634723860647,
+          "stop" : 1634723861119,
+          "duration" : 472
+        }
+      }, {
+        "uid" : "d0829b54ba79deb4",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/174//#testresult/d0829b54ba79deb4",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1634723848381,
+          "stop" : 1634723848974,
+          "duration" : 593
+        }
+      }, {
+        "uid" : "77b6d3e101afa6b6",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/173//#testresult/77b6d3e101afa6b6",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1634717643723,
+          "stop" : 1634717644351,
+          "duration" : 628
+        }
+      }, {
+        "uid" : "4dee9aaca50146f0",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/172//#testresult/4dee9aaca50146f0",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1634717537399,
+          "stop" : 1634717538014,
+          "duration" : 615
+        }
+      }, {
+        "uid" : "cb83a6d1e6e0d36f",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/171//#testresult/cb83a6d1e6e0d36f",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1634710896291,
+          "stop" : 1634710896902,
+          "duration" : 611
+        }
+      }, {
+        "uid" : "21586daa3a1db116",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/170//#testresult/21586daa3a1db116",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1634710184793,
+          "stop" : 1634710185483,
+          "duration" : 690
+        }
+      }, {
+        "uid" : "fbc8c1fc861d4914",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/169//#testresult/fbc8c1fc861d4914",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 502",
+        "time" : {
+          "start" : 1634508721486,
+          "stop" : 1634508722125,
+          "duration" : 639
+        }
+      }, {
+        "uid" : "7c62bdf9b933bc0a",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/167//#testresult/7c62bdf9b933bc0a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1633888226900,
+          "stop" : 1633888248465,
+          "duration" : 21565
+        }
+      }, {
+        "uid" : "aabdb037f35bf873",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/168//#testresult/aabdb037f35bf873",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1633888154562,
+          "stop" : 1633888155232,
+          "duration" : 670
+        }
+      }, {
+        "uid" : "1a5b81959c49c62e",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/166//#testresult/1a5b81959c49c62e",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 404",
+        "time" : {
+          "start" : 1633888143971,
+          "stop" : 1633888144489,
+          "duration" : 518
+        }
+      }, {
+        "uid" : "985ac631dddb0643",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/165//#testresult/985ac631dddb0643",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1633767072484,
+          "stop" : 1633767073132,
+          "duration" : 648
+        }
+      }, {
+        "uid" : "e7bc50fbe5d52de3",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/164//#testresult/e7bc50fbe5d52de3",
+        "status" : "failed",
+        "statusDetails" : "abort(Error: call revert exception (method=\"factory()\", errorArgs=null, errorName=null, errorSignature=null, reason=null, code=CALL_EXCEPTION, version=abi/5.4.1)). Build with -s ASSERTIONS=1 for more info.",
+        "time" : {
+          "start" : 1633766911029,
+          "stop" : 1633766911267,
+          "duration" : 238
+        }
+      }, {
+        "uid" : "dd289522c25c7132",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/163//#testresult/dd289522c25c7132",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1633766674751,
+          "stop" : 1633766675448,
+          "duration" : 697
+        }
+      }, {
+        "uid" : "a175ddf8891478d9",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/161//#testresult/a175ddf8891478d9",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1633766643779,
+          "stop" : 1633766644291,
+          "duration" : 512
+        }
+      }, {
+        "uid" : "b3a84a407156fca2",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/159//#testresult/b3a84a407156fca2",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1633751940766,
+          "stop" : 1633751941233,
+          "duration" : 467
+        }
+      }, {
+        "uid" : "40c96c63d7f1010f",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/158//#testresult/40c96c63d7f1010f",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1633751791850,
+          "stop" : 1633751792334,
+          "duration" : 484
+        }
+      }, {
+        "uid" : "1ef3a90ee5ec45a3",
+        "reportUrl" : "https://neonlabsorg.github.io/neon-e2e/157//#testresult/1ef3a90ee5ec45a3",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1633751713120,
+          "stop" : 1633751713768,
+          "duration" : 648
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "6b7593821854ac27.json",
+  "parameterValues" : [ "9", "10" ]
+}
