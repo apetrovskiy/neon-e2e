@@ -1,6 +1,8 @@
 from config import config
 from dataclasses import dataclass
-from behave import given, then, when
+from behave import given, step, then, when
+# from behave.api.async_step import async_run_until_complete
+# import asyncio
 from src.helpers.account_factory import AccountFactory
 from web3 import Web3
 
@@ -8,7 +10,7 @@ ETHER = "ether"
 
 
 def get_web3():
-    return Web3(Web3.HTTPProvider(config.HTTP_URL))
+    return Web3(Web3.HTTPProvider(config.PROXY_URL))
 
 
 @dataclass
@@ -23,9 +25,11 @@ data = Data(None, None, 0, 0)
 w3 = get_web3()
 
 
-@given(
-    u'there is user Alice in Ethereum network with the initial balance {initial_balance}Ξ'
-)
+@step("0001")
+# @async_run_until_complete
+@given(u'there is user Alice in Ethereum network ' +
+       u'with the initial balance {initial_balance}Ξ')
+# async
 def step_user_alice_initial_balance(context, initial_balance: str):
     data.user_alice = AccountFactory().create()
     print(f"user A: {data.user_alice.address}")
@@ -37,9 +41,11 @@ def step_user_alice_initial_balance(context, initial_balance: str):
     assert initial_balance == str(ethers_amount)
 
 
-@given(
-    u'there is user Bob in Ethereum network with the initial balance {initial_balance}Ξ'
-)
+@step("0002")
+# @async_run_until_complete
+@given(u'there is user Bob in Ethereum network ' +
+       u'with the initial balance {initial_balance}Ξ')
+# async
 def step_user_bob_initial_balance(context, initial_balance: str):
     data.user_bob = AccountFactory().create()
     print(f"user B: {data.user_bob.address}")
@@ -51,11 +57,13 @@ def step_user_bob_initial_balance(context, initial_balance: str):
     assert initial_balance == str(ethers_amount)
 
 
+@step("0003")
+# @async_run_until_complete
 @when(u'user Alice sends {eth_number}Ξ to user Bob')
+# async
 def step_transaction(context, eth_number: str):
-    print(
-        f"Attempting to send {eth_number}Ξ from {data.user_alice.address} to {data.user_bob.address}"
-    )
+    print(f"Attempting to send {eth_number}Ξ from \
+        {data.user_alice.address} to {data.user_bob.address}")
 
     print(f"value = {w3.toWei(eth_number, ETHER)}")
     print(f"gas price = {w3.eth.gas_price}")
@@ -70,23 +78,26 @@ def step_transaction(context, eth_number: str):
                data=b'')
     print(f"transaction: {txn}")
 
-    signed_txn: str
     try:
-        signed_txn = w3.eth.signTransaction(txn,
-                                            str(data.user_alice.privateKey))
+        signed_txn: str = w3.eth.signTransaction(
+            txn, str(data.user_alice.privateKey))
+
+        # Deploy transaction
+        create_receipt = w3.eth.send_raw_transaction(signed_txn.rawTransaction)
+
+        print(f"Transaction successful with hash: \
+            {create_receipt.transactionHash}")
+
     except Exception as e:
         print(e)
-
-    # Deploy transaction
-    create_receipt = w3.eth.send_raw_transaction(signed_txn.rawTransaction)
-
-    print(
-        f"Transaction successful with hash: {create_receipt.transactionHash}")
 
     print('when is finished')
 
 
+@step("0004")
+# @async_run_until_complete
 @then(u'the recipient has balance increased by {eth_number}Ξ')
+# async
 def step_user_bob_result(context, eth_number: str):
     balance = w3.eth.get_balance(data.user_bob.address)
 
@@ -98,7 +109,10 @@ def step_user_bob_result(context, eth_number: str):
     assert balance == expected_balance
 
 
+@step("0005")
+# @async_run_until_complete
 @then(u'the sender has balance decreased more than by {eth_number}Ξ')
+# async
 def step_user_alice_result(context, eth_number):
     balance = w3.eth.get_balance(data.user_alice.address)
 
@@ -110,7 +124,10 @@ def step_user_alice_result(context, eth_number):
     assert balance <= expected_balance
 
 
+@step("0006")
+# @async_run_until_complete
 @then(u'the sender has balance decreased by {eth_number}Ξ')
+# async
 def step_user_alice_no_changes(context, eth_number):
     balance = w3.eth.get_balance(data.user_alice.address)
 

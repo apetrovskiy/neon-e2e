@@ -6,6 +6,6 @@ load_dotenv()
 
 [print(f"{k}={v}") for k, v in sorted(os.environ.items())]
 
-w3 = Web3(os.getenv("HTTP_URL"))
+w3 = Web3(os.getenv("PROXY_URL"))
 
 [print(account) for account in w3.eth.accounts]
