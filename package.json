@@ -23,7 +23,9 @@
     "steps-usage": "yarn dry-run --format usage:report/usage.txt --format usage | grep 'UNUSED' || echo 'Good!'",
     "dry-run": "cucumber-js features/**/*.feature $npm_package_config_cucumber --dry-run",
     "report": "allure generate report/allure-results -o report/allure-report && allure open report/allure-report",
-    "cypress:open": "./node_modules/.bin/cypress open"
+    "cypress:open": "./node_modules/.bin/cypress open",
+    "cy:run:firefox": "./node_modules/.bin/cypress run --browser firefox",
+    "cy:run:chromium": "./node_modules/.bin/cypress run --browser chromium"
   },
   "dependencies": {
     "@hqoss/guards": "^0.0.3",
