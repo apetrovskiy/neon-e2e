@@ -19,12 +19,12 @@
     "pretest": "rimraf report && mkdir report",
     "dictionary": "rimraf dictionary && bdd-dictionary-generator -p ./tests/step-definitions -f markdown",
     "lint": "eslint '**/*.{ts,js}' --fix --max-warnings 0",
-    "test": "cucumber-js features/**/*.feature $npm_package_config_cucumber",
+    "test:cucumber": "cucumber-js features/**/*.feature $npm_package_config_cucumber",
     "steps-usage": "yarn dry-run --format usage:report/usage.txt --format usage | grep 'UNUSED' || echo 'Good!'",
     "dry-run": "cucumber-js features/**/*.feature $npm_package_config_cucumber --dry-run",
     "report": "allure generate report/allure-results -o report/allure-report && allure open report/allure-report",
     "nw:clean": "rm -rf build",
-    "nw:local": "npm run nw:clean && tsc && nightwatch --config ./nightwatch.local.conf.js"
+    "nw:local": "npm run nw:clean && rm -rf node_modules/nightwatch-allure/node_modules/@types/node && tsc && nightwatch --config ./nightwatch.local.conf.js"
   },
   "dependencies": {
     "@hqoss/guards": "^0.0.3",
@@ -32,7 +32,6 @@
     "@types/config": "^0.0.38",
     "@types/cucumber": "^6.0.0",
     "@types/faker": "^5.1.7",
-    "@types/node": "^14.14.35",
     "allure-commandline": "^2.13.8",
     "allure-cucumberjs": "^2.0.0-beta.9",
     "axios": "^0.22.0",
@@ -78,7 +77,11 @@
     "husky": "^4.0.0",
     "lint-staged": "^10.5.4",
     "nightwatch": "^1.7.11",
+    "nightwatch-allure": "^1.2.0",
     "prettier": "^2.4.1",
     "selenium-server": "^3.141.59"
+  },
+  "peerDependencies": {
+    "@types/node": "^14.14.35"
   }
 }

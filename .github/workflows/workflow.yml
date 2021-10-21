@@ -74,7 +74,7 @@ jobs:
           node-version: 16.x
       - run: npm ci
       - run: npm run build --if-present
-      - run: npm test
+      - run: npm test:cucumber
       # - run: find -name '*.test.js' | while read test ; do echo $test ; npm test $test ; done
 
       - name: Look at Allure
