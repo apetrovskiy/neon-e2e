@@ -22,7 +22,9 @@
     "test": "cucumber-js features/**/*.feature $npm_package_config_cucumber",
     "steps-usage": "yarn dry-run --format usage:report/usage.txt --format usage | grep 'UNUSED' || echo 'Good!'",
     "dry-run": "cucumber-js features/**/*.feature $npm_package_config_cucumber --dry-run",
-    "report": "allure generate report/allure-results -o report/allure-report && allure open report/allure-report"
+    "report": "allure generate report/allure-results -o report/allure-report && allure open report/allure-report",
+    "nw:clean": "rm -rf build",
+    "nw:local": "npm run nw:clean && tsc && nightwatch --config ./nightwatch.local.conf.js"
   },
   "dependencies": {
     "@hqoss/guards": "^0.0.3",

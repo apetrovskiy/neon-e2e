@@ -8,5 +8,6 @@ This dictionary provides the essential steps to test your application.
 
 
  - [deploy-contract-steps](deploy-contract-steps.md)
+ - [faucet-steps](faucet-steps.md)
  - [main-steps](main-steps.md)
  - [transaction-steps](transaction-steps.md)
