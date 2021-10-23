@@ -1,7 +1,7 @@
 # 📗 deploy-contract-steps
 
 
-3 steps defined.
+4 steps defined.
 
 ## 📍 Given
 
@@ -13,10 +13,12 @@
 | --- | ---- | ---- |
 | 1 | contractFileName | string |
 
+#### - the contract is compiled
+
 ## 🎬 When
 
-#### - compiling the contract
+#### - the contract is deployed
 
 ## ✅ Then
 
-#### - there is no errors
+#### - there are no errors
