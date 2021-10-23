@@ -15,8 +15,28 @@ const chrome = {
   webStorageEnabled: true
 };
 
+// usage:
+/*
+    default: {
+      desiredCapabilities: {
+      ...chrome,
+      chromeOptions: headlessChromeOptions
+      },
+*/
+
+const firefox = {
+  acceptSslCerts: true,
+  browserName: 'firefox',
+  javascriptEnabled: true,
+  mationette: true,
+  'moz:firefoxOptions': {
+    args: ['-headless']
+  }
+};
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const headlessChromeOptions = {
-  args: ['headless']
+  args: ['headless', 'no-sandbox', 'disable-gpu']
 };
 
 module.exports = {
@@ -49,10 +69,7 @@ module.exports = {
       }
     },
     default: {
-      desiredCapabilities: {
-        ...chrome,
-        chromeOptions: headlessChromeOptions
-      },
+      desiredCapabilities: firefox,
       globals: {
         // for before/after hooks and variables, see src/globals.ts
       },
@@ -65,6 +82,22 @@ module.exports = {
       },
       silent: true,
       webdriver: {
+        start_process: true
+      }
+    },
+    firefox: {
+      desiredCapabilities: {
+        alwaysMatch: {
+          'moz:firefoxOptions': {
+            args: ['-headless']
+          }
+        },
+        browserName: 'firefox'
+      },
+      webdriver: {
+        host: 'localhost',
+        port: 4444,
+        server_path: 'node_modules/.bin/geckodriver',
         start_process: true
       }
     },

@@ -25,7 +25,7 @@
     "report": "allure generate report/allure-results -o report/allure-report && allure open report/allure-report",
     "nw:clean": "rm -rf build",
     "nw:local": "npm run nw:clean && rm -rf node_modules/nightwatch-allure/node_modules/@types/node && tsc && nightwatch --config ./nightwatch.local.conf.js",
-    "nw:ci": "npm run nw:clean && rm -rf node_modules/nightwatch-allure/node_modules/@types/node && tsc && nightwatch --config ./nightwatch.local.conf.js"
+    "nw:ci": "npm run nw:clean && rm -rf node_modules/nightwatch-allure/node_modules/@types/node && tsc && nightwatch --config ./nightwatch.ci.conf.js"
   },
   "dependencies": {
     "@hqoss/guards": "^0.0.3",
