@@ -48,17 +48,21 @@ jobs:
           # pipenv run pytest --alluredir=report/allure-results
           pipenv run behave -f allure_behave.formatter:AllureFormatter -o report/allure-results ./features --no-capture --no-capture-stderr
 
-      - name: Look at Allure
-        if: always()
-        uses: ./.github/actions/allure-show
+      # - name: Look at Allure
+      #   if: always()
+      #   uses: ./.github/actions/allure-show
 
-      # TODO: de-duplicate
-      - name: Archive Allure results
+      # # TODO: de-duplicate
+      # - name: Archive Allure results
+      #   if: always()
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: allure-results
+      #     path: report/allure-results
+      - uses: ./.github/actions/allure-upload
         if: always()
-        uses: actions/upload-artifact@v2
         with:
-          name: allure-results
-          path: report/allure-results
+          folder-name: report/allure-results
 
   node-cucumber:
     runs-on: ubuntu-latest
@@ -77,17 +81,21 @@ jobs:
       - run: npm test:cucumber
       # - run: find -name '*.test.js' | while read test ; do echo $test ; npm test $test ; done
 
-      - name: Look at Allure
-        if: always()
-        uses: ./.github/actions/allure-show
+      # - name: Look at Allure
+      #   if: always()
+      #   uses: ./.github/actions/allure-show
 
-      # TODO: de-duplicate
-      - name: Archive Allure results
+      # # TODO: de-duplicate
+      # - name: Archive Allure results
+      #   if: always()
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: allure-results
+      #     path: report/allure-results
+      - uses: ./.github/actions/allure-upload
         if: always()
-        uses: actions/upload-artifact@v2
         with:
-          name: allure-results
-          path: report/allure-results
+          folder-name: report/allure-results
 
   node-nightwatch:
     runs-on: ubuntu-latest
@@ -106,17 +114,21 @@ jobs:
       - run: npm run nw:ci
       # - run: find -name '*.test.js' | while read test ; do echo $test ; npm test $test ; done
 
-      - name: Look at Allure
-        if: always()
-        uses: ./.github/actions/allure-show
+      # - name: Look at Allure
+      #   if: always()
+      #   uses: ./.github/actions/allure-show
 
-      # TODO: de-duplicate
-      - name: Archive Allure results
+      # # TODO: de-duplicate
+      # - name: Archive Allure results
+      #   if: always()
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: allure-results
+      #     path: report/allure-results
+      - uses: ./.github/actions/allure-upload
         if: always()
-        uses: actions/upload-artifact@v2
         with:
-          name: allure-results
-          path: report/allure-results
+          folder-name: report/allure-results
 
   golang:
     runs-on: ubuntu-latest
@@ -148,17 +160,21 @@ jobs:
           export ALLURE_RESULTS_PATH=/home/runner/work/neon-e2e/neon-e2e/report
           go test -v ./...
 
-      - name: Look at Allure
-        if: always()
-        uses: ./.github/actions/allure-show
+      # - name: Look at Allure
+      #   if: always()
+      #   uses: ./.github/actions/allure-show
 
-      # TODO: de-duplicate
-      - name: Archive Allure results
+      # # TODO: de-duplicate
+      # - name: Archive Allure results
+      #   if: always()
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: allure-results
+      #     path: report/allure-results
+      - uses: ./.github/actions/allure-upload
         if: always()
-        uses: actions/upload-artifact@v2
         with:
-          name: allure-results
-          path: report/allure-results
+          folder-name: report/allure-results
 
   allure:
     runs-on: ubuntu-latest
