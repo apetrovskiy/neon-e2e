@@ -3,6 +3,7 @@ namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
   using System;
   using dotenv.net.Utilities;
   using Nethereum.Web3;
+
   public class Connection
   {
     public static Web3 Connect()
