@@ -1,13 +1,15 @@
 namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
 {
+  using Allure.Xunit.Attributes;
   using Nethereum.Hex.HexTypes;
   using Nethereum.RPC.Eth.DTOs;
   using NeonEndToEnd.org.neonlabs.e2e.nethereum;
   using Xunit;
 
+  [AllureSuite("Nethereum")]
   public class CallStateFromPreviousBlock
   {
-    [Fact]
+    [AllureXunit(DisplayName = "Should Transfer And GetState From Previous Block test")]
     public async void ShouldTransferAndGetStateFromPreviousBlock()
     {
       var contractByteCode =
