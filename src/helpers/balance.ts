@@ -7,10 +7,10 @@ import { Account } from 'web3-core';
 import { Web3Helper } from './web3-helper';
 
 export class Balance {
-  async getBalance(account: Account): Promise<number> {
+  async getBalance(account: Account): Promise<string> {
     return await Web3Helper.getWeb3().eth.getBalance(account.address);
   }
-  convertToEther(balance: number): string {
+  convertToEther(balance: string): string {
     return Web3Helper.getWeb3().utils.fromWei(balance, unit.ether);
   }
 }
