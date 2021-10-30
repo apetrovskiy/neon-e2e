@@ -19,5 +19,6 @@ func createAccount() {
 	if !ok {
 		log.Fatal("cannot assert type: publicKey is not of type *ecdsa.PublicKey")
 	}
-	publicKeyBytes := crypto.FromECDSA(publicKeyECDSA)
+  // TODO: fix it
+	// publicKeyBytes := crypto.FromECDSA(publicKeyECDSA)
 }
