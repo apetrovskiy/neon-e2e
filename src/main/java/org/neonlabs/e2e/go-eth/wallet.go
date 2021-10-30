@@ -22,5 +22,6 @@ func createAccount() {
 	}
 	// TODO: fix it
 	// publicKeyBytes := crypto.FromECDSA(publicKeyECDSA)
+  fmt.Println(hexString)
 	fmt.Println(publicKeyECDSA)
 }
