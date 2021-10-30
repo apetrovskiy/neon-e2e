@@ -9,7 +9,7 @@ import { logger } from 'src/utils/logger';
 import { Account } from 'web3-core';
 
 let userAlice: Account;
-let initialBalanceAlice = 0;
+let initialBalanceAlice = "0";
 const quotient: number = Config.faucetQuotient;
 const balanceHelper = new Balance();
 const applyQuotient = (amount: number) => amount * quotient;
