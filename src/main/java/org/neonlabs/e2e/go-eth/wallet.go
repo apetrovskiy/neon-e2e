@@ -2,7 +2,6 @@ package go_eth
 
 import (
 	"crypto/ecdsa"
-	"crypto/ecliptic"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/crypto"
 	"log"
