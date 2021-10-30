@@ -2,6 +2,7 @@ package go_eth
 
 import (
 	"crypto/ecdsa"
+	"fmt"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/crypto"
 	"log"
@@ -19,6 +20,7 @@ func createAccount() {
 	if !ok {
 		log.Fatal("cannot assert type: publicKey is not of type *ecdsa.PublicKey")
 	}
-  // TODO: fix it
+	// TODO: fix it
 	// publicKeyBytes := crypto.FromECDSA(publicKeyECDSA)
+	fmt.Println(publicKeyECDSA)
 }
