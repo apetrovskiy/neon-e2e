@@ -13,8 +13,8 @@ import { errorMessages } from 'src/constants/error-messages';
 
 let userAlice: Account;
 let userBob: Account;
-let initialBalanceAlice: number = 0;
-let initialBalanceBob: number = 0;
+let initialBalanceAlice: string = '0';
+let initialBalanceBob: string = '0';
 const quotient: number = Config.faucetQuotient;
 const w3 = Web3Helper.getWeb3();
 const balanceHelper = new Balance();
