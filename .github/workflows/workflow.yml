@@ -70,7 +70,7 @@ jobs:
       - name: Mocha tests
         timeout-minutes: 15
         run: |
-          npm run test:ci
+          npm run test:mocha
           mv ./allure-results/ ./report/
       - uses: ./.github/actions/allure-upload
         if: always()

@@ -7,16 +7,20 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "typeRoots": [
+      "node_modules/@testdeck/mocha",
       "node_modules/@types",
       "node_modules/@types/node/fs/promises.d.ts",
       "node_modules/@types/allure-js-commons/index.d.ts",
       "node_modules/@types/chai/index.d.ts",
       "node_modules/@types/chromedriver/index.d.ts",
       "node_modules/@types/cucumber/index.d.ts",
+      "node_modules/@types/mocha",
       "node_modules/@types/nightwatch/index.d.ts",
       "node_modules/@types/node/index.d.ts",
       "node_modules/@types/rimraf/index.d.ts",
       "types",
+      "node_modules/@parity/api/src/util/index.d.ts",
+      "node_modules/@parity/light.js/index.d.ts",
       "node_modules/web3/types/index.d.ts",
       "node_modules/web3-bzz/types/index.d.ts",
       "node_modules/web3-core/types/index.d.ts",
@@ -47,6 +51,7 @@
     "esModuleInterop": true,
     "outDir": "build",
     "rootDirs": ["src", "tests", "types"],
+    "types": ["node", "mocha", "chai"],
     "inlineSourceMap": true,
     "baseUrl": ".",
     "paths": {
@@ -61,7 +66,7 @@
       "types/*": ["types/*", "src/types/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.js"],
+  "include": ["**/*.ts", "**/*.test.js", "./src/**/*.test.js"],
   "exclude": ["node_modules", "build", "node_modules/**/tests"],
   // "rootDir": "./src",
   "noImplicitAny": true,
@@ -73,5 +78,6 @@
   "skipLibCheck": true,
   "forceConsistentCasingInFileNames": true,
   "resolveJsonModule": true,
-  "strictNullChecks": true
+  "strictNullChecks": true,
+  "allowJs": true
 }
