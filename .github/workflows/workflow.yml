@@ -57,25 +57,25 @@ jobs:
     timeout-minutes: 30
     needs: build
     steps:
-    - uses: actions/checkout@v2
-    - uses: ./.github/actions/allure-prep
-    - uses: ./.github/actions/switch-network
-    - name: Use Node.js 16
-      uses: actions/setup-node@v2
-      if: always()
-      with:
-        node-version: 16.x
-    - run: npm ci
-    - run: npm run build --if-present
-    - name: Mocha tests
-      timeout-minutes: 15
-      run: |
-        npm run test:ci
-        mv ./allure-results/ ./report/
-    - uses: ./.github/actions/allure-upload
-      if: always()
-      with:
-        folder-name: report/allure-results
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/allure-prep
+      - uses: ./.github/actions/switch-network
+      - name: Use Node.js 16
+        uses: actions/setup-node@v2
+        if: always()
+        with:
+          node-version: 16.x
+      - run: npm ci
+      - run: npm run build --if-present
+      - name: Mocha tests
+        timeout-minutes: 15
+        run: |
+          npm run test:ci
+          mv ./allure-results/ ./report/
+      - uses: ./.github/actions/allure-upload
+        if: always()
+        with:
+          folder-name: report/allure-results
 
   node-cucumber:
     runs-on: ubuntu-latest
@@ -91,7 +91,7 @@ jobs:
           node-version: 16.x
       - run: npm ci
       - run: npm run build --if-present
-      - run: npm test:cucumber
+      - run: npm run test:cucumber
       - uses: ./.github/actions/allure-upload
         if: always()
         with:
