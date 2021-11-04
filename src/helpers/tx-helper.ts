@@ -17,7 +17,7 @@ export class TxHelper {
         from: sender.address,
         gas: '4294967295',
         to: recipient.address,
-        value: Web3Helper.getWeb3().utils.toWei(amount.toString(), unit.ether)
+        value: Web3Helper.getWeb3().utils.toWei(amount.toString())
       },
       sender.privateKey
     );

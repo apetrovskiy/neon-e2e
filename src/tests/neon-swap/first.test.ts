@@ -1,6 +1,6 @@
 import { NightwatchBrowser, NightwatchTests } from 'nightwatch';
 
-import { NeonSwapMessages } from '../constants/neon-swap';
+import { NeonSwapMessages } from '../../constants/neon-swap';
 
 // import { URL } from '../constants/neon-swap ';
 
