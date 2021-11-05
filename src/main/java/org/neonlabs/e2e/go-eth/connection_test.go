@@ -16,7 +16,3 @@ func TestConnection(t *testing.T) {
 			}
 		}))
 }
-
-func TestNewWalletBalance(t *testing.T) {
-
-}
