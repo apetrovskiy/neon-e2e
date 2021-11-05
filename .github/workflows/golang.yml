@@ -48,7 +48,3 @@ jobs:
         run: |
           export ALLURE_RESULTS_PATH=/home/runner/work/neon-e2e/neon-e2e/report
           go test -v ./...
-      - uses: ./.github/actions/allure-upload
-        if: always()
-        with:
-          folder-name: report/allure-results
