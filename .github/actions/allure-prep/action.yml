@@ -1,10 +1,11 @@
 name: Prepare Allure
 description: Allure installation and folders
 runs:
-  using: "composite"
+  using: 'composite'
   steps:
     - run: |
-        sudo apt-get install allure
+        sudo apt-get update
+        sudo apt-get install allure --fix-missing
         mkdir report
         mkdir report/allure-results
         mkdir report/allure-report
