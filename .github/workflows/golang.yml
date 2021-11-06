@@ -1,0 +1,50 @@
+name: Go 1.17
+
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: "Test scenario tags"
+        required: false
+      network:
+        description: "Network (devnet, testnet, internal.testnet, neonswap.live, aws, ropsten, rinkeby)"
+        required: true
+        default: "devnet"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+  golang:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/allure-prep
+      - uses: ./.github/actions/switch-network
+      - name: Set up Go
+        uses: actions/setup-go@v2
+        if: always()
+        with:
+          go-version: 1.17
+
+      - name: Build
+        if: always()
+        run: |
+          echo "go mod download"
+          go mod download
+          echo "go install"
+          go install
+          GCO_ENABLED=0
+          go mod vendor
+          go build -v ./...
+
+      - name: Test
+        if: always()
+        run: |
+          export ALLURE_RESULTS_PATH=/home/runner/work/neon-e2e/neon-e2e/report
+          go test -v ./...

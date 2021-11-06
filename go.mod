@@ -2,14 +2,18 @@ module github.com/neonlabsorg/neon-e2e
 
 go 1.17
 
-require github.com/joho/godotenv v1.4.0
+require (
+	github.com/dailymotion/allure-go v0.5.5
+	github.com/ethereum/go-ethereum v1.10.9
+	github.com/joho/godotenv v1.4.0
+	github.com/onsi/ginkgo v1.16.4
+	github.com/onsi/gomega v1.16.0
+)
 
 require (
 	github.com/StackExchange/wmi v0.0.0-20180116203802-5d049714c4a6 // indirect
 	github.com/btcsuite/btcd v0.20.1-beta // indirect
-	github.com/dailymotion/allure-go v0.5.5 // indirect
 	github.com/deckarep/golang-set v0.0.0-20180603214616-504e848d77ea // indirect
-	github.com/ethereum/go-ethereum v1.10.9 // indirect
 	github.com/fatih/camelcase v1.0.0 // indirect
 	github.com/fsnotify/fsnotify v1.4.9 // indirect
 	github.com/go-ole/go-ole v1.2.1 // indirect
@@ -20,8 +24,6 @@ require (
 	github.com/gorilla/websocket v1.4.2 // indirect
 	github.com/jtolds/gls v4.20.0+incompatible // indirect
 	github.com/nxadm/tail v1.4.8 // indirect
-	github.com/onsi/ginkgo v1.16.4 // indirect
-	github.com/onsi/gomega v1.16.0 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/shirou/gopsutil v3.21.4-0.20210419000835-c7a38de76ee5+incompatible // indirect
 	github.com/tklauser/go-sysconf v0.3.5 // indirect

@@ -22,7 +22,8 @@ var testData = []struct {
 }
 
 func TestFrogJmp(t *testing.T) {
-
+	allure.Epic("go temporary tests")
+	allure.Story("go temporary tests")
 	for _, td := range testData {
 		t.Run(fmt.Sprintf("Run, data = %o", td), func(t *testing.T) {
 			allure.Test(t, allure.Action(func() {
@@ -41,6 +42,8 @@ func TestFrogJmp(t *testing.T) {
 
 func TestPassedExample(t *testing.T) {
 
+	allure.Epic("go temporary tests")
+	allure.Story("go temporary tests")
 	allure.Test(t,
 		allure.Description("This is a test to show allure implementation with a passing test"),
 		allure.Action(func() {
