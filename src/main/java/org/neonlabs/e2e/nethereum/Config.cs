@@ -14,7 +14,6 @@ namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
     public string FaucetUrl { get; set; }
     public string AddressFrom { get; set; }
     public string AddressTo { get; set; }
-
     public bool DisableConfirmation { get; set; }
     public string PrivateKey { get; set; }
 

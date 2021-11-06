@@ -40,7 +40,7 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
     }
 
     [AllureXunit(DisplayName = "Initial balance")]
-    public async void ShouldGetInitialBalanceAsync()
+    public void ShouldGetInitialBalanceAsync()
     {
       var account = AccountFactory.CreateAccount();
       Console.WriteLine(account.ChainId);
