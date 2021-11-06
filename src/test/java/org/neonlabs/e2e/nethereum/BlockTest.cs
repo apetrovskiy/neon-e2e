@@ -7,6 +7,8 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
   using Xunit;
 
   [AllureSuite("Nethereum")]
+  [AllureEpic("Nethereum")]
+  [AllureFeature(new string[] { "Nethereum" })]
   public class BlockNumberTest
   {
     [AllureXunit(DisplayName = "Latest block number test")]
