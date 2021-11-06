@@ -7,6 +7,7 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
   using Xunit;
 
   [AllureSuite("Nethereum")]
+  [AllureEpic("Nethereum")]
   public class ConnectionTest
   {
     [AllureXunit(DisplayName = "Connection test")]
