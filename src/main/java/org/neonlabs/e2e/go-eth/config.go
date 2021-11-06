@@ -14,6 +14,7 @@ const projectDirName = "neon-e2e"
 type Config struct {
 	NetworkName, ProxyURL, NetworkId, CurrencySymbol, FaucetUrl string
 	FaucetQuotient                                              int
+	AddressFrom, AddressTo, PrivateKey                          string
 }
 
 func loadEnv() {
@@ -37,6 +38,9 @@ func GetConfig() *Config {
 	currencySymbol := os.Getenv("CURRENCY_SYMBOL")
 	faucetQuotient, _ := strconv.Atoi(os.Getenv("FAUCET_QUOTIENT"))
 	faucetUrl := os.Getenv("FAUCET_URL")
+	addressFrom := os.Getenv("ADDRESS_FROM")
+	addressTo := os.Getenv("ADDRESS_TO")
+	privateKey := os.Getenv("PRIVATE_KEY")
 
 	return &Config{
 		NetworkName:    networkName,
@@ -45,5 +49,8 @@ func GetConfig() *Config {
 		CurrencySymbol: currencySymbol,
 		FaucetQuotient: faucetQuotient,
 		FaucetUrl:      faucetUrl,
+		AddressFrom:    addressFrom,
+		AddressTo:      addressTo,
+		PrivateKey:     privateKey,
 	}
 }

@@ -7,6 +7,8 @@ import (
 )
 
 func TestConnection(t *testing.T) {
+	allure.Epic("go-ethereum")
+	allure.Story("go-ethereum")
 	allure.Test(t,
 		allure.Description("Connection to network"),
 		allure.Action(func() {
