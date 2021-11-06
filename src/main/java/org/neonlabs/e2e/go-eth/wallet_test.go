@@ -7,6 +7,8 @@ import (
 )
 
 func TestNewWalletBalance(t *testing.T) {
+	allure.Epic("go-ethereum")
+	allure.Story("go-ethereum")
 	allure.Test(t,
 		allure.Description("Creating a new wallet"),
 		allure.Action(func() {
