@@ -7,9 +7,10 @@ import (
 )
 
 func TestNewWalletBalance(t *testing.T) {
-	allure.Epic("go-ethereum")
-	allure.Story("go-ethereum")
+
 	allure.Test(t,
+		allure.Epic("go-ethereum"),
+		allure.Story("go-ethereum"),
 		allure.Description("Creating a new wallet"),
 		allure.Action(func() {
 			hash := createAccount()
