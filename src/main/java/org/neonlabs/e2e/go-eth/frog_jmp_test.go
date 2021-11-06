@@ -25,16 +25,20 @@ func TestFrogJmp(t *testing.T) {
 
 	for _, td := range testData {
 		t.Run(fmt.Sprintf("Run, data = %o", td), func(t *testing.T) {
-			allure.Test(t, allure.Action(func() {
-				if td.out != SolutionFrogJmp(td.x, td.y, td.d) {
+			allure.Test(t,
+				allure.Epic("go temporary tests"),
+				allure.Story("go temporary tests"),
+				allure.Action(func() {
 
-					fmt.Println(GetConfig().NetworkId)
-					fmt.Println(GetConfig().ProxyURL)
-					fmt.Println(GetConfig().FaucetUrl)
+					if td.out != SolutionFrogJmp(td.x, td.y, td.d) {
 
-					t.Errorf("FAIL!")
-				}
-			}))
+						fmt.Println(GetConfig().NetworkId)
+						fmt.Println(GetConfig().ProxyURL)
+						fmt.Println(GetConfig().FaucetUrl)
+
+						t.Errorf("FAIL!")
+					}
+				}))
 		})
 	}
 }
@@ -42,6 +46,8 @@ func TestFrogJmp(t *testing.T) {
 func TestPassedExample(t *testing.T) {
 
 	allure.Test(t,
+		allure.Epic("go temporary tests"),
+		allure.Story("go temporary tests"),
 		allure.Description("This is a test to show allure implementation with a passing test"),
 		allure.Action(func() {
 			s := "Hello world"

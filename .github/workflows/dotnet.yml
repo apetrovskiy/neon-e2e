@@ -1,0 +1,54 @@
+name: .NET 5.0
+
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: "Test scenario tags"
+        required: false
+      network:
+        description: "Network (devnet, testnet, internal.testnet, neonswap.live, aws, ropsten, rinkeby)"
+        required: true
+        default: "devnet"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+  dotnet:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    needs:
+      - build
+      # - dotnet-format
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/allure-prep
+      - uses: ./.github/actions/switch-network
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        if: always()
+        with:
+          dotnet-version: 5.0.x
+      - name: Print dotnet version
+        if: always()
+        run: dotnet --version
+      - name: Restore dependencies
+        if: always()
+        run: dotnet restore
+      # - name: dotnet - format check
+      #   if: always()
+      #   run: |
+      #     run: dotnet tool update -g dotnet-format
+      #     dotnet-format --check
+      - name: Build
+        if: always()
+        run: dotnet build --no-restore
+      - name: Test
+        timeout-minutes: 15
+        if: always()
+        run: dotnet test --no-build --verbosity normal
