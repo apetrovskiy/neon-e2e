@@ -29,13 +29,8 @@ jobs:
       - name: Check EVM
         run: |
           ls
-      - name: Check Solana
-        run: |
-          ls
-      - uses: ./.github/actions/allure-upload
+      - uses: ./.github/actions/check-solana
         if: always()
-        with:
-          folder-name: report/allure-results
 
   python:
     runs-on: ubuntu-latest
