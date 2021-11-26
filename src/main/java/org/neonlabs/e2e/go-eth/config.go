@@ -15,6 +15,8 @@ type Config struct {
 	NetworkName, ProxyURL, NetworkId, CurrencySymbol, FaucetUrl string
 	FaucetQuotient                                              int
 	AddressFrom, AddressTo, PrivateKey                          string
+	SolanaExplorer, SolanaUrl                                   string
+	UsersNumber                                                 int
 }
 
 func loadEnv() {
@@ -35,22 +37,26 @@ func GetConfig() *Config {
 	networkName := os.Getenv("NETWORK_NAME")
 	proxyUrl := os.Getenv("PROXY_URL")
 	networkId := os.Getenv("NETWORK_ID")
-	currencySymbol := os.Getenv("CURRENCY_SYMBOL")
 	faucetQuotient, _ := strconv.Atoi(os.Getenv("FAUCET_QUOTIENT"))
 	faucetUrl := os.Getenv("FAUCET_URL")
 	addressFrom := os.Getenv("ADDRESS_FROM")
 	addressTo := os.Getenv("ADDRESS_TO")
 	privateKey := os.Getenv("PRIVATE_KEY")
+	solanaExplorer := os.Getenv("SOLANA_EXPLORER")
+	solanaUrl := os.Getenv("SOLANA_URL")
+	usersNumber, _ := strconv.Atoi(os.Getenv("USERS_NUMBER"))
 
 	return &Config{
 		NetworkName:    networkName,
 		ProxyURL:       proxyUrl,
 		NetworkId:      networkId,
-		CurrencySymbol: currencySymbol,
 		FaucetQuotient: faucetQuotient,
 		FaucetUrl:      faucetUrl,
 		AddressFrom:    addressFrom,
 		AddressTo:      addressTo,
 		PrivateKey:     privateKey,
+		SolanaExplorer: solanaExplorer,
+		SolanaUrl:      solanaUrl,
+		UsersNumber:    usersNumber,
 	}
 }
