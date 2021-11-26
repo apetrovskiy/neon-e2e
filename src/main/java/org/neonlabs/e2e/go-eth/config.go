@@ -44,7 +44,7 @@ func GetConfig() *Config {
 	privateKey := os.Getenv("PRIVATE_KEY")
 	solanaExplorer := os.Getenv("SOLANA_EXPLORER")
 	solanaUrl := os.Getenv("SOLANA_URL")
-	usersNumber := os.Getenv("USERS_NUMBER")
+	usersNumber, _ := strconv.Atoi(os.Getenv("USERS_NUMBER"))
 
 	return &Config{
 		NetworkName:    networkName,
