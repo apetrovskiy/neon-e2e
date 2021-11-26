@@ -16,6 +16,9 @@ namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
     public string AddressTo { get; set; }
     public bool DisableConfirmation { get; set; }
     public string PrivateKey { get; set; }
+    public string SolanaExplorer { get; set; }
+    public string SolanaUrl { get; set; }
+    public int UsersNumber { get; set; }
 
     public Config()
     {
@@ -28,7 +31,10 @@ namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
       AddressFrom = EnvReader.GetStringValue("ADDRESS_FROM");
       AddressTo = EnvReader.GetStringValue("ADDRESS_TO");
       DisableConfirmation = Convert.ToBoolean(EnvReader.GetStringValue("DISABLE_CONFIRMATION"));
-      PrivateKey = EnvReader.GetStringValue("PPRIVATE_KEY");
+      PrivateKey = EnvReader.GetStringValue("PRIVATE_KEY");
+      SolanaExplorer = EnvReader.GetStringValue("SOLANA_EXPLORER");
+      SolanaUrl = EnvReader.GetStringValue("SOLANA_URL");
+      UsersNumber = Convert.ToInt32(EnvReader.GetStringValue("USERS_NUMBER"));
     }
   }
 }
