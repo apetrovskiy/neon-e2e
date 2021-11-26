@@ -64,11 +64,9 @@ jobs:
         timeout-minutes: 15
         run: |
           npm run test:mocha
-      - uses: ./.github/actions/allure-environment-data
-        if: always()
-      - name: Moving test results
-        run: |
-          mv ./allure-results/ ./report/
+      # - name: Moving test results
+      #   run: |
+      #     mv ./allure-results/ ./report/
       - uses: ./.github/actions/allure-upload
         if: always()
         with:
@@ -219,6 +217,8 @@ jobs:
         timeout-minutes: 15
         if: always()
         run: ./gradlew build --warning-mode all
+      - uses: ./.github/actions/allure-environment-data
+        if: always()
       - uses: ./.github/actions/allure-upload
         if: always()
         with:
