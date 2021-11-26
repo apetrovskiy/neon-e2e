@@ -29,6 +29,6 @@ runs:
         echo "there are now files in report/$ALLURE_RESULTS"
         ls "report/$ALLURE_RESULTS"
         cp "./$ENV_PROP_FILE" ./report
-        mkdir $ALLURE_RESULTS
+        # mkdir $ALLURE_RESULTS
         cp "./$ENV_PROP_FILE" "./$ALLURE_RESULTS"
       shell: bash
