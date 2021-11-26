@@ -35,7 +35,6 @@ func GetConfig() *Config {
 	networkName := os.Getenv("NETWORK_NAME")
 	proxyUrl := os.Getenv("PROXY_URL")
 	networkId := os.Getenv("NETWORK_ID")
-	currencySymbol := os.Getenv("CURRENCY_SYMBOL")
 	faucetQuotient, _ := strconv.Atoi(os.Getenv("FAUCET_QUOTIENT"))
 	faucetUrl := os.Getenv("FAUCET_URL")
 	addressFrom := os.Getenv("ADDRESS_FROM")
@@ -46,7 +45,6 @@ func GetConfig() *Config {
 		NetworkName:    networkName,
 		ProxyURL:       proxyUrl,
 		NetworkId:      networkId,
-		CurrencySymbol: currencySymbol,
 		FaucetQuotient: faucetQuotient,
 		FaucetUrl:      faucetUrl,
 		AddressFrom:    addressFrom,

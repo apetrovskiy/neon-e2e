@@ -7,7 +7,6 @@ BASE_URL = os.environ.get('PROXY_URL').replace('/solana', ''),
 PROXY_URL = os.environ.get('PROXY_URL')
 NETWORK_ID = os.environ.get('NETWORK_ID')
 NETWORK_NAME = os.environ.get('NETWORK_NAME')
-CURRENCY_SYMBOL = os.environ.get('CURRENCY_SYMBOL')
 FAUCET_QUOTIENT = os.environ.get('FAUCET_QUOTIENT')
 FAUCET_URL = os.environ.get('FAUCET_URL')
 ADDRESS_FROM = os.environ.get('ADDRESS_FROM')

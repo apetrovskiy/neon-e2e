@@ -23,7 +23,6 @@ namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
       NetworkName = dotenv.net.Utilities.EnvReader.GetStringValue("NETWORK_NAME");
       ProxyUrl = EnvReader.GetStringValue("PROXY_URL");
       NetworkId = EnvReader.GetStringValue("NETWORK_ID");
-      CurrencySymbol = EnvReader.GetStringValue("CURRENCY_SYMBOL");
       FaucetQuotient = Convert.ToInt32(EnvReader.GetStringValue("FAUCET_QUOTIENT"));
       FaucetUrl = EnvReader.GetStringValue("FAUCET_URL");
       AddressFrom = EnvReader.GetStringValue("ADDRESS_FROM");
