@@ -35,7 +35,7 @@ jobs:
         run: |
           pipenv run flake8 src
           pipenv run flake8 tests
-      - name: Test with pytest
+      - name: Test with behave
         if: always()
         run: |
           pwd
@@ -64,6 +64,10 @@ jobs:
         timeout-minutes: 15
         run: |
           npm run test:mocha
+      - uses: ./.github/actions/allure-environment-data
+        if: always()
+      - name: Moving test results
+        run: |
           mv ./allure-results/ ./report/
       - uses: ./.github/actions/allure-upload
         if: always()
