@@ -18,3 +18,19 @@ func getLastBlockBalance(client *ethclient.Client, hex string) *big.Int {
 	}
 	return balance
 }
+func getSpecificBlockBalance(client *ethclient.Client, hex string, blockNumber *big.Int) *big.Int {
+	account := common.HexToAddress(hex)
+	balance, err := client.BalanceAt(context.Background(), account, blockNumber)
+	if err != nil {
+		log.Fatal(err)
+	}
+	return balance
+}
+func getPendingBalance(client *ethclient.Client, hex string) *big.Int {
+	account := common.HexToAddress(hex)
+	pendingBalance, err := client.PendingBalanceAt(context.Background(), account)
+	if err != nil {
+		log.Fatal(err)
+	}
+	return pendingBalance
+}
