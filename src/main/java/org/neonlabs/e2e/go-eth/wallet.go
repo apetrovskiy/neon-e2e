@@ -3,7 +3,6 @@ package go_eth
 import (
 	"crypto/ecdsa"
 	"fmt"
-	"hash"
 	"log"
 
 	"github.com/ethereum/go-ethereum/common/hexutil"
@@ -11,7 +10,7 @@ import (
 	"golang.org/x/crypto/sha3"
 )
 
-func createAccount() hash.Hash {
+func createWallet() string {
 	privateKey, err := crypto.GenerateKey()
 	if err != nil {
 		log.Fatal(err)
@@ -33,5 +32,5 @@ func createAccount() hash.Hash {
 	fmt.Println(address)
 	fmt.Println(hash)
 	fmt.Println(hexutil.Encode(hash.Sum(nil)[12:]))
-	return hash
+	return address.Hex()
 }
