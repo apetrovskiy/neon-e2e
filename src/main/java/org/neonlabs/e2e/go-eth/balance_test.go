@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestGetBalance(t *testing.T) {
+func TestGetLatestBalance(t *testing.T) {
 
 	allure.Test(t,
 		allure.Epic("go-ethereum"),
@@ -31,7 +31,8 @@ func TestGetBalance(t *testing.T) {
 			fmt.Println(balance)
 			assert.Equal(t, GetConfig().InitialBalance, balance, "The initial balance is wrong")
 		}))
-
+}
+func TestGetSpecificBlockBalance(t *testing.T) {
 	allure.Test(t,
 		allure.Epic("go-ethereum"),
 		allure.Feature("go-ethereum"),
@@ -53,7 +54,8 @@ func TestGetBalance(t *testing.T) {
 			fmt.Println(balance)
 			assert.Equal(t, GetConfig().InitialBalance, balance, "The initial balance is wrong")
 		}))
-
+}
+func TestGetPendingBalance(t *testing.T) {
 	allure.Test(t,
 		allure.Epic("go-ethereum"),
 		allure.Feature("go-ethereum"),
