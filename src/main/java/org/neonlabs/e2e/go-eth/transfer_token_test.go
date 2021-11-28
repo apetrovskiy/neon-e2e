@@ -41,6 +41,6 @@ func TestTransferToken(t *testing.T) {
 			fmt.Println(recipientBalance)
 			assert.Equal(t, GetConfig().InitialBalance, recipientBalance, "Recipient's initial balance is wrong")
 
-			// result=transferToken(senderAddress,recipientAddress,"1000000000000000")
+			// result=transferToken(senderAddress,recipientAddress,"1000000000000000000")
 		}))
 }
