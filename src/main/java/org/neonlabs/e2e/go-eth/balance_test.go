@@ -77,7 +77,3 @@ func TestGetPendingBalance(t *testing.T) {
 			assert.Equal(t, GetConfig().InitialBalance, balance, "The initial balance is wrong")
 		}))
 }
-
-// TODO: get balance of not the latest block
-
-// TODO: get the pending balance
