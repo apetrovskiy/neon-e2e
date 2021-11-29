@@ -1,0 +1,381 @@
+{
+  "uid" : "8dfb8de64d26be80",
+  "name" : "a user to user successful transaction",
+  "fullName" : "features/transaction.feature:transaction:a user to user successful transaction",
+  "historyId" : "0be402c745055d01d57f5ed2bb30709f",
+  "time" : {
+    "start" : 1638207187190,
+    "stop" : 1638207191486,
+    "duration" : 4296
+  },
+  "description" : "",
+  "status" : "failed",
+  "statusMessage" : "balance should be less than: expected 90000000000000000000 to be below 90000000000000000000",
+  "statusTrace" : "AssertionError: balance should be less than: expected 90000000000000000000 to be below 90000000000000000000\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:83:68\n    at Generator.next (<anonymous>)\n    at fulfilled (/home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "time" : { },
+    "status" : "broken",
+    "steps" : [ {
+      "name" : "Before: tests/step-definitions/hooks.ts:9",
+      "time" : {
+        "start" : 1638207187190,
+        "stop" : 1638207187190,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "description" : "",
+    "status" : "failed",
+    "statusMessage" : "balance should be less than: expected 90000000000000000000 to be below 90000000000000000000",
+    "statusTrace" : "AssertionError: balance should be less than: expected 90000000000000000000 to be below 90000000000000000000\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:83:68\n    at Generator.next (<anonymous>)\n    at fulfilled (/home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+    "steps" : [ {
+      "name" : "Given there is user Alice in Ethereum network with the initial balance <10>Ξ",
+      "time" : {
+        "start" : 1638207187190,
+        "stop" : 1638207187983,
+        "duration" : 793
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "And there is user Bob in Ethereum network with the initial balance <10>Ξ",
+      "time" : {
+        "start" : 1638207187983,
+        "stop" : 1638207188885,
+        "duration" : 902
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "When user Alice sends <1>Ξ to user Bob",
+      "time" : {
+        "start" : 1638207188885,
+        "stop" : 1638207190650,
+        "duration" : 1765
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Then the recipient has balance increased by <1>Ξ",
+      "time" : {
+        "start" : 1638207190650,
+        "stop" : 1638207191064,
+        "duration" : 414
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "And the sender has balance decreased more than by <1>Ξ",
+      "time" : {
+        "start" : 1638207191064,
+        "stop" : 1638207191485,
+        "duration" : 421
+      },
+      "status" : "failed",
+      "statusMessage" : "balance should be less than: expected 90000000000000000000 to be below 90000000000000000000",
+      "statusTrace" : "AssertionError: balance should be less than: expected 90000000000000000000 to be below 90000000000000000000\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:83:68\n    at Generator.next (<anonymous>)\n    at fulfilled (/home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 5,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "2699"
+  }, {
+    "name" : "feature",
+    "value" : "transaction"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "amount",
+    "value" : "1"
+  }, {
+    "name" : "initial balance",
+    "value" : "10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 71,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 71
+      },
+      "items" : [ {
+        "uid" : "78b44f367de20064",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/47//#testresult/78b44f367de20064",
+        "status" : "failed",
+        "statusDetails" : "balance should be less than: expected 90000000000000000000 to be below 90000000000000000000",
+        "time" : {
+          "start" : 1638207077815,
+          "stop" : 1638207081781,
+          "duration" : 3966
+        }
+      }, {
+        "uid" : "de4a77b3eaa585a0",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/46//#testresult/de4a77b3eaa585a0",
+        "status" : "failed",
+        "statusDetails" : "balance should be less than: expected 90000000000000000000 to be below 90000000000000000000",
+        "time" : {
+          "start" : 1638206705490,
+          "stop" : 1638206710166,
+          "duration" : 4676
+        }
+      }, {
+        "uid" : "22c6cb33093a1769",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/45//#testresult/22c6cb33093a1769",
+        "status" : "failed",
+        "statusDetails" : "balance should be less than: expected 90000000000000000000 to be below 90000000000000000000",
+        "time" : {
+          "start" : 1638206686409,
+          "stop" : 1638206689988,
+          "duration" : 3579
+        }
+      }, {
+        "uid" : "c4ff097931c956f0",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/44//#testresult/c4ff097931c956f0",
+        "status" : "failed",
+        "statusDetails" : "balance should be less than: expected 90000000000000000000 to be below 90000000000000000000",
+        "time" : {
+          "start" : 1638206235136,
+          "stop" : 1638206239108,
+          "duration" : 3972
+        }
+      }, {
+        "uid" : "463139236d9c1f97",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/43//#testresult/463139236d9c1f97",
+        "status" : "failed",
+        "statusDetails" : "balance should be less than: expected 90000000000000000000 to be below 90000000000000000000",
+        "time" : {
+          "start" : 1638205893752,
+          "stop" : 1638205898695,
+          "duration" : 4943
+        }
+      }, {
+        "uid" : "372d54ce0ec70237",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/41//#testresult/372d54ce0ec70237",
+        "status" : "failed",
+        "statusDetails" : "balance should be less than: expected 90000000000000000000 to be below 90000000000000000000",
+        "time" : {
+          "start" : 1638204737939,
+          "stop" : 1638204742308,
+          "duration" : 4369
+        }
+      }, {
+        "uid" : "9a53f878b795095",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/42//#testresult/9a53f878b795095",
+        "status" : "failed",
+        "statusDetails" : "balance should be less than: expected 90000000000000000000 to be below 90000000000000000000",
+        "time" : {
+          "start" : 1638204878344,
+          "stop" : 1638204883577,
+          "duration" : 5233
+        }
+      }, {
+        "uid" : "c6a173e04a19ade2",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/40//#testresult/c6a173e04a19ade2",
+        "status" : "failed",
+        "statusDetails" : "balance should be less than: expected 90000000000000000000 to be below 90000000000000000000",
+        "time" : {
+          "start" : 1638204079434,
+          "stop" : 1638204084244,
+          "duration" : 4810
+        }
+      }, {
+        "uid" : "ef2f321bb617f075",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/39//#testresult/ef2f321bb617f075",
+        "status" : "failed",
+        "statusDetails" : "Invalid JSON RPC response: \"<html>\\r\\n<head><title>502 Bad Gateway</title></head>\\r\\n<body>\\r\\n<center><h1>502 Bad Gateway</h1></center>\\r\\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\\r\\n</body>\\r\\n</html>\\r\\n\"",
+        "time" : {
+          "start" : 1638202938386,
+          "stop" : 1638202938701,
+          "duration" : 315
+        }
+      }, {
+        "uid" : "bf4bc2abe1e317b1",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/38//#testresult/bf4bc2abe1e317b1",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 429",
+        "time" : {
+          "start" : 1638133974437,
+          "stop" : 1638133974927,
+          "duration" : 490
+        }
+      }, {
+        "uid" : "af7b96255becf43b",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/37//#testresult/af7b96255becf43b",
+        "status" : "failed",
+        "statusDetails" : "Returned error: HTTPConnectionPool(host='test2-solana', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1bfc797790>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))",
+        "time" : {
+          "start" : 1638133949310,
+          "stop" : 1638133949889,
+          "duration" : 579
+        }
+      }, {
+        "uid" : "7eccec66e4858a62",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/36//#testresult/7eccec66e4858a62",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 429",
+        "time" : {
+          "start" : 1638132856435,
+          "stop" : 1638132856925,
+          "duration" : 490
+        }
+      }, {
+        "uid" : "f30288813e14a66e",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/35//#testresult/f30288813e14a66e",
+        "status" : "failed",
+        "statusDetails" : "Returned error: HTTPConnectionPool(host='test2-solana', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1c0c0bc550>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))",
+        "time" : {
+          "start" : 1638132792535,
+          "stop" : 1638132793084,
+          "duration" : 549
+        }
+      }, {
+        "uid" : "7ef54b5cef52fef",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/34//#testresult/7ef54b5cef52fef",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 429",
+        "time" : {
+          "start" : 1638131379080,
+          "stop" : 1638131379539,
+          "duration" : 459
+        }
+      }, {
+        "uid" : "30920e760039f05e",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/33//#testresult/30920e760039f05e",
+        "status" : "failed",
+        "statusDetails" : "Returned error: HTTPConnectionPool(host='test2-solana', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1c0c0c0d90>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))",
+        "time" : {
+          "start" : 1638131255471,
+          "stop" : 1638131255929,
+          "duration" : 458
+        }
+      }, {
+        "uid" : "440e47062c51bd09",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/31//#testresult/440e47062c51bd09",
+        "status" : "failed",
+        "statusDetails" : "Returned error: HTTPConnectionPool(host='test2-solana', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1c0c0c1f10>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))",
+        "time" : {
+          "start" : 1638124108019,
+          "stop" : 1638124108394,
+          "duration" : 375
+        }
+      }, {
+        "uid" : "3b3a17150bfdb583",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/30//#testresult/3b3a17150bfdb583",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 429",
+        "time" : {
+          "start" : 1638120533657,
+          "stop" : 1638120534105,
+          "duration" : 448
+        }
+      }, {
+        "uid" : "84751fcd32e73127",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/29//#testresult/84751fcd32e73127",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 502",
+        "time" : {
+          "start" : 1638120500974,
+          "stop" : 1638120501302,
+          "duration" : 328
+        }
+      }, {
+        "uid" : "7f3d1e76b960e853",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/27//#testresult/7f3d1e76b960e853",
+        "status" : "failed",
+        "statusDetails" : "Returned error: HTTPConnectionPool(host='test2-solana', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1c0c802370>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))",
+        "time" : {
+          "start" : 1638120442504,
+          "stop" : 1638120442856,
+          "duration" : 352
+        }
+      }, {
+        "uid" : "7f786dfd77b3ee5d",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/26//#testresult/7f786dfd77b3ee5d",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 429",
+        "time" : {
+          "start" : 1638118486323,
+          "stop" : 1638118486851,
+          "duration" : 528
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "8dfb8de64d26be80.json",
+  "parameterValues" : [ "1", "10" ]
+}
