@@ -1,6 +1,5 @@
 import requests
 from config.config import FAUCET_URL
-from src.helpers.common.urls import Urls
 from src.helpers.faucet.faucet_request import FaucetRequest
 
 
