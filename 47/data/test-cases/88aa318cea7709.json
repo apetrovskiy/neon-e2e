@@ -1,0 +1,381 @@
+{
+  "uid" : "88aa318cea7709",
+  "name" : "a user to user failed transaction",
+  "fullName" : "features/transaction.feature:transaction:a user to user failed transaction",
+  "historyId" : "52f0e342c8c61c8a8125f48173d3818c",
+  "time" : {
+    "start" : 1638207091840,
+    "stop" : 1638207094015,
+    "duration" : 2175
+  },
+  "description" : "",
+  "status" : "failed",
+  "statusMessage" : "error happened during the operation: expected 'Returned error: Command \\'[\\'neon-cli\\', \\'--commitment=recent\\', \\'--url\\', \\'http://test3-solana:8899\\', \\'--evm_loader=53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io\\', \\'emulate\\', \\'a0f4cee3dccfde7a2b34f401139345676f588cdf\\', \\'ac61cd85b933048dcc56791a2c3597e8e2ecee9d\\', \\'none\\', \\'0x5f68e8131ecf80000\\']\\' returned non-zero exit status 1.' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'",
+  "statusTrace" : "AssertionError: error happened during the operation: expected 'Returned error: Command \\'[\\'neon-cli\\', \\'--commitment=recent\\', \\'--url\\', \\'http://test3-solana:8899\\', \\'--evm_loader=53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io\\', \\'emulate\\', \\'a0f4cee3dccfde7a2b34f401139345676f588cdf\\', \\'ac61cd85b933048dcc56791a2c3597e8e2ecee9d\\', \\'none\\', \\'0x5f68e8131ecf80000\\']\\' returned non-zero exit status 1.' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:58:69\n    at runNextTicks (node:internal/process/task_queues:61:5)\n    at listOnTimeout (node:internal/timers:526:9)\n    at processTimers (node:internal/timers:500:7)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "time" : { },
+    "status" : "broken",
+    "steps" : [ {
+      "name" : "Before: tests/step-definitions/hooks.ts:9",
+      "time" : {
+        "start" : 1638207091840,
+        "stop" : 1638207091841,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "",
+    "status" : "failed",
+    "statusMessage" : "error happened during the operation: expected 'Returned error: Command \\'[\\'neon-cli\\', \\'--commitment=recent\\', \\'--url\\', \\'http://test3-solana:8899\\', \\'--evm_loader=53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io\\', \\'emulate\\', \\'a0f4cee3dccfde7a2b34f401139345676f588cdf\\', \\'ac61cd85b933048dcc56791a2c3597e8e2ecee9d\\', \\'none\\', \\'0x5f68e8131ecf80000\\']\\' returned non-zero exit status 1.' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'",
+    "statusTrace" : "AssertionError: error happened during the operation: expected 'Returned error: Command \\'[\\'neon-cli\\', \\'--commitment=recent\\', \\'--url\\', \\'http://test3-solana:8899\\', \\'--evm_loader=53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io\\', \\'emulate\\', \\'a0f4cee3dccfde7a2b34f401139345676f588cdf\\', \\'ac61cd85b933048dcc56791a2c3597e8e2ecee9d\\', \\'none\\', \\'0x5f68e8131ecf80000\\']\\' returned non-zero exit status 1.' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:58:69\n    at runNextTicks (node:internal/process/task_queues:61:5)\n    at listOnTimeout (node:internal/timers:526:9)\n    at processTimers (node:internal/timers:500:7)",
+    "steps" : [ {
+      "name" : "Given there is user Alice in Ethereum network with the initial balance <10>Ξ",
+      "time" : {
+        "start" : 1638207091841,
+        "stop" : 1638207092468,
+        "duration" : 627
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And there is user Bob in Ethereum network with the initial balance <10>Ξ",
+      "time" : {
+        "start" : 1638207092469,
+        "stop" : 1638207093279,
+        "duration" : 810
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When user Alice sends <11>Ξ to user Bob",
+      "time" : {
+        "start" : 1638207093280,
+        "stop" : 1638207094014,
+        "duration" : 734
+      },
+      "status" : "failed",
+      "statusMessage" : "error happened during the operation: expected 'Returned error: Command \\'[\\'neon-cli\\', \\'--commitment=recent\\', \\'--url\\', \\'http://test3-solana:8899\\', \\'--evm_loader=53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io\\', \\'emulate\\', \\'a0f4cee3dccfde7a2b34f401139345676f588cdf\\', \\'ac61cd85b933048dcc56791a2c3597e8e2ecee9d\\', \\'none\\', \\'0x5f68e8131ecf80000\\']\\' returned non-zero exit status 1.' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'",
+      "statusTrace" : "AssertionError: error happened during the operation: expected 'Returned error: Command \\'[\\'neon-cli\\', \\'--commitment=recent\\', \\'--url\\', \\'http://test3-solana:8899\\', \\'--evm_loader=53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io\\', \\'emulate\\', \\'a0f4cee3dccfde7a2b34f401139345676f588cdf\\', \\'ac61cd85b933048dcc56791a2c3597e8e2ecee9d\\', \\'none\\', \\'0x5f68e8131ecf80000\\']\\' returned non-zero exit status 1.' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:58:69\n    at runNextTicks (node:internal/process/task_queues:61:5)\n    at listOnTimeout (node:internal/timers:526:9)\n    at processTimers (node:internal/timers:500:7)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "Then the recipient has balance increased by 0Ξ",
+      "time" : {
+        "start" : 1638207094014,
+        "stop" : 1638207094015,
+        "duration" : 1
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And the sender has balance decreased by 0Ξ",
+      "time" : {
+        "start" : 1638207094015,
+        "stop" : 1638207094015,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "2733"
+  }, {
+    "name" : "feature",
+    "value" : "transaction"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "amount",
+    "value" : "11"
+  }, {
+    "name" : "initial balance",
+    "value" : "10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 70,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 70
+      },
+      "items" : [ {
+        "uid" : "b07f0c1b1b5f61c7",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/46//#testresult/b07f0c1b1b5f61c7",
+        "status" : "failed",
+        "statusDetails" : "error happened during the operation: expected 'Returned error: Command \\'[\\'neon-cli\\', \\'--commitment=recent\\', \\'--url\\', \\'http://test3-solana:8899\\', \\'--evm_loader=53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io\\', \\'emulate\\', \\'2015871864c582b930c2d9198f344bf677419525\\', \\'b01b77ed451e90597db5fe003fe6f0103e7079b1\\', \\'none\\', \\'0x5f68e8131ecf80000\\']\\' returned non-zero exit status 1.' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'",
+        "time" : {
+          "start" : 1638206723889,
+          "stop" : 1638206726479,
+          "duration" : 2590
+        }
+      }, {
+        "uid" : "c7b1555e20466204",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/45//#testresult/c7b1555e20466204",
+        "status" : "failed",
+        "statusDetails" : "error happened during the operation: expected 'Returned error: Command \\'[\\'neon-cli\\', \\'--commitment=recent\\', \\'--url\\', \\'http://test3-solana:8899\\', \\'--evm_loader=53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io\\', \\'emulate\\', \\'36c1fa34a7dcc2709b9b74c85d6eb71ad2e1292a\\', \\'2be4212b17740c5963744b9af035d1279a05de60\\', \\'none\\', \\'0x5f68e8131ecf80000\\']\\' returned non-zero exit status 1.' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'",
+        "time" : {
+          "start" : 1638206699241,
+          "stop" : 1638206701457,
+          "duration" : 2216
+        }
+      }, {
+        "uid" : "7a70a66936f13c38",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/44//#testresult/7a70a66936f13c38",
+        "status" : "failed",
+        "statusDetails" : "error happened during the operation: expected 'Returned error: Command \\'[\\'neon-cli\\', \\'--commitment=recent\\', \\'--url\\', \\'http://test3-solana:8899\\', \\'--evm_loader=53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io\\', \\'emulate\\', \\'2781ccd227bacb57458957ef8293b4d750c0166f\\', \\'1788033f955ea7190cb8ecd76fc991f35e723f80\\', \\'none\\', \\'0x5f68e8131ecf80000\\']\\' returned non-zero exit status 1.' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'",
+        "time" : {
+          "start" : 1638206249398,
+          "stop" : 1638206251535,
+          "duration" : 2137
+        }
+      }, {
+        "uid" : "e307c6b6b5bc53c3",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/43//#testresult/e307c6b6b5bc53c3",
+        "status" : "failed",
+        "statusDetails" : "error happened during the operation: expected 'Returned error: Command \\'[\\'neon-cli\\', \\'--commitment=recent\\', \\'--url\\', \\'http://test3-solana:8899\\', \\'--evm_loader=53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io\\', \\'emulate\\', \\'5b203806856896c6218fffb8c470a4a42ea1d38d\\', \\'b983b262662eb90b9b201445077141557ef46b6b\\', \\'none\\', \\'0x5f68e8131ecf80000\\']\\' returned non-zero exit status 1.' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'",
+        "time" : {
+          "start" : 1638205912963,
+          "stop" : 1638205915619,
+          "duration" : 2656
+        }
+      }, {
+        "uid" : "e5408bc3f6076566",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/41//#testresult/e5408bc3f6076566",
+        "status" : "failed",
+        "statusDetails" : "error happened during the operation: expected 'Returned error: Command \\'[\\'neon-cli\\', \\'--commitment=recent\\', \\'--url\\', \\'http://test3-solana:8899\\', \\'--evm_loader=53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io\\', \\'emulate\\', \\'c01a5e08aebc4794aeb41460846e9ec288da37cd\\', \\'14fca34d760a5299d20cc4bda912b05113189710\\', \\'none\\', \\'0x5f68e8131ecf80000\\']\\' returned non-zero exit status 1.' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'",
+        "time" : {
+          "start" : 1638204755536,
+          "stop" : 1638204758521,
+          "duration" : 2985
+        }
+      }, {
+        "uid" : "6eecc5ed65fa2ec2",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/42//#testresult/6eecc5ed65fa2ec2",
+        "status" : "failed",
+        "statusDetails" : "error happened during the operation: expected 'Returned error: Command \\'[\\'neon-cli\\', \\'--commitment=recent\\', \\'--url\\', \\'http://test3-solana:8899\\', \\'--evm_loader=53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io\\', \\'emulate\\', \\'9e8f8f71600c119d816486408e45845ec05b6532\\', \\'909105ffcf0195c8ee2491e7f91a1126812737f5\\', \\'none\\', \\'0x5f68e8131ecf80000\\']\\' returned non-zero exit status 1.' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'",
+        "time" : {
+          "start" : 1638204896708,
+          "stop" : 1638204899745,
+          "duration" : 3037
+        }
+      }, {
+        "uid" : "f82668704ca10720",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/40//#testresult/f82668704ca10720",
+        "status" : "failed",
+        "statusDetails" : "error happened during the operation: expected 'Returned error: Command \\'[\\'neon-cli\\', \\'--commitment=recent\\', \\'--url\\', \\'http://test3-solana:8899\\', \\'--evm_loader=53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io\\', \\'emulate\\', \\'70471e03027c525b5da3a5906ffd4265f0df6bfa\\', \\'93be0d7424bb668fbfe2604b012dc130ff296b6a\\', \\'none\\', \\'0x5f68e8131ecf80000\\']\\' returned non-zero exit status 1.' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'",
+        "time" : {
+          "start" : 1638204097915,
+          "stop" : 1638204100939,
+          "duration" : 3024
+        }
+      }, {
+        "uid" : "d6ef4b0713901ff5",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/39//#testresult/d6ef4b0713901ff5",
+        "status" : "failed",
+        "statusDetails" : "Invalid JSON RPC response: \"<html>\\r\\n<head><title>502 Bad Gateway</title></head>\\r\\n<body>\\r\\n<center><h1>502 Bad Gateway</h1></center>\\r\\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\\r\\n</body>\\r\\n</html>\\r\\n\"",
+        "time" : {
+          "start" : 1638202939699,
+          "stop" : 1638202940031,
+          "duration" : 332
+        }
+      }, {
+        "uid" : "52333f5b4a6d28a1",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/38//#testresult/52333f5b4a6d28a1",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 429",
+        "time" : {
+          "start" : 1638133976534,
+          "stop" : 1638133977021,
+          "duration" : 487
+        }
+      }, {
+        "uid" : "70eae18cc39b29a9",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/37//#testresult/70eae18cc39b29a9",
+        "status" : "failed",
+        "statusDetails" : "Returned error: HTTPConnectionPool(host='test2-solana', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1bfc7970a0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))",
+        "time" : {
+          "start" : 1638133951599,
+          "stop" : 1638133952162,
+          "duration" : 563
+        }
+      }, {
+        "uid" : "11959be277224d4b",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/36//#testresult/11959be277224d4b",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 429",
+        "time" : {
+          "start" : 1638132858397,
+          "stop" : 1638132858882,
+          "duration" : 485
+        }
+      }, {
+        "uid" : "4f1cc39eb0c62b0f",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/35//#testresult/4f1cc39eb0c62b0f",
+        "status" : "failed",
+        "statusDetails" : "Returned error: HTTPConnectionPool(host='test2-solana', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1c0c0bcc70>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))",
+        "time" : {
+          "start" : 1638132794762,
+          "stop" : 1638132795329,
+          "duration" : 567
+        }
+      }, {
+        "uid" : "3dbd15deb2d917e",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/34//#testresult/3dbd15deb2d917e",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 429",
+        "time" : {
+          "start" : 1638131380837,
+          "stop" : 1638131381402,
+          "duration" : 565
+        }
+      }, {
+        "uid" : "b4088af18aeedf9a",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/33//#testresult/b4088af18aeedf9a",
+        "status" : "failed",
+        "statusDetails" : "Returned error: HTTPConnectionPool(host='test2-solana', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1c0c0c0ac0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))",
+        "time" : {
+          "start" : 1638131257440,
+          "stop" : 1638131257905,
+          "duration" : 465
+        }
+      }, {
+        "uid" : "8fcdfa4e0890b75b",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/31//#testresult/8fcdfa4e0890b75b",
+        "status" : "failed",
+        "statusDetails" : "Returned error: HTTPConnectionPool(host='test2-solana', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1c0c0c1ca0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))",
+        "time" : {
+          "start" : 1638124109464,
+          "stop" : 1638124109828,
+          "duration" : 364
+        }
+      }, {
+        "uid" : "d956d6afb5fcddc3",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/30//#testresult/d956d6afb5fcddc3",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 429",
+        "time" : {
+          "start" : 1638120535402,
+          "stop" : 1638120535853,
+          "duration" : 451
+        }
+      }, {
+        "uid" : "f4d1f530b12b702b",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/29//#testresult/f4d1f530b12b702b",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 502",
+        "time" : {
+          "start" : 1638120502238,
+          "stop" : 1638120502564,
+          "duration" : 326
+        }
+      }, {
+        "uid" : "6bbed08bbde6a0e1",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/27//#testresult/6bbed08bbde6a0e1",
+        "status" : "failed",
+        "statusDetails" : "Returned error: HTTPConnectionPool(host='test2-solana', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1c0c107640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))",
+        "time" : {
+          "start" : 1638120443954,
+          "stop" : 1638120444325,
+          "duration" : 371
+        }
+      }, {
+        "uid" : "69d503e01f615b46",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/26//#testresult/69d503e01f615b46",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 429",
+        "time" : {
+          "start" : 1638118488325,
+          "stop" : 1638118488808,
+          "duration" : 483
+        }
+      }, {
+        "uid" : "8ca9d2f9b2946795",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/24//#testresult/8ca9d2f9b2946795",
+        "status" : "failed",
+        "statusDetails" : "Returned error: HTTPConnectionPool(host='test2-solana', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1c0c0ef700>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))",
+        "time" : {
+          "start" : 1638118408185,
+          "stop" : 1638118408527,
+          "duration" : 342
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "88aa318cea7709.json",
+  "parameterValues" : [ "11", "10" ]
+}
