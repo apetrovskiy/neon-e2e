@@ -1,0 +1,347 @@
+{
+  "uid" : "61fbaf8b4bec4588",
+  "name" : "the first funding request",
+  "fullName" : "features/faucet.feature:faucet:the first funding request",
+  "historyId" : "f9e08518def96dbb1b3de773981f1969",
+  "time" : {
+    "start" : 1638283093928,
+    "stop" : 1638283094636,
+    "duration" : 708
+  },
+  "description" : "",
+  "status" : "failed",
+  "statusMessage" : "Invalid JSON RPC response: \"<html>\\r\\n<head><title>502 Bad Gateway</title></head>\\r\\n<body>\\r\\n<center><h1>502 Bad Gateway</h1></center>\\r\\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\\r\\n</body>\\r\\n</html>\\r\\n\"",
+  "statusTrace" : "Error: Invalid JSON RPC response: \"<html>\\r\\n<head><title>502 Bad Gateway</title></head>\\r\\n<body>\\r\\n<center><h1>502 Bad Gateway</h1></center>\\r\\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\\r\\n</body>\\r\\n</html>\\r\\n\"\n    at Object.InvalidResponse (/home/runner/work/neon-e2e/neon-e2e/node_modules/web3-core-helpers/lib/errors.js:43:16)\n    at XMLHttpRequest.request.onreadystatechange (/home/runner/work/neon-e2e/neon-e2e/node_modules/web3-providers-http/lib/index.js:95:32)\n    at XMLHttpRequestEventTarget.dispatchEvent (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request-event-target.ts:44:13)\n    at XMLHttpRequest._setReadyState (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:219:8)\n    at XMLHttpRequest._onHttpResponseEnd (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:345:8)\n    at IncomingMessage.<anonymous> (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:311:39)\n    at IncomingMessage.emit (node:events:402:35)\n    at IncomingMessage.emit (node:domain:475:12)\n    at endReadableNT (node:internal/streams/readable:1343:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "time" : { },
+    "status" : "broken",
+    "steps" : [ {
+      "name" : "Before: tests/step-definitions/hooks.ts:9",
+      "time" : {
+        "start" : 1638283093928,
+        "stop" : 1638283093936,
+        "duration" : 8
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "",
+    "status" : "failed",
+    "statusMessage" : "Invalid JSON RPC response: \"<html>\\r\\n<head><title>502 Bad Gateway</title></head>\\r\\n<body>\\r\\n<center><h1>502 Bad Gateway</h1></center>\\r\\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\\r\\n</body>\\r\\n</html>\\r\\n\"",
+    "statusTrace" : "Error: Invalid JSON RPC response: \"<html>\\r\\n<head><title>502 Bad Gateway</title></head>\\r\\n<body>\\r\\n<center><h1>502 Bad Gateway</h1></center>\\r\\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\\r\\n</body>\\r\\n</html>\\r\\n\"\n    at Object.InvalidResponse (/home/runner/work/neon-e2e/neon-e2e/node_modules/web3-core-helpers/lib/errors.js:43:16)\n    at XMLHttpRequest.request.onreadystatechange (/home/runner/work/neon-e2e/neon-e2e/node_modules/web3-providers-http/lib/index.js:95:32)\n    at XMLHttpRequestEventTarget.dispatchEvent (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request-event-target.ts:44:13)\n    at XMLHttpRequest._setReadyState (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:219:8)\n    at XMLHttpRequest._onHttpResponseEnd (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:345:8)\n    at IncomingMessage.<anonymous> (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:311:39)\n    at IncomingMessage.emit (node:events:402:35)\n    at IncomingMessage.emit (node:domain:475:12)\n    at endReadableNT (node:internal/streams/readable:1343:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
+    "steps" : [ {
+      "name" : "Given there is user Alice in Ethereum network with no initial balance",
+      "time" : {
+        "start" : 1638283093936,
+        "stop" : 1638283093986,
+        "duration" : 50
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When the user requests the ERC20 faucet for <1>Ξ",
+      "time" : {
+        "start" : 1638283093986,
+        "stop" : 1638283093987,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then the balance equals <1>Ξ",
+      "time" : {
+        "start" : 1638283093987,
+        "stop" : 1638283094636,
+        "duration" : 649
+      },
+      "status" : "failed",
+      "statusMessage" : "Invalid JSON RPC response: \"<html>\\r\\n<head><title>502 Bad Gateway</title></head>\\r\\n<body>\\r\\n<center><h1>502 Bad Gateway</h1></center>\\r\\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\\r\\n</body>\\r\\n</html>\\r\\n\"",
+      "statusTrace" : "Error: Invalid JSON RPC response: \"<html>\\r\\n<head><title>502 Bad Gateway</title></head>\\r\\n<body>\\r\\n<center><h1>502 Bad Gateway</h1></center>\\r\\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\\r\\n</body>\\r\\n</html>\\r\\n\"\n    at Object.InvalidResponse (/home/runner/work/neon-e2e/neon-e2e/node_modules/web3-core-helpers/lib/errors.js:43:16)\n    at XMLHttpRequest.request.onreadystatechange (/home/runner/work/neon-e2e/neon-e2e/node_modules/web3-providers-http/lib/index.js:95:32)\n    at XMLHttpRequestEventTarget.dispatchEvent (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request-event-target.ts:44:13)\n    at XMLHttpRequest._setReadyState (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:219:8)\n    at XMLHttpRequest._onHttpResponseEnd (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:345:8)\n    at IncomingMessage.<anonymous> (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:311:39)\n    at IncomingMessage.emit (node:events:402:35)\n    at IncomingMessage.emit (node:domain:475:12)\n    at endReadableNT (node:internal/streams/readable:1343:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "2692"
+  }, {
+    "name" : "feature",
+    "value" : "faucet"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "initial balance",
+    "value" : "1"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 61,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 19,
+        "unknown" : 0,
+        "total" : 80
+      },
+      "items" : [ {
+        "uid" : "d8f9b5ac053d88d1",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/56//#testresult/d8f9b5ac053d88d1",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '100' to equal '10'",
+        "time" : {
+          "start" : 1638217181617,
+          "stop" : 1638217182562,
+          "duration" : 945
+        }
+      }, {
+        "uid" : "ad0e4f58f7bfbc70",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/55//#testresult/ad0e4f58f7bfbc70",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '100' to equal '10'",
+        "time" : {
+          "start" : 1638216745225,
+          "stop" : 1638216746360,
+          "duration" : 1135
+        }
+      }, {
+        "uid" : "dd634830a0fd8f6c",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/54//#testresult/dd634830a0fd8f6c",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '100' to equal '10'",
+        "time" : {
+          "start" : 1638213204803,
+          "stop" : 1638213205835,
+          "duration" : 1032
+        }
+      }, {
+        "uid" : "808bbf65bdfed8d5",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/53//#testresult/808bbf65bdfed8d5",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '100' to equal '10'",
+        "time" : {
+          "start" : 1638212922461,
+          "stop" : 1638212923172,
+          "duration" : 711
+        }
+      }, {
+        "uid" : "916073bfc7e53c1",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/52//#testresult/916073bfc7e53c1",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '100' to equal '10'",
+        "time" : {
+          "start" : 1638212606781,
+          "stop" : 1638212607955,
+          "duration" : 1174
+        }
+      }, {
+        "uid" : "f18381f8c3f518f1",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/51//#testresult/f18381f8c3f518f1",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '100' to equal '10'",
+        "time" : {
+          "start" : 1638211893380,
+          "stop" : 1638211894408,
+          "duration" : 1028
+        }
+      }, {
+        "uid" : "2e41b3912b2824af",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/50//#testresult/2e41b3912b2824af",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '100' to equal '10'",
+        "time" : {
+          "start" : 1638210793671,
+          "stop" : 1638210794615,
+          "duration" : 944
+        }
+      }, {
+        "uid" : "1b0ad7416a950d5e",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/49//#testresult/1b0ad7416a950d5e",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '100' to equal '10'",
+        "time" : {
+          "start" : 1638210556428,
+          "stop" : 1638210557034,
+          "duration" : 606
+        }
+      }, {
+        "uid" : "96278e6b5d66e9c2",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/48//#testresult/96278e6b5d66e9c2",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '100' to equal '10'",
+        "time" : {
+          "start" : 1638207183181,
+          "stop" : 1638207184271,
+          "duration" : 1090
+        }
+      }, {
+        "uid" : "8678b298a7160563",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/47//#testresult/8678b298a7160563",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '100' to equal '10'",
+        "time" : {
+          "start" : 1638207073991,
+          "stop" : 1638207074957,
+          "duration" : 966
+        }
+      }, {
+        "uid" : "eebe8f7b9f5d01bd",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/46//#testresult/eebe8f7b9f5d01bd",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '100' to equal '10'",
+        "time" : {
+          "start" : 1638206701469,
+          "stop" : 1638206702432,
+          "duration" : 963
+        }
+      }, {
+        "uid" : "4e65420808947b4",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/45//#testresult/4e65420808947b4",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '100' to equal '10'",
+        "time" : {
+          "start" : 1638206682695,
+          "stop" : 1638206683535,
+          "duration" : 840
+        }
+      }, {
+        "uid" : "cf486ecb4091d9ff",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/44//#testresult/cf486ecb4091d9ff",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '100' to equal '10'",
+        "time" : {
+          "start" : 1638206231472,
+          "stop" : 1638206232214,
+          "duration" : 742
+        }
+      }, {
+        "uid" : "65b7879781d7a7ac",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/43//#testresult/65b7879781d7a7ac",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '100' to equal '10'",
+        "time" : {
+          "start" : 1638205889547,
+          "stop" : 1638205890615,
+          "duration" : 1068
+        }
+      }, {
+        "uid" : "bfe3033ac4b19452",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/41//#testresult/bfe3033ac4b19452",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '100' to equal '10'",
+        "time" : {
+          "start" : 1638204734000,
+          "stop" : 1638204734958,
+          "duration" : 958
+        }
+      }, {
+        "uid" : "be4535ffe9179272",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/42//#testresult/be4535ffe9179272",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '100' to equal '10'",
+        "time" : {
+          "start" : 1638204874172,
+          "stop" : 1638204875309,
+          "duration" : 1137
+        }
+      }, {
+        "uid" : "541a64249ff6be88",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/40//#testresult/541a64249ff6be88",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '100' to equal '10'",
+        "time" : {
+          "start" : 1638204075267,
+          "stop" : 1638204076439,
+          "duration" : 1172
+        }
+      }, {
+        "uid" : "b4f7c01750dd6fd2",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/39//#testresult/b4f7c01750dd6fd2",
+        "status" : "failed",
+        "statusDetails" : "Invalid JSON RPC response: \"<html>\\r\\n<head><title>502 Bad Gateway</title></head>\\r\\n<body>\\r\\n<center><h1>502 Bad Gateway</h1></center>\\r\\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\\r\\n</body>\\r\\n</html>\\r\\n\"",
+        "time" : {
+          "start" : 1638202937000,
+          "stop" : 1638202937395,
+          "duration" : 395
+        }
+      }, {
+        "uid" : "12c12a7b1662b59",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/38//#testresult/12c12a7b1662b59",
+        "status" : "passed",
+        "time" : {
+          "start" : 1638133958356,
+          "stop" : 1638133972879,
+          "duration" : 14523
+        }
+      }, {
+        "uid" : "af2ab76fd28d3a73",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/37//#testresult/af2ab76fd28d3a73",
+        "status" : "failed",
+        "statusDetails" : "Returned error: HTTPConnectionPool(host='test2-solana', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1bfc797970>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))",
+        "time" : {
+          "start" : 1638133946823,
+          "stop" : 1638133947577,
+          "duration" : 754
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "61fbaf8b4bec4588.json",
+  "parameterValues" : [ "1" ]
+}
