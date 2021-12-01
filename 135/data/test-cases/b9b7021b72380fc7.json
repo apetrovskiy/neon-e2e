@@ -1,0 +1,332 @@
+{
+  "uid" : "b9b7021b72380fc7",
+  "name" : "the first funding request",
+  "fullName" : "features/faucet.feature:faucet:the first funding request",
+  "historyId" : "9f8e14c7432acddd8d64a92406fbde4a",
+  "time" : {
+    "start" : 1638320055338,
+    "stop" : 1638320055632,
+    "duration" : 294
+  },
+  "description" : "",
+  "status" : "failed",
+  "statusMessage" : "Request failed with status code 429",
+  "statusTrace" : "Error: Request failed with status code 429\n    at createError (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/adapters/http.js:293:11)\n    at IncomingMessage.emit (node:events:402:35)\n    at IncomingMessage.emit (node:domain:475:12)\n    at endReadableNT (node:internal/streams/readable:1343:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
+  "flaky" : true,
+  "newFailed" : true,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "time" : { },
+    "status" : "broken",
+    "steps" : [ {
+      "name" : "Before: tests/step-definitions/hooks.ts:9",
+      "time" : {
+        "start" : 1638320055338,
+        "stop" : 1638320055338,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "",
+    "status" : "failed",
+    "statusMessage" : "Request failed with status code 429",
+    "statusTrace" : "Error: Request failed with status code 429\n    at createError (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/adapters/http.js:293:11)\n    at IncomingMessage.emit (node:events:402:35)\n    at IncomingMessage.emit (node:domain:475:12)\n    at endReadableNT (node:internal/streams/readable:1343:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
+    "steps" : [ {
+      "name" : "Given there is user Alice in Ethereum network with no initial balance",
+      "time" : {
+        "start" : 1638320055338,
+        "stop" : 1638320055354,
+        "duration" : 16
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When the user requests the ERC20 faucet for <10>Ξ",
+      "time" : {
+        "start" : 1638320055355,
+        "stop" : 1638320055631,
+        "duration" : 276
+      },
+      "status" : "failed",
+      "statusMessage" : "Request failed with status code 429",
+      "statusTrace" : "Error: Request failed with status code 429\n    at createError (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/adapters/http.js:293:11)\n    at IncomingMessage.emit (node:events:402:35)\n    at IncomingMessage.emit (node:domain:475:12)\n    at endReadableNT (node:internal/streams/readable:1343:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "Then the balance equals <10>Ξ",
+      "time" : {
+        "start" : 1638320055631,
+        "stop" : 1638320055632,
+        "duration" : 1
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "2773"
+  }, {
+    "name" : "feature",
+    "value" : "faucet"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "initial balance",
+    "value" : "10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 70,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 78,
+        "unknown" : 0,
+        "total" : 148
+      },
+      "items" : [ {
+        "uid" : "cbaa82465db95e0",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/134//#testresult/cbaa82465db95e0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1638320026119,
+          "stop" : 1638320026935,
+          "duration" : 816
+        }
+      }, {
+        "uid" : "4887a54413d540ca",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/133//#testresult/4887a54413d540ca",
+        "status" : "passed",
+        "time" : {
+          "start" : 1638319665743,
+          "stop" : 1638319666542,
+          "duration" : 799
+        }
+      }, {
+        "uid" : "355d920b07f7d07b",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/132//#testresult/355d920b07f7d07b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1638319555829,
+          "stop" : 1638319556686,
+          "duration" : 857
+        }
+      }, {
+        "uid" : "b06d5446d63b791d",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/131//#testresult/b06d5446d63b791d",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 429",
+        "time" : {
+          "start" : 1638319176525,
+          "stop" : 1638319177024,
+          "duration" : 499
+        }
+      }, {
+        "uid" : "49b1525e63c6622",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/130//#testresult/49b1525e63c6622",
+        "status" : "passed",
+        "time" : {
+          "start" : 1638319151296,
+          "stop" : 1638319152133,
+          "duration" : 837
+        }
+      }, {
+        "uid" : "436281cc467e9125",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/129//#testresult/436281cc467e9125",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 429",
+        "time" : {
+          "start" : 1638318072324,
+          "stop" : 1638318072625,
+          "duration" : 301
+        }
+      }, {
+        "uid" : "dec7c932fc4dab25",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/128//#testresult/dec7c932fc4dab25",
+        "status" : "passed",
+        "time" : {
+          "start" : 1638318025091,
+          "stop" : 1638318025908,
+          "duration" : 817
+        }
+      }, {
+        "uid" : "9cce383bb82143e",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/127//#testresult/9cce383bb82143e",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 429",
+        "time" : {
+          "start" : 1638315753576,
+          "stop" : 1638315754111,
+          "duration" : 535
+        }
+      }, {
+        "uid" : "80c2541b5bf3d249",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/126//#testresult/80c2541b5bf3d249",
+        "status" : "passed",
+        "time" : {
+          "start" : 1638315711286,
+          "stop" : 1638315712144,
+          "duration" : 858
+        }
+      }, {
+        "uid" : "4c21bc558f937db0",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/125//#testresult/4c21bc558f937db0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1638315388400,
+          "stop" : 1638315389280,
+          "duration" : 880
+        }
+      }, {
+        "uid" : "6dd4f9f6f87d2447",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/119//#testresult/6dd4f9f6f87d2447",
+        "status" : "passed",
+        "time" : {
+          "start" : 1638314463689,
+          "stop" : 1638314464429,
+          "duration" : 740
+        }
+      }, {
+        "uid" : "74e947cf6818a075",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/118//#testresult/74e947cf6818a075",
+        "status" : "passed",
+        "time" : {
+          "start" : 1638314096111,
+          "stop" : 1638314096986,
+          "duration" : 875
+        }
+      }, {
+        "uid" : "3961015945dbfbad",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/117//#testresult/3961015945dbfbad",
+        "status" : "passed",
+        "time" : {
+          "start" : 1638313446596,
+          "stop" : 1638313447452,
+          "duration" : 856
+        }
+      }, {
+        "uid" : "3ffee2d7929c1cb5",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/116//#testresult/3ffee2d7929c1cb5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1638313141919,
+          "stop" : 1638313142680,
+          "duration" : 761
+        }
+      }, {
+        "uid" : "d6201069a15069a9",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/115//#testresult/d6201069a15069a9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1638312571271,
+          "stop" : 1638312572139,
+          "duration" : 868
+        }
+      }, {
+        "uid" : "c608542af5508bd3",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/114//#testresult/c608542af5508bd3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1638311877580,
+          "stop" : 1638311878340,
+          "duration" : 760
+        }
+      }, {
+        "uid" : "40efe99f7bdc54e0",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/113//#testresult/40efe99f7bdc54e0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1638311261924,
+          "stop" : 1638311262804,
+          "duration" : 880
+        }
+      }, {
+        "uid" : "9d769c5ef99137a",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/110//#testresult/9d769c5ef99137a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1638309949254,
+          "stop" : 1638309950092,
+          "duration" : 838
+        }
+      }, {
+        "uid" : "d9b01b69ea4c531a",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/109//#testresult/d9b01b69ea4c531a",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 429",
+        "time" : {
+          "start" : 1638309440159,
+          "stop" : 1638309440629,
+          "duration" : 470
+        }
+      }, {
+        "uid" : "fa0de67885c50b2b",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/108//#testresult/fa0de67885c50b2b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1638309285181,
+          "stop" : 1638309285919,
+          "duration" : 738
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "b9b7021b72380fc7.json",
+  "parameterValues" : [ "10" ]
+}
