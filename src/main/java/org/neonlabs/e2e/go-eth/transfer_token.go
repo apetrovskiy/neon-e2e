@@ -5,13 +5,12 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/crypto"
 	"golang.org/x/crypto/sha3"
 )
 
-func createWallet() common.Address {
+func transferToken(senderKey string, recipientKey string, amount string) string {
 	privateKey, err := crypto.GenerateKey()
 	if err != nil {
 		log.Fatal(err)
@@ -33,5 +32,5 @@ func createWallet() common.Address {
 	fmt.Println(address)
 	fmt.Println(hash)
 	fmt.Println(hexutil.Encode(hash.Sum(nil)[12:]))
-	return address
+	return address.Hex()
 }

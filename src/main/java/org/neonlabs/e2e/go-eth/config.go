@@ -2,6 +2,7 @@ package go_eth
 
 import (
 	"log"
+	"math/big"
 	"os"
 	"regexp"
 	"strconv"
@@ -17,6 +18,7 @@ type Config struct {
 	AddressFrom, AddressTo, PrivateKey                          string
 	SolanaExplorer, SolanaUrl                                   string
 	UsersNumber                                                 int
+	InitialBalance                                              *big.Int
 }
 
 func loadEnv() {
@@ -45,6 +47,8 @@ func GetConfig() *Config {
 	solanaExplorer := os.Getenv("SOLANA_EXPLORER")
 	solanaUrl := os.Getenv("SOLANA_URL")
 	usersNumber, _ := strconv.Atoi(os.Getenv("USERS_NUMBER"))
+	bigIntHolder := new(big.Int)
+	initialBalance, _ := bigIntHolder.SetString(os.Getenv("INITIAL_BALANCE"), 18)
 
 	return &Config{
 		NetworkName:    networkName,
@@ -58,5 +62,6 @@ func GetConfig() *Config {
 		SolanaExplorer: solanaExplorer,
 		SolanaUrl:      solanaUrl,
 		UsersNumber:    usersNumber,
+		InitialBalance: initialBalance,
 	}
 }
