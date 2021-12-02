@@ -28,10 +28,10 @@ func transferEther(client *ethclient.Client, senderAccount Account, recipientAcc
 	// gasPrice, err := client.SuggestGasPrice(context.Background())
 	// if err != nil {
 	// 	fmt.Println("=================================================================== 02 e")
-  //   fmt.Println(err)
+	//   fmt.Println(err)
 	// 	log.Fatal(err)
 	// }
-  gasPrice:=big.NewInt(21000)
+	gasPrice := big.NewInt(21000)
 
 	toAddress := common.HexToAddress(recipientAccount.Address.Hex())
 	var data []byte
@@ -40,22 +40,22 @@ func transferEther(client *ethclient.Client, senderAccount Account, recipientAcc
 	// chainID, err := client.NetworkID(context.Background())
 	// if err != nil {
 	// 	fmt.Println("=================================================================== 03 e")
-  //   fmt.Println(err)
+	//   fmt.Println(err)
 	// 	log.Fatal(err)
 	// }
-  chainID:=big.NewInt(111)
+	chainID := big.NewInt(111)
 
 	signedTx, err := types.SignTx(tx, types.NewEIP155Signer(chainID), senderAccount.PrivateKey)
 	if err != nil {
 		fmt.Println("=================================================================== 04 e")
-    fmt.Println(err)
+		fmt.Println(err)
 		log.Fatal(err)
 	}
 
 	err = client.SendTransaction(context.Background(), signedTx)
 	if err != nil {
 		fmt.Println("=================================================================== 05 e")
-    fmt.Println(err)
+		fmt.Println(err)
 		log.Fatal(err)
 	}
 
