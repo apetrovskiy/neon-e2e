@@ -1,10 +1,18 @@
 package org.neonlabs.e2e.web3j;
 
+import org.web3j.protocol.Web3j;
+import org.web3j.protocol.http.HttpService;
+
 /**
  * Returns a connection to blockchain.
  */
 public class Connection {
-  public int getId() {
-    return 1;
+  /**
+   * Creates a connection to blockchain.
+   */
+  public Web3j createConnection() {
+    var config = new Config();
+    var web3 = Web3j.build(new HttpService(config.getProxyUrl()));
+    return web3;
   }
 }

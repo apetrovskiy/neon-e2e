@@ -16,7 +16,7 @@ class ConnectionTest {
   @Description("allure description")
   @Story("allure story")
   void probe() {
-    assertEquals(1, new Connection().getId(), "sample assertion");
+    assertEquals(1, 1, "sample assertion");
   }
 
   @Test
@@ -24,6 +24,7 @@ class ConnectionTest {
   @Story("Connection")
   void shouldConnectToNetwork() {
     var config = new Config();
-    assertNotNull(config.getProxyUrl(), "Proxy URL should not be empty");
+    var web3 = new Connection().createConnection();
+    assertNotNull(web3, "Connecton to the network should not be null");
   }
 }

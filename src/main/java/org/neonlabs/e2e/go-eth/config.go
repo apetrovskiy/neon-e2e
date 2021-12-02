@@ -48,7 +48,7 @@ func GetConfig() *Config {
 	solanaUrl := os.Getenv("SOLANA_URL")
 	usersNumber, _ := strconv.Atoi(os.Getenv("USERS_NUMBER"))
 	initialBalance := new(big.Int)
-	initialBalance, _ = initialBalance.SetString(os.Getenv("INITIAL_BALANCE"), 0)
+	initialBalance, _ = initialBalance.SetString(os.Getenv("FAUCET_AMOUNT"), 0)
 
 	return &Config{
 		NetworkName:    networkName,
