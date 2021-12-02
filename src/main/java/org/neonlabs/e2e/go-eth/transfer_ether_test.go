@@ -43,7 +43,7 @@ func TestTransferEther(t *testing.T) {
 
 			transferEther(client, *senderAccount, *recipientAccount, "1000000000000000000")
 
-			////////////////////////
+			// TODO: change to the right amounts
 			senderBalance = getLastBlockBalance(client, senderAccount.Address.Hex())
 			fmt.Println(senderBalance)
 			assert.Equal(t, GetConfig().InitialBalance, senderBalance, "Sender's initial balance is wrong")
