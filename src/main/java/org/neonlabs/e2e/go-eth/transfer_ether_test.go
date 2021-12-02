@@ -41,6 +41,15 @@ func TestTransferEther(t *testing.T) {
 			fmt.Println(recipientBalance)
 			assert.Equal(t, GetConfig().InitialBalance, recipientBalance, "Recipient's initial balance is wrong")
 
-			result = transferEther(sender.Address, recipient.Address, "1000000000000000000")
+			transferEther(client, *senderAccount, *recipientAccount, "1000000000000000000")
+
+			////////////////////////
+			senderBalance = getLastBlockBalance(client, senderAccount.Address.Hex())
+			fmt.Println(senderBalance)
+			assert.Equal(t, GetConfig().InitialBalance, senderBalance, "Sender's initial balance is wrong")
+
+			recipientBalance = getLastBlockBalance(client, recipientAccount.Address.Hex())
+			fmt.Println(recipientBalance)
+			assert.Equal(t, GetConfig().InitialBalance, recipientBalance, "Recipient's initial balance is wrong")
 		}))
 }
