@@ -3,6 +3,7 @@ package go_eth
 import (
 	"crypto/ecdsa"
 	"fmt"
+	"hash"
 	"log"
 
 	"github.com/ethereum/go-ethereum/common"
@@ -11,7 +12,17 @@ import (
 	"golang.org/x/crypto/sha3"
 )
 
-func createWallet() common.Address {
+type Account struct {
+	Address         common.Address
+	PrivateKey      *ecdsa.PrivateKey
+	PrivateKeyBytes []byte
+	PrivateKeyHex   string
+	PublicKey       *ecdsa.PublicKey
+	PublicKeyBytes  []byte
+	Hash            hash.Hash
+}
+
+func createWallet() *Account {
 	privateKey, err := crypto.GenerateKey()
 	if err != nil {
 		log.Fatal(err)
@@ -33,5 +44,13 @@ func createWallet() common.Address {
 	fmt.Println(address)
 	fmt.Println(hash)
 	fmt.Println(hexutil.Encode(hash.Sum(nil)[12:]))
-	return address
+	return &Account{
+		Address:         address,
+		PrivateKey:      privateKey,
+		PrivateKeyBytes: privateKeyBytes,
+		PrivateKeyHex:   hexString,
+		PublicKey:       publicKeyECDSA,
+		PublicKeyBytes:  publicKeyBytes,
+		Hash:            hash,
+	}
 }

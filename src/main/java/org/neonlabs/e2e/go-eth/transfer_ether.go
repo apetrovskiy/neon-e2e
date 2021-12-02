@@ -3,14 +3,16 @@ package go_eth
 import (
 	"crypto/ecdsa"
 	"fmt"
-	"log"
-
+	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/crypto"
 	"golang.org/x/crypto/sha3"
+	"log"
 )
 
-func transferEther(senderKey string, recipientKey string, amount string) string {
+func transferEther(senderKey common.Address, recipientKey common.Address, amount string) string {
+	// privateKey, err := crypto.HexToECDSA(senderKey.)
+
 	privateKey, err := crypto.GenerateKey()
 	if err != nil {
 		log.Fatal(err)

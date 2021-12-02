@@ -22,12 +22,12 @@ func TestGetLatestBalance(t *testing.T) {
 				t.Errorf("Failed to connect to %s: %o", GetConfig().ProxyURL, err)
 			}
 
-			accountAddress := createWallet()
-			if len(accountAddress) == 0 {
+			account := createWallet()
+			if len(account.Address) == 0 {
 				t.Error("Failed to create a new wallet")
 			}
 
-			balance := getLastBlockBalance(client, accountAddress.Hex())
+			balance := getLastBlockBalance(client, account.Address.Hex())
 			fmt.Println(balance)
 			assert.Equal(t, GetConfig().InitialBalance, balance, "The initial balance is wrong")
 		}))
@@ -44,13 +44,13 @@ func TestGetSpecificBlockBalance(t *testing.T) {
 				t.Errorf("Failed to connect to %s: %o", GetConfig().ProxyURL, err)
 			}
 
-			accountAddress := createWallet()
-			if len(accountAddress) == 0 {
+			account := createWallet()
+			if len(account.Address) == 0 {
 				t.Error("Failed to create a new wallet")
 			}
 
 			blockNumber := big.NewInt(1001)
-			balance := getSpecificBlockBalance(client, accountAddress.Hex(), blockNumber)
+			balance := getSpecificBlockBalance(client, account.Address.Hex(), blockNumber)
 			fmt.Println(balance)
 			assert.Equal(t, GetConfig().InitialBalance, balance, "The initial balance is wrong")
 		}))
@@ -67,12 +67,12 @@ func TestGetPendingBalance(t *testing.T) {
 				t.Errorf("Failed to connect to %s: %o", GetConfig().ProxyURL, err)
 			}
 
-			accountAddress := createWallet()
-			if len(accountAddress) == 0 {
+			account := createWallet()
+			if len(account.Address) == 0 {
 				t.Error("Failed to create a new wallet")
 			}
 
-			balance := getPendingBalance(client, accountAddress.Hex())
+			balance := getPendingBalance(client, account.Address.Hex())
 			fmt.Println(balance)
 			assert.Equal(t, GetConfig().InitialBalance, balance, "The initial balance is wrong")
 		}))

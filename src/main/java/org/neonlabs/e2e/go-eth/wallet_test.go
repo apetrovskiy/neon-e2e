@@ -14,8 +14,8 @@ func TestNewWalletBalance(t *testing.T) {
 		allure.Story("go-ethereum"),
 		allure.Description("Creating a new wallet"),
 		allure.Action(func() {
-			accountAddress := createWallet()
-			if len(accountAddress.Hash()) == 0 {
+			account := createWallet()
+			if len(account.Address.Hash()) == 0 {
 				t.Error("Failed to create a new wallet")
 			}
 		}))

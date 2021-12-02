@@ -23,24 +23,24 @@ func TestTransferEther(t *testing.T) {
 				t.Errorf("Failed to connect to %s: %o", GetConfig().ProxyURL, err)
 			}
 
-			senderAddress := createWallet()
-			if len(senderAddress) == 0 {
+			senderAccount := createWallet()
+			if len(senderAccount.Address) == 0 {
 				t.Error("Failed to create a new wallet")
 			}
 
-			senderBalance := getLastBlockBalance(client, senderAddress.Hex())
+			senderBalance := getLastBlockBalance(client, senderAccount.Address.Hex())
 			fmt.Println(senderBalance)
 			assert.Equal(t, GetConfig().InitialBalance, senderBalance, "Sender's initial balance is wrong")
 
-			recipientAddress := createWallet()
-			if len(recipientAddress) == 0 {
+			recipientAccount := createWallet()
+			if len(recipientAccount.Address) == 0 {
 				t.Error("Failed to create a new wallet")
 			}
 
-			recipientBalance := getLastBlockBalance(client, recipientAddress.Hex())
+			recipientBalance := getLastBlockBalance(client, recipientAccount.Address.Hex())
 			fmt.Println(recipientBalance)
 			assert.Equal(t, GetConfig().InitialBalance, recipientBalance, "Recipient's initial balance is wrong")
 
-			// result=transferEther(senderAddress,recipientAddress,"1000000000000000000")
+			// result = transferEther(senderAddress, recipientAddress, "1000000000000000000")
 		}))
 }
