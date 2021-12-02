@@ -41,6 +41,6 @@ func TestTransferEther(t *testing.T) {
 			fmt.Println(recipientBalance)
 			assert.Equal(t, GetConfig().InitialBalance, recipientBalance, "Recipient's initial balance is wrong")
 
-			// result = transferEther(senderAddress, recipientAddress, "1000000000000000000")
+			result = transferEther(sender.Address, recipient.Address, "1000000000000000000")
 		}))
 }
