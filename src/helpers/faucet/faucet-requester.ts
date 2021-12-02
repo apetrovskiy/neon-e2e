@@ -8,6 +8,10 @@ import { logger } from '../../utils/logger';
 import { FaucetRequest } from './faucet-request';
 
 export const requestFaucet = async (wallet: string, amount: number): Promise<void> => {
+  if (!Config.useFaucet) {
+    logger.notice('Skipping faucet request');
+    return;
+  }
   const data: FaucetRequest = { amount: amount, wallet: wallet };
   logger.notice(`URL: ${Config.faucetUrl}`);
   logger.notice(`Wallet = ${data.wallet}, amount = ${data.amount}`);
