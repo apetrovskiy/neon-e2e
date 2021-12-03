@@ -12,7 +12,7 @@ func TestNewWallet(t *testing.T) {
 	allure.Test(t,
 		allure.Epic(Epic),
 		allure.Feature(FeatureExternallyOwnedAccounts),
-		allure.Story("Wallet"),
+		allure.Story(StoryWallet),
 		allure.Description("Creating a new wallet"),
 		allure.Action(func() {
 			account := createWallet()

@@ -12,8 +12,8 @@ func TestConnection(t *testing.T) {
 
 	allure.Test(t,
 		allure.Epic(Epic),
-		allure.Feature(Epic),
-		allure.Story("Connection"),
+		allure.Feature(FeatureCommon),
+		allure.Story(StoryConnection),
 		allure.Description("Connection to network"),
 		allure.Action(func() {
 			_, err := connect()

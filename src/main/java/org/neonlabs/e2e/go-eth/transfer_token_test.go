@@ -15,7 +15,7 @@ func TestTransferToken(t *testing.T) {
 		allure.Epic(Epic),
 		allure.Lead(FeatureExternallyOwnedAccounts),
 		allure.Feature(FeatureExternallyOwnedAccounts),
-		allure.Story("Transfer"),
+		allure.Story(StoryTransfer),
 		allure.Description("Transfer tokens"),
 		allure.Action(func() {
 			client, err := connect()

@@ -17,8 +17,8 @@ func TestTransferEther(t *testing.T) {
 	allure.Test(t,
 		allure.Epic(Epic),
 		allure.Lead(FeatureExternallyOwnedAccounts),
-		allure.Feature(Epic),
-		allure.Story("Transfer"),
+		allure.Feature(FeatureExternallyOwnedAccounts),
+		allure.Story(StoryTransfer),
 		allure.Description("Transfer Ether"),
 		allure.Action(func() {
 			client, err := connect()
