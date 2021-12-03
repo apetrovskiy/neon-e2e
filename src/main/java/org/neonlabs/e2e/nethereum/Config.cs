@@ -41,7 +41,7 @@ namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
       EnvReader.TryGetStringValue("NETWORK_ID", out networkId);
       EnvReader.TryGetStringValue("FAUCET_QUOTIENT", out faucetQuotient);
       EnvReader.TryGetStringValue("FAUCET_URL", out faucetUrl);
-      EnvReader.TryGetBooleanValue("USE_FAUCET");
+      EnvReader.TryGetBooleanValue("USE_FAUCET", out useFaucet);
       EnvReader.TryGetStringValue("ADDRESS_FROM", out addressFrom);
       EnvReader.TryGetStringValue("ADDRESS_TO", out addressTo);
       EnvReader.TryGetStringValue("DISABLE_CONFIRMATION", out disableConfirmation);
