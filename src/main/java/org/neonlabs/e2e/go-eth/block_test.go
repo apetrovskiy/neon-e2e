@@ -1,8 +1,9 @@
 package go_eth
 
 import (
-	"log"
 	"testing"
+
+	log "github.com/sirupsen/logrus"
 
 	"github.com/dailymotion/allure-go"
 	"github.com/stretchr/testify/assert"

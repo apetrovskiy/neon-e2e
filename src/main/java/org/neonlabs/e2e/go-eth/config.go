@@ -1,11 +1,12 @@
 package go_eth
 
 import (
-	"log"
 	"math/big"
 	"os"
 	"regexp"
 	"strconv"
+
+	log "github.com/sirupsen/logrus"
 
 	"github.com/dailymotion/allure-go"
 	"github.com/joho/godotenv"
@@ -23,6 +24,8 @@ type Config struct {
 }
 
 func loadEnv() {
+	log.SetFormatter(&log.TextFormatter{})
+
 	projectName := regexp.MustCompile(`^(.*` + projectDirName + `)`)
 	currentWorkDirectory, _ := os.Getwd()
 	rootPath := projectName.Find([]byte(currentWorkDirectory))

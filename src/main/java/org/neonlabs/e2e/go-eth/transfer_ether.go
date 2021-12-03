@@ -2,8 +2,9 @@ package go_eth
 
 import (
 	"context"
-	"log"
 	"math/big"
+
+	log "github.com/sirupsen/logrus"
 
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/ethclient"

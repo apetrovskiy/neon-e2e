@@ -1,14 +1,15 @@
 package go_eth
 
 import (
+	"math/big"
+
 	"github.com/dailymotion/allure-go"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/ethclient"
+	log "github.com/sirupsen/logrus"
 	"golang.org/x/crypto/sha3"
-	"log"
-	"math/big"
 )
 
 func buildGasEstimationRequest(toAddress common.Address) []byte {
