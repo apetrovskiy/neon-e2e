@@ -26,6 +26,7 @@ func getPendingNonce(client *ethclient.Client, senderAccount Account) uint64 {
 
 		nonce, err = client.PendingNonceAt(context.Background(), senderAccount.Address)
 		if err != nil {
+			// TODO: logging
 			fmt.Println("=================================================================== 01 e")
 			log.Fatal(err)
 		}
@@ -43,6 +44,7 @@ func getChainId(client *ethclient.Client) *big.Int {
 
 		chainId, err = client.NetworkID(context.Background())
 		if err != nil {
+			// TODO: logging
 			fmt.Println("=================================================================== 03 e")
 			fmt.Println(err)
 			log.Fatal(err)
@@ -61,6 +63,7 @@ func signTransaction(tx *types.Transaction, signer types.EIP155Signer, privateKe
 
 		signedTx, err = types.SignTx(tx, signer, privateKey)
 		if err != nil {
+			// TODO: logging
 			fmt.Println("=================================================================== 04 e")
 			fmt.Println(err)
 			log.Fatal(err)
@@ -77,6 +80,7 @@ func sendTransaction(client *ethclient.Client, signedTx *types.Transaction) {
 
 		err := client.SendTransaction(context.Background(), signedTx)
 		if err != nil {
+			// TODO: logging
 			fmt.Println("=================================================================== 05 e")
 			fmt.Println(err)
 			log.Fatal(err)
