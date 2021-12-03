@@ -4,23 +4,23 @@ namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
   using dotenv.net;
   using dotenv.net.Utilities;
 
-  public class Config
+  public static class Config
   {
-    public string NetworkName { get; set; }
-    public string ProxyUrl { get; set; }
-    public string NetworkId { get; set; }
-    public int FaucetQuotient { get; set; }
-    public string FaucetUrl { get; set; }
-    public bool UseFaucet { get; set; }
-    public string AddressFrom { get; set; }
-    public string AddressTo { get; set; }
-    public bool DisableConfirmation { get; set; }
-    public string PrivateKey { get; set; }
-    public string SolanaExplorer { get; set; }
-    public string SolanaUrl { get; set; }
-    public int UsersNumber { get; set; }
+    public static string NetworkName { get; set; }
+    public static string ProxyUrl { get; set; }
+    public static string NetworkId { get; set; }
+    public static int FaucetQuotient { get; set; }
+    public static string FaucetUrl { get; set; }
+    public static bool UseFaucet { get; set; }
+    public static string AddressFrom { get; set; }
+    public static string AddressTo { get; set; }
+    public static bool DisableConfirmation { get; set; }
+    public static string PrivateKey { get; set; }
+    public static string SolanaExplorer { get; set; }
+    public static string SolanaUrl { get; set; }
+    public static int UsersNumber { get; set; }
 
-    public Config()
+    public static void Init()
     {
       string networkName;
       string proxyUrl;

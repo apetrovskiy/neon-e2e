@@ -12,7 +12,7 @@ func TestWhisperConnection(t *testing.T) {
 
 	allure.SkipTest(t,
 		allure.Epic(Epic),
-		allure.Feature(FeatureWhister),
+		allure.Feature(FeatureWhisper),
 		allure.Story("Connect Whisper client"),
 		allure.Description("Connect Whisper client"),
 		allure.Action(func() {
@@ -24,7 +24,7 @@ func TestGenerateWhisperKeyPair(t *testing.T) {
 
 	allure.SkipTest(t,
 		allure.Epic(Epic),
-		allure.Feature(FeatureWhister),
+		allure.Feature(FeatureWhisper),
 		allure.Story("Generate Whisper key pair"),
 		allure.Description("Generate Whisper key pair"),
 		allure.Action(func() {
@@ -36,7 +36,7 @@ func TestSendMessageOnWhisper(t *testing.T) {
 
 	allure.SkipTest(t,
 		allure.Epic(Epic),
-		allure.Feature(FeatureWhister),
+		allure.Feature(FeatureWhisper),
 		allure.Story("Send message on Whisper"),
 		allure.Description("Send message on Whisper"),
 		allure.Action(func() {
@@ -48,7 +48,7 @@ func TestSubscribeToWhisperMessages(t *testing.T) {
 
 	allure.SkipTest(t,
 		allure.Epic(Epic),
-		allure.Feature(FeatureWhister),
+		allure.Feature(FeatureWhisper),
 		allure.Story("Subscribe to Whisper messages"),
 		allure.Description("Subscribe to Whisper messages"),
 		allure.Action(func() {

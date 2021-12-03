@@ -5,10 +5,11 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
   using NeonEndToEnd.org.neonlabs.e2e.nethereum;
   using Nethereum.RPC.Eth;
   using Xunit;
+  using static NeonEndToEnd.org.neonlabs.e2e.nethereum.Constants;
 
-  [AllureSuite("Nethereum")]
-  [AllureEpic("Nethereum")]
-  [AllureFeature(new string[] { "Nethereum" })]
+  [AllureSuite(Suite)]
+  [AllureEpic(Epic)]
+  [AllureFeature(new string[] { FeatureBlocks })]
   public class BlockNumberTest
   {
     [AllureXunit(DisplayName = "Latest block number test")]

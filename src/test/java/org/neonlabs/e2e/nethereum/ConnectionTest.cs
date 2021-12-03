@@ -5,10 +5,11 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
   using NeonEndToEnd.org.neonlabs.e2e.nethereum;
   using Nethereum.RPC.Eth;
   using Xunit;
+  using static NeonEndToEnd.org.neonlabs.e2e.nethereum.Constants;
 
-  [AllureSuite("Nethereum")]
-  [AllureEpic("Nethereum")]
-  [AllureFeature(new string[] { "Nethereum" })]
+  [AllureSuite(Suite)]
+  [AllureEpic(Epic)]
+  [AllureFeature(new string[] { FeatureCommon })]
   public class ConnectionTest
   {
     [AllureXunit(DisplayName = "Connection test")]
@@ -45,6 +46,7 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
     public void ShouldGetInitialBalanceAsync()
     {
       var account = AccountFactory.CreateAccount();
+      // TODO: logging
       Console.WriteLine(account.ChainId);
       // Console.WriteLine(account.TransactionManager.Client.GetType().Name);
       // Assert.NotNull(balance);

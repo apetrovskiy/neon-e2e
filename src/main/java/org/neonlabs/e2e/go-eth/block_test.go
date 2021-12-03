@@ -12,7 +12,7 @@ func TestQueryBlockHeader(t *testing.T) {
 
 	allure.SkipTest(t,
 		allure.Epic(Epic),
-		allure.Feature("Block"),
+		allure.Feature(FeatureBlocks),
 		allure.Story("Query block"),
 		allure.Description("Block header"),
 		allure.Action(func() {
@@ -24,7 +24,7 @@ func TestQueryFullBlock(t *testing.T) {
 
 	allure.SkipTest(t,
 		allure.Epic(Epic),
-		allure.Feature("Block"),
+		allure.Feature(FeatureBlocks),
 		allure.Story("Query block"),
 		allure.Description("Full block"),
 		allure.Action(func() {
