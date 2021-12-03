@@ -2,7 +2,6 @@ package go_eth
 
 import (
 	"fmt"
-	"math/big"
 	"testing"
 
 	"github.com/dailymotion/allure-go"
@@ -12,7 +11,7 @@ import (
 func TestNewBlocksSubscription(t *testing.T) {
 
 	allure.SkipTest(t,
-		allure.Epic("go-ethereum"),
+		allure.Epic(Epic),
 		allure.Feature("Subscription"),
 		allure.Story("Subscription to new blocks"),
 		allure.Description("Subscription to new blocks"),

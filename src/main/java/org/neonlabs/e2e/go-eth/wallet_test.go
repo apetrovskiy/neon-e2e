@@ -10,8 +10,8 @@ import (
 func TestNewWallet(t *testing.T) {
 
 	allure.Test(t,
-		allure.Epic("go-ethereum"),
-		allure.Feature("Externally Owned Accounts"),
+		allure.Epic(Epic),
+		allure.Feature(FeatureExternallyOwnedAccounts),
 		allure.Story("Wallet"),
 		allure.Description("Creating a new wallet"),
 		allure.Action(func() {

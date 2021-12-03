@@ -2,7 +2,6 @@ package go_eth
 
 import (
 	"fmt"
-	"math/big"
 	"testing"
 
 	"github.com/dailymotion/allure-go"
@@ -12,7 +11,7 @@ import (
 func TestQueryTransaction(t *testing.T) {
 
 	allure.SkipTest(t,
-		allure.Epic("go-ethereum"),
+		allure.Epic(Epic),
 		allure.Feature("Transaction"),
 		allure.Story("Query transaction"),
 		allure.Description("Query transaction"),
@@ -25,7 +24,7 @@ func TestQueryTransaction(t *testing.T) {
 func TestCreateRawTransaction(t *testing.T) {
 
 	allure.SkipTest(t,
-		allure.Epic("go-ethereum"),
+		allure.Epic(Epic),
 		allure.Feature("Transaction"),
 		allure.Story("Create raw transaction"),
 		allure.Description("Create raw transaction"),
@@ -38,7 +37,7 @@ func TestCreateRawTransaction(t *testing.T) {
 func TestSendRawTransaction(t *testing.T) {
 
 	allure.SkipTest(t,
-		allure.Epic("go-ethereum"),
+		allure.Epic(Epic),
 		allure.Feature("Transaction"),
 		allure.Story("Send raw transaction"),
 		allure.Description("Send raw transaction"),

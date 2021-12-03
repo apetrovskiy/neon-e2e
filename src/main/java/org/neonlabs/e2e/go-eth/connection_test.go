@@ -11,8 +11,8 @@ import (
 func TestConnection(t *testing.T) {
 
 	allure.Test(t,
-		allure.Epic("go-ethereum"),
-		allure.Feature("go-ethereum"),
+		allure.Epic(Epic),
+		allure.Feature(Epic),
 		allure.Story("Connection"),
 		allure.Description("Connection to network"),
 		allure.Action(func() {
@@ -30,8 +30,8 @@ func TestConnection(t *testing.T) {
 // func TestNewWallet222(t *testing.T) {
 
 // 	allure.Test(t,
-// 		allure.Epic("go-ethereum"),
-// 		allure.Feature("go-ethereum"),
+// 		allure.Epic(Epic),
+// 		allure.Feature(Epic),
 // 		allure.Story("Wallet"),
 // 		allure.Description("Creating a new wallet 222"),
 // 		allure.Action(func() {

@@ -2,7 +2,6 @@ package go_eth
 
 import (
 	"fmt"
-	"math/big"
 	"testing"
 
 	"github.com/dailymotion/allure-go"
@@ -12,10 +11,10 @@ import (
 func TestAddressIsValid(t *testing.T) {
 
 	allure.SkipTest(t,
-		allure.Epic("go-ethereum"),
-		allure.Feature("Address"),
-		allure.Story("Address validation"),
-		allure.Description("Get the latest block balance"),
+		allure.Epic(Epic),
+		allure.Feature(FeatureAddress),
+		allure.Story(StoryAddressValidation),
+		allure.Description("Address is valid"),
 		allure.Action(func() {
 			// TODO: logging
 			fmt.Println("111")
@@ -25,10 +24,10 @@ func TestAddressIsValid(t *testing.T) {
 func TestAddressIsAccount(t *testing.T) {
 
 	allure.SkipTest(t,
-		allure.Epic("go-ethereum"),
-		allure.Feature("Address"),
-		allure.Story("Address validation"),
-		allure.Description("Get the latest block balance"),
+		allure.Epic(Epic),
+		allure.Feature(FeatureAddress),
+		allure.Story(StoryAddressValidation),
+		allure.Description("Address is account"),
 		allure.Action(func() {
 			// TODO: logging
 			fmt.Println("111")
@@ -38,10 +37,10 @@ func TestAddressIsAccount(t *testing.T) {
 func TestAddressIsSmartConstract(t *testing.T) {
 
 	allure.SkipTest(t,
-		allure.Epic("go-ethereum"),
-		allure.Feature("Address"),
-		allure.Story("Address validation"),
-		allure.Description("Get the latest block balance"),
+		allure.Epic(Epic),
+		allure.Feature(FeatureAddress),
+		allure.Story(StoryAddressValidation),
+		allure.Description("Address is smart contract"),
 		allure.Action(func() {
 			// TODO: logging
 			fmt.Println("111")

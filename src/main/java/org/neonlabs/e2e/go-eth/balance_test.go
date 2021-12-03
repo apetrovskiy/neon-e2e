@@ -12,9 +12,9 @@ import (
 func TestGetLatestBalance(t *testing.T) {
 
 	allure.Test(t,
-		allure.Epic("go-ethereum"),
-		allure.Feature("Externally Owned Accounts"),
-		allure.Story("Balance"),
+		allure.Epic(Epic),
+		allure.Feature(FeatureExternallyOwnedAccounts),
+		allure.Story(StoryBalance),
 		allure.Description("Get the latest block balance"),
 		allure.Action(func() {
 			client, err := connect()
@@ -35,9 +35,9 @@ func TestGetLatestBalance(t *testing.T) {
 }
 func TestGetSpecificBlockBalance(t *testing.T) {
 	allure.Test(t,
-		allure.Epic("go-ethereum"),
-		allure.Feature("Externally Owned Accounts"),
-		allure.Story("Balance"),
+		allure.Epic(Epic),
+		allure.Feature(FeatureExternallyOwnedAccounts),
+		allure.Story(StoryBalance),
 		allure.Description("Get a specific block balance"),
 		allure.Action(func() {
 			client, err := connect()
@@ -59,9 +59,9 @@ func TestGetSpecificBlockBalance(t *testing.T) {
 }
 func TestGetPendingBalance(t *testing.T) {
 	allure.Test(t,
-		allure.Epic("go-ethereum"),
-		allure.Feature("Externally Owned Accounts"),
-		allure.Story("Balance"),
+		allure.Epic(Epic),
+		allure.Feature(FeatureExternallyOwnedAccounts),
+		allure.Story(StoryBalance),
 		allure.Description("Get pending balance"),
 		allure.Action(func() {
 			client, err := connect()

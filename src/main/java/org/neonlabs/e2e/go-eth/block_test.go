@@ -2,7 +2,6 @@ package go_eth
 
 import (
 	"fmt"
-	"math/big"
 	"testing"
 
 	"github.com/dailymotion/allure-go"
@@ -12,7 +11,7 @@ import (
 func TestQueryBlockHeader(t *testing.T) {
 
 	allure.SkipTest(t,
-		allure.Epic("go-ethereum"),
+		allure.Epic(Epic),
 		allure.Feature("Block"),
 		allure.Story("Query block"),
 		allure.Description("Block header"),
@@ -25,7 +24,7 @@ func TestQueryBlockHeader(t *testing.T) {
 func TestQueryFullBlock(t *testing.T) {
 
 	allure.SkipTest(t,
-		allure.Epic("go-ethereum"),
+		allure.Epic(Epic),
 		allure.Feature("Block"),
 		allure.Story("Query block"),
 		allure.Description("Full block"),

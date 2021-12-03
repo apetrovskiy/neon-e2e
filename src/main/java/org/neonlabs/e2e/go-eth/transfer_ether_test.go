@@ -3,6 +3,7 @@ package go_eth
 import (
 	"fmt"
 	"math/big"
+
 	// TODO: clean it up
 	// "math/big"
 	"testing"
@@ -14,9 +15,9 @@ import (
 func TestTransferEther(t *testing.T) {
 
 	allure.Test(t,
-		allure.Epic("go-ethereum"),
-		allure.Lead("Externally Owned Accounts"),
-		allure.Feature("go-ethereum"),
+		allure.Epic(Epic),
+		allure.Lead(FeatureExternallyOwnedAccounts),
+		allure.Feature(Epic),
 		allure.Story("Transfer"),
 		allure.Description("Transfer Ether"),
 		allure.Action(func() {
