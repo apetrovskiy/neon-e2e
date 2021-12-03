@@ -10,7 +10,6 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// TODO: finish it
 func TestTransferEther(t *testing.T) {
 
 	allure.Test(t,

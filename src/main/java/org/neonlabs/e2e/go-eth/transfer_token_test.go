@@ -12,7 +12,7 @@ import (
 // TODO: finish it
 func TestTransferToken(t *testing.T) {
 
-	allure.Test(t,
+	allure.SkipTest(t,
 		allure.Epic("go-ethereum"),
 		allure.Lead("go-ethereum"),
 		allure.Feature("go-ethereum"),
