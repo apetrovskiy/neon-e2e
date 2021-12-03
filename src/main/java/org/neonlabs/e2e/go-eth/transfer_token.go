@@ -101,20 +101,29 @@ func transferToken(client *ethclient.Client, senderAccount Account, recipientAcc
 
 	tx := types.NewTransaction(nonce, tokenAddress, value, gasLimit, gasPrice, data)
 
-	chainID, err := client.NetworkID(context.Background())
-	if err != nil {
-		log.Fatal(err)
-	}
+	/*
+		chainID, err := client.NetworkID(context.Background())
+		if err != nil {
+			log.Fatal(err)
+		}
+	*/
+	chainID := getChainId(client)
 
-	signedTx, err := types.SignTx(tx, types.NewEIP155Signer(chainID), senderAccount.PrivateKey)
-	if err != nil {
-		log.Fatal(err)
-	}
+	/*
+		signedTx, err := types.SignTx(tx, types.NewEIP155Signer(chainID), senderAccount.PrivateKey)
+		if err != nil {
+			log.Fatal(err)
+		}
+	*/
+	signedTx := signTransaction(tx, types.NewEIP155Signer(chainID), senderAccount.PrivateKey)
 
-	err = client.SendTransaction(context.Background(), signedTx)
-	if err != nil {
-		log.Fatal(err)
-	}
+	/*
+		err = client.SendTransaction(context.Background(), signedTx)
+		if err != nil {
+			log.Fatal(err)
+		}
+	*/
+	sendTransaction(client, signedTx)
 
 	fmt.Printf("tx sent: %s", signedTx.Hash().Hex()) // tx sent: 0xa56316b637a94c4cc0331c73ef26389d6c097506d581073f927275e7a6ece0bc
 
