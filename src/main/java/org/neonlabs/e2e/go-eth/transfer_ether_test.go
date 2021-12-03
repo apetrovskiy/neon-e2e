@@ -15,9 +15,10 @@ func TestTransferEther(t *testing.T) {
 
 	allure.Test(t,
 		allure.Epic("go-ethereum"),
+    allure.Lead("go-ethereum"),
 		allure.Feature("go-ethereum"),
 		allure.Story("go-ethereum"),
-		allure.Description("Get the latest block balance"),
+		allure.Description("Transfer Ether"),
 		allure.Action(func() {
 			client, err := connect()
 			if err != nil {
