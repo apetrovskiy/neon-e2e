@@ -17,6 +17,7 @@ import (
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/ethclient"
 	// "golang.org/x/crypto/sha3"
+	// "github.com/dailymotion/allure-go"
 )
 
 func transferToken(client *ethclient.Client, senderAccount Account, recipientAccount Account, tokenAmount string) {

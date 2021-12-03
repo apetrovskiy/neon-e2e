@@ -10,6 +10,7 @@ import (
 func connect() (*ethclient.Client, error) {
 	var client *ethclient.Client
 	var err error
+
 	allure.Step(allure.Description("Connecting to network "+GetConfig().ProxyURL), allure.Action(func() {
 		client, err = ethclient.Dial(GetConfig().ProxyURL)
 		if err != nil {

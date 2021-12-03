@@ -64,15 +64,5 @@ func createWallet() *Account {
 		}
 	}))
 
-	// return &Account{
-	// 	Address:         address,
-	// 	PrivateKey:      privateKey,
-	// 	PrivateKeyBytes: privateKeyBytes,
-	// 	PrivateKeyHex:   hexString,
-	// 	PublicKey:       publicKeyECDSA,
-	// 	PublicKeyBytes:  publicKeyBytes,
-	// 	Hash:            hash,
-	// }
-
 	return &accountData
 }
