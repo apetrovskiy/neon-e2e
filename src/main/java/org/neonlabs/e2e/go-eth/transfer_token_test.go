@@ -1,6 +1,7 @@
 package go_eth
 
 import (
+	"fmt"
 	"log"
 	"testing"
 
@@ -19,13 +20,15 @@ func TestTransferToken(t *testing.T) {
 		allure.Description("Transfer tokens"),
 		allure.Action(func() {
 			client, err := connect()
+			assert.Nil(t, err, fmt.Sprintf(FaileToConnectTo, GetConfig().ProxyURL, err))
 			if err != nil {
-				t.Errorf("Failed to connect to %s: %o", GetConfig().ProxyURL, err)
+				t.Errorf(FaileToConnectTo, GetConfig().ProxyURL, err)
 			}
 
 			senderAccount := createWallet()
+			assert.NotEqual(t, 0, len(senderAccount.Address.Hash()), FailedToCreateWallet)
 			if len(senderAccount.Address) == 0 {
-				t.Error("Failed to create a new wallet")
+				t.Error(FailedToCreateWallet)
 			}
 
 			senderBalance := getLastBlockBalance(client, senderAccount.Address.Hex())
@@ -33,8 +36,9 @@ func TestTransferToken(t *testing.T) {
 			assert.Equal(t, GetConfig().InitialBalance, senderBalance, "Sender's initial balance is wrong")
 
 			recipientAccount := createWallet()
+			assert.NotEqual(t, 0, len(recipientAccount.Address.Hash()), FailedToCreateWallet)
 			if len(recipientAccount.Address) == 0 {
-				t.Error("Failed to create a new wallet")
+				t.Error(FailedToCreateWallet)
 			}
 
 			recipientBalance := getLastBlockBalance(client, recipientAccount.Address.Hex())
