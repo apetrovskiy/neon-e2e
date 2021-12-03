@@ -21,3 +21,18 @@ func TestNewWalletBalance(t *testing.T) {
 			t.Log("Wallet has been created")
 		}))
 }
+
+func TestConnection111(t *testing.T) {
+
+	allure.Test(t,
+		allure.Epic("go-ethereum"),
+		allure.Feature("go-ethereum"),
+		allure.Story("Connection"),
+		allure.Description("Connection to network 111"),
+		allure.Action(func() {
+			_, err := connect()
+			if err != nil {
+				t.Errorf("Failed to connect to %s: %o", GetConfig().ProxyURL, err)
+			}
+		}))
+}
