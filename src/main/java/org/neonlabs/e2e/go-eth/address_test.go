@@ -1,7 +1,7 @@
 package go_eth
 
 import (
-	"fmt"
+	"log"
 	"testing"
 
 	"github.com/dailymotion/allure-go"
@@ -16,8 +16,7 @@ func TestAddressIsValid(t *testing.T) {
 		allure.Story(StoryAddressValidation),
 		allure.Description("Address is valid"),
 		allure.Action(func() {
-			// TODO: logging
-			fmt.Println("111")
+			log.Println("111")
 			assert.Equal(t, 1, 1, "111")
 		}))
 }
@@ -29,8 +28,7 @@ func TestAddressIsAccount(t *testing.T) {
 		allure.Story(StoryAddressValidation),
 		allure.Description("Address is account"),
 		allure.Action(func() {
-			// TODO: logging
-			fmt.Println("111")
+			log.Println("111")
 			assert.Equal(t, 1, 1, "111")
 		}))
 }
@@ -42,8 +40,7 @@ func TestAddressIsSmartConstract(t *testing.T) {
 		allure.Story(StoryAddressValidation),
 		allure.Description("Address is smart contract"),
 		allure.Action(func() {
-			// TODO: logging
-			fmt.Println("111")
+			log.Println("111")
 			assert.Equal(t, 1, 1, "111")
 		}))
 }

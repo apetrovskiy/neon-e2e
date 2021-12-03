@@ -1,8 +1,7 @@
 package go_eth
 
 import (
-	"fmt"
-	// "log"
+	"log"
 	"math/big"
 
 	"github.com/ethereum/go-ethereum/common"
@@ -23,18 +22,16 @@ func buildGasEstimationRequest(toAddress common.Address) []byte {
 		hash := sha3.NewLegacyKeccak256()
 		hash.Write(transferFnSignature)
 		methodID := hash.Sum(nil)[:4]
-		fmt.Println(hexutil.Encode(methodID)) // 0xa9059cbb
+		log.Println(hexutil.Encode(methodID)) // 0xa9059cbb
 
 		paddedAddress := common.LeftPadBytes(toAddress.Bytes(), 32)
-		// TODO: logging
-		fmt.Println(hexutil.Encode(paddedAddress)) // 0x0000000000000000000000004592d8f8d7b001e72cb26a73e4fa1806a51ac79d
+		log.Println(hexutil.Encode(paddedAddress)) // 0x0000000000000000000000004592d8f8d7b001e72cb26a73e4fa1806a51ac79d
 
 		amount := new(big.Int)
 		amount.SetString("1000000000000000000000", 10) // sets the value to 1000 tokens, in the token denomination
 
 		paddedAmount := common.LeftPadBytes(amount.Bytes(), 32)
-		// TODO: logging
-		fmt.Println(hexutil.Encode(paddedAmount)) // 0x00000000000000000000000000000000000000000000003635c9adc5dea00000
+		log.Println(hexutil.Encode(paddedAmount)) // 0x00000000000000000000000000000000000000000000003635c9adc5dea00000
 
 		data = append(data, methodID...)
 		data = append(data, paddedAddress...)
@@ -50,7 +47,7 @@ func transferToken(client *ethclient.Client, senderAccount Account, recipientAcc
 		fromAddress := crypto.PubkeyToAddress(*senderAccount.PublicKey)
 		nonce, err := client.PendingNonceAt(context.Background(), fromAddress)
 		if err != nil {
-			fmt.Println("=================================================================== 01 e")
+			log.Println("=================================================================== 01 e")
 			log.Fatal(err)
 		}
 	*/
@@ -59,8 +56,8 @@ func transferToken(client *ethclient.Client, senderAccount Account, recipientAcc
 	value := big.NewInt(1000000000000000000) // in wei (1 eth)
 	// gasPrice, err := client.SuggestGasPrice(context.Background())
 	// if err != nil {
-	// 	fmt.Println("=================================================================== 02 e")
-	//   fmt.Println(err)
+	// 	log.Println("=================================================================== 02 e")
+	//   log.Println(err)
 	// 	log.Fatal(err)
 	// }
 	gasPrice := big.NewInt(21000)
@@ -72,27 +69,27 @@ func transferToken(client *ethclient.Client, senderAccount Account, recipientAcc
 
 		// chainID, err := client.NetworkID(context.Background())
 		// if err != nil {
-		// 	fmt.Println("=================================================================== 03 e")
-		//   fmt.Println(err)
+		// 	log.Println("=================================================================== 03 e")
+		//   log.Println(err)
 		// 	log.Fatal(err)
 		// }
 		chainID := big.NewInt(111)
 
 		signedTx, err := types.SignTx(tx, types.NewEIP155Signer(chainID), senderAccount.PrivateKey)
 		if err != nil {
-			fmt.Println("=================================================================== 04 e")
-			fmt.Println(err)
+			log.Println("=================================================================== 04 e")
+			log.Println(err)
 			log.Fatal(err)
 		}
 
 		err = client.SendTransaction(context.Background(), signedTx)
 		if err != nil {
-			fmt.Println("=================================================================== 05 e")
-			fmt.Println(err)
+			log.Println("=================================================================== 05 e")
+			log.Println(err)
 			log.Fatal(err)
 		}
 
-		fmt.Printf("tx sent: %s", signedTx.Hash().Hex())
+		log.Printf("tx sent: %s", signedTx.Hash().Hex())
 	*/
 
 	toAddress := common.HexToAddress(senderAccount.Address.Hex())
@@ -103,16 +100,16 @@ func transferToken(client *ethclient.Client, senderAccount Account, recipientAcc
 		hash := sha3.NewLegacyKeccak256()
 		hash.Write(transferFnSignature)
 		methodID := hash.Sum(nil)[:4]
-		fmt.Println(hexutil.Encode(methodID)) // 0xa9059cbb
+		log.Println(hexutil.Encode(methodID)) // 0xa9059cbb
 
 		paddedAddress := common.LeftPadBytes(toAddress.Bytes(), 32)
-		fmt.Println(hexutil.Encode(paddedAddress)) // 0x0000000000000000000000004592d8f8d7b001e72cb26a73e4fa1806a51ac79d
+		log.Println(hexutil.Encode(paddedAddress)) // 0x0000000000000000000000004592d8f8d7b001e72cb26a73e4fa1806a51ac79d
 
 		amount := new(big.Int)
 		amount.SetString("1000000000000000000000", 10) // sets the value to 1000 tokens, in the token denomination
 
 		paddedAmount := common.LeftPadBytes(amount.Bytes(), 32)
-		fmt.Println(hexutil.Encode(paddedAmount)) // 0x00000000000000000000000000000000000000000000003635c9adc5dea00000
+		log.Println(hexutil.Encode(paddedAmount)) // 0x00000000000000000000000000000000000000000000003635c9adc5dea00000
 
 		var data []byte
 		data = append(data, methodID...)
@@ -129,7 +126,7 @@ func transferToken(client *ethclient.Client, senderAccount Account, recipientAcc
 		if err != nil {
 			log.Fatal(err)
 		}
-		fmt.Println(gasLimit) // 23256
+		log.Println(gasLimit) // 23256
 	*/
 	gasLimit := estimateGasLimit(client, data, tokenAddress)
 
@@ -159,7 +156,6 @@ func transferToken(client *ethclient.Client, senderAccount Account, recipientAcc
 	*/
 	sendTransaction(client, signedTx)
 
-	// TODO: logging
-	fmt.Printf("tx sent: %s", signedTx.Hash().Hex()) // tx sent: 0xa56316b637a94c4cc0331c73ef26389d6c097506d581073f927275e7a6ece0bc
+	log.Printf("tx sent: %s", signedTx.Hash().Hex()) // tx sent: 0xa56316b637a94c4cc0331c73ef26389d6c097506d581073f927275e7a6ece0bc
 
 }

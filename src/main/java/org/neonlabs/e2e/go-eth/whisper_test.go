@@ -1,7 +1,7 @@
 package go_eth
 
 import (
-	"fmt"
+	"log"
 	"testing"
 
 	"github.com/dailymotion/allure-go"
@@ -16,8 +16,7 @@ func TestWhisperConnection(t *testing.T) {
 		allure.Story("Connect Whisper client"),
 		allure.Description("Connect Whisper client"),
 		allure.Action(func() {
-			// TODO: logging
-			fmt.Println("111")
+			log.Println("111")
 			assert.Equal(t, 1, 1, "111")
 		}))
 }
@@ -29,8 +28,7 @@ func TestGenerateWhisperKeyPair(t *testing.T) {
 		allure.Story("Generate Whisper key pair"),
 		allure.Description("Generate Whisper key pair"),
 		allure.Action(func() {
-			// TODO: logging
-			fmt.Println("111")
+			log.Println("111")
 			assert.Equal(t, 1, 1, "111")
 		}))
 }
@@ -42,8 +40,7 @@ func TestSendMessageOnWhisper(t *testing.T) {
 		allure.Story("Send message on Whisper"),
 		allure.Description("Send message on Whisper"),
 		allure.Action(func() {
-			// TODO: logging
-			fmt.Println("111")
+			log.Println("111")
 			assert.Equal(t, 1, 1, "111")
 		}))
 }
@@ -55,8 +52,7 @@ func TestSubscribeToWhisperMessages(t *testing.T) {
 		allure.Story("Subscribe to Whisper messages"),
 		allure.Description("Subscribe to Whisper messages"),
 		allure.Action(func() {
-			// TODO: logging
-			fmt.Println("111")
+			log.Println("111")
 			assert.Equal(t, 1, 1, "111")
 		}))
 }

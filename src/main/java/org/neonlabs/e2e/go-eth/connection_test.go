@@ -18,27 +18,8 @@ func TestConnection(t *testing.T) {
 		allure.Action(func() {
 			_, err := connect()
 			assert.Nil(t, err, fmt.Sprintf("Failed to connect to %s: %o", GetConfig().ProxyURL, err))
-
 			if err != nil {
-
 				t.Errorf("Failed to connect to %s: %o", GetConfig().ProxyURL, err)
 			}
 		}))
 }
-
-// TODO: clean it up
-// func TestNewWallet222(t *testing.T) {
-
-// 	allure.Test(t,
-// 		allure.Epic(Epic),
-// 		allure.Feature(Epic),
-// 		allure.Story("Wallet"),
-// 		allure.Description("Creating a new wallet 222"),
-// 		allure.Action(func() {
-// 			account := createWallet()
-// 			if len(account.Address.Hash()) == 0 {
-// 				t.Error("Failed to create a new wallet")
-// 			}
-// 			t.Log("Wallet has been created")
-// 		}))
-// }

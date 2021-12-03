@@ -1,7 +1,7 @@
 package go_eth
 
 import (
-	"fmt"
+	"log"
 	"math/big"
 	"testing"
 
@@ -28,8 +28,7 @@ func TestGetLatestBalance(t *testing.T) {
 			}
 
 			balance := getLastBlockBalance(client, account.Address.Hex())
-			// TODO: logging
-			fmt.Println(balance)
+			log.Println(balance)
 			assert.Equal(t, GetConfig().InitialBalance, balance, "The initial balance is wrong")
 		}))
 }
@@ -52,8 +51,7 @@ func TestGetSpecificBlockBalance(t *testing.T) {
 
 			blockNumber := big.NewInt(1001)
 			balance := getSpecificBlockBalance(client, account.Address.Hex(), blockNumber)
-			// TODO: logging
-			fmt.Println(balance)
+			log.Println(balance)
 			assert.Equal(t, GetConfig().InitialBalance, balance, "The initial balance is wrong")
 		}))
 }
@@ -75,8 +73,7 @@ func TestGetPendingBalance(t *testing.T) {
 			}
 
 			balance := getPendingBalance(client, account.Address.Hex())
-			// TODO: logging
-			fmt.Println(balance)
+			log.Println(balance)
 			assert.Equal(t, GetConfig().InitialBalance, balance, "The initial balance is wrong")
 		}))
 }

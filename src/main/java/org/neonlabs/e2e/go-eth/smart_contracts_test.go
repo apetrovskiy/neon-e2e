@@ -1,7 +1,7 @@
 package go_eth
 
 import (
-	"fmt"
+	"log"
 	"testing"
 
 	"github.com/dailymotion/allure-go"
@@ -16,8 +16,7 @@ func TestDeploySmartContract(t *testing.T) {
 		allure.Story("Deploy smart contracts"),
 		allure.Description("Deploy smart contracts"),
 		allure.Action(func() {
-			// TODO: logging
-			fmt.Println("111")
+			log.Println("111")
 			assert.Equal(t, 1, 1, "111")
 		}))
 }
@@ -29,8 +28,7 @@ func TestLoadSmartContract(t *testing.T) {
 		allure.Story("Load smart contracts"),
 		allure.Description("Load smart contracts"),
 		allure.Action(func() {
-			// TODO: logging
-			fmt.Println("111")
+			log.Println("111")
 			assert.Equal(t, 1, 1, "111")
 		}))
 }
@@ -42,8 +40,7 @@ func TestQuerySmartConstract(t *testing.T) {
 		allure.Story("Query smart contracts"),
 		allure.Description("Query smart contracts"),
 		allure.Action(func() {
-			// TODO: logging
-			fmt.Println("111")
+			log.Println("111")
 			assert.Equal(t, 1, 1, "111")
 		}))
 }
@@ -55,8 +52,7 @@ func TestWriteToSmartConstract(t *testing.T) {
 		allure.Story("Write to smart contracts"),
 		allure.Description("Write to smart contracts"),
 		allure.Action(func() {
-			// TODO: logging
-			fmt.Println("111")
+			log.Println("111")
 			assert.Equal(t, 1, 1, "111")
 		}))
 }
@@ -68,8 +64,7 @@ func TestReadSmartConstractBytecode(t *testing.T) {
 		allure.Story("Read smart contract bytecode"),
 		allure.Description("Read smart contract bytecode"),
 		allure.Action(func() {
-			// TODO: logging
-			fmt.Println("111")
+			log.Println("111")
 			assert.Equal(t, 1, 1, "111")
 		}))
 }
@@ -81,8 +76,7 @@ func TestQueryERC20TokenSmartConstract(t *testing.T) {
 		allure.Story("Query smart contracts"),
 		allure.Description("Query ERC20 token smart contracts"),
 		allure.Action(func() {
-			// TODO: logging
-			fmt.Println("111")
+			log.Println("111")
 			assert.Equal(t, 1, 1, "111")
 		}))
 }

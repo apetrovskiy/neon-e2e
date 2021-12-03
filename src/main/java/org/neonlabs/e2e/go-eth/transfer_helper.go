@@ -3,18 +3,14 @@ package go_eth
 import (
 	"context"
 	"crypto/ecdsa"
-	// "crypto/ecdsa"
-	"fmt"
+
 	"log"
 	"math/big"
 
 	"github.com/ethereum/go-ethereum/common"
-	// "github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/core/types"
-	// "github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/ethclient"
 
-	// "golang.org/x/crypto/sha3"
 	"github.com/dailymotion/allure-go"
 	"github.com/ethereum/go-ethereum"
 )
@@ -27,8 +23,6 @@ func getPendingNonce(client *ethclient.Client, senderAccount Account) uint64 {
 
 		nonce, err = client.PendingNonceAt(context.Background(), senderAccount.Address)
 		if err != nil {
-			// TODO: logging
-			fmt.Println("=================================================================== 01 e")
 			log.Fatal(err)
 		}
 	}))
@@ -45,9 +39,6 @@ func getChainId(client *ethclient.Client) *big.Int {
 
 		chainId, err = client.NetworkID(context.Background())
 		if err != nil {
-			// TODO: logging
-			fmt.Println("=================================================================== 03 e")
-			fmt.Println(err)
 			log.Fatal(err)
 		}
 
@@ -64,9 +55,6 @@ func signTransaction(tx *types.Transaction, signer types.EIP155Signer, privateKe
 
 		signedTx, err = types.SignTx(tx, signer, privateKey)
 		if err != nil {
-			// TODO: logging
-			fmt.Println("=================================================================== 04 e")
-			fmt.Println(err)
 			log.Fatal(err)
 		}
 
@@ -81,9 +69,6 @@ func sendTransaction(client *ethclient.Client, signedTx *types.Transaction) {
 
 		err := client.SendTransaction(context.Background(), signedTx)
 		if err != nil {
-			// TODO: logging
-			fmt.Println("=================================================================== 05 e")
-			fmt.Println(err)
 			log.Fatal(err)
 		}
 
@@ -104,7 +89,7 @@ func estimateGasLimit(client *ethclient.Client, data []byte, tokenAddress common
 		if err != nil {
 			log.Fatal(err)
 		}
-		fmt.Println(gasLimit) // 23256
+		log.Println(gasLimit) // 23256
 	}))
 
 	return gasLimit

@@ -2,7 +2,6 @@ package go_eth
 
 import (
 	"crypto/ecdsa"
-	"fmt"
 	"hash"
 	"log"
 
@@ -45,13 +44,12 @@ func createWallet() *Account {
 		hash := sha3.NewLegacyKeccak256()
 		hash.Write(publicKeyBytes[1:])
 
-		// TODO: logging
-		fmt.Println(hexString)
-		fmt.Println(publicKeyECDSA)
-		fmt.Println(publicKeyBytes)
-		fmt.Println(address)
-		fmt.Println(hash)
-		fmt.Println(hexutil.Encode(hash.Sum(nil)[12:]))
+		log.Println(hexString)
+		log.Println(publicKeyECDSA)
+		log.Println(publicKeyBytes)
+		log.Println(address)
+		log.Println(hash)
+		log.Println(hexutil.Encode(hash.Sum(nil)[12:]))
 
 		accountData = Account{
 			Address:         address,
