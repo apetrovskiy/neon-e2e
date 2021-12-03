@@ -46,4 +46,24 @@ public class Config {
   public String getFaucetUrl() {
     return System.getProperty("FAUCET_URL");
   }
+
+  public Boolean getUseFaucet() {
+    return Boolean.parseBoolean(System.getProperty("USE_FAUCET"));
+  }
+
+  public Boolean getSolanaExplorer() {
+    return Boolean.parseBoolean(System.getProperty("SOLANA_EXPLORER"));
+  }
+
+  public Boolean getSolanaUrl() {
+    return Boolean.parseBoolean(System.getProperty("SOLANA_URL"));
+  }
+
+  public Integer getUsersNumber() {
+    return Integer.parseInt(System.getProperty("USERS_NUMBER"));
+  }
+
+  public Boolean getFaucetAmount() {
+    return Boolean.parseBoolean(System.getProperty("FAUCET_AMOUNT"));
+  }
 }

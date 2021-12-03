@@ -1,8 +1,7 @@
 import allure
-from config import config
-from src.helpers.common.networks import Networks
-from src.helpers.faucet.faucet_requester import request_faucet
 from web3 import Web3, HTTPProvider
+from config import config
+from src.helpers.faucet.faucet_requester import request_faucet
 
 
 class AccountFactory():
