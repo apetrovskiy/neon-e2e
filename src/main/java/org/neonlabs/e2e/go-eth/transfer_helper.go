@@ -8,7 +8,7 @@ import (
 	"log"
 	"math/big"
 
-	// "github.com/ethereum/go-ethereum/common"
+	"github.com/ethereum/go-ethereum/common"
 	// "github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/core/types"
 	// "github.com/ethereum/go-ethereum/crypto"
@@ -16,6 +16,7 @@ import (
 
 	// "golang.org/x/crypto/sha3"
 	"github.com/dailymotion/allure-go"
+	"github.com/ethereum/go-ethereum"
 )
 
 func getPendingNonce(client *ethclient.Client, senderAccount Account) uint64 {
@@ -88,4 +89,23 @@ func sendTransaction(client *ethclient.Client, signedTx *types.Transaction) {
 
 	}))
 
+}
+
+func estimateGasLimit(client *ethclient.Client, data []byte, tokenAddress common.Address) uint64 {
+	var gasLimit uint64
+	var err error
+
+	allure.Step(allure.Description("Sending transaction"), allure.Action(func() {
+
+		gasLimit, err = client.EstimateGas(context.Background(), ethereum.CallMsg{
+			To:   &tokenAddress,
+			Data: data,
+		})
+		if err != nil {
+			log.Fatal(err)
+		}
+		fmt.Println(gasLimit) // 23256
+	}))
+
+	return gasLimit
 }
