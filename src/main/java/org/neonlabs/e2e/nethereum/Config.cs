@@ -11,6 +11,7 @@ namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
     public string NetworkId { get; set; }
     public int FaucetQuotient { get; set; }
     public string FaucetUrl { get; set; }
+    public bool UseFaucet { get; set; }
     public string AddressFrom { get; set; }
     public string AddressTo { get; set; }
     public bool DisableConfirmation { get; set; }
