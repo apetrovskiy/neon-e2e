@@ -1,8 +1,7 @@
 package go_eth
 
 import (
-	"fmt"
-	// "math/big"
+	"log"
 	"testing"
 
 	"github.com/dailymotion/allure-go"
@@ -12,11 +11,12 @@ import (
 // TODO: finish it
 func TestTransferToken(t *testing.T) {
 
-	allure.Test(t,
-		allure.Epic("go-ethereum"),
-		allure.Feature("go-ethereum"),
-		allure.Story("go-ethereum"),
-		allure.Description("Get the latest block balance"),
+	allure.SkipTest(t,
+		allure.Epic(Epic),
+		allure.Lead(FeatureExternallyOwnedAccounts),
+		allure.Feature(FeatureExternallyOwnedAccounts),
+		allure.Story(StoryTransfer),
+		allure.Description("Transfer tokens"),
 		allure.Action(func() {
 			client, err := connect()
 			if err != nil {
@@ -29,7 +29,7 @@ func TestTransferToken(t *testing.T) {
 			}
 
 			senderBalance := getLastBlockBalance(client, senderAccount.Address.Hex())
-			fmt.Println(senderBalance)
+			log.Println(senderBalance)
 			assert.Equal(t, GetConfig().InitialBalance, senderBalance, "Sender's initial balance is wrong")
 
 			recipientAccount := createWallet()
@@ -38,18 +38,18 @@ func TestTransferToken(t *testing.T) {
 			}
 
 			recipientBalance := getLastBlockBalance(client, recipientAccount.Address.Hex())
-			fmt.Println(recipientBalance)
+			log.Println(recipientBalance)
 			assert.Equal(t, GetConfig().InitialBalance, recipientBalance, "Recipient's initial balance is wrong")
 
 			transferToken(client, *senderAccount, *recipientAccount, "1000000000000000000")
 
 			// TODO: change to the right amounts
 			senderBalance = getLastBlockBalance(client, senderAccount.Address.Hex())
-			fmt.Println(senderBalance)
+			log.Println(senderBalance)
 			assert.Equal(t, GetConfig().InitialBalance, senderBalance, "Sender's initial balance is wrong")
 
 			recipientBalance = getLastBlockBalance(client, recipientAccount.Address.Hex())
-			fmt.Println(recipientBalance)
+			log.Println(recipientBalance)
 			assert.Equal(t, GetConfig().InitialBalance, recipientBalance, "Recipient's initial balance is wrong")
 		}))
 }

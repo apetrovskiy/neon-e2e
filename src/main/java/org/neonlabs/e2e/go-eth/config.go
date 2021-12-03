@@ -7,6 +7,7 @@ import (
 	"regexp"
 	"strconv"
 
+	"github.com/dailymotion/allure-go"
 	"github.com/joho/godotenv"
 )
 
@@ -34,34 +35,39 @@ func loadEnv() {
 }
 
 func GetConfig() *Config {
-	loadEnv()
+	var config Config
 
-	networkName := os.Getenv("NETWORK_NAME")
-	proxyUrl := os.Getenv("PROXY_URL")
-	networkId := os.Getenv("NETWORK_ID")
-	faucetQuotient, _ := strconv.Atoi(os.Getenv("FAUCET_QUOTIENT"))
-	faucetUrl := os.Getenv("FAUCET_URL")
-	addressFrom := os.Getenv("ADDRESS_FROM")
-	addressTo := os.Getenv("ADDRESS_TO")
-	privateKey := os.Getenv("PRIVATE_KEY")
-	solanaExplorer := os.Getenv("SOLANA_EXPLORER")
-	solanaUrl := os.Getenv("SOLANA_URL")
-	usersNumber, _ := strconv.Atoi(os.Getenv("USERS_NUMBER"))
-	initialBalance := new(big.Int)
-	initialBalance, _ = initialBalance.SetString(os.Getenv("FAUCET_AMOUNT"), 0)
+	allure.Step(allure.Description("Loading the .env file"), allure.Action(func() {
+		loadEnv()
 
-	return &Config{
-		NetworkName:    networkName,
-		ProxyURL:       proxyUrl,
-		NetworkId:      networkId,
-		FaucetQuotient: faucetQuotient,
-		FaucetUrl:      faucetUrl,
-		AddressFrom:    addressFrom,
-		AddressTo:      addressTo,
-		PrivateKey:     privateKey,
-		SolanaExplorer: solanaExplorer,
-		SolanaUrl:      solanaUrl,
-		UsersNumber:    usersNumber,
-		InitialBalance: initialBalance,
-	}
+		networkName := os.Getenv("NETWORK_NAME")
+		proxyUrl := os.Getenv("PROXY_URL")
+		networkId := os.Getenv("NETWORK_ID")
+		faucetQuotient, _ := strconv.Atoi(os.Getenv("FAUCET_QUOTIENT"))
+		faucetUrl := os.Getenv("FAUCET_URL")
+		addressFrom := os.Getenv("ADDRESS_FROM")
+		addressTo := os.Getenv("ADDRESS_TO")
+		privateKey := os.Getenv("PRIVATE_KEY")
+		solanaExplorer := os.Getenv("SOLANA_EXPLORER")
+		solanaUrl := os.Getenv("SOLANA_URL")
+		usersNumber, _ := strconv.Atoi(os.Getenv("USERS_NUMBER"))
+		initialBalance := new(big.Int)
+		initialBalance, _ = initialBalance.SetString(os.Getenv("INITIAL_BALANCE"), 0)
+
+		config = Config{
+			NetworkName:    networkName,
+			ProxyURL:       proxyUrl,
+			NetworkId:      networkId,
+			FaucetQuotient: faucetQuotient,
+			FaucetUrl:      faucetUrl,
+			AddressFrom:    addressFrom,
+			AddressTo:      addressTo,
+			PrivateKey:     privateKey,
+			SolanaExplorer: solanaExplorer,
+			SolanaUrl:      solanaUrl,
+			UsersNumber:    usersNumber,
+			InitialBalance: initialBalance,
+		}
+	}))
+	return &config
 }
