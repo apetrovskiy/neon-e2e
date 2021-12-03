@@ -11,7 +11,7 @@ func TestConnection(t *testing.T) {
 	allure.Test(t,
 		allure.Epic("go-ethereum"),
 		allure.Feature("go-ethereum"),
-		allure.Story("go-ethereum"),
+		allure.Story("Connection"),
 		allure.Description("Connection to network"),
 		allure.Action(func() {
 			_, err := connect()
