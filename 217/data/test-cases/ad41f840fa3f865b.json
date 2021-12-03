@@ -1,0 +1,381 @@
+{
+  "uid" : "ad41f840fa3f865b",
+  "name" : "a user to user failed transaction",
+  "fullName" : "features/transaction.feature:transaction:a user to user failed transaction",
+  "historyId" : "80dd77e8290a680663e804112d7d2de8",
+  "time" : {
+    "start" : 1638560250952,
+    "stop" : 1638560254940,
+    "duration" : 3988
+  },
+  "description" : "",
+  "status" : "failed",
+  "statusMessage" : "balance should be equal to: expected '200000000000000000000' to equal '100000000000000000000'",
+  "statusTrace" : "AssertionError: balance should be equal to: expected '200000000000000000000' to equal '100000000000000000000'\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:72:63\n    at Generator.next (<anonymous>)\n    at fulfilled (/home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "time" : { },
+    "status" : "broken",
+    "steps" : [ {
+      "name" : "Before: tests/step-definitions/hooks.ts:9",
+      "time" : {
+        "start" : 1638560250952,
+        "stop" : 1638560250953,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "",
+    "status" : "failed",
+    "statusMessage" : "balance should be equal to: expected '200000000000000000000' to equal '100000000000000000000'",
+    "statusTrace" : "AssertionError: balance should be equal to: expected '200000000000000000000' to equal '100000000000000000000'\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:72:63\n    at Generator.next (<anonymous>)\n    at fulfilled (/home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+    "steps" : [ {
+      "name" : "Given there is user Alice in Ethereum network with the initial balance <10>Ξ",
+      "time" : {
+        "start" : 1638560250953,
+        "stop" : 1638560251867,
+        "duration" : 914
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And there is user Bob in Ethereum network with the initial balance <10>Ξ",
+      "time" : {
+        "start" : 1638560251867,
+        "stop" : 1638560252673,
+        "duration" : 806
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When user Alice sends <10>Ξ to user Bob",
+      "time" : {
+        "start" : 1638560252673,
+        "stop" : 1638560254418,
+        "duration" : 1745
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then the recipient has balance increased by 0Ξ",
+      "time" : {
+        "start" : 1638560254418,
+        "stop" : 1638560254939,
+        "duration" : 521
+      },
+      "status" : "failed",
+      "statusMessage" : "balance should be equal to: expected '200000000000000000000' to equal '100000000000000000000'",
+      "statusTrace" : "AssertionError: balance should be equal to: expected '200000000000000000000' to equal '100000000000000000000'\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:72:63\n    at Generator.next (<anonymous>)\n    at fulfilled (/home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "And the sender has balance decreased by 0Ξ",
+      "time" : {
+        "start" : 1638560254939,
+        "stop" : 1638560254940,
+        "duration" : 1
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "2774"
+  }, {
+    "name" : "feature",
+    "value" : "transaction"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "amount",
+    "value" : "10"
+  }, {
+    "name" : "initial balance",
+    "value" : "10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 225,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 225
+      },
+      "items" : [ {
+        "uid" : "6d4d7182c495f5fe",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/213//#testresult/6d4d7182c495f5fe",
+        "status" : "failed",
+        "statusDetails" : "balance should be equal to: expected '200000000000000000000' to equal '100000000000000000000'",
+        "time" : {
+          "start" : 1638559692106,
+          "stop" : 1638559695120,
+          "duration" : 3014
+        }
+      }, {
+        "uid" : "7d637577d5aa2463",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/212//#testresult/7d637577d5aa2463",
+        "status" : "failed",
+        "statusDetails" : "balance should be equal to: expected '200000000000000000000' to equal '100000000000000000000'",
+        "time" : {
+          "start" : 1638559622108,
+          "stop" : 1638559626210,
+          "duration" : 4102
+        }
+      }, {
+        "uid" : "32f9a4444992b97b",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/211//#testresult/32f9a4444992b97b",
+        "status" : "failed",
+        "statusDetails" : "balance should be equal to: expected '200000000000000000000' to equal '100000000000000000000'",
+        "time" : {
+          "start" : 1638558692902,
+          "stop" : 1638558697036,
+          "duration" : 4134
+        }
+      }, {
+        "uid" : "da4dbec391de9c8",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/210//#testresult/da4dbec391de9c8",
+        "status" : "failed",
+        "statusDetails" : "balance should be equal to: expected '200000000000000000000' to equal '100000000000000000000'",
+        "time" : {
+          "start" : 1638557669017,
+          "stop" : 1638557672714,
+          "duration" : 3697
+        }
+      }, {
+        "uid" : "225e8adb5101cb4d",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/209//#testresult/225e8adb5101cb4d",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '0' to equal '10'",
+        "time" : {
+          "start" : 1638557214005,
+          "stop" : 1638557214638,
+          "duration" : 633
+        }
+      }, {
+        "uid" : "f0a181f453375627",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/208//#testresult/f0a181f453375627",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '5' to equal '10'",
+        "time" : {
+          "start" : 1638557189171,
+          "stop" : 1638557189671,
+          "duration" : 500
+        }
+      }, {
+        "uid" : "73b434fd3bbfab8",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/207//#testresult/73b434fd3bbfab8",
+        "status" : "failed",
+        "statusDetails" : "error happened during the operation: expected 'Returned error: Command \\'[\\'neon-cli\\', \\'--commitment=recent\\', \\'--url\\', \\'http://dima-solana:8899\\', \\'--evm_loader=53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io\\', \\'emulate\\', \\'b6cf8502fd3e8300ac3ee6812eb59bf730ffee5e\\', \\'933a6976ad7e3ac999e3ef0b3cf9bd638e2ac67b\\', \\'none\\', \\'0x56bc75e2d63100000\\']\\' returned non-zero exit status 1.' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'",
+        "time" : {
+          "start" : 1638557186390,
+          "stop" : 1638557188627,
+          "duration" : 2237
+        }
+      }, {
+        "uid" : "a863b0a5122de76c",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/206//#testresult/a863b0a5122de76c",
+        "status" : "failed",
+        "statusDetails" : "balance should be equal to: expected '200000000000000000000' to equal '100000000000000000000'",
+        "time" : {
+          "start" : 1638556627463,
+          "stop" : 1638556631135,
+          "duration" : 3672
+        }
+      }, {
+        "uid" : "324c76f6609f9ce4",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/205//#testresult/324c76f6609f9ce4",
+        "status" : "failed",
+        "statusDetails" : "balance should be equal to: expected '200000000000000000000' to equal '100000000000000000000'",
+        "time" : {
+          "start" : 1638555532478,
+          "stop" : 1638555536228,
+          "duration" : 3750
+        }
+      }, {
+        "uid" : "1a2a280aa8521d6",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/204//#testresult/1a2a280aa8521d6",
+        "status" : "failed",
+        "statusDetails" : "balance should be equal to: expected '200000000000000000000' to equal '100000000000000000000'",
+        "time" : {
+          "start" : 1638554693188,
+          "stop" : 1638554697237,
+          "duration" : 4049
+        }
+      }, {
+        "uid" : "8fd21ab11c569419",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/203//#testresult/8fd21ab11c569419",
+        "status" : "failed",
+        "statusDetails" : "balance should be equal to: expected '200000000000000000000' to equal '100000000000000000000'",
+        "time" : {
+          "start" : 1638554221612,
+          "stop" : 1638554225779,
+          "duration" : 4167
+        }
+      }, {
+        "uid" : "716da52305ad4a79",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/202//#testresult/716da52305ad4a79",
+        "status" : "failed",
+        "statusDetails" : "balance should be equal to: expected '200000000000000000000' to equal '100000000000000000000'",
+        "time" : {
+          "start" : 1638552697928,
+          "stop" : 1638552701451,
+          "duration" : 3523
+        }
+      }, {
+        "uid" : "e2084191c3a19aa",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/201//#testresult/e2084191c3a19aa",
+        "status" : "failed",
+        "statusDetails" : "balance should be equal to: expected '200000000000000000000' to equal '100000000000000000000'",
+        "time" : {
+          "start" : 1638552427815,
+          "stop" : 1638552432299,
+          "duration" : 4484
+        }
+      }, {
+        "uid" : "fed3648d3b0da07e",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/200//#testresult/fed3648d3b0da07e",
+        "status" : "failed",
+        "statusDetails" : "balance should be equal to: expected '200000000000000000000' to equal '100000000000000000000'",
+        "time" : {
+          "start" : 1638551884158,
+          "stop" : 1638551888739,
+          "duration" : 4581
+        }
+      }, {
+        "uid" : "3a7eba6c88a4915",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/199//#testresult/3a7eba6c88a4915",
+        "status" : "failed",
+        "statusDetails" : "balance should be equal to: expected '200000000000000000000' to equal '100000000000000000000'",
+        "time" : {
+          "start" : 1638545779881,
+          "stop" : 1638545784027,
+          "duration" : 4146
+        }
+      }, {
+        "uid" : "d3ded4d7b7801de6",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/198//#testresult/d3ded4d7b7801de6",
+        "status" : "failed",
+        "statusDetails" : "balance should be equal to: expected '200000000000000000000' to equal '100000000000000000000'",
+        "time" : {
+          "start" : 1638545244284,
+          "stop" : 1638545247283,
+          "duration" : 2999
+        }
+      }, {
+        "uid" : "7f0ae421f73b971c",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/197//#testresult/7f0ae421f73b971c",
+        "status" : "failed",
+        "statusDetails" : "balance should be equal to: expected '200000000000000000000' to equal '100000000000000000000'",
+        "time" : {
+          "start" : 1638545083916,
+          "stop" : 1638545088473,
+          "duration" : 4557
+        }
+      }, {
+        "uid" : "aa08f68591e8a05f",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/196//#testresult/aa08f68591e8a05f",
+        "status" : "failed",
+        "statusDetails" : "balance should be equal to: expected '200000000000000000000' to equal '100000000000000000000'",
+        "time" : {
+          "start" : 1638544993221,
+          "stop" : 1638544997227,
+          "duration" : 4006
+        }
+      }, {
+        "uid" : "c14b9ad429144fa0",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/195//#testresult/c14b9ad429144fa0",
+        "status" : "failed",
+        "statusDetails" : "balance should be equal to: expected '200000000000000000000' to equal '100000000000000000000'",
+        "time" : {
+          "start" : 1638543902518,
+          "stop" : 1638543905616,
+          "duration" : 3098
+        }
+      }, {
+        "uid" : "da8d2b263be9dce3",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/194//#testresult/da8d2b263be9dce3",
+        "status" : "failed",
+        "statusDetails" : "balance should be equal to: expected '200000000000000000000' to equal '100000000000000000000'",
+        "time" : {
+          "start" : 1638543148442,
+          "stop" : 1638543152009,
+          "duration" : 3567
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "ad41f840fa3f865b.json",
+  "parameterValues" : [ "10", "10" ]
+}
