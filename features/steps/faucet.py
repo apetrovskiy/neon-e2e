@@ -7,8 +7,8 @@ from behave.runner import Context
 def step_user_no_initial_balance(context: Context):
     print("no initial balance")
     raise NotImplementedError(
-        u'STEP: Given there is user Alice in Ethereum network with no initial balance'
-    )
+        u'STEP: Given there is user Alice in Ethereum network '
+        'with no initial balance')
 
 
 @step("0008")
