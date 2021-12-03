@@ -2,7 +2,6 @@ package go_eth
 
 import (
 	"fmt"
-	// "math/big"
 	"testing"
 
 	"github.com/dailymotion/allure-go"
@@ -30,6 +29,7 @@ func TestTransferToken(t *testing.T) {
 			}
 
 			senderBalance := getLastBlockBalance(client, senderAccount.Address.Hex())
+			// TODO: logging
 			fmt.Println(senderBalance)
 			assert.Equal(t, GetConfig().InitialBalance, senderBalance, "Sender's initial balance is wrong")
 
@@ -39,6 +39,7 @@ func TestTransferToken(t *testing.T) {
 			}
 
 			recipientBalance := getLastBlockBalance(client, recipientAccount.Address.Hex())
+			// TODO: logging
 			fmt.Println(recipientBalance)
 			assert.Equal(t, GetConfig().InitialBalance, recipientBalance, "Recipient's initial balance is wrong")
 
@@ -46,10 +47,12 @@ func TestTransferToken(t *testing.T) {
 
 			// TODO: change to the right amounts
 			senderBalance = getLastBlockBalance(client, senderAccount.Address.Hex())
+			// TODO: logging
 			fmt.Println(senderBalance)
 			assert.Equal(t, GetConfig().InitialBalance, senderBalance, "Sender's initial balance is wrong")
 
 			recipientBalance = getLastBlockBalance(client, recipientAccount.Address.Hex())
+			// TODO: logging
 			fmt.Println(recipientBalance)
 			assert.Equal(t, GetConfig().InitialBalance, recipientBalance, "Recipient's initial balance is wrong")
 		}))

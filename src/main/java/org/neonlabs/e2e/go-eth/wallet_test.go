@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestNewWalletBalance(t *testing.T) {
+func TestNewWallet(t *testing.T) {
 
 	allure.Test(t,
 		allure.Epic("go-ethereum"),
@@ -16,8 +16,9 @@ func TestNewWalletBalance(t *testing.T) {
 		allure.Description("Creating a new wallet"),
 		allure.Action(func() {
 			account := createWallet()
+			assert.NotEqual(t, 0, len(account.Address.Hash()), "Failed to create a new wallet")
 			if len(account.Address.Hash()) == 0 {
-				assert.NotEqual(t, 0, len(account.Address.Hash()), "Failed to create a new wallet")
+
 				t.Error("Failed to create a new wallet")
 			}
 			t.Log("Wallet has been created")
@@ -25,48 +26,51 @@ func TestNewWalletBalance(t *testing.T) {
 		}))
 }
 
-func TestConnection111(t *testing.T) {
+// TODO: clean it up
+// func TestConnection111(t *testing.T) {
 
-	allure.Test(t,
-		allure.Epic("go-ethereum"),
-		allure.Feature("go-ethereum"),
-		allure.Story("Connection"),
-		allure.Description("Connection to network 111"),
-		allure.Action(func() {
-			_, err := connect()
-			if err != nil {
-				t.Errorf("Failed to connect to %s: %o", GetConfig().ProxyURL, err)
-			}
-		}))
-}
+// 	allure.Test(t,
+// 		allure.Epic("go-ethereum"),
+// 		allure.Feature("go-ethereum"),
+// 		allure.Story("Connection"),
+// 		allure.Description("Connection to network 111"),
+// 		allure.Action(func() {
+// 			_, err := connect()
+// 			if err != nil {
+// 				t.Errorf("Failed to connect to %s: %o", GetConfig().ProxyURL, err)
+// 			}
+// 		}))
+// }
 
-func TestConnection333(t *testing.T) {
+// TODO: clean it up
+// func TestConnection333(t *testing.T) {
 
-	allure.Test(t,
-		allure.Epic("go-ethereum"),
-		allure.Feature("go-ethereum"),
-		allure.Story("Connection 333"),
-		allure.Description("Connection to network 333"),
-		allure.Action(func() {
-			_, err := connect()
-			if err != nil {
-				t.Errorf("Failed to connect to %s: %o", GetConfig().ProxyURL, err)
-			}
-		}))
-}
+// 	allure.Test(t,
+// 		allure.Epic("go-ethereum"),
+// 		allure.Feature("go-ethereum"),
+// 		allure.Story("Connection 333"),
+// 		allure.Description("Connection to network 333"),
+// 		allure.Action(func() {
+// 			_, err := connect()
+// 			if err != nil {
+// 				t.Errorf("Failed to connect to %s: %o", GetConfig().ProxyURL, err)
+// 			}
+// 		}))
+// }
 
-func TestNewWalletBalance333(t *testing.T) {
+// TODO: clean it up
+// func TestNewWallet333(t *testing.T) {
 
-	allure.Test(t,
-		allure.Epic("go-ethereum"),
-		allure.Feature("go-ethereum"),
-		allure.Story("Wallet 333"),
-		allure.Description("Creating a new wallet 333"),
-		allure.Action(func() {
-			account := createWallet()
-			if len(account.Address.Hash()) == 0 {
-				t.Error("Failed to create a new wallet")
-			}
-			t.Log("Wallet has been created")
-		}))
-}
+// 	allure.Test(t,
+// 		allure.Epic("go-ethereum"),
+// 		allure.Feature("go-ethereum"),
+// 		allure.Story("Wallet 333"),
+// 		allure.Description("Creating a new wallet 333"),
+// 		allure.Action(func() {
+// 			account := createWallet()
+// 			if len(account.Address.Hash()) == 0 {
+// 				t.Error("Failed to create a new wallet")
+// 			}
+// 			t.Log("Wallet has been created")
+// 		}))
+// }

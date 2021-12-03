@@ -1,23 +1,17 @@
 package go_eth
 
 import (
-	// "context"
-	// "crypto/ecdsa"
 	"fmt"
 	// "log"
 	"math/big"
 
-	// "github.com/ethereum/go-ethereum"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"golang.org/x/crypto/sha3"
 
-	// "github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core/types"
-	// "github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/ethclient"
-	// "golang.org/x/crypto/sha3"
 	"github.com/dailymotion/allure-go"
+	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/ethereum/go-ethereum/ethclient"
 )
 
 func buildGasEstimationRequest(toAddress common.Address) []byte {
@@ -32,12 +26,14 @@ func buildGasEstimationRequest(toAddress common.Address) []byte {
 		fmt.Println(hexutil.Encode(methodID)) // 0xa9059cbb
 
 		paddedAddress := common.LeftPadBytes(toAddress.Bytes(), 32)
+		// TODO: logging
 		fmt.Println(hexutil.Encode(paddedAddress)) // 0x0000000000000000000000004592d8f8d7b001e72cb26a73e4fa1806a51ac79d
 
 		amount := new(big.Int)
 		amount.SetString("1000000000000000000000", 10) // sets the value to 1000 tokens, in the token denomination
 
 		paddedAmount := common.LeftPadBytes(amount.Bytes(), 32)
+		// TODO: logging
 		fmt.Println(hexutil.Encode(paddedAmount)) // 0x00000000000000000000000000000000000000000000003635c9adc5dea00000
 
 		data = append(data, methodID...)
@@ -163,6 +159,7 @@ func transferToken(client *ethclient.Client, senderAccount Account, recipientAcc
 	*/
 	sendTransaction(client, signedTx)
 
+	// TODO: logging
 	fmt.Printf("tx sent: %s", signedTx.Hash().Hex()) // tx sent: 0xa56316b637a94c4cc0331c73ef26389d6c097506d581073f927275e7a6ece0bc
 
 }

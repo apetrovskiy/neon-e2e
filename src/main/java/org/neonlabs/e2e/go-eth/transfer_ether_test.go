@@ -3,6 +3,7 @@ package go_eth
 import (
 	"fmt"
 	"math/big"
+	// TODO: clean it up
 	// "math/big"
 	"testing"
 
@@ -30,6 +31,7 @@ func TestTransferEther(t *testing.T) {
 			}
 
 			senderBalance := getLastBlockBalance(client, senderAccount.Address.Hex())
+			// TODO: logging
 			fmt.Println(senderBalance)
 			assert.Equal(t, GetConfig().InitialBalance, senderBalance, "Sender's initial balance is wrong")
 
@@ -39,6 +41,7 @@ func TestTransferEther(t *testing.T) {
 			}
 
 			recipientBalance := getLastBlockBalance(client, recipientAccount.Address.Hex())
+			// TODO: logging
 			fmt.Println(recipientBalance)
 			assert.Equal(t, GetConfig().InitialBalance, recipientBalance, "Recipient's initial balance is wrong")
 
@@ -46,11 +49,13 @@ func TestTransferEther(t *testing.T) {
 
 			// TODO: change to the right amounts
 			senderBalance = getLastBlockBalance(client, senderAccount.Address.Hex())
+			// TODO: logging
 			fmt.Println(senderBalance)
 			expectedSenderBalance, _ := new(big.Int).SetString("90000000000000000000", 0)
 			assert.Equal(t, expectedSenderBalance, senderBalance, "Sender's initial balance is wrong")
 
 			recipientBalance = getLastBlockBalance(client, recipientAccount.Address.Hex())
+			// TODO: logging
 			fmt.Println(recipientBalance)
 			expectedRecipientBalance, _ := new(big.Int).SetString("110000000000000000000", 0)
 			assert.Equal(t, expectedRecipientBalance, recipientBalance, "Recipient's initial balance is wrong")
