@@ -16,10 +16,9 @@ func TestNewWallet(t *testing.T) {
 		allure.Description("Creating a new wallet"),
 		allure.Action(func() {
 			account := createWallet()
-			assert.NotEqual(t, 0, len(account.Address.Hash()), "Failed to create a new wallet")
+			assert.NotEqual(t, 0, len(account.Address.Hash()), FailedToCreateWallet)
 			if len(account.Address.Hash()) == 0 {
-
-				t.Error("Failed to create a new wallet")
+				t.Error(FailedToCreateWallet)
 			}
 			t.Log("Wallet has been created")
 

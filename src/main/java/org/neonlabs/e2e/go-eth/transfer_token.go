@@ -1,16 +1,15 @@
 package go_eth
 
 import (
-	"log"
 	"math/big"
 
+	"github.com/dailymotion/allure-go"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
-	"golang.org/x/crypto/sha3"
-
-	"github.com/dailymotion/allure-go"
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/ethclient"
+	log "github.com/sirupsen/logrus"
+	"golang.org/x/crypto/sha3"
 )
 
 func buildGasEstimationRequest(toAddress common.Address) []byte {
@@ -157,5 +156,4 @@ func transferToken(client *ethclient.Client, senderAccount Account, recipientAcc
 	sendTransaction(client, signedTx)
 
 	log.Printf("tx sent: %s", signedTx.Hash().Hex()) // tx sent: 0xa56316b637a94c4cc0331c73ef26389d6c097506d581073f927275e7a6ece0bc
-
 }
