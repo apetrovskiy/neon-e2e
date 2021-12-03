@@ -26,6 +26,7 @@ namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
       string networkId;
       string faucetQuotient;
       string faucetUrl;
+      bool useFaucet;
       string addressFrom;
       string addressTo;
       string disableConfirmation;
@@ -40,6 +41,7 @@ namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
       EnvReader.TryGetStringValue("NETWORK_ID", out networkId);
       EnvReader.TryGetStringValue("FAUCET_QUOTIENT", out faucetQuotient);
       EnvReader.TryGetStringValue("FAUCET_URL", out faucetUrl);
+      EnvReader.TryGetBooleanValue("USE_FAUCET");
       EnvReader.TryGetStringValue("ADDRESS_FROM", out addressFrom);
       EnvReader.TryGetStringValue("ADDRESS_TO", out addressTo);
       EnvReader.TryGetStringValue("DISABLE_CONFIRMATION", out disableConfirmation);
@@ -53,6 +55,7 @@ namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
       NetworkId = networkId;
       FaucetQuotient = Convert.ToInt32(faucetQuotient);
       FaucetUrl = faucetUrl;
+      UseFaucet = useFaucet;
       AddressFrom = addressFrom;
       AddressTo = addressTo;
       DisableConfirmation = Convert.ToBoolean(disableConfirmation);

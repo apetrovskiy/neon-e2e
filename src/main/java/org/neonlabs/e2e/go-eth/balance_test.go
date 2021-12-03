@@ -1,7 +1,7 @@
 package go_eth
 
 import (
-	"fmt"
+	"log"
 	"math/big"
 	"testing"
 
@@ -12,9 +12,9 @@ import (
 func TestGetLatestBalance(t *testing.T) {
 
 	allure.Test(t,
-		allure.Epic("go-ethereum"),
-		allure.Feature("go-ethereum"),
-		allure.Story("go-ethereum"),
+		allure.Epic(Epic),
+		allure.Feature(FeatureExternallyOwnedAccounts),
+		allure.Story(StoryBalance),
 		allure.Description("Get the latest block balance"),
 		allure.Action(func() {
 			client, err := connect()
@@ -22,21 +22,21 @@ func TestGetLatestBalance(t *testing.T) {
 				t.Errorf("Failed to connect to %s: %o", GetConfig().ProxyURL, err)
 			}
 
-			accountAddress := createWallet()
-			if len(accountAddress) == 0 {
+			account := createWallet()
+			if len(account.Address) == 0 {
 				t.Error("Failed to create a new wallet")
 			}
 
-			balance := getLastBlockBalance(client, accountAddress.Hex())
-			fmt.Println(balance)
+			balance := getLastBlockBalance(client, account.Address.Hex())
+			log.Println(balance)
 			assert.Equal(t, GetConfig().InitialBalance, balance, "The initial balance is wrong")
 		}))
 }
 func TestGetSpecificBlockBalance(t *testing.T) {
 	allure.Test(t,
-		allure.Epic("go-ethereum"),
-		allure.Feature("go-ethereum"),
-		allure.Story("go-ethereum"),
+		allure.Epic(Epic),
+		allure.Feature(FeatureExternallyOwnedAccounts),
+		allure.Story(StoryBalance),
 		allure.Description("Get a specific block balance"),
 		allure.Action(func() {
 			client, err := connect()
@@ -44,22 +44,22 @@ func TestGetSpecificBlockBalance(t *testing.T) {
 				t.Errorf("Failed to connect to %s: %o", GetConfig().ProxyURL, err)
 			}
 
-			accountAddress := createWallet()
-			if len(accountAddress) == 0 {
+			account := createWallet()
+			if len(account.Address) == 0 {
 				t.Error("Failed to create a new wallet")
 			}
 
 			blockNumber := big.NewInt(1001)
-			balance := getSpecificBlockBalance(client, accountAddress.Hex(), blockNumber)
-			fmt.Println(balance)
+			balance := getSpecificBlockBalance(client, account.Address.Hex(), blockNumber)
+			log.Println(balance)
 			assert.Equal(t, GetConfig().InitialBalance, balance, "The initial balance is wrong")
 		}))
 }
 func TestGetPendingBalance(t *testing.T) {
 	allure.Test(t,
-		allure.Epic("go-ethereum"),
-		allure.Feature("go-ethereum"),
-		allure.Story("go-ethereum"),
+		allure.Epic(Epic),
+		allure.Feature(FeatureExternallyOwnedAccounts),
+		allure.Story(StoryBalance),
 		allure.Description("Get pending balance"),
 		allure.Action(func() {
 			client, err := connect()
@@ -67,13 +67,13 @@ func TestGetPendingBalance(t *testing.T) {
 				t.Errorf("Failed to connect to %s: %o", GetConfig().ProxyURL, err)
 			}
 
-			accountAddress := createWallet()
-			if len(accountAddress) == 0 {
+			account := createWallet()
+			if len(account.Address) == 0 {
 				t.Error("Failed to create a new wallet")
 			}
 
-			balance := getPendingBalance(client, accountAddress.Hex())
-			fmt.Println(balance)
+			balance := getPendingBalance(client, account.Address.Hex())
+			log.Println(balance)
 			assert.Equal(t, GetConfig().InitialBalance, balance, "The initial balance is wrong")
 		}))
 }

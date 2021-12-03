@@ -1,36 +1,33 @@
 package go_eth
 
 import (
-	"crypto/ecdsa"
-	"fmt"
+	"context"
 	"log"
+	"math/big"
 
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/crypto"
-	"golang.org/x/crypto/sha3"
+	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/ethereum/go-ethereum/ethclient"
 )
 
-func transferEther(senderKey string, recipientKey string, amount string) string {
-	privateKey, err := crypto.GenerateKey()
+func transferEther(client *ethclient.Client, senderAccount Account, recipientAccount Account, amount string) {
+	nonce := getPendingNonce(client, senderAccount)
+
+	value := new(big.Int)
+	value, _ = value.SetString(amount, 0)
+	gasLimit := uint64(21000) // in units
+	gasPrice, err := client.SuggestGasPrice(context.Background())
 	if err != nil {
 		log.Fatal(err)
 	}
-	privateKeyBytes := crypto.FromECDSA(privateKey)
-	hexString := hexutil.Encode(privateKeyBytes)[:2]
-	publicKey := privateKey.Public()
-	publicKeyECDSA, ok := publicKey.(*ecdsa.PublicKey)
-	if !ok {
-		log.Fatal("cannot assert type: publicKey is not of type *ecdsa.PublicKey")
-	}
-	publicKeyBytes := crypto.FromECDSAPub(publicKeyECDSA)
-	address := crypto.PubkeyToAddress(*publicKeyECDSA)
-	hash := sha3.NewLegacyKeccak256()
-	hash.Write(publicKeyBytes[1:])
-	fmt.Println(hexString)
-	fmt.Println(publicKeyECDSA)
-	fmt.Println(publicKeyBytes)
-	fmt.Println(address)
-	fmt.Println(hash)
-	fmt.Println(hexutil.Encode(hash.Sum(nil)[12:]))
-	return address.Hex()
+
+	var data []byte
+	tx := types.NewTransaction(nonce, recipientAccount.Address, value, gasLimit, gasPrice, data)
+
+	chainID := getChainId(client)
+
+	signedTx := signTransaction(tx, types.NewEIP155Signer(chainID), senderAccount.PrivateKey)
+
+	sendTransaction(client, signedTx)
+
+	log.Printf("tx sent: %s", signedTx.Hash().Hex())
 }
