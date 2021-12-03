@@ -1,7 +1,7 @@
 package go_eth
 
 import (
-	"log"
+	log "github.com/sirupsen/logrus"
 
 	"github.com/dailymotion/allure-go"
 	"github.com/ethereum/go-ethereum/ethclient"
