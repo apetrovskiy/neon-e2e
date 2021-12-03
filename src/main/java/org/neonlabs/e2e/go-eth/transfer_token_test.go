@@ -14,7 +14,7 @@ func TestTransferToken(t *testing.T) {
 
 	allure.Test(t,
 		allure.Epic("go-ethereum"),
-    allure.Lead("go-ethereum"),
+		allure.Lead("go-ethereum"),
 		allure.Feature("go-ethereum"),
 		allure.Story("go-ethereum"),
 		allure.Description("Transfer tokens"),
