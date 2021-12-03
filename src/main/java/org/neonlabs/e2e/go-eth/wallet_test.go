@@ -18,5 +18,6 @@ func TestNewWalletBalance(t *testing.T) {
 			if len(account.Address.Hash()) == 0 {
 				t.Error("Failed to create a new wallet")
 			}
+			t.Log("Wallet has been created")
 		}))
 }
