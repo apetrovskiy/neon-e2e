@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/dailymotion/allure-go v0.5.5
-	github.com/ethereum/go-ethereum v1.10.9
+	github.com/ethereum/go-ethereum v1.10.13
 	github.com/influxdata/influxdb v1.8.3
 	github.com/joho/godotenv v1.4.0
 	github.com/onsi/ginkgo v1.16.4

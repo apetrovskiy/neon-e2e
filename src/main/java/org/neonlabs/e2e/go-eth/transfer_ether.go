@@ -15,6 +15,10 @@ import (
 	// "golang.org/x/crypto/sha3"
 )
 
+func getPendingNonce() {
+
+}
+
 func transferEther(client *ethclient.Client, senderAccount Account, recipientAccount Account, amount string) {
 	fromAddress := crypto.PubkeyToAddress(*senderAccount.PublicKey)
 	nonce, err := client.PendingNonceAt(context.Background(), fromAddress)
