@@ -15,7 +15,7 @@ func TestTransferEther(t *testing.T) {
 
 	allure.Test(t,
 		allure.Epic("go-ethereum"),
-		allure.Lead("go-ethereum"),
+		allure.Lead("Externally Owned Accounts"),
 		allure.Feature("go-ethereum"),
 		allure.Story("Transfer"),
 		allure.Description("Transfer Ether"),

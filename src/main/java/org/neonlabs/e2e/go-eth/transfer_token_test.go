@@ -13,8 +13,8 @@ func TestTransferToken(t *testing.T) {
 
 	allure.SkipTest(t,
 		allure.Epic("go-ethereum"),
-		allure.Lead("go-ethereum"),
-		allure.Feature("go-ethereum"),
+		allure.Lead("Externally Owned Accounts"),
+		allure.Feature("Externally Owned Accounts"),
 		allure.Story("Transfer"),
 		allure.Description("Transfer tokens"),
 		allure.Action(func() {

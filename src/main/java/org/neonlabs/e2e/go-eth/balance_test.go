@@ -13,7 +13,7 @@ func TestGetLatestBalance(t *testing.T) {
 
 	allure.Test(t,
 		allure.Epic("go-ethereum"),
-		allure.Feature("go-ethereum"),
+		allure.Feature("Externally Owned Accounts"),
 		allure.Story("Balance"),
 		allure.Description("Get the latest block balance"),
 		allure.Action(func() {
@@ -36,7 +36,7 @@ func TestGetLatestBalance(t *testing.T) {
 func TestGetSpecificBlockBalance(t *testing.T) {
 	allure.Test(t,
 		allure.Epic("go-ethereum"),
-		allure.Feature("go-ethereum"),
+		allure.Feature("Externally Owned Accounts"),
 		allure.Story("Balance"),
 		allure.Description("Get a specific block balance"),
 		allure.Action(func() {
@@ -60,7 +60,7 @@ func TestGetSpecificBlockBalance(t *testing.T) {
 func TestGetPendingBalance(t *testing.T) {
 	allure.Test(t,
 		allure.Epic("go-ethereum"),
-		allure.Feature("go-ethereum"),
+		allure.Feature("Externally Owned Accounts"),
 		allure.Story("Balance"),
 		allure.Description("Get pending balance"),
 		allure.Action(func() {
