@@ -183,6 +183,7 @@ jobs:
     # needs:
     # - build
     # - dotnet-format
+    needs: health-check
     steps:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/allure-prep
