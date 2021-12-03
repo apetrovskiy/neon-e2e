@@ -63,7 +63,7 @@ public class Config {
     return Integer.parseInt(System.getProperty("USERS_NUMBER"));
   }
 
-  public Boolean getInitialBalance() {
-    return Boolean.parseBoolean(System.getProperty("INITIAL_BALANCE"));
+  public Boolean getFaucetAmount() {
+    return Boolean.parseBoolean(System.getProperty("FAUCET_AMOUNT"));
   }
 }

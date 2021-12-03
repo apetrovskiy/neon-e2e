@@ -18,7 +18,6 @@ func TestNewWallet(t *testing.T) {
 			account := createWallet()
 			assert.NotEqual(t, 0, len(account.Address.Hash()), "Failed to create a new wallet")
 			if len(account.Address.Hash()) == 0 {
-
 				t.Error("Failed to create a new wallet")
 			}
 			t.Log("Wallet has been created")
