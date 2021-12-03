@@ -4,8 +4,9 @@ import (
 	"context"
 	"crypto/ecdsa"
 
-	"log"
 	"math/big"
+
+	log "github.com/sirupsen/logrus"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"

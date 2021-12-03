@@ -2,11 +2,12 @@ package go_eth
 
 import (
 	"context"
+	"math/big"
+
 	"github.com/dailymotion/allure-go"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/ethclient"
-	"log"
-	"math/big"
+	log "github.com/sirupsen/logrus"
 )
 
 func getLastBlockBalance(client *ethclient.Client, hex string) *big.Int {

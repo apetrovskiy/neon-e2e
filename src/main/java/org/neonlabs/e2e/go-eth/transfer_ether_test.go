@@ -2,8 +2,9 @@ package go_eth
 
 import (
 	"fmt"
-	"log"
 	"math/big"
+
+	log "github.com/sirupsen/logrus"
 
 	"testing"
 

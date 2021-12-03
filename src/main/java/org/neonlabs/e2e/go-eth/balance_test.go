@@ -2,9 +2,10 @@ package go_eth
 
 import (
 	"fmt"
-	"log"
 	"math/big"
 	"testing"
+
+	log "github.com/sirupsen/logrus"
 
 	"github.com/dailymotion/allure-go"
 	"github.com/stretchr/testify/assert"
