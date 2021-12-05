@@ -11,10 +11,12 @@ namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
     public const string FeatureExternallyOwnedAccounts = "Externally Owned Accounts";
     public const string FeatureSmartContracts = "Smart contracts";
     public const string FeatureSwarm = "Swarm";
+    public const string FeatureTransaction = "Transaction";
     public const string FeatureWhisper = "Whisper";
     public const string StoryAddressValidation = "Address validation";
     public const string StoryBalance = "Balance";
     public const string StoryConnection = "Connection";
+    public const string StoryQueryBlock = "Query Block";
     public const string StoryTransfer = "Transfer";
     public const string StoryWallet = "Wallet";
   }
