@@ -9,10 +9,12 @@ const (
 	FeatureExternallyOwnedAccounts = "Externally Owned Accounts"
 	FeatureSmartContracts          = "Smart contracts"
 	FeatureSwarm                   = "Swarm"
+	FeatureTransaction             = "Transaction"
 	FeatureWhisper                 = "Whisper"
 	StoryAddressValidation         = "Address validation"
 	StoryBalance                   = "Balance"
 	StoryConnection                = "Connection"
+	StoryQueryBlock                = "Query block"
 	StoryTransfer                  = "Transfer"
 	StoryWallet                    = "Wallet"
 )

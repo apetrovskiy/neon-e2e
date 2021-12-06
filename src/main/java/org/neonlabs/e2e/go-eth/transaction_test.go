@@ -13,7 +13,7 @@ func TestQueryTransaction(t *testing.T) {
 
 	allure.SkipTest(t,
 		allure.Epic(Epic),
-		allure.Feature("Transaction"),
+		allure.Feature(FeatureTransaction),
 		allure.Story("Query transaction"),
 		allure.Description("Query transaction"),
 		allure.Action(func() {
@@ -25,7 +25,7 @@ func TestCreateRawTransaction(t *testing.T) {
 
 	allure.SkipTest(t,
 		allure.Epic(Epic),
-		allure.Feature("Transaction"),
+		allure.Feature(FeatureTransaction),
 		allure.Story("Create raw transaction"),
 		allure.Description("Create raw transaction"),
 		allure.Action(func() {
@@ -37,7 +37,7 @@ func TestSendRawTransaction(t *testing.T) {
 
 	allure.SkipTest(t,
 		allure.Epic(Epic),
-		allure.Feature("Transaction"),
+		allure.Feature(FeatureTransaction),
 		allure.Story("Send raw transaction"),
 		allure.Description("Send raw transaction"),
 		allure.Action(func() {
