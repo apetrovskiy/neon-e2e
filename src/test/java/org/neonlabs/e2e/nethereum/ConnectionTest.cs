@@ -12,13 +12,14 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
   [AllureFeature(new string[] { FeatureCommon })]
   public class ConnectionTest
   {
+    [AllureStory(Story)]
     [AllureXunit(DisplayName = "Connection test")]
     public void ShouldConnect()
     {
       var web3 = Connection.Connect();
       Assert.NotNull(web3);
     }
-
+[AllureStory(Story)]
     [AllureXunit(DisplayName = "Subprojects are filled in")]
     public void ShouldHaveData()
     {
@@ -35,21 +36,5 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
       // Assert.All(web3, w=>w);
     }
 
-    [AllureXunit(DisplayName = "GetBalance Async")]
-    public async void ShouldGetBalanceAsync()
-    {
-      var balance = await Balance.GetBalance();
-      Assert.NotNull(balance);
-    }
-
-    [AllureXunit(DisplayName = "Initial balance")]
-    public void ShouldGetInitialBalanceAsync()
-    {
-      var account = AccountFactory.CreateAccount();
-      // TODO: logging
-      Console.WriteLine(account.ChainId);
-      // Console.WriteLine(account.TransactionManager.Client.GetType().Name);
-      // Assert.NotNull(balance);
-    }
   }
 }
