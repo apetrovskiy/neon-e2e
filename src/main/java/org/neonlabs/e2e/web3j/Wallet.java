@@ -27,7 +27,7 @@
 //   Wallet.process(seed);
 //   //
 
-//   WalletFile aWallet = Wallet //.process(seed); //.createLight(seed,
+//   WalletFile aWallet = Wallet.process(seed); //.createLight(seed,
 //   ecKeyPair);
 //   String sAddress = aWallet.getAddress();
 

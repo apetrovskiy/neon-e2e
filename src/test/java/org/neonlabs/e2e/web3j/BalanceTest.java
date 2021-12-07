@@ -27,6 +27,26 @@ class BalanceTest {
   @Description("Get the latest block balance")
   @Disabled(NotYetDone)
   void test01() {
+    final var web3 = new Connection().createConnection();
+    assertNotNull(web3, "Connection should not be null");
+
+    /*
+     * client, err := connect()
+     * assert.Nil(t, err, fmt.Sprintf(FaileToConnectTo, GetConfig().ProxyURL, err))
+     * if err != nil {
+     * t.Errorf(FaileToConnectTo, GetConfig().ProxyURL, err)
+     * }
+     * 
+     * account := createWallet()
+     * assert.NotEqual(t, 0, len(account.Address.Hash()), FailedToCreateWallet)
+     * if len(account.Address) == 0 {
+     * t.Error(FailedToCreateWallet)
+     * }
+     * 
+     * balance := getLastBlockBalance(client, account.Address.Hex())
+     * log.Println(balance)
+     * assert.Equal(t, GetConfig().InitialBalance, balance, InitialBalanceIsWrong)
+     */
     assertAll(
         () -> assertNotNull(1, ""),
         () -> assertEquals(1, 1, ""));
