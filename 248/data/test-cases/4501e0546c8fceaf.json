@@ -1,0 +1,375 @@
+{
+  "uid" : "4501e0546c8fceaf",
+  "name" : "a user to user failed transaction -- @1.2 ",
+  "fullName" : "transaction: a user to user failed transaction",
+  "historyId" : "938ed95fe63c85b5afd5015e941bfac2",
+  "time" : {
+    "start" : 1638983684603,
+    "stop" : 1638983684604,
+    "duration" : 1
+  },
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'coroutine' object has no attribute 'address'\n",
+  "statusTrace" : "  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"features/steps/transaction.py\", line 36, in step_user_alice_initial_balance\n    print(f\"user A: {data.user_alice.address}\")\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "AttributeError: 'coroutine' object has no attribute 'address'\n",
+    "statusTrace" : "  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"features/steps/transaction.py\", line 36, in step_user_alice_initial_balance\n    print(f\"user A: {data.user_alice.address}\")\n",
+    "steps" : [ {
+      "name" : "Given there is user Alice in Ethereum network with the initial balance 10Ξ",
+      "time" : {
+        "start" : 1638983684603,
+        "stop" : 1638983684604,
+        "duration" : 1
+      },
+      "status" : "broken",
+      "statusMessage" : "AttributeError: 'coroutine' object has no attribute 'address'\n",
+      "statusTrace" : "  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"features/steps/transaction.py\", line 36, in step_user_alice_initial_balance\n    print(f\"user A: {data.user_alice.address}\")\n",
+      "steps" : [ {
+        "name" : "create",
+        "time" : {
+          "start" : 1638983684603,
+          "stop" : 1638983684603,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "And there is user Bob in Ethereum network with the initial balance 10Ξ",
+      "time" : {
+        "start" : 1638983684604,
+        "stop" : 1638983684604,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When user Alice sends 11Ξ to user Bob",
+      "time" : {
+        "start" : 1638983684604,
+        "stop" : 1638983684604,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then the recipient has balance increased by 0Ξ",
+      "time" : {
+        "start" : 1638983684604,
+        "stop" : 1638983684604,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And the sender has balance decreased by 0Ξ",
+      "time" : {
+        "start" : 1638983684604,
+        "stop" : 1638983684604,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "transaction"
+  }, {
+    "name" : "framework",
+    "value" : "behave"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "amount",
+    "value" : "11"
+  }, {
+    "name" : "initial balance",
+    "value" : "10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 281,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 281
+      },
+      "items" : [ {
+        "uid" : "f71846ed725e32d1",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/247//#testresult/f71846ed725e32d1",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'coroutine' object has no attribute 'address'\n",
+        "time" : {
+          "start" : 1638983239472,
+          "stop" : 1638983239473,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "5de4a1107eeb5f32",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/246//#testresult/5de4a1107eeb5f32",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'coroutine' object has no attribute 'address'\n",
+        "time" : {
+          "start" : 1638982972820,
+          "stop" : 1638982972822,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "e4a7422d6db4a7a5",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/245//#testresult/e4a7422d6db4a7a5",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'coroutine' object has no attribute 'address'\n",
+        "time" : {
+          "start" : 1638980462295,
+          "stop" : 1638980462296,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "c97428c1bd6b6f82",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/244//#testresult/c97428c1bd6b6f82",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'coroutine' object has no attribute 'address'\n",
+        "time" : {
+          "start" : 1638978076250,
+          "stop" : 1638978076252,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "4e59f69d04f96faa",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/243//#testresult/4e59f69d04f96faa",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'coroutine' object has no attribute 'address'\n",
+        "time" : {
+          "start" : 1638976457290,
+          "stop" : 1638976457291,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "5389b573e159e0ef",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/242//#testresult/5389b573e159e0ef",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'coroutine' object has no attribute 'address'\n",
+        "time" : {
+          "start" : 1638973019578,
+          "stop" : 1638973019579,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "26586f4c5d699904",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/241//#testresult/26586f4c5d699904",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'coroutine' object has no attribute 'address'\n",
+        "time" : {
+          "start" : 1638855764844,
+          "stop" : 1638855764845,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "8ad653b91b968615",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/240//#testresult/8ad653b91b968615",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'coroutine' object has no attribute 'address'\n",
+        "time" : {
+          "start" : 1638791409124,
+          "stop" : 1638791409125,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "e11d3570511dfd55",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/238//#testresult/e11d3570511dfd55",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'coroutine' object has no attribute 'address'\n",
+        "time" : {
+          "start" : 1638783217504,
+          "stop" : 1638783217506,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "ed1c58b4c5d66c31",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/237//#testresult/ed1c58b4c5d66c31",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'coroutine' object has no attribute 'address'\n",
+        "time" : {
+          "start" : 1638783199003,
+          "stop" : 1638783199004,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "561653ff429e7cc",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/236//#testresult/561653ff429e7cc",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'coroutine' object has no attribute 'address'\n",
+        "time" : {
+          "start" : 1638774001198,
+          "stop" : 1638774001199,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "5cefce4dbcd3cafd",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/235//#testresult/5cefce4dbcd3cafd",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'coroutine' object has no attribute 'address'\n",
+        "time" : {
+          "start" : 1638773492671,
+          "stop" : 1638773492672,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "8477c7b1a6722658",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/234//#testresult/8477c7b1a6722658",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'coroutine' object has no attribute 'address'\n",
+        "time" : {
+          "start" : 1638773133434,
+          "stop" : 1638773133435,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "ec317378a7b278c8",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/234//#testresult/ec317378a7b278c8",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'coroutine' object has no attribute 'address'\n",
+        "time" : {
+          "start" : 1638771694590,
+          "stop" : 1638771694591,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "d76c881b0e6be5df",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/233//#testresult/d76c881b0e6be5df",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'coroutine' object has no attribute 'address'\n",
+        "time" : {
+          "start" : 1638770435813,
+          "stop" : 1638770435814,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "ba9396b8d44fd644",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/232//#testresult/ba9396b8d44fd644",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'coroutine' object has no attribute 'address'\n",
+        "time" : {
+          "start" : 1638751895261,
+          "stop" : 1638751895263,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "cd022a2e334d8104",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/231//#testresult/cd022a2e334d8104",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'coroutine' object has no attribute 'address'\n",
+        "time" : {
+          "start" : 1638750401153,
+          "stop" : 1638750401154,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "593bd691fcba020c",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/230//#testresult/593bd691fcba020c",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'coroutine' object has no attribute 'address'\n",
+        "time" : {
+          "start" : 1638716383172,
+          "stop" : 1638716383173,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "68121df05d48c7d3",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/229//#testresult/68121df05d48c7d3",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'coroutine' object has no attribute 'address'\n",
+        "time" : {
+          "start" : 1638713097869,
+          "stop" : 1638713097871,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "a17b8d080258c9d9",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/228//#testresult/a17b8d080258c9d9",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'coroutine' object has no attribute 'address'\n",
+        "time" : {
+          "start" : 1638711796881,
+          "stop" : 1638711796882,
+          "duration" : 1
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "4501e0546c8fceaf.json",
+  "parameterValues" : [ "11", "10" ]
+}
