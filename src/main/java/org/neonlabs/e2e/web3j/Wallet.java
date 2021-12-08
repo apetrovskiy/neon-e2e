@@ -46,12 +46,16 @@ public class Wallet {
       account.setPrivateKeyDec(privateKeyInDec);
 
     } catch (CipherException e) {
+      log.error(e.getClass().getName());
       log.error(e.getMessage());
     } catch (InvalidAlgorithmParameterException e) {
+      log.error(e.getClass().getName());
       log.error(e.getMessage());
     } catch (NoSuchAlgorithmException e) {
+      log.error(e.getClass().getName());
       log.error(e.getMessage());
     } catch (NoSuchProviderException e) {
+      log.error(e.getClass().getName());
       log.error(e.getMessage());
     }
 
@@ -62,6 +66,7 @@ public class Wallet {
     final var seed = IntStream.rangeClosed(1, 12)
         .mapToObj(index -> generateRandomString() + " ")
         .collect(Collectors.joining(" "));
+    log.info("Generated seed: %s", seed);
     return seed.trim();
   }
 
