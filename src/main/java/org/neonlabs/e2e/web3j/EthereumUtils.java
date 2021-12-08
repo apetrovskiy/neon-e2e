@@ -1,5 +1,6 @@
 package org.neonlabs.e2e.web3j;
 
+import io.qameta.allure.Step;
 // import lombok.experimental.UtilityClass;
 // import lombok.val;
 import org.web3j.crypto.Credentials;
@@ -14,6 +15,7 @@ public class EthereumUtils {
   /**
    * Signs linking code.
    */
+  @Step
   public static String signLinkingCode(String code, String privateKey) {
     var credentials = Credentials.create(privateKey);
     byte[] data = code.getBytes();

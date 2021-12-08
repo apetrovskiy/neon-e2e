@@ -1,5 +1,6 @@
 package org.neonlabs.e2e.web3j;
 
+import io.qameta.allure.Step;
 import java.math.BigInteger;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.NoSuchAlgorithmException;
@@ -25,6 +26,7 @@ public class Wallet {
    * Creates an externally owned account.
    */
   @SneakyThrows
+  @Step
   public static Account create() {
 
     final var seed = generateSeed();

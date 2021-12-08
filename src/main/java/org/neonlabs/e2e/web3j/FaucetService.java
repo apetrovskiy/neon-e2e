@@ -1,5 +1,6 @@
 package org.neonlabs.e2e.web3j;
 
+import io.qameta.allure.Step;
 // import lombok.UtilityClass;
 
 /**
@@ -7,6 +8,7 @@ package org.neonlabs.e2e.web3j;
  */
 // @UtilityClass
 public class FaucetService {
+  @Step
   public static void requestFaucet() {
 
   }

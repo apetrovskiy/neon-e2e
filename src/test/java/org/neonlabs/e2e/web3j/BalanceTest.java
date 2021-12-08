@@ -12,6 +12,7 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
+import lombok.SneakyThrows;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -25,10 +26,13 @@ class BalanceTest {
   @Test
   @Story(StoryBalance)
   @Description("Get the latest block balance")
-  @Disabled(NotYetDone)
-  void test01() {
+  @SneakyThrows
+  void shouldGetLatestBlockBalance() {
     final var web3 = new Connection().createConnection();
     assertNotNull(web3, "Connection should not be null");
+    final var wallet = Wallet.create();
+    assertNotNull(wallet, "Wallet is null");
+    final var balance = new Balance().getEthBalance(web3, wallet.getAddress());
 
     /*
      * client, err := connect()
@@ -47,15 +51,13 @@ class BalanceTest {
      * log.Println(balance)
      * assert.Equal(t, GetConfig().InitialBalance, balance, InitialBalanceIsWrong)
      */
-    assertAll(
-        () -> assertNotNull(1, ""),
-        () -> assertEquals(1, 1, ""));
+    assertEquals(new Config().getFaucetAmount(), balance,
+        "Balance is not equal to the initial balance");
   }
 
   @Test
   @Story(StoryBalance)
   @Description("Get a specific block balance")
-  @Disabled(NotYetDone)
   void test02() {
     assertAll(
         () -> assertNotNull(1, ""),
@@ -72,3 +74,31 @@ class BalanceTest {
         () -> assertEquals(1, 1, ""));
   }
 }
+
+/*
+ * func TestGetLatestBalance(t *testing.T) {
+ * 
+ * allure.Test(t,
+ * allure.Epic(Epic),
+ * allure.Feature(FeatureExternallyOwnedAccounts),
+ * allure.Story(StoryBalance),
+ * allure.Description("Get the latest block balance"),
+ * allure.Action(func() {
+ * client, err := connect()
+ * assert.Nil(t, err, fmt.Sprintf(FaileToConnectTo, GetConfig().ProxyURL, err))
+ * if err != nil {
+ * t.Errorf(FaileToConnectTo, GetConfig().ProxyURL, err)
+ * }
+ * 
+ * account := createWallet()
+ * assert.NotEqual(t, 0, len(account.Address.Hash()), FailedToCreateWallet)
+ * if len(account.Address) == 0 {
+ * t.Error(FailedToCreateWallet)
+ * }
+ * 
+ * balance := getLastBlockBalance(client, account.Address.Hex())
+ * log.Println(balance)
+ * assert.Equal(t, GetConfig().InitialBalance, balance, InitialBalanceIsWrong)
+ * }))
+ * }
+ */

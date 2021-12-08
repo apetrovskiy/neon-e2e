@@ -24,7 +24,7 @@ class WalletTest {
   @Test
   @Story(StoryWallet)
   @Description("Creating a new wallet")
-  void test() {
+  void shouldCreateWallet() {
     final var wallet = Wallet.create();
 
     assertAll(

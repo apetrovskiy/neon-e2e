@@ -17,7 +17,7 @@ class ConnectionTest {
   @Description("Connection web3j")
   @Story("Connection")
   void shouldConnectToNetwork() {
-    var web3 = new Connection().createConnection();
+    final var web3 = new Connection().createConnection();
     assertNotNull(web3, "Connecton to the network should not be null");
   }
 }
