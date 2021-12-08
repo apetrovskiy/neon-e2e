@@ -1,18 +1,16 @@
 package org.neonlabs.e2e.web3j;
 
 import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.neonlabs.e2e.web3j.Constants.Epic;
 import static org.neonlabs.e2e.web3j.Constants.FeatureExternallyOwnedAccounts;
-import static org.neonlabs.e2e.web3j.Constants.NotYetDone;
 import static org.neonlabs.e2e.web3j.Constants.StoryWallet;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
-import org.junit.jupiter.api.Disabled;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -20,15 +18,19 @@ import org.junit.jupiter.api.Test;
  */
 @Epic(Epic)
 @Feature(FeatureExternallyOwnedAccounts)
-@SuppressWarnings("PMD.JUnitTestContainsTooManyAsserts")
+@Slf4j
+@SuppressWarnings({ "PMD.JUnitTestContainsTooManyAsserts", "PMD.DataflowAnomalyAnalysis" })
 class WalletTest {
   @Test
   @Story(StoryWallet)
   @Description("Creating a new wallet")
-  @Disabled(NotYetDone)
   void test() {
+    final var wallet = Wallet.create();
+
     assertAll(
-        () -> assertNotNull(1, ""),
-        () -> assertEquals(1, 1, ""));
+        () -> assertNotNull(wallet, "Wallet is null"),
+        () -> assertNotNull(wallet.getAddress(), "Wallet address is null"),
+        () -> assertNotNull(wallet.getPrivateKey(), "Wallet private key is null"));
+    log.info("Wallet has been created");
   }
 }

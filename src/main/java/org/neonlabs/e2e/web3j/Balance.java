@@ -23,5 +23,11 @@ public class Balance {
         .sendAsync()
         .get();
     return result;
+    /*
+     * EthGetBalance ethGetBalance = web3
+     * .ethGetBalance(“0xcF8B652b0173FBABE734f5F388C2da24a2359993”,
+     * DefaultBlockParameterName.LATEST)
+     * .sendAsync().get();
+     */
   }
 }
