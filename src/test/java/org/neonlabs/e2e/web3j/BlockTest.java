@@ -27,6 +27,17 @@ class BlockTest {
   @Description("Block Header")
   @Disabled(NotYetDone)
   void test01() {
+
+    /*
+     * client, err := connect()
+     * assert.Nil(t, err, fmt.Sprintf(FaileToConnectTo, GetConfig().ProxyURL, err))
+     * header, err := client.HeaderByNumber(context.Background(), nil)
+     * assert.Nil(t, err, "Failed to get block header")
+     * if err != nil {
+     * log.Fatal(err)
+     * }
+     * assert.Greater(t, 0, header.Number, "Block header number greater than 0")
+     */
     assertAll(
         () -> assertNotNull(1, ""),
         () -> assertEquals(1, 1, ""));
