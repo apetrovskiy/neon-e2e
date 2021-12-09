@@ -1,0 +1,343 @@
+{
+  "uid" : "d1493ad3525b102c",
+  "name" : "the first funding request",
+  "fullName" : "features/faucet.feature:faucet:the first funding request",
+  "historyId" : "9f8e14c7432acddd8d64a92406fbde4a",
+  "time" : {
+    "start" : 1639089877318,
+    "stop" : 1639089877777,
+    "duration" : 459
+  },
+  "description" : "",
+  "status" : "failed",
+  "statusMessage" : "the initial amount should be set to: expected '5' to equal '10'",
+  "statusTrace" : "AssertionError: the initial amount should be set to: expected '5' to equal '10'\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/faucet-steps.ts:34:69\n    at Generator.next (<anonymous>)\n    at fulfilled (/home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/faucet-steps.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : true,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "time" : { },
+    "status" : "broken",
+    "steps" : [ {
+      "name" : "Before: tests/step-definitions/hooks.ts:9",
+      "time" : {
+        "start" : 1639089877319,
+        "stop" : 1639089877324,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "",
+    "status" : "failed",
+    "statusMessage" : "the initial amount should be set to: expected '5' to equal '10'",
+    "statusTrace" : "AssertionError: the initial amount should be set to: expected '5' to equal '10'\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/faucet-steps.ts:34:69\n    at Generator.next (<anonymous>)\n    at fulfilled (/home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/faucet-steps.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+    "steps" : [ {
+      "name" : "Given there is user Alice in Ethereum network with no initial balance",
+      "time" : {
+        "start" : 1639089877324,
+        "stop" : 1639089877353,
+        "duration" : 29
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When the user requests the ERC20 faucet for <10>Ξ",
+      "time" : {
+        "start" : 1639089877353,
+        "stop" : 1639089877354,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then the balance equals <10>Ξ",
+      "time" : {
+        "start" : 1639089877354,
+        "stop" : 1639089877777,
+        "duration" : 423
+      },
+      "status" : "failed",
+      "statusMessage" : "the initial amount should be set to: expected '5' to equal '10'",
+      "statusTrace" : "AssertionError: the initial amount should be set to: expected '5' to equal '10'\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/faucet-steps.ts:34:69\n    at Generator.next (<anonymous>)\n    at fulfilled (/home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/faucet-steps.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "3150"
+  }, {
+    "name" : "feature",
+    "value" : "faucet"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "initial balance",
+    "value" : "10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 110,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 183,
+        "unknown" : 0,
+        "total" : 293
+      },
+      "items" : [ {
+        "uid" : "4ae79f5b136b5434",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/287//#testresult/4ae79f5b136b5434",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '10000' to equal '100'",
+        "time" : {
+          "start" : 1639089856079,
+          "stop" : 1639089856961,
+          "duration" : 882
+        }
+      }, {
+        "uid" : "8bd4ab1422ceb590",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/284//#testresult/8bd4ab1422ceb590",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '7' to equal '10'",
+        "time" : {
+          "start" : 1639088332364,
+          "stop" : 1639088336958,
+          "duration" : 4594
+        }
+      }, {
+        "uid" : "e83a9f7c33e7bbd4",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/282//#testresult/e83a9f7c33e7bbd4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1639088334564,
+          "stop" : 1639088335594,
+          "duration" : 1030
+        }
+      }, {
+        "uid" : "bb6a641505447ae1",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/283//#testresult/bb6a641505447ae1",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '10000' to equal '100'",
+        "time" : {
+          "start" : 1639088303287,
+          "stop" : 1639088304085,
+          "duration" : 798
+        }
+      }, {
+        "uid" : "a4fbadc90e1a2930",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/281//#testresult/a4fbadc90e1a2930",
+        "status" : "passed",
+        "time" : {
+          "start" : 1639082053577,
+          "stop" : 1639082054700,
+          "duration" : 1123
+        }
+      }, {
+        "uid" : "4b4ee588cde5a688",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/280//#testresult/4b4ee588cde5a688",
+        "status" : "failed",
+        "statusDetails" : "function timed out, ensure the promise resolves within 30000 milliseconds",
+        "time" : {
+          "start" : 1639080296210,
+          "stop" : 1639080326251,
+          "duration" : 30041
+        }
+      }, {
+        "uid" : "ba55470a7fc6b75",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/279//#testresult/ba55470a7fc6b75",
+        "status" : "passed",
+        "time" : {
+          "start" : 1639079052441,
+          "stop" : 1639079053233,
+          "duration" : 792
+        }
+      }, {
+        "uid" : "8d4cfeafba04d964",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/278//#testresult/8d4cfeafba04d964",
+        "status" : "failed",
+        "statusDetails" : "function timed out, ensure the promise resolves within 30000 milliseconds",
+        "time" : {
+          "start" : 1639078522956,
+          "stop" : 1639078553006,
+          "duration" : 30050
+        }
+      }, {
+        "uid" : "7795179e4c6f069b",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/277//#testresult/7795179e4c6f069b",
+        "status" : "failed",
+        "statusDetails" : "function timed out, ensure the promise resolves within 30000 milliseconds",
+        "time" : {
+          "start" : 1639076947843,
+          "stop" : 1639076977894,
+          "duration" : 30051
+        }
+      }, {
+        "uid" : "90ec720b0b04b803",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/276//#testresult/90ec720b0b04b803",
+        "status" : "passed",
+        "time" : {
+          "start" : 1639076281568,
+          "stop" : 1639076282273,
+          "duration" : 705
+        }
+      }, {
+        "uid" : "eff09a8d97daefa6",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/275//#testresult/eff09a8d97daefa6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1639067528241,
+          "stop" : 1639067528848,
+          "duration" : 607
+        }
+      }, {
+        "uid" : "45374db5215e4a9d",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/274//#testresult/45374db5215e4a9d",
+        "status" : "failed",
+        "statusDetails" : "function timed out, ensure the promise resolves within 30000 milliseconds",
+        "time" : {
+          "start" : 1639067162659,
+          "stop" : 1639067192726,
+          "duration" : 30067
+        }
+      }, {
+        "uid" : "9089034ca00970b2",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/273//#testresult/9089034ca00970b2",
+        "status" : "failed",
+        "statusDetails" : "function timed out, ensure the promise resolves within 30000 milliseconds",
+        "time" : {
+          "start" : 1639040995111,
+          "stop" : 1639041025157,
+          "duration" : 30046
+        }
+      }, {
+        "uid" : "859ecc831d3971b7",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/272//#testresult/859ecc831d3971b7",
+        "status" : "failed",
+        "statusDetails" : "function timed out, ensure the promise resolves within 30000 milliseconds",
+        "time" : {
+          "start" : 1639034459880,
+          "stop" : 1639034489931,
+          "duration" : 30051
+        }
+      }, {
+        "uid" : "a392a45e5eca7e18",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/268//#testresult/a392a45e5eca7e18",
+        "status" : "failed",
+        "statusDetails" : "function timed out, ensure the promise resolves within 30000 milliseconds",
+        "time" : {
+          "start" : 1639009624461,
+          "stop" : 1639009654497,
+          "duration" : 30036
+        }
+      }, {
+        "uid" : "955c14d03667ddbc",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/271//#testresult/955c14d03667ddbc",
+        "status" : "failed",
+        "statusDetails" : "function timed out, ensure the promise resolves within 30000 milliseconds",
+        "time" : {
+          "start" : 1639026710896,
+          "stop" : 1639026740949,
+          "duration" : 30053
+        }
+      }, {
+        "uid" : "ed1e7777749d736d",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/253//#testresult/ed1e7777749d736d",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '10000' to equal '100'",
+        "time" : {
+          "start" : 1639002298638,
+          "stop" : 1639002299502,
+          "duration" : 864
+        }
+      }, {
+        "uid" : "efa1d99e6d950f17",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/270//#testresult/efa1d99e6d950f17",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '7' to equal '10'",
+        "time" : {
+          "start" : 1639009643841,
+          "stop" : 1639009647781,
+          "duration" : 3940
+        }
+      }, {
+        "uid" : "e7a9fb3cbc57e44d",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/269//#testresult/e7a9fb3cbc57e44d",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '5' to equal '10'",
+        "time" : {
+          "start" : 1639009624711,
+          "stop" : 1639009625186,
+          "duration" : 475
+        }
+      }, {
+        "uid" : "299b4cdfab9b591e",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/267//#testresult/299b4cdfab9b591e",
+        "status" : "failed",
+        "statusDetails" : "function timed out, ensure the promise resolves within 30000 milliseconds",
+        "time" : {
+          "start" : 1639009600728,
+          "stop" : 1639009630745,
+          "duration" : 30017
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "d1493ad3525b102c.json",
+  "parameterValues" : [ "10" ]
+}
