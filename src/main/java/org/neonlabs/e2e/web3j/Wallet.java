@@ -20,7 +20,7 @@ import org.web3j.crypto.WalletFile;
  * Creates a new wallet.
  */
 @Slf4j
-@SuppressWarnings("PMD.GuardLogStatement")
+@SuppressWarnings({ "PMD.GuardLogStatement", "PMD.SystemPrintln" })
 public class Wallet {
   /**
    * Creates an externally owned account.
@@ -33,17 +33,24 @@ public class Wallet {
     var account = new Account();
 
     try {
-      ECKeyPair ecKeyPair = Keys.createEcKeyPair();
-      BigInteger privateKeyInDec = ecKeyPair.getPrivateKey();
+      System.out.println("00001");
+      final ECKeyPair ecKeyPair = Keys.createEcKeyPair();
+      System.out.println("00002");
+      final BigInteger privateKeyInDec = ecKeyPair.getPrivateKey();
+      System.out.println("00003");
 
-      String privatekeyInHex = privateKeyInDec.toString(16);
+      final String privatekeyInHex = privateKeyInDec.toString(16);
+      System.out.println("00004");
 
-      WalletFile walletFile = org.web3j.crypto.Wallet.createLight(seed, ecKeyPair);
+      final WalletFile walletFile = org.web3j.crypto.Wallet.createLight(seed, ecKeyPair);
+      System.out.println("00005");
       String address = walletFile.getAddress();
+      System.out.println("00006");
 
       account.setAddress(address);
       account.setPrivateKey(privatekeyInHex);
       account.setPrivateKeyDec(privateKeyInDec);
+      System.out.println("00007");
 
     } catch (CipherException e) {
       log.error(e.getClass().getName());

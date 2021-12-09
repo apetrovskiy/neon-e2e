@@ -12,14 +12,14 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
   [AllureFeature(new string[] { FeatureCommon })]
   public class ConnectionTest
   {
-    [AllureStory(Story)]
+    [AllureStory(new string[] { StoryConnection })]
     [AllureXunit(DisplayName = "Connection test")]
     public void ShouldConnect()
     {
       var web3 = Connection.Connect();
       Assert.NotNull(web3);
     }
-[AllureStory(Story)]
+    [AllureStory(new string[] { StoryConnection })]
     [AllureXunit(DisplayName = "Subprojects are filled in")]
     public void ShouldHaveData()
     {

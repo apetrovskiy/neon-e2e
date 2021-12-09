@@ -12,40 +12,40 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
   [AllureFeature(new string[] { FeatureEvents })]
   public class EventsTest
   {
-    [AllureStory("Subscription to new blocks")]
-    [AllureXunit(DisplayName = "Subscription to new blocks")]
+    [AllureStory(new string[] { "Subscription to new blocks" })]
+    // [AllureXunit(DisplayName = "Subscription to new blocks")]
     [Fact(Skip = "not yet done")]
     public async void ShouldSubscribeToNewBlocks()
     {
       var latestBlockNumber = await Block.GetLatestBlockNumber();
       Assert.NotNull(latestBlockNumber);
     }
-    [AllureStory("Subscription to event logs")]
-    [AllureXunit(DisplayName = "Subscription to event logs")]
+    [AllureStory(new string[] { "Subscription to event logs" })]
+    // [AllureXunit(DisplayName = "Subscription to event logs")]
     [Fact(Skip = "not yet done")]
     public async void ShouldSubscribeToEventLogs()
     {
       var latestBlockNumber = await Block.GetLatestBlockNumber();
       Assert.NotNull(latestBlockNumber);
     }
-    [AllureStory("Read event logs")]
-    [AllureXunit(DisplayName = "Read event logs")]
+    [AllureStory(new string[] { "Read event logs" })]
+    // [AllureXunit(DisplayName = "Read event logs")]
     [Fact(Skip = "not yet done")]
     public async void ShouldReadEventLogs()
     {
       var latestBlockNumber = await Block.GetLatestBlockNumber();
       Assert.NotNull(latestBlockNumber);
     }
-    [AllureStory("Read ERC20 token event logs")]
-    [AllureXunit(DisplayName = "Read ERC20 token event logs")]
+    [AllureStory(new string[] { "Read ERC20 token event logs" })]
+    // [AllureXunit(DisplayName = "Read ERC20 token event logs")]
     [Fact(Skip = "not yet done")]
     public async void ShouldReadERC20TokenEventLogs()
     {
       var latestBlockNumber = await Block.GetLatestBlockNumber();
       Assert.NotNull(latestBlockNumber);
     }
-    [AllureStory("Read 0x protocol event logs")]
-    [AllureXunit(DisplayName = "Read 0x protocol event logs")]
+    [AllureStory(new string[] { "Read 0x protocol event logs" })]
+    // [AllureXunit(DisplayName = "Read 0x protocol event logs")]
     [Fact(Skip = "not yet done")]
     public async void ShouldRead0xProtocalEventLogs()
     {

@@ -12,14 +12,14 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
   [AllureFeature(new string[] { FeatureExternallyOwnedAccounts })]
   public class BalanceTest
   {
-    [AllureStory(StoryBalance)]
+    [AllureStory(new string[] { StoryBalance })]
     [AllureXunit(DisplayName = "GetBalance Async")]
     public async void ShouldGetBalanceAsync()
     {
       var balance = await Balance.GetBalance();
       Assert.NotNull(balance);
     }
-    [AllureStory(StoryBalance)]
+    [AllureStory(new string[] { StoryBalance })]
     [AllureXunit(DisplayName = "Initial balance")]
     public void ShouldGetInitialBalanceAsync()
     {
@@ -29,24 +29,24 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
       // Console.WriteLine(account.TransactionManager.Client.GetType().Name);
       // Assert.NotNull(balance);
     }
-    [AllureStory(StoryQueryBlock)]
-    [AllureXunit(DisplayName = "Get the latest block balance")]
+    [AllureStory(new string[] { StoryQueryBlock })]
+    // [AllureXunit(DisplayName = "Get the latest block balance")]
     [Fact(Skip = "not yet done")]
     public async void ShouldGetLatestBlockBalance()
     {
       var latestBlockNumber = await Block.GetLatestBlockNumber();
       Assert.NotNull(latestBlockNumber);
     }
-    [AllureStory(StoryQueryBlock)]
-    [AllureXunit(DisplayName = "Get a specific block balance")]
+    [AllureStory(new string[] { StoryQueryBlock })]
+    // [AllureXunit(DisplayName = "Get a specific block balance")]
     [Fact(Skip = "not yet done")]
     public async void ShouldGetSpecifigBlockBalance()
     {
       var latestBlockNumber = await Block.GetLatestBlockNumber();
       Assert.NotNull(latestBlockNumber);
     }
-    [AllureStory(StoryQueryBlock)]
-    [AllureXunit(DisplayName = "Get pending balance")]
+    [AllureStory(new string[] { StoryQueryBlock })]
+    // [AllureXunit(DisplayName = "Get pending balance")]
     [Fact(Skip = "not yet done")]
     public async void ShouldGetPendingBalance()
     {
