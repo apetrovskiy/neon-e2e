@@ -34,25 +34,13 @@ public class Wallet {
     Account account = new Account();
 
     try {
-      // System.out.println("00001");
-      // log.info(Marker.ANY_MARKER, "00001");
       final ECKeyPair ecKeyPair = Keys.createEcKeyPair();
-      // System.out.println("00002");
-      // log.info(Marker.ANY_MARKER, "00002");
       final BigInteger privateKeyInDec = ecKeyPair.getPrivateKey();
-      // System.out.println("00003");
-      // log.info(Marker.ANY_MARKER, "00003");
 
       // final String privatekeyInHex = privateKeyInDec.toString(16);
-      // System.out.println("00004");
-      // log.info(Marker.ANY_MARKER, "00004");
 
       final WalletFile walletFile = org.web3j.crypto.Wallet.createLight(seed, ecKeyPair);
-      // System.out.println("00005");
-      // log.info(Marker.ANY_MARKER, "00005");
       String address = walletFile.getAddress();
-      // System.out.println("00006");
-      // log.info(Marker.ANY_MARKER, "00006");
 
       account = Account
         .builder()
