@@ -56,7 +56,7 @@ public class Wallet {
 
       account.setAddress(address);
       account.setPrivateKey(privatekeyInHex);
-      account.setPrivateKeyDec(privateKeyInDec);
+      // account.setPrivateKeyDec(privateKeyInDec);
       System.out.println("00007");
       log.info(Marker.ANY_MARKER, "00007");
 
