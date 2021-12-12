@@ -11,7 +11,6 @@ import java.util.stream.IntStream;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.neonlabs.e2e.web3j.model.Account;
-import org.slf4j.Marker;
 import org.web3j.crypto.CipherException;
 import org.web3j.crypto.ECKeyPair;
 import org.web3j.crypto.Keys;
@@ -21,7 +20,7 @@ import org.web3j.crypto.WalletFile;
  * Creates a new wallet.
  */
 @Slf4j
-@SuppressWarnings({ "PMD.GuardLogStatement", "PMD.SystemPrintln" })
+@SuppressWarnings({ "PMD.GuardLogStatement", "PMD.DataflowAnomalyAnalysis" })
 public class Wallet {
   /**
    * Creates an externally owned account.
@@ -29,28 +28,20 @@ public class Wallet {
   @SneakyThrows
   @Step
   public static Account create() {
-
     final var seed = generateSeed();
     Account account = new Account();
-
     try {
       final ECKeyPair ecKeyPair = Keys.createEcKeyPair();
       final BigInteger privateKeyInDec = ecKeyPair.getPrivateKey();
-
       // final String privatekeyInHex = privateKeyInDec.toString(16);
-
       final WalletFile walletFile = org.web3j.crypto.Wallet.createLight(seed, ecKeyPair);
       String address = walletFile.getAddress();
-
       account = Account
         .builder()
         .address(address)
         // .privateKey(privateKeyInHex)
         .privateKeyDec(privateKeyInDec)
         .build();
-      System.out.println("00007");
-      log.info(Marker.ANY_MARKER, "00007");
-
     } catch (CipherException e) {
       log.error(e.getClass().getName());
       log.error(e.getMessage());
