@@ -8,15 +8,15 @@ on:
         description: 'Test scenario tags'
         required: false
       network:
-        description: 'Network (devnet, testnet, internal.testnet, neonswap.live, aws, ropsten, rinkeby)'
+        type: choice
+        description: 'Network (devnet, testnet, teststand, teststand2)'
         required: true
         default: 'teststand2'
-      name:
-        type: choice
-        description: Who to greet
         options:
-          - monalisa
-          - cschleiden
+          - devnet
+          - testnet
+          - teststand
+          - teststand2
       message:
         required: true
       use-emoji:
