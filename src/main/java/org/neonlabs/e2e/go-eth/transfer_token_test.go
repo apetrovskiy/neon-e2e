@@ -14,7 +14,7 @@ import (
 func TestTransferToken(t *testing.T) {
 
 	allure.SkipTest(t,
-		allure.Suite(Epic),
+		// allure.Suite(Epic),
 		allure.Epic(Epic),
 		allure.Lead(FeatureExternallyOwnedAccounts),
 		allure.Feature(FeatureExternallyOwnedAccounts),

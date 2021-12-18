@@ -12,8 +12,8 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
   [AllureFeature(new string[] { FeatureTransaction })]
   public class TransactionTest
   {
-    [AllureStory("Transaction")]
-    [AllureXunit(DisplayName = "TBD")]
+    [AllureStory(new string[] { "Transaction" })]
+    // [AllureXunit(DisplayName = "TBD")]
     [Fact(Skip = "not yet done")]
     public async void ShouldGetLatestBlockNumber()
     {

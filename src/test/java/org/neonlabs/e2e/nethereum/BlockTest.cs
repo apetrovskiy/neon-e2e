@@ -13,7 +13,7 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
   public class BlockNumberTest
   {
     [AllureSubSuite(StoryQueryBlock)]
-    [AllureStory(StoryQueryBlock)]
+    [AllureStory(new string[] { StoryQueryBlock })]
     [AllureXunit(DisplayName = "Latest block number test")]
     public async void ShouldGetLatestBlockNumber()
     {
@@ -21,8 +21,8 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
       Assert.NotNull(latestBlockNumber);
     }
     [AllureSubSuite(StoryQueryBlock)]
-    [AllureStory(StoryQueryBlock)]
-    [AllureXunit(DisplayName = "Block header")]
+    [AllureStory(new string[] { StoryQueryBlock })]
+    // [AllureXunit(DisplayName = "Block header")]
     [Fact(Skip = "not yet done")]
     public async void ShouldGetBlockHeader()
     {
@@ -30,8 +30,8 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
       Assert.NotNull(latestBlockNumber);
     }
     [AllureSubSuite(StoryQueryBlock)]
-    [AllureStory(StoryQueryBlock)]
-    [AllureXunit(DisplayName = "Full block")]
+    [AllureStory(new string[] { StoryQueryBlock })]
+    // [AllureXunit(DisplayName = "Full block")]
     [Fact(Skip = "not yet done")]
     public async void ShouldGetFullBlock()
     {

@@ -44,6 +44,8 @@ plugins {
   // id("org.web3j") version("4.8.7")
   id("io.freefair.lombok") version ("6.2.0")
 
+  // id("org.web3j") version ("4.8.7")
+
   id("io.qameta.allure") version "2.8.1"
 
   jacoco

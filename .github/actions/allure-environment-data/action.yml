@@ -1,7 +1,7 @@
 name: Collect Allure environment data (short version)
 description: Collects environment data and puts them into allure-results folder
 runs:
-  using: "composite"
+  using: 'composite'
   steps:
     - run: |
         pwd
@@ -11,15 +11,33 @@ runs:
         export $(grep -v '^#' .env | xargs)
         echo "PROXY_URL=$PROXY_URL" > $ENV_PROP_FILE
 
+        function writeData() {
+          echo "================================ Running query ================================"
+          echo "curl -X POST -H 'Content-Type: application/json' -d '$1' $2"
+          {
+            RESULT=$(curl -X POST -H 'Content-Type: application/json' -d '$1' $2)
+            echo "result=$RESULT"
+            RESULT=$(echo $RESULT | sed 's/\"/\\\"/g')
+          } || {
+            RESULT="N/A"
+          }
+          echo "prepared result=$RESULT"
+          echo "$3=$RESULT" >> $ENV_PROP_FILE
+        }
+
         # EVM version
-        EVM_VERSION=$(curl -X POST -H 'Content-Type: application/json' -d '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":0}' $PROXY_URL)
-        EVM_VERSION=$(echo $EVM_VERSION | sed 's/\"/\\\"/g')
-        echo "EVM.Version=$EVM_VERSION" >> $ENV_PROP_FILE
-        
+        writeData '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":0}' $PROXY_URL 'EVM.Version'
+
+        # Proxy version
+        writeData '{"jsonrpc":"2.0","method":"neon_proxy_version","params":[],"id":0}' $PROXY_URL 'Proxy.Version'
+
+        # NEON Cli version
+        writeData '{"jsonrpc":"2.0","method":"neon_cli_version","params":[],"id":0}' $PROXY_URL 'NEON-CLI.Version'
+
         # Solana cluster version
-        SOLANA_VERSION=$(curl $SOLANA_URL -X POST -H "Content-Type: application/json" -d '{"jsonrpc":"2.0","id":1, "method":"getVersion"}')
-        SOLANA_VERSION=$(echo $SOLANA_VERSION | sed 's/\"/\\\"/g')
-        echo "Solana.Version=$SOLANA_VERSION" >> $ENV_PROP_FILE
+        # SOLANA_VERSION=$(curl $SOLANA_URL -X POST -H "Content-Type: application/json" -d '{"jsonrpc":"2.0","id":1, "method":"getVersion"}')
+        writeData '{"jsonrpc":"2.0","id":1,"method":"getVersion"}' $SOLANA_URL 'Solana.Version'
+
         echo "Solana.Explorer=$SOLANA_EXPLORER" >> $ENV_PROP_FILE
 
         cat $ENV_PROP_FILE
@@ -31,4 +49,6 @@ runs:
         cp "./$ENV_PROP_FILE" ./report
         # mkdir $ALLURE_RESULTS
         cp "./$ENV_PROP_FILE" "./$ALLURE_RESULTS"
+
+        cat "./report/$ENV_PROP_FILE"
       shell: bash

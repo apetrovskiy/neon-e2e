@@ -12,8 +12,8 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
   [AllureFeature(new string[] { FeatureExternallyOwnedAccounts })]
   public class TransferTokenTest
   {
-    [AllureStory(StoryTransfer)]
-    [AllureXunit(DisplayName = "TBD")]
+    [AllureStory(new string[] { StoryTransfer })]
+    // [AllureXunit(DisplayName = "TBD")]
     [Fact(Skip = "not yet done")]
     public async void ShouldGetLatestBlockNumber()
     {
