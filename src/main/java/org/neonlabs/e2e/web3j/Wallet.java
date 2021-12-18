@@ -1,49 +1,90 @@
-// package org.neonlabs.e2e.web3j;
+package org.neonlabs.e2e.web3j;
 
-// import java.math.BigInteger;
-// import java.security.InvalidAlgorithmParameterException;
-// import java.security.NoSuchAlgorithmException;
-// import java.security.NoSuchProviderException;
-// import org.web3j.crypto.CipherException;
-// import org.web3j.crypto.ECKeyPair;
-// import org.web3j.crypto.Keys;
-// import org.web3j.crypto.WalletFile;
+import io.qameta.allure.Step;
+import java.math.BigInteger;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
+import java.util.Random;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
+import org.neonlabs.e2e.web3j.model.Account;
+import org.web3j.crypto.CipherException;
+import org.web3j.crypto.ECKeyPair;
+import org.web3j.crypto.Keys;
+import org.web3j.crypto.WalletFile;
 
-// /**
-//  * Creates a new wallet.
-//  */
-// public class Wallet {
-//   public static void process(String seed) {
+/**
+ * Creates a new wallet.
+ */
+@Slf4j
+@SuppressWarnings({ "PMD.GuardLogStatement", "PMD.SystemPrintln" })
+public class Wallet {
+  /**
+   * Creates an externally owned account.
+   */
+  @SneakyThrows
+  @Step
+  public static Account create() {
 
-//   // JSONObject processJson = new JSONObject();
+    final var seed = generateSeed();
+    var account = new Account();
 
-//   try {
-//   ECKeyPair ecKeyPair = Keys.createEcKeyPair();
-//   BigInteger privateKeyInDec = ecKeyPair.getPrivateKey();
+    try {
+      System.out.println("00001");
+      final ECKeyPair ecKeyPair = Keys.createEcKeyPair();
+      System.out.println("00002");
+      final BigInteger privateKeyInDec = ecKeyPair.getPrivateKey();
+      System.out.println("00003");
 
-//   String sPrivatekeyInHex = privateKeyInDec.toString(16);
+      final String privatekeyInHex = privateKeyInDec.toString(16);
+      System.out.println("00004");
 
-//   //
-//   Wallet.process(seed);
-//   //
+      final WalletFile walletFile = org.web3j.crypto.Wallet.createLight(seed, ecKeyPair);
+      System.out.println("00005");
+      String address = walletFile.getAddress();
+      System.out.println("00006");
 
-//   WalletFile aWallet = Wallet //.process(seed); //.createLight(seed,
-//   ecKeyPair);
-//   String sAddress = aWallet.getAddress();
+      account.setAddress(address);
+      account.setPrivateKey(privatekeyInHex);
+      account.setPrivateKeyDec(privateKeyInDec);
+      System.out.println("00007");
 
-//   // processJson.put("address", "0x" + sAddress);
-//   // processJson.put("privatekey", sPrivatekeyInHex);
+    } catch (CipherException e) {
+      log.error(e.getClass().getName());
+      log.error(e.getMessage());
+    } catch (InvalidAlgorithmParameterException e) {
+      log.error(e.getClass().getName());
+      log.error(e.getMessage());
+    } catch (NoSuchAlgorithmException e) {
+      log.error(e.getClass().getName());
+      log.error(e.getMessage());
+    } catch (NoSuchProviderException e) {
+      log.error(e.getClass().getName());
+      log.error(e.getMessage());
+    }
 
-//   } catch (CipherException e) {
-//   //
-//   } catch (InvalidAlgorithmParameterException e) {
-//   //
-//   } catch (NoSuchAlgorithmException e) {
-//   //
-//   } catch (NoSuchProviderException e) {
-//   //
-//   }
+    return account;
+  }
 
-//   // return processJson;
-//   }
-// }
+  private static String generateSeed() {
+    final var seed = IntStream.rangeClosed(1, 12)
+        .mapToObj(index -> generateRandomString() + " ")
+        .collect(Collectors.joining(" "));
+    log.info("Generated seed: %s", seed);
+    return seed.trim();
+  }
+
+  private static String generateRandomString() {
+    final var startCharacter = 97;
+    final var endCharacter = 122;
+    final var maxLength = 10;
+    final var random = new Random();
+    return random.ints(startCharacter, endCharacter + 1)
+        .limit(maxLength)
+        .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
+        .toString();
+  }
+}
