@@ -12,12 +12,16 @@ runs:
         echo "PROXY_URL=$PROXY_URL" > $ENV_PROP_FILE
 
         function writeData() {
-          echo "writeData input_data=$1"
-          echo "writeData URL=$2"
-          RESULT=$(curl -X POST -H 'Content-Type: application/json' -d $1 $2)
-          echo "writeData result1=$RESULT"
-          RESULT=$(echo $RESULT | sed 's/\"/\\\"/g')
-          echo "writeData result2=$RESULT"
+          echo "================================ Running query ================================"
+          echo "curl -X POST -H 'Content-Type: application/json' -d '$1' $2"
+          {
+            RESULT=$(curl -X POST -H 'Content-Type: application/json' -d '$1' $2)
+            echo "result=$RESULT"
+            RESULT=$(echo $RESULT | sed 's/\"/\\\"/g')
+          } || {
+            RESULT="N/A"
+          }
+          echo "prepared result=$RESULT"
           echo "$3=$RESULT" >> $ENV_PROP_FILE
         }
 
@@ -32,7 +36,7 @@ runs:
 
         # Solana cluster version
         # SOLANA_VERSION=$(curl $SOLANA_URL -X POST -H "Content-Type: application/json" -d '{"jsonrpc":"2.0","id":1, "method":"getVersion"}')
-        # writeData '{"jsonrpc":"2.0","id":1,"method":"getVersion"}' $SOLANA_URL 'Solana.Version'
+        writeData '{"jsonrpc":"2.0","id":1,"method":"getVersion"}' $SOLANA_URL 'Solana.Version'
 
         echo "Solana.Explorer=$SOLANA_EXPLORER" >> $ENV_PROP_FILE
 

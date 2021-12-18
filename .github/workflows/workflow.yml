@@ -252,7 +252,7 @@ jobs:
         with:
           folder-name: report/allure-results
 
-  allure:
+  environment-data:
     runs-on: ubuntu-latest
     if: always()
     needs:
@@ -263,6 +263,21 @@ jobs:
       - golang
       - dotnet
       - jdk
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/allure-prep
+      - uses: ./.github/actions/switch-network
+      - uses: ./.github/actions/allure-environment-data
+        if: always()
+      - uses: ./.github/actions/allure-upload
+        if: always()
+        with:
+          folder-name: report/allure-results
+
+  allure:
+    runs-on: ubuntu-latest
+    if: always()
+    needs: environment-data
     steps:
       - name: Download all workflow run artifacts
         uses: actions/download-artifact@v2
