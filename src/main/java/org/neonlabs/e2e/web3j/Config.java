@@ -31,10 +31,6 @@ public class Config {
     return System.getProperty("ADDRESS_TO");
   }
 
-  public String getDisableConfirmation() {
-    return System.getProperty("DISABLE_CONFIRMATION");
-  }
-
   public String getPrivateKey() {
     return System.getProperty("PRIVATE_KEY");
   }

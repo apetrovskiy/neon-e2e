@@ -18,7 +18,6 @@ export const Config = {
   baseUrl: getStringValue(process.env.PROXY_URL).replace('/solana', ''),
   addressFrom: getStringValue(process.env.ADDRESS_FROM),
   addressTo: getStringValue(process.env.ADDRESS_TO),
-  disableConfirmation: getStringValue(process.env.DISABLE_CONFIRMATION),
   privateKey: getStringValue(process.env.PRIVATE_KEY),
   faucetQuotient: Number.parseInt(getStringValue(process.env.FAUCET_QUOTIENT)),
   faucetUrl: getStringValue(process.env.FAUCET_URL),

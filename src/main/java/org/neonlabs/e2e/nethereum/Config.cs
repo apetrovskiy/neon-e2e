@@ -14,7 +14,6 @@ namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
     public static bool UseFaucet { get; set; }
     public static string AddressFrom { get; set; }
     public static string AddressTo { get; set; }
-    public static bool DisableConfirmation { get; set; }
     public static string PrivateKey { get; set; }
     public static string SolanaExplorer { get; set; }
     public static string SolanaUrl { get; set; }
@@ -30,7 +29,6 @@ namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
       bool useFaucet;
       string addressFrom;
       string addressTo;
-      string disableConfirmation;
       string privateKey;
       string solanaExplorer;
       string solanaUrl;
@@ -45,7 +43,6 @@ namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
       EnvReader.TryGetBooleanValue("USE_FAUCET", out useFaucet);
       EnvReader.TryGetStringValue("ADDRESS_FROM", out addressFrom);
       EnvReader.TryGetStringValue("ADDRESS_TO", out addressTo);
-      EnvReader.TryGetStringValue("DISABLE_CONFIRMATION", out disableConfirmation);
       EnvReader.TryGetStringValue("PRIVATE_KEY", out privateKey);
       EnvReader.TryGetStringValue("SOLANA_EXPLORER", out solanaExplorer);
       EnvReader.TryGetStringValue("SOLANA_URL", out solanaUrl);
@@ -59,7 +56,6 @@ namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
       UseFaucet = useFaucet;
       AddressFrom = addressFrom;
       AddressTo = addressTo;
-      DisableConfirmation = Convert.ToBoolean(disableConfirmation);
       PrivateKey = privateKey;
       SolanaExplorer = solanaExplorer;
       SolanaUrl = solanaUrl;
