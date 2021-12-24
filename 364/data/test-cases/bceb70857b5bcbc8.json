@@ -1,0 +1,381 @@
+{
+  "uid" : "bceb70857b5bcbc8",
+  "name" : "a user to user successful transaction",
+  "fullName" : "features/transaction.feature:transaction:a user to user successful transaction",
+  "historyId" : "f659aec79492d7aa3039b11e9fdb5bcf",
+  "time" : {
+    "start" : 1640313183931,
+    "stop" : 1640313184256,
+    "duration" : 325
+  },
+  "description" : "",
+  "status" : "failed",
+  "statusMessage" : "Request failed with status code 500",
+  "statusTrace" : "Error: Request failed with status code 500\n    at createError (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/adapters/http.js:293:11)\n    at IncomingMessage.emit (node:events:402:35)\n    at IncomingMessage.emit (node:domain:475:12)\n    at endReadableNT (node:internal/streams/readable:1343:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "time" : { },
+    "status" : "broken",
+    "steps" : [ {
+      "name" : "Before: tests/step-definitions/hooks.ts:9",
+      "time" : {
+        "start" : 1640313183931,
+        "stop" : 1640313183932,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 1
+  } ],
+  "testStage" : {
+    "description" : "",
+    "status" : "failed",
+    "statusMessage" : "Request failed with status code 500",
+    "statusTrace" : "Error: Request failed with status code 500\n    at createError (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/adapters/http.js:293:11)\n    at IncomingMessage.emit (node:events:402:35)\n    at IncomingMessage.emit (node:domain:475:12)\n    at endReadableNT (node:internal/streams/readable:1343:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
+    "steps" : [ {
+      "name" : "Given there is user Alice in Ethereum network with the initial balance <10>Ξ",
+      "time" : {
+        "start" : 1640313183932,
+        "stop" : 1640313184255,
+        "duration" : 323
+      },
+      "status" : "failed",
+      "statusMessage" : "Request failed with status code 500",
+      "statusTrace" : "Error: Request failed with status code 500\n    at createError (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/home/runner/work/neon-e2e/neon-e2e/node_modules/axios/lib/adapters/http.js:293:11)\n    at IncomingMessage.emit (node:events:402:35)\n    at IncomingMessage.emit (node:domain:475:12)\n    at endReadableNT (node:internal/streams/readable:1343:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "And there is user Bob in Ethereum network with the initial balance <10>Ξ",
+      "time" : {
+        "start" : 1640313184256,
+        "stop" : 1640313184256,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "When user Alice sends <2>Ξ to user Bob",
+      "time" : {
+        "start" : 1640313184256,
+        "stop" : 1640313184256,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Then the recipient has balance increased by <2>Ξ",
+      "time" : {
+        "start" : 1640313184256,
+        "stop" : 1640313184256,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "And the sender has balance decreased more than by <2>Ξ",
+      "time" : {
+        "start" : 1640313184256,
+        "stop" : 1640313184256,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 5
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "2757"
+  }, {
+    "name" : "feature",
+    "value" : "transaction"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "amount",
+    "value" : "2"
+  }, {
+    "name" : "initial balance",
+    "value" : "10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 358,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 358
+      },
+      "items" : [ {
+        "uid" : "a6836dd391ac4d96",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/361//#testresult/a6836dd391ac4d96",
+        "status" : "failed",
+        "statusDetails" : "Cannot read properties of null (reading 'replace')",
+        "time" : {
+          "start" : 1640312634178,
+          "stop" : 1640312634210,
+          "duration" : 32
+        }
+      }, {
+        "uid" : "9ebd9e7d41436e8",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/362//#testresult/9ebd9e7d41436e8",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 429",
+        "time" : {
+          "start" : 1640312644260,
+          "stop" : 1640312644706,
+          "duration" : 446
+        }
+      }, {
+        "uid" : "2d2bbdccb0d72c27",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/359//#testresult/2d2bbdccb0d72c27",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1640312613110,
+          "stop" : 1640312613437,
+          "duration" : 327
+        }
+      }, {
+        "uid" : "91925223a5a4266f",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/358//#testresult/91925223a5a4266f",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1640311385973,
+          "stop" : 1640311386166,
+          "duration" : 193
+        }
+      }, {
+        "uid" : "470ee642cf3321f1",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/357//#testresult/470ee642cf3321f1",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1640311316613,
+          "stop" : 1640311316966,
+          "duration" : 353
+        }
+      }, {
+        "uid" : "abe792bce0bd84f0",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/356//#testresult/abe792bce0bd84f0",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1640310548462,
+          "stop" : 1640310548651,
+          "duration" : 189
+        }
+      }, {
+        "uid" : "def5e714669850cb",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/355//#testresult/def5e714669850cb",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1640279797874,
+          "stop" : 1640279798201,
+          "duration" : 327
+        }
+      }, {
+        "uid" : "907b76acc9fd70e9",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/353//#testresult/907b76acc9fd70e9",
+        "status" : "failed",
+        "statusDetails" : "Cannot read properties of null (reading 'replace')",
+        "time" : {
+          "start" : 1639953444900,
+          "stop" : 1639953444934,
+          "duration" : 34
+        }
+      }, {
+        "uid" : "190d10bd5214b9ba",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/352//#testresult/190d10bd5214b9ba",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 502",
+        "time" : {
+          "start" : 1639953416066,
+          "stop" : 1639953416497,
+          "duration" : 431
+        }
+      }, {
+        "uid" : "2110b4a2ac0fb76c",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/351//#testresult/2110b4a2ac0fb76c",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 401",
+        "time" : {
+          "start" : 1639953308125,
+          "stop" : 1639953308679,
+          "duration" : 554
+        }
+      }, {
+        "uid" : "c30f8968c73a7aef",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/350//#testresult/c30f8968c73a7aef",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 401",
+        "time" : {
+          "start" : 1639953031483,
+          "stop" : 1639953031805,
+          "duration" : 322
+        }
+      }, {
+        "uid" : "1679167e2ccfe2d",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/349//#testresult/1679167e2ccfe2d",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 429",
+        "time" : {
+          "start" : 1639952759349,
+          "stop" : 1639952759830,
+          "duration" : 481
+        }
+      }, {
+        "uid" : "983a7d383588ec80",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/348//#testresult/983a7d383588ec80",
+        "status" : "failed",
+        "statusDetails" : "Cannot read properties of null (reading 'replace')",
+        "time" : {
+          "start" : 1639952734677,
+          "stop" : 1639952734708,
+          "duration" : 31
+        }
+      }, {
+        "uid" : "4b684d353f8f4cb5",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/346//#testresult/4b684d353f8f4cb5",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 401",
+        "time" : {
+          "start" : 1639952696598,
+          "stop" : 1639952697210,
+          "duration" : 612
+        }
+      }, {
+        "uid" : "c4057d0b724e1a34",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/343//#testresult/c4057d0b724e1a34",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '0' to equal '100'",
+        "time" : {
+          "start" : 1639938079334,
+          "stop" : 1639938079699,
+          "duration" : 365
+        }
+      }, {
+        "uid" : "857dae9ca946f8a0",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/345//#testresult/857dae9ca946f8a0",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '1000' to equal '10'",
+        "time" : {
+          "start" : 1639938142801,
+          "stop" : 1639938144080,
+          "duration" : 1279
+        }
+      }, {
+        "uid" : "15a09daac4b1a91",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/342//#testresult/15a09daac4b1a91",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '1000' to equal '100'",
+        "time" : {
+          "start" : 1639938037828,
+          "stop" : 1639938038642,
+          "duration" : 814
+        }
+      }, {
+        "uid" : "123e6aebef929b92",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/340//#testresult/123e6aebef929b92",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '1000' to equal '10'",
+        "time" : {
+          "start" : 1639914469649,
+          "stop" : 1639914474543,
+          "duration" : 4894
+        }
+      }, {
+        "uid" : "a3b7ad331713bb39",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/338//#testresult/a3b7ad331713bb39",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '1000' to equal '100'",
+        "time" : {
+          "start" : 1639914417719,
+          "stop" : 1639914418532,
+          "duration" : 813
+        }
+      }, {
+        "uid" : "ae2f8cadc1828f6b",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/339//#testresult/ae2f8cadc1828f6b",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '0' to equal '100'",
+        "time" : {
+          "start" : 1639914458823,
+          "stop" : 1639914459412,
+          "duration" : 589
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "bceb70857b5bcbc8.json",
+  "parameterValues" : [ "2", "10" ]
+}
