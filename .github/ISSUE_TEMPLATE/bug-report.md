@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-about: Describe an issue in Neon EndToEnd
+about: Describe an issue in the Neon EndToEnd suite
 title: ''
 labels: bug
 assignees: ''

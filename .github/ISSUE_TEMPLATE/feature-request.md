@@ -1,6 +1,6 @@
 ---
 name: Feature Request
-about: Suggest an idea for improving the UX of Neon EndToEnd
+about: Suggest an idea for improving the UX of the Neon EndToEnd suite
 title: ''
 labels: 'improvement'
 assignees: ''
