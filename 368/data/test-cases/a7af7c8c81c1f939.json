@@ -1,0 +1,348 @@
+{
+  "uid" : "a7af7c8c81c1f939",
+  "name" : "the first funding request",
+  "fullName" : "features/faucet.feature:faucet:the first funding request",
+  "historyId" : "9f8e14c7432acddd8d64a92406fbde4a",
+  "time" : {
+    "start" : 1640373521719,
+    "stop" : 1640373522383,
+    "duration" : 664
+  },
+  "description" : "",
+  "status" : "failed",
+  "statusMessage" : "Returned error: HTTPConnectionPool(host='10.2.0.2', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7eff948b3cd0>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+  "statusTrace" : "Error: Returned error: HTTPConnectionPool(host='10.2.0.2', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7eff948b3cd0>: Failed to establish a new connection: [Errno 111] Connection refused'))\n    at Object.ErrorResponse (/home/runner/work/neon-e2e/neon-e2e/node_modules/web3-core-helpers/lib/errors.js:28:19)\n    at /home/runner/work/neon-e2e/neon-e2e/node_modules/web3-core-requestmanager/lib/index.js:302:36\n    at XMLHttpRequest.request.onreadystatechange (/home/runner/work/neon-e2e/neon-e2e/node_modules/web3-providers-http/lib/index.js:98:13)\n    at XMLHttpRequestEventTarget.dispatchEvent (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request-event-target.ts:44:13)\n    at XMLHttpRequest._setReadyState (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:219:8)\n    at XMLHttpRequest._onHttpResponseEnd (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:345:8)\n    at IncomingMessage.<anonymous> (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:311:39)\n    at IncomingMessage.emit (node:events:402:35)\n    at IncomingMessage.emit (node:domain:475:12)\n    at endReadableNT (node:internal/streams/readable:1343:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "time" : { },
+    "status" : "broken",
+    "steps" : [ {
+      "name" : "Before: tests/step-definitions/hooks.ts:9",
+      "time" : {
+        "start" : 1640373521720,
+        "stop" : 1640373521730,
+        "duration" : 10
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "",
+    "status" : "failed",
+    "statusMessage" : "Returned error: HTTPConnectionPool(host='10.2.0.2', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7eff948b3cd0>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+    "statusTrace" : "Error: Returned error: HTTPConnectionPool(host='10.2.0.2', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7eff948b3cd0>: Failed to establish a new connection: [Errno 111] Connection refused'))\n    at Object.ErrorResponse (/home/runner/work/neon-e2e/neon-e2e/node_modules/web3-core-helpers/lib/errors.js:28:19)\n    at /home/runner/work/neon-e2e/neon-e2e/node_modules/web3-core-requestmanager/lib/index.js:302:36\n    at XMLHttpRequest.request.onreadystatechange (/home/runner/work/neon-e2e/neon-e2e/node_modules/web3-providers-http/lib/index.js:98:13)\n    at XMLHttpRequestEventTarget.dispatchEvent (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request-event-target.ts:44:13)\n    at XMLHttpRequest._setReadyState (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:219:8)\n    at XMLHttpRequest._onHttpResponseEnd (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:345:8)\n    at IncomingMessage.<anonymous> (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:311:39)\n    at IncomingMessage.emit (node:events:402:35)\n    at IncomingMessage.emit (node:domain:475:12)\n    at endReadableNT (node:internal/streams/readable:1343:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
+    "steps" : [ {
+      "name" : "Given there is user Alice in Ethereum network with no initial balance",
+      "time" : {
+        "start" : 1640373521730,
+        "stop" : 1640373521767,
+        "duration" : 37
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When the user requests the ERC20 faucet for <10>Ξ",
+      "time" : {
+        "start" : 1640373521768,
+        "stop" : 1640373521768,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then the balance equals <10>Ξ",
+      "time" : {
+        "start" : 1640373521768,
+        "stop" : 1640373522382,
+        "duration" : 614
+      },
+      "status" : "failed",
+      "statusMessage" : "Returned error: HTTPConnectionPool(host='10.2.0.2', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7eff948b3cd0>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "statusTrace" : "Error: Returned error: HTTPConnectionPool(host='10.2.0.2', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7eff948b3cd0>: Failed to establish a new connection: [Errno 111] Connection refused'))\n    at Object.ErrorResponse (/home/runner/work/neon-e2e/neon-e2e/node_modules/web3-core-helpers/lib/errors.js:28:19)\n    at /home/runner/work/neon-e2e/neon-e2e/node_modules/web3-core-requestmanager/lib/index.js:302:36\n    at XMLHttpRequest.request.onreadystatechange (/home/runner/work/neon-e2e/neon-e2e/node_modules/web3-providers-http/lib/index.js:98:13)\n    at XMLHttpRequestEventTarget.dispatchEvent (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request-event-target.ts:44:13)\n    at XMLHttpRequest._setReadyState (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:219:8)\n    at XMLHttpRequest._onHttpResponseEnd (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:345:8)\n    at IncomingMessage.<anonymous> (/home/runner/work/neon-e2e/neon-e2e/node_modules/xhr2-cookies/xml-http-request.ts:311:39)\n    at IncomingMessage.emit (node:events:402:35)\n    at IncomingMessage.emit (node:domain:475:12)\n    at endReadableNT (node:internal/streams/readable:1343:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "3021"
+  }, {
+    "name" : "feature",
+    "value" : "faucet"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "initial balance",
+    "value" : "10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 169,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 192,
+        "unknown" : 0,
+        "total" : 361
+      },
+      "items" : [ {
+        "uid" : "47ea4803d9cf48c6",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/367//#testresult/47ea4803d9cf48c6",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '0' to equal '100'",
+        "time" : {
+          "start" : 1640331680761,
+          "stop" : 1640331681382,
+          "duration" : 621
+        }
+      }, {
+        "uid" : "b7ef2e33ab2f64c3",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/366//#testresult/b7ef2e33ab2f64c3",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 429",
+        "time" : {
+          "start" : 1640313194417,
+          "stop" : 1640313194911,
+          "duration" : 494
+        }
+      }, {
+        "uid" : "1a257790e24e2b3e",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/365//#testresult/1a257790e24e2b3e",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '1000' to equal '10'",
+        "time" : {
+          "start" : 1640313202285,
+          "stop" : 1640313206526,
+          "duration" : 4241
+        }
+      }, {
+        "uid" : "adadfe2b340132c3",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/361//#testresult/adadfe2b340132c3",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '1000' to equal '10'",
+        "time" : {
+          "start" : 1640312626829,
+          "stop" : 1640312634034,
+          "duration" : 7205
+        }
+      }, {
+        "uid" : "d6364c1b2bd28c67",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/362//#testresult/d6364c1b2bd28c67",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 429",
+        "time" : {
+          "start" : 1640312642464,
+          "stop" : 1640312642920,
+          "duration" : 456
+        }
+      }, {
+        "uid" : "51a458f3674c3376",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/359//#testresult/51a458f3674c3376",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '10' to equal '100'",
+        "time" : {
+          "start" : 1640312597089,
+          "stop" : 1640312612051,
+          "duration" : 14962
+        }
+      }, {
+        "uid" : "a9aa21266f1caee5",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/358//#testresult/a9aa21266f1caee5",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '10' to equal '100'",
+        "time" : {
+          "start" : 1640311370267,
+          "stop" : 1640311385363,
+          "duration" : 15096
+        }
+      }, {
+        "uid" : "aa3f9d0f323bbc9",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/357//#testresult/aa3f9d0f323bbc9",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '10' to equal '100'",
+        "time" : {
+          "start" : 1640311300492,
+          "stop" : 1640311315520,
+          "duration" : 15028
+        }
+      }, {
+        "uid" : "968c0c134142bd90",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/356//#testresult/968c0c134142bd90",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '10' to equal '100'",
+        "time" : {
+          "start" : 1640310533788,
+          "stop" : 1640310547849,
+          "duration" : 14061
+        }
+      }, {
+        "uid" : "865c36b62bdb482d",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/355//#testresult/865c36b62bdb482d",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '10' to equal '100'",
+        "time" : {
+          "start" : 1640279781834,
+          "stop" : 1640279796813,
+          "duration" : 14979
+        }
+      }, {
+        "uid" : "1193b2c47d93c111",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/353//#testresult/1193b2c47d93c111",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '1000' to equal '10'",
+        "time" : {
+          "start" : 1639953440677,
+          "stop" : 1639953444749,
+          "duration" : 4072
+        }
+      }, {
+        "uid" : "72c20342d360589e",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/352//#testresult/72c20342d360589e",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 502",
+        "time" : {
+          "start" : 1639953414221,
+          "stop" : 1639953414710,
+          "duration" : 489
+        }
+      }, {
+        "uid" : "ce00b2bb1256afd2",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/351//#testresult/ce00b2bb1256afd2",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 401",
+        "time" : {
+          "start" : 1639953305726,
+          "stop" : 1639953306346,
+          "duration" : 620
+        }
+      }, {
+        "uid" : "9e836c542c5f4452",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/350//#testresult/9e836c542c5f4452",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 401",
+        "time" : {
+          "start" : 1639953030193,
+          "stop" : 1639953030529,
+          "duration" : 336
+        }
+      }, {
+        "uid" : "4378776f0973b2fa",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/349//#testresult/4378776f0973b2fa",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 429",
+        "time" : {
+          "start" : 1639952757276,
+          "stop" : 1639952757811,
+          "duration" : 535
+        }
+      }, {
+        "uid" : "33f2e5151e34ff07",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/348//#testresult/33f2e5151e34ff07",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '1000' to equal '10'",
+        "time" : {
+          "start" : 1639952726724,
+          "stop" : 1639952734541,
+          "duration" : 7817
+        }
+      }, {
+        "uid" : "eabedd9ff24223f3",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/346//#testresult/eabedd9ff24223f3",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 401",
+        "time" : {
+          "start" : 1639952694371,
+          "stop" : 1639952694992,
+          "duration" : 621
+        }
+      }, {
+        "uid" : "d3d937abfb42c1b5",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/343//#testresult/d3d937abfb42c1b5",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '0' to equal '100'",
+        "time" : {
+          "start" : 1639938077801,
+          "stop" : 1639938078189,
+          "duration" : 388
+        }
+      }, {
+        "uid" : "ac50eb99c7f76e80",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/345//#testresult/ac50eb99c7f76e80",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '1000' to equal '10'",
+        "time" : {
+          "start" : 1639938135437,
+          "stop" : 1639938136925,
+          "duration" : 1488
+        }
+      }, {
+        "uid" : "70566166c7ccee16",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/342//#testresult/70566166c7ccee16",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '1000' to equal '100'",
+        "time" : {
+          "start" : 1639938034516,
+          "stop" : 1639938035310,
+          "duration" : 794
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "a7af7c8c81c1f939.json",
+  "parameterValues" : [ "10" ]
+}
