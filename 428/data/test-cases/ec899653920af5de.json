@@ -1,0 +1,381 @@
+{
+  "uid" : "ec899653920af5de",
+  "name" : "a user to user successful transaction",
+  "fullName" : "features/transaction.feature:transaction:a user to user successful transaction",
+  "historyId" : "90b8dcbcdc4cfde35e119df99631b02f",
+  "time" : {
+    "start" : 1640566711049,
+    "stop" : 1640566726609,
+    "duration" : 15560
+  },
+  "description" : "",
+  "status" : "failed",
+  "statusMessage" : "the initial amount should be set to: expected '10' to equal '200'",
+  "statusTrace" : "AssertionError: the initial amount should be set to: expected '10' to equal '200'\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:28:69\n    at Generator.next (<anonymous>)\n    at fulfilled (/home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "time" : { },
+    "status" : "broken",
+    "steps" : [ {
+      "name" : "Before: tests/step-definitions/hooks.ts:12",
+      "time" : {
+        "start" : 1640566711049,
+        "stop" : 1640566711049,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "",
+    "status" : "failed",
+    "statusMessage" : "the initial amount should be set to: expected '10' to equal '200'",
+    "statusTrace" : "AssertionError: the initial amount should be set to: expected '10' to equal '200'\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:28:69\n    at Generator.next (<anonymous>)\n    at fulfilled (/home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+    "steps" : [ {
+      "name" : "Given there is user Alice in Ethereum network with the initial balance <10>Ξ",
+      "time" : {
+        "start" : 1640566711049,
+        "stop" : 1640566726608,
+        "duration" : 15559
+      },
+      "status" : "failed",
+      "statusMessage" : "the initial amount should be set to: expected '10' to equal '200'",
+      "statusTrace" : "AssertionError: the initial amount should be set to: expected '10' to equal '200'\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:28:69\n    at Generator.next (<anonymous>)\n    at fulfilled (/home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "And there is user Bob in Ethereum network with the initial balance <10>Ξ",
+      "time" : {
+        "start" : 1640566726608,
+        "stop" : 1640566726608,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When user Alice sends <9>Ξ to user Bob",
+      "time" : {
+        "start" : 1640566726608,
+        "stop" : 1640566726608,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then the recipient has balance increased by <9>Ξ",
+      "time" : {
+        "start" : 1640566726608,
+        "stop" : 1640566726609,
+        "duration" : 1
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And the sender has balance decreased more than by <9>Ξ",
+      "time" : {
+        "start" : 1640566726609,
+        "stop" : 1640566726609,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "2691"
+  }, {
+    "name" : "feature",
+    "value" : "transaction"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "amount",
+    "value" : "9"
+  }, {
+    "name" : "initial balance",
+    "value" : "10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 390,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 390
+      },
+      "items" : [ {
+        "uid" : "c8c0c36c7d7048cf",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/427//#testresult/c8c0c36c7d7048cf",
+        "status" : "failed",
+        "statusDetails" : "Invalid JSON RPC response: \"<html>\\r\\n<head><title>502 Bad Gateway</title></head>\\r\\n<body>\\r\\n<center><h1>502 Bad Gateway</h1></center>\\r\\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\\r\\n</body>\\r\\n</html>\\r\\n\"",
+        "time" : {
+          "start" : 1640566510386,
+          "stop" : 1640566524774,
+          "duration" : 14388
+        }
+      }, {
+        "uid" : "f1744fc000373322",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/425//#testresult/f1744fc000373322",
+        "status" : "failed",
+        "statusDetails" : "Cannot read properties of undefined (reading 'step')",
+        "time" : {
+          "start" : 1640564990557,
+          "stop" : 1640564990568,
+          "duration" : 11
+        }
+      }, {
+        "uid" : "2625ce5b08a3e287",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/423//#testresult/2625ce5b08a3e287",
+        "status" : "failed",
+        "statusDetails" : "Invalid JSON RPC response: \"<html>\\r\\n<head><title>502 Bad Gateway</title></head>\\r\\n<body>\\r\\n<center><h1>502 Bad Gateway</h1></center>\\r\\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\\r\\n</body>\\r\\n</html>\\r\\n\"",
+        "time" : {
+          "start" : 1640565129389,
+          "stop" : 1640565143929,
+          "duration" : 14540
+        }
+      }, {
+        "uid" : "3118d227e1d0a8b2",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/426//#testresult/3118d227e1d0a8b2",
+        "status" : "failed",
+        "statusDetails" : "Cannot read properties of undefined (reading 'step')",
+        "time" : {
+          "start" : 1640565007197,
+          "stop" : 1640565007199,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "6bdd691b2d7aeb07",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/422//#testresult/6bdd691b2d7aeb07",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '10' to equal '200'",
+        "time" : {
+          "start" : 1640564320586,
+          "stop" : 1640564335398,
+          "duration" : 14812
+        }
+      }, {
+        "uid" : "f4c3047885c9fb0c",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/421//#testresult/f4c3047885c9fb0c",
+        "status" : "failed",
+        "statusDetails" : "balance should be equal to: expected '20000000000000000000' to equal '19000000000000000000'",
+        "time" : {
+          "start" : 1640563645993,
+          "stop" : 1640563676639,
+          "duration" : 30646
+        }
+      }, {
+        "uid" : "c9f53e15194e56f7",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/420//#testresult/c9f53e15194e56f7",
+        "status" : "failed",
+        "statusDetails" : "Invalid JSON RPC response: \"<html>\\r\\n<head><title>502 Bad Gateway</title></head>\\r\\n<body>\\r\\n<center><h1>502 Bad Gateway</h1></center>\\r\\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\\r\\n</body>\\r\\n</html>\\r\\n\"",
+        "time" : {
+          "start" : 1640562698329,
+          "stop" : 1640562727095,
+          "duration" : 28766
+        }
+      }, {
+        "uid" : "445d9ef3f2b2441d",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/419//#testresult/445d9ef3f2b2441d",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '10' to equal '200'",
+        "time" : {
+          "start" : 1640558901846,
+          "stop" : 1640558916795,
+          "duration" : 14949
+        }
+      }, {
+        "uid" : "87cff6916ed7198e",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/417//#testresult/87cff6916ed7198e",
+        "status" : "failed",
+        "statusDetails" : "Returned error: HTTPConnectionPool(host='65.108.187.34', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f507d353fa0>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+        "time" : {
+          "start" : 1640558266673,
+          "stop" : 1640558280742,
+          "duration" : 14069
+        }
+      }, {
+        "uid" : "dd0b0863b02a1ff2",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/418//#testresult/dd0b0863b02a1ff2",
+        "status" : "failed",
+        "statusDetails" : "Returned error: HTTPConnectionPool(host='65.108.187.34', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f507d4bc040>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+        "time" : {
+          "start" : 1640558253624,
+          "stop" : 1640558268182,
+          "duration" : 14558
+        }
+      }, {
+        "uid" : "2f2db95a0aa80ee1",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/416//#testresult/2f2db95a0aa80ee1",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 500",
+        "time" : {
+          "start" : 1640557365880,
+          "stop" : 1640557366098,
+          "duration" : 218
+        }
+      }, {
+        "uid" : "d6e0d4e2f5d7843f",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/414//#testresult/d6e0d4e2f5d7843f",
+        "status" : "failed",
+        "statusDetails" : "Cannot read properties of undefined (reading 'step')",
+        "time" : {
+          "start" : 1640556632789,
+          "stop" : 1640556632811,
+          "duration" : 22
+        }
+      }, {
+        "uid" : "7fdd4baa7c9bd3a9",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/415//#testresult/7fdd4baa7c9bd3a9",
+        "status" : "failed",
+        "statusDetails" : "Cannot read properties of undefined (reading 'step')",
+        "time" : {
+          "start" : 1640556724482,
+          "stop" : 1640556724491,
+          "duration" : 9
+        }
+      }, {
+        "uid" : "db3899c4592bd260",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/413//#testresult/db3899c4592bd260",
+        "status" : "failed",
+        "statusDetails" : "Cannot read properties of undefined (reading 'step')",
+        "time" : {
+          "start" : 1640556071590,
+          "stop" : 1640556071593,
+          "duration" : 3
+        }
+      }, {
+        "uid" : "164e1d46b2563a5f",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/412//#testresult/164e1d46b2563a5f",
+        "status" : "failed",
+        "statusDetails" : "error happened during the operation: expected 'Failed to check for transaction receipt:\\n{}' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'",
+        "time" : {
+          "start" : 1640554971125,
+          "stop" : 1640555003719,
+          "duration" : 32594
+        }
+      }, {
+        "uid" : "ee39444df9a66f2e",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/395//#testresult/ee39444df9a66f2e",
+        "status" : "failed",
+        "statusDetails" : "balance should be equal to: expected '20000000000000000000' to equal '19000000000000000000'",
+        "time" : {
+          "start" : 1640532553843,
+          "stop" : 1640532584182,
+          "duration" : 30339
+        }
+      }, {
+        "uid" : "d67751ab77e91f9a",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/396//#testresult/d67751ab77e91f9a",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '10' to equal '200'",
+        "time" : {
+          "start" : 1640532530488,
+          "stop" : 1640532545593,
+          "duration" : 15105
+        }
+      }, {
+        "uid" : "c07427c0534f458d",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/394//#testresult/c07427c0534f458d",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 429",
+        "time" : {
+          "start" : 1640531945937,
+          "stop" : 1640531946222,
+          "duration" : 285
+        }
+      }, {
+        "uid" : "3427e28774260aed",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/382//#testresult/3427e28774260aed",
+        "status" : "failed",
+        "statusDetails" : "Invalid JSON RPC response: \"<html>\\r\\n<head><title>502 Bad Gateway</title></head>\\r\\n<body>\\r\\n<center><h1>502 Bad Gateway</h1></center>\\r\\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\\r\\n</body>\\r\\n</html>\\r\\n\"",
+        "time" : {
+          "start" : 1640528575863,
+          "stop" : 1640528590406,
+          "duration" : 14543
+        }
+      }, {
+        "uid" : "da2c521ffcece6d7",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/385//#testresult/da2c521ffcece6d7",
+        "status" : "failed",
+        "statusDetails" : "Request failed with status code 429",
+        "time" : {
+          "start" : 1640528504986,
+          "stop" : 1640528505268,
+          "duration" : 282
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "ec899653920af5de.json",
+  "parameterValues" : [ "9", "10" ]
+}
