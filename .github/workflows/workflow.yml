@@ -17,13 +17,13 @@ on:
           - testnet
           - teststand
           - teststand2
-      message:
-        required: true
-      use-emoji:
-        type: boolean
-        description: Include 🎉🤣 emojis
-      environment:
-        type: environment
+      # message:
+      #   required: true
+      # use-emoji:
+      #   type: boolean
+      #   description: Include 🎉🤣 emojis
+      # environment:
+      #   type: environment
 
 jobs:
   python:
@@ -336,7 +336,7 @@ jobs:
           echo "{{ env.NETWORK_NAME }}=${{ env.NETWORK_NAME }}"
         shell: bash
       - name: Send a notification to Teams channel
-        uses: neonlabsorg/teams-notification-action@0.1.1
+        uses: neonlabsorg/teams-notification-action@1.2
         if: always()
         with:
           hookUrl: ${{ secrets.MS_TEAMS_WEBHOOK_URI }}

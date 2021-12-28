@@ -12,11 +12,11 @@ def step_user_no_initial_balance(context: Context):
 
 
 @step("0008")
-@when(u'the user requests the ERC20 faucet for {eth_number}Ξ')
-def step_user_requests_the_erc20_faucet(context: Context, eth_number: str):
+@when(u'the user requests the Ether faucet for {eth_number}Ξ')
+def step_user_requests_the_token_faucet(context: Context, eth_number: str):
     print("erc20")
     raise NotImplementedError(
-        u'STEP: When the user requests the ERC20 faucet for 1Ξ')
+        u'STEP: When the user requests the Ether faucet for 1Ξ')
 
 
 @step("0009")

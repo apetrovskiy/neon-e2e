@@ -11,5 +11,5 @@ class ConfigKt {
   val addressFrom = config["ADDRESS_FROM"]
   val addressTo = config["ADDRESS_TO"]
   val privateKey = config["PRIVATE_KEY"]
-  val faucetQuotient = config["FAUCET_QUOTIENT"]
+  val requestAmount = config["REQUEST_AMOUNT"]
 }

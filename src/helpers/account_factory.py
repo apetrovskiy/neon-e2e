@@ -14,8 +14,8 @@ class AccountFactory():
             account = w3.eth.account.create()
         else:
             account = w3.eth.account.create(id)
-        if config.FAUCET_URL != "":
-            await request_faucet(account.address, config.FAUCET_QUOTIENT * 10)
+        if config.USE_FAUCET:
+            await request_faucet(account.address, config.REQUEST_AMOUNT * 10)
 
     @allure.step
     async def create(self):
