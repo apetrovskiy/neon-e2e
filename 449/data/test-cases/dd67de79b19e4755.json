@@ -1,0 +1,363 @@
+{
+  "uid" : "dd67de79b19e4755",
+  "name" : "simple contract deployment",
+  "fullName" : "features/deploy-contract.feature:deploy contract:simple contract deployment",
+  "historyId" : "d64d15e40fdd759ba421da7b39bf93cc",
+  "time" : {
+    "start" : 1640703210793,
+    "stop" : 1640703211723,
+    "duration" : 930
+  },
+  "description" : "",
+  "status" : "failed",
+  "statusMessage" : "web3_eth_contract_1.Contract is not a constructor",
+  "statusTrace" : "TypeError: web3_eth_contract_1.Contract is not a constructor\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/deploy-contract-steps.ts:34:20\n    at Generator.next (<anonymous>)\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/deploy-contract-steps.ts:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (/home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/deploy-contract-steps.ts:4:12)\n    at CustomWorld.<anonymous> (/home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/deploy-contract-steps.ts:32:45)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "time" : { },
+    "status" : "broken",
+    "steps" : [ {
+      "name" : "Before: tests/step-definitions/hooks.ts:12",
+      "time" : {
+        "start" : 1640703210793,
+        "stop" : 1640703210794,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "",
+    "status" : "failed",
+    "statusMessage" : "web3_eth_contract_1.Contract is not a constructor",
+    "statusTrace" : "TypeError: web3_eth_contract_1.Contract is not a constructor\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/deploy-contract-steps.ts:34:20\n    at Generator.next (<anonymous>)\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/deploy-contract-steps.ts:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (/home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/deploy-contract-steps.ts:4:12)\n    at CustomWorld.<anonymous> (/home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/deploy-contract-steps.ts:32:45)",
+    "steps" : [ {
+      "name" : "Given there is a contract '<3_Ballot.sol>'",
+      "time" : {
+        "start" : 1640703210794,
+        "stop" : 1640703210808,
+        "duration" : 14
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And the contract is compiled",
+      "time" : {
+        "start" : 1640703210808,
+        "stop" : 1640703211714,
+        "duration" : 906
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When the contract is deployed",
+      "time" : {
+        "start" : 1640703211714,
+        "stop" : 1640703211715,
+        "duration" : 1
+      },
+      "status" : "failed",
+      "statusMessage" : "web3_eth_contract_1.Contract is not a constructor",
+      "statusTrace" : "TypeError: web3_eth_contract_1.Contract is not a constructor\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/deploy-contract-steps.ts:34:20\n    at Generator.next (<anonymous>)\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/deploy-contract-steps.ts:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (/home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/deploy-contract-steps.ts:4:12)\n    at CustomWorld.<anonymous> (/home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/deploy-contract-steps.ts:32:45)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "Then there are no errors",
+      "time" : {
+        "start" : 1640703211715,
+        "stop" : 1640703211715,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "2844"
+  }, {
+    "name" : "feature",
+    "value" : "deploy contract"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "contract file",
+    "value" : "3_Ballot.sol"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 408,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 408
+      },
+      "items" : [ {
+        "uid" : "1e68f75519a0bb01",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/448//#testresult/1e68f75519a0bb01",
+        "status" : "failed",
+        "statusDetails" : "web3_eth_contract_1.Contract is not a constructor",
+        "time" : {
+          "start" : 1640700074483,
+          "stop" : 1640700075313,
+          "duration" : 830
+        }
+      }, {
+        "uid" : "7e9aca213b026eea",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/447//#testresult/7e9aca213b026eea",
+        "status" : "failed",
+        "statusDetails" : "web3_eth_contract_1.Contract is not a constructor",
+        "time" : {
+          "start" : 1640698571609,
+          "stop" : 1640698573087,
+          "duration" : 1478
+        }
+      }, {
+        "uid" : "cc24e146d15c5ee7",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/446//#testresult/cc24e146d15c5ee7",
+        "status" : "failed",
+        "statusDetails" : "web3_eth_contract_1.Contract is not a constructor",
+        "time" : {
+          "start" : 1640677837278,
+          "stop" : 1640677838779,
+          "duration" : 1501
+        }
+      }, {
+        "uid" : "adf10939ad60e47c",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/445//#testresult/adf10939ad60e47c",
+        "status" : "failed",
+        "statusDetails" : "web3_eth_contract_1.Contract is not a constructor",
+        "time" : {
+          "start" : 1640677817054,
+          "stop" : 1640677817861,
+          "duration" : 807
+        }
+      }, {
+        "uid" : "19a65a1b553a57a3",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/444//#testresult/19a65a1b553a57a3",
+        "status" : "failed",
+        "statusDetails" : "web3_eth_contract_1.Contract is not a constructor",
+        "time" : {
+          "start" : 1640671835530,
+          "stop" : 1640671836946,
+          "duration" : 1416
+        }
+      }, {
+        "uid" : "87930c17bf5d10ec",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/442//#testresult/87930c17bf5d10ec",
+        "status" : "failed",
+        "statusDetails" : "web3_eth_contract_1.Contract is not a constructor",
+        "time" : {
+          "start" : 1640671753494,
+          "stop" : 1640671754562,
+          "duration" : 1068
+        }
+      }, {
+        "uid" : "acd8c72dfcee9070",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/443//#testresult/acd8c72dfcee9070",
+        "status" : "failed",
+        "statusDetails" : "web3_eth_contract_1.Contract is not a constructor",
+        "time" : {
+          "start" : 1640671763037,
+          "stop" : 1640671764593,
+          "duration" : 1556
+        }
+      }, {
+        "uid" : "1c78145662a843d4",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/441//#testresult/1c78145662a843d4",
+        "status" : "failed",
+        "statusDetails" : "web3_eth_contract_1.Contract is not a constructor",
+        "time" : {
+          "start" : 1640644359767,
+          "stop" : 1640644360816,
+          "duration" : 1049
+        }
+      }, {
+        "uid" : "61bd5b8e0bf556fa",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/440//#testresult/61bd5b8e0bf556fa",
+        "status" : "failed",
+        "statusDetails" : "web3_eth_contract_1.Contract is not a constructor",
+        "time" : {
+          "start" : 1640644352152,
+          "stop" : 1640644353270,
+          "duration" : 1118
+        }
+      }, {
+        "uid" : "3ba0e9b0f0eb2878",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/439//#testresult/3ba0e9b0f0eb2878",
+        "status" : "failed",
+        "statusDetails" : "web3_eth_contract_1.Contract is not a constructor",
+        "time" : {
+          "start" : 1640637083040,
+          "stop" : 1640637084305,
+          "duration" : 1265
+        }
+      }, {
+        "uid" : "36536c7fe4cff541",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/438//#testresult/36536c7fe4cff541",
+        "status" : "failed",
+        "statusDetails" : "web3_eth_contract_1.Contract is not a constructor",
+        "time" : {
+          "start" : 1640636094904,
+          "stop" : 1640636096211,
+          "duration" : 1307
+        }
+      }, {
+        "uid" : "dd303cb94d3d0b4e",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/437//#testresult/dd303cb94d3d0b4e",
+        "status" : "failed",
+        "statusDetails" : "web3_eth_contract_1.Contract is not a constructor",
+        "time" : {
+          "start" : 1640635322128,
+          "stop" : 1640635323440,
+          "duration" : 1312
+        }
+      }, {
+        "uid" : "b2c76de1fe50cc7a",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/436//#testresult/b2c76de1fe50cc7a",
+        "status" : "failed",
+        "statusDetails" : "web3_eth_contract_1.Contract is not a constructor",
+        "time" : {
+          "start" : 1640621808028,
+          "stop" : 1640621808996,
+          "duration" : 968
+        }
+      }, {
+        "uid" : "bd390f0a780bec5d",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/434//#testresult/bd390f0a780bec5d",
+        "status" : "failed",
+        "statusDetails" : "web3_eth_contract_1.Contract is not a constructor",
+        "time" : {
+          "start" : 1640621460413,
+          "stop" : 1640621461313,
+          "duration" : 900
+        }
+      }, {
+        "uid" : "9a799a6fd0484543",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/431//#testresult/9a799a6fd0484543",
+        "status" : "failed",
+        "statusDetails" : "web3_eth_contract_1.Contract is not a constructor",
+        "time" : {
+          "start" : 1640615499368,
+          "stop" : 1640615500299,
+          "duration" : 931
+        }
+      }, {
+        "uid" : "479b84eb6bbf788c",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/429//#testresult/479b84eb6bbf788c",
+        "status" : "failed",
+        "statusDetails" : "web3_eth_contract_1.Contract is not a constructor",
+        "time" : {
+          "start" : 1640567729476,
+          "stop" : 1640567730443,
+          "duration" : 967
+        }
+      }, {
+        "uid" : "2d9f2a360748b27d",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/430//#testresult/2d9f2a360748b27d",
+        "status" : "failed",
+        "statusDetails" : "web3_eth_contract_1.Contract is not a constructor",
+        "time" : {
+          "start" : 1640567761393,
+          "stop" : 1640567762353,
+          "duration" : 960
+        }
+      }, {
+        "uid" : "2f4e79e99045ba80",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/428//#testresult/2f4e79e99045ba80",
+        "status" : "failed",
+        "statusDetails" : "web3_eth_contract_1.Contract is not a constructor",
+        "time" : {
+          "start" : 1640566645628,
+          "stop" : 1640566646582,
+          "duration" : 954
+        }
+      }, {
+        "uid" : "eddf4c3c1ba4a232",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/427//#testresult/eddf4c3c1ba4a232",
+        "status" : "failed",
+        "statusDetails" : "web3_eth_contract_1.Contract is not a constructor",
+        "time" : {
+          "start" : 1640566398054,
+          "stop" : 1640566399556,
+          "duration" : 1502
+        }
+      }, {
+        "uid" : "b60108714fb01c82",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/425//#testresult/b60108714fb01c82",
+        "status" : "failed",
+        "statusDetails" : "web3_eth_contract_1.Contract is not a constructor",
+        "time" : {
+          "start" : 1640564988774,
+          "stop" : 1640564990031,
+          "duration" : 1257
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "dd67de79b19e4755.json",
+  "parameterValues" : [ "3_Ballot.sol" ]
+}
