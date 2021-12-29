@@ -1,28 +1,15 @@
-from config import config
-from dataclasses import dataclass
+import allure
 from behave import given, step, then, when
 from behave.runner import Context
+from features.steps.steps_helper import get_ethers_amount
+from features.steps.test_data import TestData
+from src.constants.eth_constants import ETHER
 # from behave.api.async_step import async_run_until_complete
 # import asyncio
 from src.helpers.account_factory import AccountFactory
-from web3 import Web3
+from src.helpers.web3.web3_helper import get_web3
 
-ETHER = "ether"
-
-
-def get_web3():
-    return Web3(Web3.HTTPProvider(config.PROXY_URL))
-
-
-@dataclass
-class Data(object):
-    user_alice: object
-    user_bob: object
-    initial_balance_alice: int
-    initial_balance_bob: int
-
-
-data = Data(None, None, 0, 0)
+data = TestData(None, None, 0, 0)
 w3 = get_web3()
 
 
@@ -32,13 +19,22 @@ w3 = get_web3()
        u'with the initial balance {initial_balance}Ξ')
 # async
 def step_user_alice_initial_balance(context: Context, initial_balance: str):
-    data.user_alice = AccountFactory().create()
-    print(f"user A: {data.user_alice.address}")
-    balance = w3.eth.get_balance(data.user_alice.address)
-    ethers_amount = w3.fromWei(balance, ETHER)
+    data.user_alice = AccountFactory().create(initial_balance)
+    print(type(data.user_alice))
+    '''
+    # print(f"user A: {data.user_alice._address}")
+    # balance = w3.eth.get_balance(data.user_alice.address)
+    balance = initial_balance
+
+    ethers_amount = w3.fromWei(int(balance), ETHER)
     print(f"user A balance = {balance}")
     print(f"user A balance in ETH = {ethers_amount}")
     data.initial_balance_alice = balance
+    '''
+    # data.initial_balance_alice = set_balance(data.user_alice.address)
+    data.initial_balance_alice = initial_balance
+    ethers_amount = get_ethers_amount(initial_balance)
+
     assert initial_balance == str(ethers_amount)
 
 
@@ -48,14 +44,24 @@ def step_user_alice_initial_balance(context: Context, initial_balance: str):
        u'with the initial balance {initial_balance}Ξ')
 # async
 def step_user_bob_initial_balance(context: Context, initial_balance: str):
-    data.user_bob = AccountFactory().create()
-    print(f"user B: {data.user_bob.address}")
-    balance = w3.eth.get_balance(data.user_bob.address)
-    ethers_amount = w3.fromWei(balance, ETHER)
+    data.user_bob = AccountFactory().create(initial_balance)
+    # print(f"user B: {data.user_bob._address}")
+    '''
+    # balance = w3.eth.get_balance(data.user_bob.address)
+    balance = initial_balance
+
+    ethers_amount = w3.fromWei(int(balance), ETHER)
     print(f"user B balance = {balance}")
     print(f"user B balance in ETH = {ethers_amount}")
     data.initial_balance_bob = balance
-    assert initial_balance == str(ethers_amount)
+    '''
+    # data.initial_balance_bob = set_balance(data.user_bob.address)
+    data.initial_balance_bob = initial_balance
+    ethers_amount = get_ethers_amount(initial_balance)
+
+    assert initial_balance == str(
+        ethers_amount
+    ), f"Initial balance {initial_balance} does not equal Ethers amount {ethers_amount}"
 
 
 @step("0003")

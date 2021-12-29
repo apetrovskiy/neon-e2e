@@ -9,7 +9,7 @@ on:
         required: false
       network:
         type: choice
-        description: 'Network (devnet, testnet, teststand, teststand2)'
+        description: 'Network (devnet, testnet, teststand, teststand2, devnet-aws)'
         required: true
         default: 'teststand2'
         options:
@@ -17,6 +17,7 @@ on:
           - testnet
           - teststand
           - teststand2
+          - devnet-aws
       # message:
       #   required: true
       # use-emoji:
