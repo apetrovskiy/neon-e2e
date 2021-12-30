@@ -25,7 +25,7 @@ Given("there is a contract '{}'", async (contractFileName: string) => {
 
 Given('the contract is compiled', async () => {
   compiledContract = compileContract(contractFilePath);
-  console.log('=============================== copilation result ==================================');
+  console.log('=============================== compilation result ==================================');
   console.log(compiledContract);
 });
 

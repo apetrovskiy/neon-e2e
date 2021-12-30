@@ -16,7 +16,8 @@ const projectDirName = "neon-e2e"
 
 type Config struct {
 	NetworkName, ProxyURL, NetworkId, CurrencySymbol, FaucetUrl string
-	FaucetQuotient                                              int
+	RequestAmount                                               int
+	UseFaucet                                                   bool
 	AddressFrom, AddressTo, PrivateKey                          string
 	SolanaExplorer, SolanaUrl                                   string
 	UsersNumber                                                 int
@@ -46,8 +47,9 @@ func GetConfig() *Config {
 		networkName := os.Getenv("NETWORK_NAME")
 		proxyUrl := os.Getenv("PROXY_URL")
 		networkId := os.Getenv("NETWORK_ID")
-		faucetQuotient, _ := strconv.Atoi(os.Getenv("FAUCET_QUOTIENT"))
+		requestAmount, _ := strconv.Atoi(os.Getenv("REQUEST_AMOUNT"))
 		faucetUrl := os.Getenv("FAUCET_URL")
+		useFaucet, _ := strconv.ParseBool(os.Getenv("USE_FAUCET"))
 		addressFrom := os.Getenv("ADDRESS_FROM")
 		addressTo := os.Getenv("ADDRESS_TO")
 		privateKey := os.Getenv("PRIVATE_KEY")
@@ -61,8 +63,9 @@ func GetConfig() *Config {
 			NetworkName:    networkName,
 			ProxyURL:       proxyUrl,
 			NetworkId:      networkId,
-			FaucetQuotient: faucetQuotient,
+			RequestAmount:  requestAmount,
 			FaucetUrl:      faucetUrl,
+			UseFaucet:      useFaucet,
 			AddressFrom:    addressFrom,
 			AddressTo:      addressTo,
 			PrivateKey:     privateKey,

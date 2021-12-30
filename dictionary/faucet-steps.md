@@ -1,6 +1,5 @@
 # 📗 faucet-steps
 
-
 3 steps defined.
 
 ## 📍 Given
@@ -9,13 +8,13 @@
 
 ## 🎬 When
 
-#### - the user requests the ERC20 faucet for {int}Ξ
+#### - the user requests the Ether faucet for {int}Ξ
 
 ##### Parameters:
 
-|  #  | Name | Type |
-| --- | ---- | ---- |
-| 1 | amount | number |
+| #   | Name   | Type   |
+| --- | ------ | ------ |
+| 1   | amount | number |
 
 ## ✅ Then
 
@@ -23,6 +22,6 @@
 
 ##### Parameters:
 
-|  #  | Name | Type |
-| --- | ---- | ---- |
-| 1 | amount | number |
+| #   | Name   | Type   |
+| --- | ------ | ------ |
+| 1   | amount | number |
