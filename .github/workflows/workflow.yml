@@ -1,4 +1,4 @@
-name: Python 3.8, Node.js 16, Go 1.17, .NET 5.0, allure
+name: Python 3.8, Node.js 16, Go 1.17, .NET 5.0, JDK 16, allure
 
 on:
   push:
@@ -8,40 +8,56 @@ on:
         description: 'Test scenario tags'
         required: false
       network:
-        description: 'Network (devnet, testnet, internal.testnet, neonswap.live, aws, ropsten, rinkeby)'
+        type: choice
+        description: 'Network (devnet, testnet, teststand, teststand2, devnet-aws)'
         required: true
-        default: 'devnet'
+        default: 'teststand2'
+        options:
+          - devnet
+          - testnet
+          - teststand
+          - teststand2
+          - devnet-aws
+      # message:
+      #   required: true
+      # use-emoji:
+      #   type: boolean
+      #   description: Include 🎉🤣 emojis
+      # environment:
+      #   type: environment
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-
   python:
     runs-on: ubuntu-latest
-    needs: build
     steps:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/allure-prep
       - uses: ./.github/actions/switch-network
+      - name: Install pipenv
+        run: pipx install pipenv
       - name: Set up Python 3.8
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v2
         with:
           python-version: 3.8
-
-      - name: Install dependencies
+          cache: 'pipenv'
+          # cache-dependency-path: Pipfile.lock
+      - run: pipenv install
+      # - name: Install dependencies
+      #   run: |
+      #     # python -m pip install --upgrade pip
+      #     # pip install pipenv
+      #     pipenv sync
+      #     # pip install -r requirements.txt
+      - name: Lint with pylint
         run: |
-          # python -m pip install --upgrade pip
-          pip install pipenv
-          pipenv sync
-          # pip install -r requirements.txt
+          pipenv run pylint src
+          pipenv run pylint features
       - name: Lint with flake8
+        if: always()
         run: |
           pipenv run flake8 src
-          pipenv run flake8 tests
-      - name: Test with pytest
+          pipenv run flake8 features
+      - name: Test with behave
         if: always()
         run: |
           pwd
@@ -55,7 +71,6 @@ jobs:
   node-mocha:
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    needs: build
     steps:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/allure-prep
@@ -65,13 +80,17 @@ jobs:
         if: always()
         with:
           node-version: 16.x
+          cache: 'npm'
+          # cache-dependency-path: subdir/package-lock.json
       - run: npm ci
       - run: npm run build --if-present
       - name: Mocha tests
         timeout-minutes: 15
         run: |
           npm run test:mocha
-          mv ./allure-results/ ./report/
+      # - name: Moving test results
+      #   run: |
+      #     mv ./allure-results/ ./report/
       - uses: ./.github/actions/allure-upload
         if: always()
         with:
@@ -79,7 +98,6 @@ jobs:
 
   node-cucumber:
     runs-on: ubuntu-latest
-    needs: build
     steps:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/allure-prep
@@ -89,6 +107,8 @@ jobs:
         if: always()
         with:
           node-version: 16.x
+          cache: 'npm'
+          # cache-dependency-path: subdir/package-lock.json
       - run: npm ci
       - run: npm run build --if-present
       - run: npm run test:cucumber
@@ -99,7 +119,6 @@ jobs:
 
   node-nightwatch:
     runs-on: ubuntu-latest
-    needs: build
     steps:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/allure-prep
@@ -109,6 +128,8 @@ jobs:
         if: always()
         with:
           node-version: 16.x
+          cache: 'npm'
+          # cache-dependency-path: subdir/package-lock.json
       - run: npm ci
       - run: npm run build --if-present
       - run: npm run nw:ci
@@ -120,7 +141,6 @@ jobs:
 
   golang:
     runs-on: ubuntu-latest
-    needs: build
     steps:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/allure-prep
@@ -155,9 +175,9 @@ jobs:
   dotnet:
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    needs:
-      - build
-      # - dotnet-format
+    # needs:
+    # - build
+    # - dotnet-format
     steps:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/allure-prep
@@ -166,7 +186,7 @@ jobs:
         uses: actions/setup-dotnet@v1
         if: always()
         with:
-          dotnet-version: 5.0.x
+          dotnet-version: 6.0.x
       - name: Print dotnet version
         if: always()
         run: dotnet --version
@@ -193,7 +213,47 @@ jobs:
         with:
           folder-name: report/allure-results
 
-  allure:
+  jdk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/allure-prep
+      - uses: ./.github/actions/switch-network
+      - name: Set up JDK 16
+        uses: actions/setup-java@v2
+        if: always()
+        with:
+          java-version: '16'
+          distribution: 'adopt'
+          cache: 'gradle'
+      - name: Run check style
+        uses: nikitasavinov/checkstyle-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: 'github-pr-check'
+          tool_name: 'testtool'
+      - name: Gradle wrapper
+        if: always()
+        run: gradle wrapper --gradle-version 7.2
+      - name: Print Gradle version
+        if: always()
+        run: gradle --version
+      - name: Grant execute permission for gradlew
+        if: always()
+        run: chmod +x gradlew
+      - name: Test
+        timeout-minutes: 15
+        if: always()
+        run: ./gradlew build --warning-mode all
+      - uses: ./.github/actions/allure-environment-data
+        if: always()
+      - uses: ./.github/actions/allure-upload
+        if: always()
+        with:
+          folder-name: report/allure-results
+
+  environment-data:
     runs-on: ubuntu-latest
     if: always()
     needs:
@@ -202,6 +262,23 @@ jobs:
       - node-cucumber
       - node-nightwatch
       - golang
+      - dotnet
+      - jdk
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/allure-prep
+      - uses: ./.github/actions/switch-network
+      - uses: ./.github/actions/allure-environment-data
+        if: always()
+      - uses: ./.github/actions/allure-upload
+        if: always()
+        with:
+          folder-name: report/allure-results
+
+  allure:
+    runs-on: ubuntu-latest
+    if: always()
+    needs: environment-data
     steps:
       - name: Download all workflow run artifacts
         uses: actions/download-artifact@v2
@@ -214,19 +291,19 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
-      - name: Allure Report with history
-        uses: simple-elf/allure-report-action@v1.5
-        if: always()
+      # - name: Allure Report with history
+      #   uses: simple-elf/allure-report-action@v1.5
+      #   if: always()
 
       - name: Allure Report action from marketplace
-        uses: simple-elf/allure-report-action@master
+        uses: neonlabsorg/allure-report-action@master
         if: always()
         with:
           allure_results: allure-results
           gh_pages: gh-pages
           allure_report: allure-report
           allure_history: allure-history
-          keep_reports: 50
+          keep_reports: 100
 
       - name: Deploy report to Github Pages
         if: always()
@@ -235,3 +312,35 @@ jobs:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
+
+  notification:
+    runs-on: ubuntu-latest
+    if: always()
+    needs: allure
+    env:
+      NETWORK_NAME: 'teststand2-222'
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setting variables
+        run: |
+          echo "Tags: ${{ github.event.inputs.tags }}"
+          echo "Network: ${{ github.event.inputs.network }}"
+          if [ -z "${{ github.event.inputs.network }}" ]
+          then
+            NETWORK='teststand2'
+          else
+            NETWORK="${{ github.event.inputs.network }}"
+          fi
+          echo "NETWORK_NAME=$NETWORK" >> $GITHUB_ENV
+          cat $GITHUB_ENV
+          echo "NETWORK_NAME=$NETWORK_NAME"
+          echo "{{ env.NETWORK_NAME }}=${{ env.NETWORK_NAME }}"
+        shell: bash
+      - name: Send a notification to Teams channel
+        uses: neonlabsorg/teams-notification-action@1.2
+        if: always()
+        with:
+          hookUrl: ${{ secrets.MS_TEAMS_WEBHOOK_URI }}
+          actionUrl: 'https://docs.neon-labs.org/neon-e2e/${{ github.run_number }}/'
+          title: 'End-to-End Test Suite'
+          networkName: ${{ env.NETWORK_NAME }}
