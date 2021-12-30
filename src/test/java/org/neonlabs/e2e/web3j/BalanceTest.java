@@ -51,7 +51,7 @@ class BalanceTest {
      * log.Println(balance)
      * assert.Equal(t, GetConfig().InitialBalance, balance, InitialBalanceIsWrong)
      */
-    assertEquals(new Config().getFaucetAmount(), balance,
+    assertEquals(new Config().getRequestAmount(), balance,
         "Balance is not equal to the initial balance");
   }
 

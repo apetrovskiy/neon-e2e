@@ -9,7 +9,7 @@ on:
         required: false
       network:
         type: choice
-        description: 'Network (devnet, testnet, teststand, teststand2)'
+        description: 'Network (devnet, testnet, teststand, teststand2, devnet-aws)'
         required: true
         default: 'teststand2'
         options:
@@ -17,13 +17,14 @@ on:
           - testnet
           - teststand
           - teststand2
-      message:
-        required: true
-      use-emoji:
-        type: boolean
-        description: Include 🎉🤣 emojis
-      environment:
-        type: environment
+          - devnet-aws
+      # message:
+      #   required: true
+      # use-emoji:
+      #   type: boolean
+      #   description: Include 🎉🤣 emojis
+      # environment:
+      #   type: environment
 
 jobs:
   python:
@@ -303,7 +304,7 @@ jobs:
           gh_pages: gh-pages
           allure_report: allure-report
           allure_history: allure-history
-          keep_reports: 30
+          keep_reports: 100
 
       - name: Deploy report to Github Pages
         if: always()
@@ -337,7 +338,7 @@ jobs:
           echo "{{ env.NETWORK_NAME }}=${{ env.NETWORK_NAME }}"
         shell: bash
       - name: Send a notification to Teams channel
-        uses: neonlabsorg/teams-notification-action@0.1.1
+        uses: neonlabsorg/teams-notification-action@1.2
         if: always()
         with:
           hookUrl: ${{ secrets.MS_TEAMS_WEBHOOK_URI }}

@@ -1,22 +1,24 @@
 import allure
-from web3 import Web3, HTTPProvider
+from web3 import Account, Web3, HTTPProvider
 from config import config
 from src.helpers.faucet.faucet_requester import request_faucet
 
 
 class AccountFactory():
-    @allure.step
-    async def create_with_specific_id(self, id: str):
+    @allure.step("creating an account")
+    async def create_with_specific_id(self, id: str, amount: int) -> Account:
         url = config.PROXY_URL
         w3 = Web3(HTTPProvider(url))
         print(w3)
         if id is None or id == '':
-            account = w3.eth.account.create()
+            account: Account = w3.eth.account.create(amount)
         else:
-            account = w3.eth.account.create(id)
-        if config.FAUCET_URL != "":
-            await request_faucet(account.address, config.FAUCET_QUOTIENT * 10)
+            account: Account = w3.eth.account.create(id, amount)
+        if amount > 0:
+            await request_faucet(account.address, amount)
+        print(account)
+        return account
 
-    @allure.step
-    async def create(self):
-        return await self.create_with_specific_id('')
+    @allure.step("creating an account")
+    async def create(self, amount: int) -> Account:
+        return await self.create_with_specific_id('', amount)

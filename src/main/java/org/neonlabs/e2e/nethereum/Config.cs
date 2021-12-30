@@ -9,12 +9,11 @@ namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
     public static string NetworkName { get; set; }
     public static string ProxyUrl { get; set; }
     public static string NetworkId { get; set; }
-    public static int FaucetQuotient { get; set; }
+    public static int RequestAmount { get; set; }
     public static string FaucetUrl { get; set; }
     public static bool UseFaucet { get; set; }
     public static string AddressFrom { get; set; }
     public static string AddressTo { get; set; }
-    public static bool DisableConfirmation { get; set; }
     public static string PrivateKey { get; set; }
     public static string SolanaExplorer { get; set; }
     public static string SolanaUrl { get; set; }
@@ -25,12 +24,11 @@ namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
       string networkName;
       string proxyUrl;
       string networkId;
-      string faucetQuotient;
+      string requestAmount;
       string faucetUrl;
       bool useFaucet;
       string addressFrom;
       string addressTo;
-      string disableConfirmation;
       string privateKey;
       string solanaExplorer;
       string solanaUrl;
@@ -40,12 +38,11 @@ namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
       EnvReader.TryGetStringValue("NETWORK_NAME", out networkName);
       EnvReader.TryGetStringValue("PROXY_URL", out proxyUrl);
       EnvReader.TryGetStringValue("NETWORK_ID", out networkId);
-      EnvReader.TryGetStringValue("FAUCET_QUOTIENT", out faucetQuotient);
+      EnvReader.TryGetStringValue("REQUEST_AMOUNT", out requestAmount);
       EnvReader.TryGetStringValue("FAUCET_URL", out faucetUrl);
       EnvReader.TryGetBooleanValue("USE_FAUCET", out useFaucet);
       EnvReader.TryGetStringValue("ADDRESS_FROM", out addressFrom);
       EnvReader.TryGetStringValue("ADDRESS_TO", out addressTo);
-      EnvReader.TryGetStringValue("DISABLE_CONFIRMATION", out disableConfirmation);
       EnvReader.TryGetStringValue("PRIVATE_KEY", out privateKey);
       EnvReader.TryGetStringValue("SOLANA_EXPLORER", out solanaExplorer);
       EnvReader.TryGetStringValue("SOLANA_URL", out solanaUrl);
@@ -54,12 +51,11 @@ namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
       NetworkName = networkId;
       ProxyUrl = proxyUrl;
       NetworkId = networkId;
-      FaucetQuotient = Convert.ToInt32(faucetQuotient);
+      RequestAmount = Convert.ToInt32(requestAmount);
       FaucetUrl = faucetUrl;
       UseFaucet = useFaucet;
       AddressFrom = addressFrom;
       AddressTo = addressTo;
-      DisableConfirmation = Convert.ToBoolean(disableConfirmation);
       PrivateKey = privateKey;
       SolanaExplorer = solanaExplorer;
       SolanaUrl = solanaUrl;
