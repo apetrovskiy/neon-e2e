@@ -1,0 +1,354 @@
+{
+  "uid" : "9c6c3a934a038a7a",
+  "name" : "the second funding request",
+  "fullName" : "features/faucet.feature:faucet:the second funding request",
+  "historyId" : "2a48060418bc29ef61bbff27a661ab46",
+  "time" : {
+    "start" : 1640851973727,
+    "stop" : 1640852004088,
+    "duration" : 30361
+  },
+  "description" : "",
+  "status" : "failed",
+  "statusMessage" : "the initial amount should be set to: expected '5' to equal '3'",
+  "statusTrace" : "AssertionError: the initial amount should be set to: expected '5' to equal '3'\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:147:69\n    at Generator.next (<anonymous>)\n    at fulfilled (/home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "time" : { },
+    "status" : "broken",
+    "steps" : [ {
+      "name" : "Before: tests/step-definitions/hooks.ts:12",
+      "time" : {
+        "start" : 1640851973727,
+        "stop" : 1640851973727,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "",
+    "status" : "failed",
+    "statusMessage" : "the initial amount should be set to: expected '5' to equal '3'",
+    "statusTrace" : "AssertionError: the initial amount should be set to: expected '5' to equal '3'\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:147:69\n    at Generator.next (<anonymous>)\n    at fulfilled (/home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+    "steps" : [ {
+      "name" : "Given there is user Alice in Ethereum network with no initial balance",
+      "time" : {
+        "start" : 1640851973728,
+        "stop" : 1640851974244,
+        "duration" : 516
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When user Alice requests the Ether faucet for <2>Ξ",
+      "time" : {
+        "start" : 1640851974244,
+        "stop" : 1640851989187,
+        "duration" : 14943
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And user Alice requests the Ether faucet for <3>Ξ",
+      "time" : {
+        "start" : 1640851989187,
+        "stop" : 1640852004088,
+        "duration" : 14901
+      },
+      "status" : "failed",
+      "statusMessage" : "the initial amount should be set to: expected '5' to equal '3'",
+      "statusTrace" : "AssertionError: the initial amount should be set to: expected '5' to equal '3'\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:147:69\n    at Generator.next (<anonymous>)\n    at fulfilled (/home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "Then user Alice's balance equals <5>Ξ",
+      "time" : {
+        "start" : 1640852004088,
+        "stop" : 1640852004088,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "2958"
+  }, {
+    "name" : "feature",
+    "value" : "faucet"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "first amount",
+    "value" : "2"
+  }, {
+    "name" : "second amount",
+    "value" : "3"
+  }, {
+    "name" : "total",
+    "value" : "5"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 8,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 57,
+        "unknown" : 0,
+        "total" : 66
+      },
+      "items" : [ {
+        "uid" : "7c17b967a743bd83",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/507//#testresult/7c17b967a743bd83",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '5' to equal '3'",
+        "time" : {
+          "start" : 1640851813793,
+          "stop" : 1640851842225,
+          "duration" : 28432
+        }
+      }, {
+        "uid" : "fb8fd3dfb4b6c070",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/506//#testresult/fb8fd3dfb4b6c070",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '0' to equal '2'",
+        "time" : {
+          "start" : 1640851375296,
+          "stop" : 1640851375911,
+          "duration" : 615
+        }
+      }, {
+        "uid" : "83bfc1d2a7db84f8",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/505//#testresult/83bfc1d2a7db84f8",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '0' to equal '2'",
+        "time" : {
+          "start" : 1640851125573,
+          "stop" : 1640851126620,
+          "duration" : 1047
+        }
+      }, {
+        "uid" : "ad58fc8b3492dac3",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/504//#testresult/ad58fc8b3492dac3",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '0' to equal '2'",
+        "time" : {
+          "start" : 1640850411988,
+          "stop" : 1640850412996,
+          "duration" : 1008
+        }
+      }, {
+        "uid" : "400a5cfbe232ab3a",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/503//#testresult/400a5cfbe232ab3a",
+        "status" : "failed",
+        "statusDetails" : "the initial amount should be set to: expected '0' to equal '2'",
+        "time" : {
+          "start" : 1640850199142,
+          "stop" : 1640850199786,
+          "duration" : 644
+        }
+      }, {
+        "uid" : "fcb20949d362f7bc",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/502//#testresult/fcb20949d362f7bc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1640847298402,
+          "stop" : 1640847327910,
+          "duration" : 29508
+        }
+      }, {
+        "uid" : "da927cb9f2f49b1b",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/501//#testresult/da927cb9f2f49b1b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1640847267590,
+          "stop" : 1640847296071,
+          "duration" : 28481
+        }
+      }, {
+        "uid" : "d341704ac3b844e4",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/500//#testresult/d341704ac3b844e4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1640843956808,
+          "stop" : 1640843985652,
+          "duration" : 28844
+        }
+      }, {
+        "uid" : "e46436ccb92a82db",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/499//#testresult/e46436ccb92a82db",
+        "status" : "passed",
+        "time" : {
+          "start" : 1640843948689,
+          "stop" : 1640843977040,
+          "duration" : 28351
+        }
+      }, {
+        "uid" : "ebfa6c29a1ecb454",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/497//#testresult/ebfa6c29a1ecb454",
+        "status" : "passed",
+        "time" : {
+          "start" : 1640823734893,
+          "stop" : 1640823762738,
+          "duration" : 27845
+        }
+      }, {
+        "uid" : "d15a29023113cead",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/498//#testresult/d15a29023113cead",
+        "status" : "passed",
+        "time" : {
+          "start" : 1640823660527,
+          "stop" : 1640823689361,
+          "duration" : 28834
+        }
+      }, {
+        "uid" : "c56f38a0eb3ffeb7",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/496//#testresult/c56f38a0eb3ffeb7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1640809231215,
+          "stop" : 1640809260050,
+          "duration" : 28835
+        }
+      }, {
+        "uid" : "abe646c767445bd6",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/495//#testresult/abe646c767445bd6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1640809224926,
+          "stop" : 1640809253359,
+          "duration" : 28433
+        }
+      }, {
+        "uid" : "31c965f239e483f4",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/494//#testresult/31c965f239e483f4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1640807989391,
+          "stop" : 1640808018697,
+          "duration" : 29306
+        }
+      }, {
+        "uid" : "a159812a760b83bb",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/493//#testresult/a159812a760b83bb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1640807968675,
+          "stop" : 1640807997023,
+          "duration" : 28348
+        }
+      }, {
+        "uid" : "d1e7b5d0e0f5014e",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/492//#testresult/d1e7b5d0e0f5014e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1640804445756,
+          "stop" : 1640804475081,
+          "duration" : 29325
+        }
+      }, {
+        "uid" : "4821a2d0487ffd52",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/491//#testresult/4821a2d0487ffd52",
+        "status" : "passed",
+        "time" : {
+          "start" : 1640804431259,
+          "stop" : 1640804459096,
+          "duration" : 27837
+        }
+      }, {
+        "uid" : "6d5ca92c97a8bd87",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/490//#testresult/6d5ca92c97a8bd87",
+        "status" : "passed",
+        "time" : {
+          "start" : 1640799714144,
+          "stop" : 1640799743820,
+          "duration" : 29676
+        }
+      }, {
+        "uid" : "bd957901dc14e11",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/488//#testresult/bd957901dc14e11",
+        "status" : "passed",
+        "time" : {
+          "start" : 1640797690416,
+          "stop" : 1640797719709,
+          "duration" : 29293
+        }
+      }, {
+        "uid" : "a1e7a44c6e5c6ebf",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/487//#testresult/a1e7a44c6e5c6ebf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1640797642740,
+          "stop" : 1640797671082,
+          "duration" : 28342
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "9c6c3a934a038a7a.json",
+  "parameterValues" : [ "2", "3", "5" ]
+}
