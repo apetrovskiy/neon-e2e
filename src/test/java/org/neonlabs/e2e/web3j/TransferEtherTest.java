@@ -1,0 +1,34 @@
+package org.neonlabs.e2e.web3j;
+
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.neonlabs.e2e.web3j.Constants.Epic;
+import static org.neonlabs.e2e.web3j.Constants.FeatureExternallyOwnedAccounts;
+import static org.neonlabs.e2e.web3j.Constants.NotYetDone;
+import static org.neonlabs.e2e.web3j.Constants.StoryTransfer;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+
+/**
+ * Externally Owned Accounts tests.
+ */
+@Epic(Epic)
+@Feature(FeatureExternallyOwnedAccounts)
+@SuppressWarnings("PMD.JUnitTestContainsTooManyAsserts")
+class TransferEtherTest {
+  @Test
+  @Story(StoryTransfer)
+  @Description("Transfer Ether")
+  @Disabled(NotYetDone)
+  void test() {
+    assertAll(
+        () -> assertNotNull(1, ""),
+        () -> assertEquals(1, 1, ""));
+  }
+}

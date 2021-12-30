@@ -4,18 +4,23 @@ import (
 	"testing"
 
 	"github.com/dailymotion/allure-go"
+	"github.com/stretchr/testify/assert"
 )
 
-func TestNewWalletBalance(t *testing.T) {
+func TestNewWallet(t *testing.T) {
 
 	allure.Test(t,
-		allure.Epic("go-ethereum"),
-		allure.Story("go-ethereum"),
+		allure.Epic(Epic),
+		allure.Feature(FeatureExternallyOwnedAccounts),
+		allure.Story(StoryWallet),
 		allure.Description("Creating a new wallet"),
 		allure.Action(func() {
-			hash := createAccount()
-			if hash == nil {
-				t.Error("Failed to create a new wallet")
+			account := createWallet()
+			assert.NotEqual(t, 0, len(account.Address.Hash()), FailedToCreateWallet)
+			if len(account.Address.Hash()) == 0 {
+				t.Error(FailedToCreateWallet)
 			}
+			t.Log("Wallet has been created")
+
 		}))
 }

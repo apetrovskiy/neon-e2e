@@ -8,7 +8,8 @@ namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
   {
     public static Account CreateAccount()
     {
-      new Config();
+      // TODO: improve it
+      Config.Init();
       var ecKey = GenerateKey();
       var privateKey = ecKey.GetPrivateKeyAsBytes().ToHex();
       return new Account(privateKey);

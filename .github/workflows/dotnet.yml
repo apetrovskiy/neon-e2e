@@ -10,7 +10,7 @@ on:
       network:
         description: "Network (devnet, testnet, internal.testnet, neonswap.live, aws, ropsten, rinkeby)"
         required: true
-        default: "devnet"
+        default: "teststand2"
 
 jobs:
   build:
@@ -33,7 +33,7 @@ jobs:
         uses: actions/setup-dotnet@v1
         if: always()
         with:
-          dotnet-version: 5.0.x
+          dotnet-version: 6.0.x
       - name: Print dotnet version
         if: always()
         run: dotnet --version

@@ -4,32 +4,62 @@ namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
   using dotenv.net;
   using dotenv.net.Utilities;
 
-  public class Config
+  public static class Config
   {
-    public string NetworkName { get; set; }
-    public string ProxyUrl { get; set; }
-    public string NetworkId { get; set; }
-    public string CurrencySymbol { get; set; }
-    public int FaucetQuotient { get; set; }
-    public string FaucetUrl { get; set; }
-    public string AddressFrom { get; set; }
-    public string AddressTo { get; set; }
-    public bool DisableConfirmation { get; set; }
-    public string PrivateKey { get; set; }
+    public static string NetworkName { get; set; }
+    public static string ProxyUrl { get; set; }
+    public static string NetworkId { get; set; }
+    public static int RequestAmount { get; set; }
+    public static string FaucetUrl { get; set; }
+    public static bool UseFaucet { get; set; }
+    public static string AddressFrom { get; set; }
+    public static string AddressTo { get; set; }
+    public static string PrivateKey { get; set; }
+    public static string SolanaExplorer { get; set; }
+    public static string SolanaUrl { get; set; }
+    public static int UsersNumber { get; set; }
 
-    public Config()
+    public static void Init()
     {
+      string networkName;
+      string proxyUrl;
+      string networkId;
+      string requestAmount;
+      string faucetUrl;
+      bool useFaucet;
+      string addressFrom;
+      string addressTo;
+      string privateKey;
+      string solanaExplorer;
+      string solanaUrl;
+      string usersNumber;
+
       DotEnv.Load(options: new DotEnvOptions(envFilePaths: new[] { "../../../../../.env" }));
-      NetworkName = dotenv.net.Utilities.EnvReader.GetStringValue("NETWORK_NAME");
-      ProxyUrl = EnvReader.GetStringValue("PROXY_URL");
-      NetworkId = EnvReader.GetStringValue("NETWORK_ID");
-      CurrencySymbol = EnvReader.GetStringValue("CURRENCY_SYMBOL");
-      FaucetQuotient = Convert.ToInt32(EnvReader.GetStringValue("FAUCET_QUOTIENT"));
-      FaucetUrl = EnvReader.GetStringValue("FAUCET_URL");
-      AddressFrom = EnvReader.GetStringValue("ADDRESS_FROM");
-      AddressTo = EnvReader.GetStringValue("ADDRESS_TO");
-      DisableConfirmation = Convert.ToBoolean(EnvReader.GetStringValue("DISABLE_CONFIRMATION"));
-      PrivateKey = EnvReader.GetStringValue("PPRIVATE_KEY");
+      EnvReader.TryGetStringValue("NETWORK_NAME", out networkName);
+      EnvReader.TryGetStringValue("PROXY_URL", out proxyUrl);
+      EnvReader.TryGetStringValue("NETWORK_ID", out networkId);
+      EnvReader.TryGetStringValue("REQUEST_AMOUNT", out requestAmount);
+      EnvReader.TryGetStringValue("FAUCET_URL", out faucetUrl);
+      EnvReader.TryGetBooleanValue("USE_FAUCET", out useFaucet);
+      EnvReader.TryGetStringValue("ADDRESS_FROM", out addressFrom);
+      EnvReader.TryGetStringValue("ADDRESS_TO", out addressTo);
+      EnvReader.TryGetStringValue("PRIVATE_KEY", out privateKey);
+      EnvReader.TryGetStringValue("SOLANA_EXPLORER", out solanaExplorer);
+      EnvReader.TryGetStringValue("SOLANA_URL", out solanaUrl);
+      Convert.ToInt32(EnvReader.TryGetStringValue("USERS_NUMBER", out usersNumber));
+
+      NetworkName = networkId;
+      ProxyUrl = proxyUrl;
+      NetworkId = networkId;
+      RequestAmount = Convert.ToInt32(requestAmount);
+      FaucetUrl = faucetUrl;
+      UseFaucet = useFaucet;
+      AddressFrom = addressFrom;
+      AddressTo = addressTo;
+      PrivateKey = privateKey;
+      SolanaExplorer = solanaExplorer;
+      SolanaUrl = solanaUrl;
+      UsersNumber = Convert.ToInt32(usersNumber);
     }
   }
 }
