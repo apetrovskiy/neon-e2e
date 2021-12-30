@@ -45,6 +45,10 @@ func createWallet() *Account {
 		hash := sha3.NewLegacyKeccak256()
 		hash.Write(publicKeyBytes[1:])
 
+		if GetConfig().UseFaucet {
+			requestFaucet(GetConfig().RequestAmount*10, address.String())
+		}
+
 		log.Println(hexString)
 		log.Println(publicKeyECDSA)
 		log.Println(publicKeyBytes)
