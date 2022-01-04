@@ -35,8 +35,8 @@ public class Config {
     return System.getProperty("PRIVATE_KEY");
   }
 
-  public String getRequestAmount() {
-    return System.getProperty("REQUEST_AMOUNT");
+  public Integer getRequestAmount() {
+    return Integer.parseInt(System.getProperty("REQUEST_AMOUNT"));
   }
 
   public String getFaucetUrl() {

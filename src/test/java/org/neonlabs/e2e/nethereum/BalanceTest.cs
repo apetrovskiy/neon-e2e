@@ -21,9 +21,9 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
     }
     [AllureStory(new string[] { StoryBalance })]
     [AllureXunit(DisplayName = "Initial balance")]
-    public void ShouldGetInitialBalanceAsync()
+    public async void ShouldGetInitialBalanceAsync()
     {
-      var account = AccountFactory.CreateAccount();
+      var account = await AccountFactory.CreateAccount(0);
       // TODO: logging
       Console.WriteLine(account.ChainId);
       // Console.WriteLine(account.TransactionManager.Client.GetType().Name);

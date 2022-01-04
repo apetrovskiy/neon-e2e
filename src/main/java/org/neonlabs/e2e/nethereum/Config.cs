@@ -18,9 +18,11 @@ namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
     public static string SolanaExplorer { get; set; }
     public static string SolanaUrl { get; set; }
     public static int UsersNumber { get; set; }
+    private static bool isInitialized;
 
     public static void Init()
     {
+      if (isInitialized) return;
       string networkName;
       string proxyUrl;
       string networkId;
