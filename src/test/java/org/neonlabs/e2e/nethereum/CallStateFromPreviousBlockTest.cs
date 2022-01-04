@@ -22,7 +22,8 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
 
       var web3 = Connection.Connect();
       ulong totalSupply = 1000000;
-      var address = AccountFactory.CreateAccount().Address;
+      var account = await AccountFactory.CreateAccount(10);
+      var address = account.Address;
       var newAddress = "0x12890d2cce102216644c59dae5baed380d848301";
 
       var receipt = await web3.Eth.DeployContract.SendRequestAndWaitForReceiptAsync(abi, contractByteCode,

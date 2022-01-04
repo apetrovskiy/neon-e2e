@@ -10,7 +10,7 @@
     public static async Task<HexBigInteger> GetBalance()
     {
       var web3 = Connection.Connect();
-      var account = AccountFactory.CreateAccount();
+      var account = await AccountFactory.CreateAccount(10);
       var balance = await web3.Eth.GetBalance.SendRequestAsync(account.Address);
       // TODO: logging
       Console.WriteLine($"Balance in Wei: {balance.Value}");
