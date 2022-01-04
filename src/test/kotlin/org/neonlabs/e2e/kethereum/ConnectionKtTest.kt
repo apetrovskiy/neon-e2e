@@ -8,22 +8,28 @@ import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.Test
 
+// import org.kethereum.rpc
+
 @Epic("Kotlin frameworks")
-@Feature("KEthereum")
+@Feature("Kethereum")
 class ConnectionKtTest {
   @Test
-  @Description("allure description")
+  @Description("Connection Kethereum")
   @Story("Connection")
   fun shouldWork() {
     assertEquals(1, ConnectionKt().getId(), "kotlin")
   }
 
   @Test
-  @Description("Connection")
+  @Description("Connection Kethereum 2")
   @Story("Connection")
   fun shouldConnectToNetwork() {
-    val config = ConfigKt()
-    assertNotNull(config.proxyUrl)
-    assertNotNull(config.faucetUrl)
+    assertNotNull(ConfigKt.proxyUrl)
+    assertNotNull(ConfigKt.faucetUrl)
+    // val connection = HttpProvider() // RPCTransport(ConfigKt.proxyUrl) //
+    //     HttpTransport(ConfigKt.proxyUrl)
+    // assertNotNull(connection)
+    // println(connection)
+    // connection.
   }
 }
