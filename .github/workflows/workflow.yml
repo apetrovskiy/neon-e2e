@@ -9,14 +9,14 @@ on:
         required: false
       network:
         type: choice
-        description: 'Network (devnet, testnet, teststand, teststand2, devnet-aws)'
+        description: 'Network (devnet, testnet, release-stand, night-stand, devnet-aws)'
         required: true
-        default: 'teststand2'
+        default: 'night-stand'
         options:
           - devnet
           - testnet
-          - teststand
-          - teststand2
+          - release-stand
+          - night-stand
           - devnet-aws
       # message:
       #   required: true
@@ -319,7 +319,7 @@ jobs:
     if: always()
     needs: allure
     env:
-      NETWORK_NAME: 'teststand2-222'
+      NETWORK_NAME: 'night-stand-222'
     steps:
       - uses: actions/checkout@v2
       - name: Setting variables
@@ -328,7 +328,7 @@ jobs:
           echo "Network: ${{ github.event.inputs.network }}"
           if [ -z "${{ github.event.inputs.network }}" ]
           then
-            NETWORK='teststand2'
+            NETWORK='night-stand'
           else
             NETWORK="${{ github.event.inputs.network }}"
           fi
