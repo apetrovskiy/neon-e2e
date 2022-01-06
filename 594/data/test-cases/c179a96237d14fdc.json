@@ -1,0 +1,370 @@
+{
+  "uid" : "c179a96237d14fdc",
+  "name" : "the first funding request -- @1.1 ",
+  "fullName" : "faucet: the first funding request",
+  "historyId" : "631225066b7c7db46eebac616cf9c417",
+  "time" : {
+    "start" : 1641468415863,
+    "stop" : 1641468416011,
+    "duration" : 148
+  },
+  "status" : "broken",
+  "statusMessage" : "RuntimeError: This event loop is already running\n",
+  "statusTrace" : "  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 157, in wrapped_decorator\n    return step_decorator(astep_func, context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 124, in step_decorator\n    loop.run_until_complete(astep_func(context, *args, **kwargs))\n  File \"/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/asyncio/base_events.py\", line 616, in run_until_complete\n    return future.result()\n  File \"features/steps/faucet.py\", line 52, in step_balance_equals\n    balance = get_balance(async_context.data[TEST_DATA].user_alice.address)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/allure_commons/_allure.py\", line 172, in impl\n    return func(*a, **kw)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 157, in wrapped_decorator\n    return step_decorator(astep_func, context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 124, in step_decorator\n    loop.run_until_complete(astep_func(context, *args, **kwargs))\n  File \"/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/asyncio/base_events.py\", line 592, in run_until_complete\n    self._check_running()\n  File \"/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/asyncio/base_events.py\", line 552, in _check_running\n    raise RuntimeError('This event loop is already running')\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "RuntimeError: This event loop is already running\n",
+    "statusTrace" : "  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 157, in wrapped_decorator\n    return step_decorator(astep_func, context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 124, in step_decorator\n    loop.run_until_complete(astep_func(context, *args, **kwargs))\n  File \"/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/asyncio/base_events.py\", line 616, in run_until_complete\n    return future.result()\n  File \"features/steps/faucet.py\", line 52, in step_balance_equals\n    balance = get_balance(async_context.data[TEST_DATA].user_alice.address)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/allure_commons/_allure.py\", line 172, in impl\n    return func(*a, **kw)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 157, in wrapped_decorator\n    return step_decorator(astep_func, context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 124, in step_decorator\n    loop.run_until_complete(astep_func(context, *args, **kwargs))\n  File \"/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/asyncio/base_events.py\", line 592, in run_until_complete\n    self._check_running()\n  File \"/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/asyncio/base_events.py\", line 552, in _check_running\n    raise RuntimeError('This event loop is already running')\n",
+    "steps" : [ {
+      "name" : "Given there is user Alice in Ethereum network with no initial balance",
+      "time" : {
+        "start" : 1641468415864,
+        "stop" : 1641468415878,
+        "duration" : 14
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "creating an account",
+        "time" : {
+          "start" : 1641468415864,
+          "stop" : 1641468415864,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "amount",
+          "value" : "0"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "creating an account",
+        "time" : {
+          "start" : 1641468415864,
+          "stop" : 1641468415864,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "id",
+          "value" : "''"
+        }, {
+          "name" : "amount",
+          "value" : "0"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "When user Alice requests the Ether faucet for 1Ξ",
+      "time" : {
+        "start" : 1641468415878,
+        "stop" : 1641468415979,
+        "duration" : 101
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then user Alice's balance equals 1Ξ",
+      "time" : {
+        "start" : 1641468415979,
+        "stop" : 1641468416010,
+        "duration" : 31
+      },
+      "status" : "broken",
+      "statusMessage" : "RuntimeError: This event loop is already running\n",
+      "statusTrace" : "  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 157, in wrapped_decorator\n    return step_decorator(astep_func, context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 124, in step_decorator\n    loop.run_until_complete(astep_func(context, *args, **kwargs))\n  File \"/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/asyncio/base_events.py\", line 616, in run_until_complete\n    return future.result()\n  File \"features/steps/faucet.py\", line 52, in step_balance_equals\n    balance = get_balance(async_context.data[TEST_DATA].user_alice.address)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/allure_commons/_allure.py\", line 172, in impl\n    return func(*a, **kw)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 157, in wrapped_decorator\n    return step_decorator(astep_func, context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 124, in step_decorator\n    loop.run_until_complete(astep_func(context, *args, **kwargs))\n  File \"/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/asyncio/base_events.py\", line 592, in run_until_complete\n    self._check_running()\n  File \"/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/asyncio/base_events.py\", line 552, in _check_running\n    raise RuntimeError('This event loop is already running')\n",
+      "steps" : [ {
+        "name" : "getting balance",
+        "time" : {
+          "start" : 1641468415980,
+          "stop" : 1641468415980,
+          "duration" : 0
+        },
+        "status" : "broken",
+        "statusMessage" : "RuntimeError: This event loop is already running\n",
+        "statusTrace" : "  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/allure_commons/_allure.py\", line 172, in impl\n    return func(*a, **kw)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 157, in wrapped_decorator\n    return step_decorator(astep_func, context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 124, in step_decorator\n    loop.run_until_complete(astep_func(context, *args, **kwargs))\n  File \"/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/asyncio/base_events.py\", line 592, in run_until_complete\n    self._check_running()\n  File \"/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/asyncio/base_events.py\", line 552, in _check_running\n    raise RuntimeError('This event loop is already running')\n",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "context",
+          "value" : "'0xB24Fd741db8E37CDa84924bbEB73594a9F88fa65'"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "faucet"
+  }, {
+    "name" : "framework",
+    "value" : "behave"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "initial balance",
+    "value" : "1"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 473,
+        "skipped" : 2,
+        "passed" : 118,
+        "unknown" : 0,
+        "total" : 593
+      },
+      "items" : [ {
+        "uid" : "e32692bc4f457c5a",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/593//#testresult/e32692bc4f457c5a",
+        "status" : "broken",
+        "statusDetails" : "RuntimeError: This event loop is already running\n",
+        "time" : {
+          "start" : 1641466930727,
+          "stop" : 1641466930859,
+          "duration" : 132
+        }
+      }, {
+        "uid" : "d02d259b198ee2f5",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/591//#testresult/d02d259b198ee2f5",
+        "status" : "broken",
+        "statusDetails" : "RuntimeError: This event loop is already running\n",
+        "time" : {
+          "start" : 1641465858325,
+          "stop" : 1641465858604,
+          "duration" : 279
+        }
+      }, {
+        "uid" : "afd352da2cb6b2ea",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/590//#testresult/afd352da2cb6b2ea",
+        "status" : "broken",
+        "statusDetails" : "RuntimeError: This event loop is already running\n",
+        "time" : {
+          "start" : 1641465720915,
+          "stop" : 1641465721043,
+          "duration" : 128
+        }
+      }, {
+        "uid" : "d0c877443bc0657f",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/589//#testresult/d0c877443bc0657f",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'Context' object has no attribute 'data'\n",
+        "time" : {
+          "start" : 1641407593315,
+          "stop" : 1641407593430,
+          "duration" : 115
+        }
+      }, {
+        "uid" : "d9e9cd226a5d59d1",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/588//#testresult/d9e9cd226a5d59d1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641407054971,
+          "stop" : 1641407054987,
+          "duration" : 16
+        }
+      }, {
+        "uid" : "7c5242aca2c8bacc",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/587//#testresult/7c5242aca2c8bacc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641395515392,
+          "stop" : 1641395515447,
+          "duration" : 55
+        }
+      }, {
+        "uid" : "4225ea6ec02f2033",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/586//#testresult/4225ea6ec02f2033",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641395469742,
+          "stop" : 1641395469758,
+          "duration" : 16
+        }
+      }, {
+        "uid" : "f32cbf2e7ecb4dee",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/584//#testresult/f32cbf2e7ecb4dee",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641395425295,
+          "stop" : 1641395425315,
+          "duration" : 20
+        }
+      }, {
+        "uid" : "c9e459ea1e250ca7",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/583//#testresult/c9e459ea1e250ca7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641394149169,
+          "stop" : 1641394149189,
+          "duration" : 20
+        }
+      }, {
+        "uid" : "66df0b3aa05b7798",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/582//#testresult/66df0b3aa05b7798",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641394111095,
+          "stop" : 1641394111150,
+          "duration" : 55
+        }
+      }, {
+        "uid" : "8e0949cae0d67764",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/581//#testresult/8e0949cae0d67764",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641393974481,
+          "stop" : 1641393974564,
+          "duration" : 83
+        }
+      }, {
+        "uid" : "f57f1dd19fc4707c",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/580//#testresult/f57f1dd19fc4707c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641393677789,
+          "stop" : 1641393677833,
+          "duration" : 44
+        }
+      }, {
+        "uid" : "e60edcf029d9e0d8",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/579//#testresult/e60edcf029d9e0d8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641393298176,
+          "stop" : 1641393298237,
+          "duration" : 61
+        }
+      }, {
+        "uid" : "5c8ba133d40a9f4a",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/575//#testresult/5c8ba133d40a9f4a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641335651026,
+          "stop" : 1641335651091,
+          "duration" : 65
+        }
+      }, {
+        "uid" : "ccf9a9da704ed812",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/578//#testresult/ccf9a9da704ed812",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641335881974,
+          "stop" : 1641335882030,
+          "duration" : 56
+        }
+      }, {
+        "uid" : "460e65cbdb903ac9",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/577//#testresult/460e65cbdb903ac9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641335718338,
+          "stop" : 1641335718344,
+          "duration" : 6
+        }
+      }, {
+        "uid" : "bfe11d77075bfd4d",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/576//#testresult/bfe11d77075bfd4d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641335694874,
+          "stop" : 1641335694911,
+          "duration" : 37
+        }
+      }, {
+        "uid" : "dad0935d5bc0964c",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/574//#testresult/dad0935d5bc0964c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641335622883,
+          "stop" : 1641335622935,
+          "duration" : 52
+        }
+      }, {
+        "uid" : "851be87849bdd99",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/572//#testresult/851be87849bdd99",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641320689568,
+          "stop" : 1641320689584,
+          "duration" : 16
+        }
+      }, {
+        "uid" : "aac001be12a9a593",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/571//#testresult/aac001be12a9a593",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641320509993,
+          "stop" : 1641320510045,
+          "duration" : 52
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "c179a96237d14fdc.json",
+  "parameterValues" : [ "1" ]
+}
