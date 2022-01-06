@@ -1,0 +1,449 @@
+{
+  "uid" : "5b8dc76317f0fc49",
+  "name" : "a user to user successful transaction -- @1.3 ",
+  "fullName" : "transaction: a user to user successful transaction",
+  "historyId" : "38f1fb6001cd1382b3f157cc186a3111",
+  "time" : {
+    "start" : 1641465723322,
+    "stop" : 1641465724141,
+    "duration" : 819
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError\n",
+  "statusTrace" : "  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 157, in wrapped_decorator\n    return step_decorator(astep_func, context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 124, in step_decorator\n    loop.run_until_complete(astep_func(context, *args, **kwargs))\n  File \"/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/asyncio/base_events.py\", line 616, in run_until_complete\n    return future.result()\n  File \"features/steps/transaction.py\", line 124, in step_user_bob_result\n    assert balance == expected_balance\n",
+  "flaky" : false,
+  "newFailed" : true,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError\n",
+    "statusTrace" : "  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 157, in wrapped_decorator\n    return step_decorator(astep_func, context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 124, in step_decorator\n    loop.run_until_complete(astep_func(context, *args, **kwargs))\n  File \"/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/asyncio/base_events.py\", line 616, in run_until_complete\n    return future.result()\n  File \"features/steps/transaction.py\", line 124, in step_user_bob_result\n    assert balance == expected_balance\n",
+    "steps" : [ {
+      "name" : "Given there is user Alice in Ethereum network with no initial balance",
+      "time" : {
+        "start" : 1641465723323,
+        "stop" : 1641465723331,
+        "duration" : 8
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "creating an account",
+        "time" : {
+          "start" : 1641465723323,
+          "stop" : 1641465723323,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "amount",
+          "value" : "0"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "creating an account",
+        "time" : {
+          "start" : 1641465723323,
+          "stop" : 1641465723323,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "id",
+          "value" : "''"
+        }, {
+          "name" : "amount",
+          "value" : "0"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "And user Alice requests the Ether faucet for 10Ξ",
+      "time" : {
+        "start" : 1641465723331,
+        "stop" : 1641465723427,
+        "duration" : 96
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And there is user Bob in Ethereum network with no initial balance",
+      "time" : {
+        "start" : 1641465723428,
+        "stop" : 1641465723434,
+        "duration" : 6
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "creating an account",
+        "time" : {
+          "start" : 1641465723428,
+          "stop" : 1641465723428,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "amount",
+          "value" : "0"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "creating an account",
+        "time" : {
+          "start" : 1641465723428,
+          "stop" : 1641465723428,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "id",
+          "value" : "''"
+        }, {
+          "name" : "amount",
+          "value" : "0"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "And user Bob requests the Ether faucet for 10Ξ",
+      "time" : {
+        "start" : 1641465723435,
+        "stop" : 1641465723531,
+        "duration" : 96
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When user Alice sends 9Ξ to user Bob",
+      "time" : {
+        "start" : 1641465723531,
+        "stop" : 1641465724038,
+        "duration" : 507
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then the recipient has balance increased by 9Ξ",
+      "time" : {
+        "start" : 1641465724038,
+        "stop" : 1641465724141,
+        "duration" : 103
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError\n",
+      "statusTrace" : "  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 157, in wrapped_decorator\n    return step_decorator(astep_func, context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 124, in step_decorator\n    loop.run_until_complete(astep_func(context, *args, **kwargs))\n  File \"/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/asyncio/base_events.py\", line 616, in run_until_complete\n    return future.result()\n  File \"features/steps/transaction.py\", line 124, in step_user_bob_result\n    assert balance == expected_balance\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "And the sender has balance decreased by 9Ξ",
+      "time" : {
+        "start" : 1641465724141,
+        "stop" : 1641465724141,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 11,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "transaction"
+  }, {
+    "name" : "framework",
+    "value" : "behave"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "amount",
+    "value" : "9"
+  }, {
+    "name" : "initial balance",
+    "value" : "10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 17,
+        "broken" : 472,
+        "skipped" : 2,
+        "passed" : 99,
+        "unknown" : 0,
+        "total" : 590
+      },
+      "items" : [ {
+        "uid" : "7dcd87ea5630f1fc",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/589//#testresult/7dcd87ea5630f1fc",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'Context' object has no attribute 'data'\n",
+        "time" : {
+          "start" : 1641407593446,
+          "stop" : 1641407593448,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "ba4e46a023845426",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/588//#testresult/ba4e46a023845426",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641407055000,
+          "stop" : 1641407055001,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "5a784c307586648f",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/587//#testresult/5a784c307586648f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641395515461,
+          "stop" : 1641395515462,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "9a4b0a36ebcf5da4",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/586//#testresult/9a4b0a36ebcf5da4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641395469771,
+          "stop" : 1641395469773,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "db7943f4ab9b16c9",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/584//#testresult/db7943f4ab9b16c9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641395425328,
+          "stop" : 1641395425330,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "e600736c48c3e1a6",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/583//#testresult/e600736c48c3e1a6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641394149203,
+          "stop" : 1641394149205,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "b5e5451a041f19ad",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/582//#testresult/b5e5451a041f19ad",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641394111161,
+          "stop" : 1641394111163,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "b7ca8607b8c00f29",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/581//#testresult/b7ca8607b8c00f29",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641393974579,
+          "stop" : 1641393974582,
+          "duration" : 3
+        }
+      }, {
+        "uid" : "f0f3507db2dd16e0",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/580//#testresult/f0f3507db2dd16e0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641393677847,
+          "stop" : 1641393677849,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "a68529c4393ed52",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/579//#testresult/a68529c4393ed52",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641393298249,
+          "stop" : 1641393298251,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "d3cdf82ba996b3bd",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/575//#testresult/d3cdf82ba996b3bd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641335651105,
+          "stop" : 1641335651106,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "e3988a98e4ba8fcd",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/578//#testresult/e3988a98e4ba8fcd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641335882048,
+          "stop" : 1641335882050,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "86297eff68b76414",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/577//#testresult/86297eff68b76414",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641335718357,
+          "stop" : 1641335718361,
+          "duration" : 4
+        }
+      }, {
+        "uid" : "5a1203895561d9fa",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/576//#testresult/5a1203895561d9fa",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641335694925,
+          "stop" : 1641335694927,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "5322bcaee94e1b12",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/574//#testresult/5322bcaee94e1b12",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641335622948,
+          "stop" : 1641335622950,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "7144301e91d7821c",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/572//#testresult/7144301e91d7821c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641320689595,
+          "stop" : 1641320689596,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "bd6da62fee395be3",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/571//#testresult/bd6da62fee395be3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641320510060,
+          "stop" : 1641320510063,
+          "duration" : 3
+        }
+      }, {
+        "uid" : "c209f71e946485d6",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/570//#testresult/c209f71e946485d6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641319881925,
+          "stop" : 1641319881926,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "31a971bdd28ecdcd",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/569//#testresult/31a971bdd28ecdcd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641304644711,
+          "stop" : 1641304644713,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "7237383eedf5749e",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/568//#testresult/7237383eedf5749e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1641304618687,
+          "stop" : 1641304618689,
+          "duration" : 2
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "5b8dc76317f0fc49.json",
+  "parameterValues" : [ "9", "10" ]
+}
