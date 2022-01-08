@@ -1,0 +1,334 @@
+{
+  "uid" : "8a0e77aabfba904b",
+  "name" : "Should Transfer And GetState From Previous Block test",
+  "fullName" : "Should Transfer And GetState From Previous Block test",
+  "historyId" : "Should Transfer And GetState From Previous Block test",
+  "time" : {
+    "start" : 1641667210458,
+    "stop" : 1641667225699,
+    "duration" : 15241
+  },
+  "status" : "failed",
+  "statusMessage" : "eth_sendTransaction is not supported. please use eth_sendRawTransaction: eth_sendTransaction",
+  "statusTrace" : "   at Nethereum.JsonRpc.Client.ClientBase.HandleRpcError(RpcResponseMessage response, String reqMsg)\n   at Nethereum.JsonRpc.Client.ClientBase.SendInnerRequestAsync[T](RpcRequestMessage reqMsg, String route)\n   at Nethereum.JsonRpc.Client.ClientBase.SendRequestAsync[T](RpcRequest request, String route)\n   at Nethereum.RPC.TransactionReceipts.TransactionReceiptPollingService.SendRequestAndWaitForReceiptAsync(Func`1 transactionFunction, CancellationTokenSource tokenSource)\n   at Nethereum.RPC.TransactionReceipts.TransactionReceiptPollingService.DeployContractAndWaitForReceiptAsync(Func`1 deployFunction, CancellationTokenSource tokenSource)\n   at NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum.CallStateFromPreviousBlock.ShouldTransferAndGetStateFromPreviousBlock() in /home/runner/work/neon-e2e/neon-e2e/src/test/java/org/neonlabs/e2e/nethereum/CallStateFromPreviousBlockTest.cs:line 29\n   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_0(Object state)\n   at Xunit.Sdk.AsyncTestSyncContext.<>c__DisplayClass7_0.<Post>b__1(Object _) in C:\\Dev\\xunit\\xunit\\src\\xunit.execution\\Sdk\\AsyncTestSyncContext.cs:line 75",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "eth_sendTransaction is not supported. please use eth_sendRawTransaction: eth_sendTransaction",
+    "statusTrace" : "   at Nethereum.JsonRpc.Client.ClientBase.HandleRpcError(RpcResponseMessage response, String reqMsg)\n   at Nethereum.JsonRpc.Client.ClientBase.SendInnerRequestAsync[T](RpcRequestMessage reqMsg, String route)\n   at Nethereum.JsonRpc.Client.ClientBase.SendRequestAsync[T](RpcRequest request, String route)\n   at Nethereum.RPC.TransactionReceipts.TransactionReceiptPollingService.SendRequestAndWaitForReceiptAsync(Func`1 transactionFunction, CancellationTokenSource tokenSource)\n   at Nethereum.RPC.TransactionReceipts.TransactionReceiptPollingService.DeployContractAndWaitForReceiptAsync(Func`1 deployFunction, CancellationTokenSource tokenSource)\n   at NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum.CallStateFromPreviousBlock.ShouldTransferAndGetStateFromPreviousBlock() in /home/runner/work/neon-e2e/neon-e2e/src/test/java/org/neonlabs/e2e/nethereum/CallStateFromPreviousBlockTest.cs:line 29\n   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_0(Object state)\n   at Xunit.Sdk.AsyncTestSyncContext.<>c__DisplayClass7_0.<Post>b__1(Object _) in C:\\Dev\\xunit\\xunit\\src\\xunit.execution\\Sdk\\AsyncTestSyncContext.cs:line 75",
+    "steps" : [ {
+      "name" : "Loading config",
+      "time" : {
+        "start" : 1641667210506,
+        "stop" : 1641667210558,
+        "duration" : 52
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Creating an account",
+      "time" : {
+        "start" : 1641667210559,
+        "stop" : 1641667225319,
+        "duration" : 14760
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Requesting faucet",
+        "time" : {
+          "start" : 1641667210793,
+          "stop" : 1641667225319,
+          "duration" : 14526
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : ".NET Long Running Task"
+  }, {
+    "name" : "host",
+    "value" : "fv-az199-142"
+  }, {
+    "name" : "testClass",
+    "value" : "NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum.CallStateFromPreviousBlock"
+  }, {
+    "name" : "testMethod",
+    "value" : "Should Transfer And GetState From Previous Block test"
+  }, {
+    "name" : "package",
+    "value" : "NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum.CallStateFromPreviousBlock"
+  }, {
+    "name" : "epic",
+    "value" : "Nethereum"
+  }, {
+    "name" : "feature",
+    "value" : "Blocks"
+  }, {
+    "name" : "suite",
+    "value" : "Nethereum"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 537,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 537
+      },
+      "items" : [ {
+        "uid" : "e38217e25cca6994",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/635//#testresult/e38217e25cca6994",
+        "status" : "failed",
+        "statusDetails" : "eth_sendTransaction is not supported. please use eth_sendRawTransaction: eth_sendTransaction",
+        "time" : {
+          "start" : 1641667161766,
+          "stop" : 1641667176750,
+          "duration" : 14984
+        }
+      }, {
+        "uid" : "4cdb12808b15bdbb",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/632//#testresult/4cdb12808b15bdbb",
+        "status" : "failed",
+        "statusDetails" : "eth_sendTransaction is not supported. please use eth_sendRawTransaction: eth_sendTransaction",
+        "time" : {
+          "start" : 1641665903288,
+          "stop" : 1641665918456,
+          "duration" : 15168
+        }
+      }, {
+        "uid" : "986df0dcf468d188",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/630//#testresult/986df0dcf468d188",
+        "status" : "failed",
+        "statusDetails" : "eth_sendTransaction is not supported. please use eth_sendRawTransaction: eth_sendTransaction",
+        "time" : {
+          "start" : 1641592866940,
+          "stop" : 1641592881556,
+          "duration" : 14616
+        }
+      }, {
+        "uid" : "dc2bfa38d366653",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/629//#testresult/dc2bfa38d366653",
+        "status" : "failed",
+        "statusDetails" : "eth_sendTransaction is not supported. please use eth_sendRawTransaction: eth_sendTransaction",
+        "time" : {
+          "start" : 1641592855781,
+          "stop" : 1641592869920,
+          "duration" : 14139
+        }
+      }, {
+        "uid" : "9423c9d697d45c54",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/626//#testresult/9423c9d697d45c54",
+        "status" : "failed",
+        "statusDetails" : "eth_sendTransaction is not supported. please use eth_sendRawTransaction: eth_sendTransaction",
+        "time" : {
+          "start" : 1641563922231,
+          "stop" : 1641563937416,
+          "duration" : 15185
+        }
+      }, {
+        "uid" : "5da46fb8c4ec7d6a",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/624//#testresult/5da46fb8c4ec7d6a",
+        "status" : "failed",
+        "statusDetails" : "eth_sendTransaction is not supported. please use eth_sendRawTransaction: eth_sendTransaction",
+        "time" : {
+          "start" : 1641562961686,
+          "stop" : 1641562976717,
+          "duration" : 15031
+        }
+      }, {
+        "uid" : "54cf30119e378f12",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/623//#testresult/54cf30119e378f12",
+        "status" : "failed",
+        "statusDetails" : "eth_sendTransaction is not supported. please use eth_sendRawTransaction: eth_sendTransaction",
+        "time" : {
+          "start" : 1641562938199,
+          "stop" : 1641562953004,
+          "duration" : 14805
+        }
+      }, {
+        "uid" : "442700d84250e0e5",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/619//#testresult/442700d84250e0e5",
+        "status" : "failed",
+        "statusDetails" : "eth_sendTransaction is not supported. please use eth_sendRawTransaction: eth_sendTransaction",
+        "time" : {
+          "start" : 1641559104241,
+          "stop" : 1641559118917,
+          "duration" : 14676
+        }
+      }, {
+        "uid" : "21a709ef43fbb508",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/618//#testresult/21a709ef43fbb508",
+        "status" : "failed",
+        "statusDetails" : "eth_sendTransaction is not supported. please use eth_sendRawTransaction: eth_sendTransaction",
+        "time" : {
+          "start" : 1641557543628,
+          "stop" : 1641557558463,
+          "duration" : 14835
+        }
+      }, {
+        "uid" : "c4c9f88a4b44b94c",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/616//#testresult/c4c9f88a4b44b94c",
+        "status" : "failed",
+        "statusDetails" : "eth_sendTransaction is not supported. please use eth_sendRawTransaction: eth_sendTransaction",
+        "time" : {
+          "start" : 1641551770209,
+          "stop" : 1641551785477,
+          "duration" : 15268
+        }
+      }, {
+        "uid" : "72c5f5e76ab8725c",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/615//#testresult/72c5f5e76ab8725c",
+        "status" : "failed",
+        "statusDetails" : "eth_sendTransaction is not supported. please use eth_sendRawTransaction: eth_sendTransaction",
+        "time" : {
+          "start" : 1641513355583,
+          "stop" : 1641513370450,
+          "duration" : 14867
+        }
+      }, {
+        "uid" : "fb77378d51612669",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/614//#testresult/fb77378d51612669",
+        "status" : "failed",
+        "statusDetails" : "eth_sendTransaction is not supported. please use eth_sendRawTransaction: eth_sendTransaction",
+        "time" : {
+          "start" : 1641513298376,
+          "stop" : 1641513312677,
+          "duration" : 14301
+        }
+      }, {
+        "uid" : "1393cb109aae4fa4",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/612//#testresult/1393cb109aae4fa4",
+        "status" : "failed",
+        "statusDetails" : "eth_sendTransaction is not supported. please use eth_sendRawTransaction: eth_sendTransaction",
+        "time" : {
+          "start" : 1641511878334,
+          "stop" : 1641511892790,
+          "duration" : 14456
+        }
+      }, {
+        "uid" : "7a75ec0213980312",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/611//#testresult/7a75ec0213980312",
+        "status" : "failed",
+        "statusDetails" : "eth_sendTransaction is not supported. please use eth_sendRawTransaction: eth_sendTransaction",
+        "time" : {
+          "start" : 1641504381642,
+          "stop" : 1641504396814,
+          "duration" : 15172
+        }
+      }, {
+        "uid" : "dfb3cfebaec2ac0",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/609//#testresult/dfb3cfebaec2ac0",
+        "status" : "failed",
+        "statusDetails" : "eth_sendTransaction is not supported. please use eth_sendRawTransaction: eth_sendTransaction",
+        "time" : {
+          "start" : 1641498009815,
+          "stop" : 1641498024532,
+          "duration" : 14717
+        }
+      }, {
+        "uid" : "21f27ad9163de581",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/608//#testresult/21f27ad9163de581",
+        "status" : "failed",
+        "statusDetails" : "eth_sendTransaction is not supported. please use eth_sendRawTransaction: eth_sendTransaction",
+        "time" : {
+          "start" : 1641497995158,
+          "stop" : 1641498009428,
+          "duration" : 14270
+        }
+      }, {
+        "uid" : "9d38c68629507e98",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/606//#testresult/9d38c68629507e98",
+        "status" : "failed",
+        "statusDetails" : "eth_sendTransaction is not supported. please use eth_sendRawTransaction: eth_sendTransaction",
+        "time" : {
+          "start" : 1641496923997,
+          "stop" : 1641496939136,
+          "duration" : 15139
+        }
+      }, {
+        "uid" : "b8e39398afcb46b0",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/605//#testresult/b8e39398afcb46b0",
+        "status" : "failed",
+        "statusDetails" : "eth_sendTransaction is not supported. please use eth_sendRawTransaction: eth_sendTransaction",
+        "time" : {
+          "start" : 1641496451771,
+          "stop" : 1641496466873,
+          "duration" : 15102
+        }
+      }, {
+        "uid" : "6f363b3461caa193",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/602//#testresult/6f363b3461caa193",
+        "status" : "failed",
+        "statusDetails" : "eth_sendTransaction is not supported. please use eth_sendRawTransaction: eth_sendTransaction",
+        "time" : {
+          "start" : 1641493768179,
+          "stop" : 1641493782497,
+          "duration" : 14318
+        }
+      }, {
+        "uid" : "f52723561a7876f2",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/603//#testresult/f52723561a7876f2",
+        "status" : "failed",
+        "statusDetails" : "eth_sendTransaction is not supported. please use eth_sendRawTransaction: eth_sendTransaction",
+        "time" : {
+          "start" : 1641494243261,
+          "stop" : 1641494257873,
+          "duration" : 14612
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "8a0e77aabfba904b.json",
+  "parameterValues" : [ ]
+}
