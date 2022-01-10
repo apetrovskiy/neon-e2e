@@ -1,0 +1,291 @@
+{
+  "uid" : "517b14339e52f17",
+  "name" : "shouldGetLatestBlockBalance()",
+  "fullName" : "org.neonlabs.e2e.web3j.BalanceTest.shouldGetLatestBlockBalance",
+  "historyId" : "22df5f1e773a8c991b57b8ac49febe59",
+  "time" : {
+    "start" : 1641854721037,
+    "stop" : 1641854721164,
+    "duration" : 127
+  },
+  "description" : "Get the latest block balance",
+  "descriptionHtml" : "<p>Get the latest block balance</p>\n",
+  "status" : "broken",
+  "statusMessage" : "Expecting a stackmap frame at branch target 65\nException Details:\n  Location:\n    org/neonlabs/e2e/web3j/Connection.createConnection()Lorg/web3j/protocol/Web3j; @16: aload_1\n  Reason:\n    Expected stackmap frame at this location.\n  Bytecode:\n    0000000: 126d c000 6f4c b200 2e2a 2ab8 0034 3a04\n    0000010: 2b04 0454 b800 3a19 04b6 003e bb00 0759\n    0000020: b700 094d 2b05 0454 bb00 0a59 2cb6 000c\n    0000030: b700 10b8 0013 4e2b 0604 542d 3a06 a700\n    0000040: 143a 05b8 003a 1905 b600 4219 052b 0704\n    0000050: 54bf b800 3ab6 0045 1906 2b08 0454 b0  \n  Exception Handler Table:\n    bci [16, 65] => handler: 65\n",
+  "statusTrace" : "java.lang.VerifyError: Expecting a stackmap frame at branch target 65\nException Details:\n  Location:\n    org/neonlabs/e2e/web3j/Connection.createConnection()Lorg/web3j/protocol/Web3j; @16: aload_1\n  Reason:\n    Expected stackmap frame at this location.\n  Bytecode:\n    0000000: 126d c000 6f4c b200 2e2a 2ab8 0034 3a04\n    0000010: 2b04 0454 b800 3a19 04b6 003e bb00 0759\n    0000020: b700 094d 2b05 0454 bb00 0a59 2cb6 000c\n    0000030: b700 10b8 0013 4e2b 0604 542d 3a06 a700\n    0000040: 143a 05b8 003a 1905 b600 4219 052b 0704\n    0000050: 54bf b800 3ab6 0045 1906 2b08 0454 b0  \n  Exception Handler Table:\n    bci [16, 65] => handler: 65\n\n\tat org.neonlabs.e2e.web3j.BalanceTest.shouldGetLatestBlockBalance(BalanceTest.java:31)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\n\tat org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)\n\tat org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)\n\tat org.junit.jupiter.api.extension.InvocationInterceptor.interceptTestMethod(InvocationInterceptor.java:118)\n\tat org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)\n\tat org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)\n\tat org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)\n\tat org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)\n\tat org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)\n\tat org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)\n\tat org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)\n\tat org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)\n\tat org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)\n\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\n\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)\n\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)\n\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)\n\tat org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.compute(ForkJoinPoolHierarchicalTestExecutorService.java:185)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.executeNonConcurrentTasks(ForkJoinPoolHierarchicalTestExecutorService.java:155)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.invokeAll(ForkJoinPoolHierarchicalTestExecutorService.java:135)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)\n\tat org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.compute(ForkJoinPoolHierarchicalTestExecutorService.java:185)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.executeNonConcurrentTasks(ForkJoinPoolHierarchicalTestExecutorService.java:155)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.invokeAll(ForkJoinPoolHierarchicalTestExecutorService.java:135)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)\n\tat org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.compute(ForkJoinPoolHierarchicalTestExecutorService.java:185)\n\tat java.base/java.util.concurrent.RecursiveAction.exec(RecursiveAction.java:194)\n\tat java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:295)\n\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)\n\tat java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)\n\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)\n\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "junit.platform.uniqueid",
+    "value" : "[engine:junit-jupiter]/[class:org.neonlabs.e2e.web3j.BalanceTest]/[method:shouldGetLatestBlockBalance()]"
+  }, {
+    "name" : "feature",
+    "value" : "Externally Owned Accounts"
+  }, {
+    "name" : "epic",
+    "value" : "web3j"
+  }, {
+    "name" : "story",
+    "value" : "Balance"
+  }, {
+    "name" : "host",
+    "value" : "fv-az269-36"
+  }, {
+    "name" : "thread",
+    "value" : "3661@fv-az269-36.ForkJoinPool-1-worker-3(17)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "org.neonlabs.e2e.web3j.BalanceTest"
+  }, {
+    "name" : "testClass",
+    "value" : "org.neonlabs.e2e.web3j.BalanceTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "shouldGetLatestBlockBalance"
+  }, {
+    "name" : "suite",
+    "value" : "org.neonlabs.e2e.web3j.BalanceTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 355,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 355
+      },
+      "items" : [ {
+        "uid" : "8e0f27bb94bc7a22",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/678//#testresult/8e0f27bb94bc7a22",
+        "status" : "broken",
+        "statusDetails" : "Expecting a stackmap frame at branch target 65\nException Details:\n  Location:\n    org/neonlabs/e2e/web3j/Connection.createConnection()Lorg/web3j/protocol/Web3j; @16: aload_1\n  Reason:\n    Expected stackmap frame at this location.\n  Bytecode:\n    0000000: 126d c000 6f4c b200 2e2a 2ab8 0034 3a04\n    0000010: 2b04 0454 b800 3a19 04b6 003e bb00 0759\n    0000020: b700 094d 2b05 0454 bb00 0a59 2cb6 000c\n    0000030: b700 10b8 0013 4e2b 0604 542d 3a06 a700\n    0000040: 143a 05b8 003a 1905 b600 4219 052b 0704\n    0000050: 54bf b800 3ab6 0045 1906 2b08 0454 b0  \n  Exception Handler Table:\n    bci [16, 65] => handler: 65\n",
+        "time" : {
+          "start" : 1641854501839,
+          "stop" : 1641854502039,
+          "duration" : 200
+        }
+      }, {
+        "uid" : "2e56b9441d635e67",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/676//#testresult/2e56b9441d635e67",
+        "status" : "broken",
+        "statusDetails" : "Expecting a stackmap frame at branch target 65\nException Details:\n  Location:\n    org/neonlabs/e2e/web3j/Connection.createConnection()Lorg/web3j/protocol/Web3j; @16: aload_1\n  Reason:\n    Expected stackmap frame at this location.\n  Bytecode:\n    0000000: 126d c000 6f4c b200 2e2a 2ab8 0034 3a04\n    0000010: 2b04 0454 b800 3a19 04b6 003e bb00 0759\n    0000020: b700 094d 2b05 0454 bb00 0a59 2cb6 000c\n    0000030: b700 10b8 0013 4e2b 0604 542d 3a06 a700\n    0000040: 143a 05b8 003a 1905 b600 4219 052b 0704\n    0000050: 54bf b800 3ab6 0045 1906 2b08 0454 b0  \n  Exception Handler Table:\n    bci [16, 65] => handler: 65\n",
+        "time" : {
+          "start" : 1641853559503,
+          "stop" : 1641853559591,
+          "duration" : 88
+        }
+      }, {
+        "uid" : "1bb3d33a4ecd6486",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/675//#testresult/1bb3d33a4ecd6486",
+        "status" : "broken",
+        "statusDetails" : "Expecting a stackmap frame at branch target 65\nException Details:\n  Location:\n    org/neonlabs/e2e/web3j/Connection.createConnection()Lorg/web3j/protocol/Web3j; @16: aload_1\n  Reason:\n    Expected stackmap frame at this location.\n  Bytecode:\n    0000000: 126d c000 6f4c b200 2e2a 2ab8 0034 3a04\n    0000010: 2b04 0454 b800 3a19 04b6 003e bb00 0759\n    0000020: b700 094d 2b05 0454 bb00 0a59 2cb6 000c\n    0000030: b700 10b8 0013 4e2b 0604 542d 3a06 a700\n    0000040: 143a 05b8 003a 1905 b600 4219 052b 0704\n    0000050: 54bf b800 3ab6 0045 1906 2b08 0454 b0  \n  Exception Handler Table:\n    bci [16, 65] => handler: 65\n",
+        "time" : {
+          "start" : 1641853555369,
+          "stop" : 1641853555505,
+          "duration" : 136
+        }
+      }, {
+        "uid" : "896132491b767587",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/674//#testresult/896132491b767587",
+        "status" : "broken",
+        "statusDetails" : "Expecting a stackmap frame at branch target 65\nException Details:\n  Location:\n    org/neonlabs/e2e/web3j/Connection.createConnection()Lorg/web3j/protocol/Web3j; @16: aload_1\n  Reason:\n    Expected stackmap frame at this location.\n  Bytecode:\n    0000000: 126d c000 6f4c b200 2e2a 2ab8 0034 3a04\n    0000010: 2b04 0454 b800 3a19 04b6 003e bb00 0759\n    0000020: b700 094d 2b05 0454 bb00 0a59 2cb6 000c\n    0000030: b700 10b8 0013 4e2b 0604 542d 3a06 a700\n    0000040: 143a 05b8 003a 1905 b600 4219 052b 0704\n    0000050: 54bf b800 3ab6 0045 1906 2b08 0454 b0  \n  Exception Handler Table:\n    bci [16, 65] => handler: 65\n",
+        "time" : {
+          "start" : 1641851984073,
+          "stop" : 1641851984180,
+          "duration" : 107
+        }
+      }, {
+        "uid" : "8d81867fafa0d1c8",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/672//#testresult/8d81867fafa0d1c8",
+        "status" : "broken",
+        "statusDetails" : "Expecting a stackmap frame at branch target 65\nException Details:\n  Location:\n    org/neonlabs/e2e/web3j/Connection.createConnection()Lorg/web3j/protocol/Web3j; @16: aload_1\n  Reason:\n    Expected stackmap frame at this location.\n  Bytecode:\n    0000000: 126d c000 6f4c b200 2e2a 2ab8 0034 3a04\n    0000010: 2b04 0454 b800 3a19 04b6 003e bb00 0759\n    0000020: b700 094d 2b05 0454 bb00 0a59 2cb6 000c\n    0000030: b700 10b8 0013 4e2b 0604 542d 3a06 a700\n    0000040: 143a 05b8 003a 1905 b600 4219 052b 0704\n    0000050: 54bf b800 3ab6 0045 1906 2b08 0454 b0  \n  Exception Handler Table:\n    bci [16, 65] => handler: 65\n",
+        "time" : {
+          "start" : 1641850999681,
+          "stop" : 1641850999774,
+          "duration" : 93
+        }
+      }, {
+        "uid" : "61577d12ac67f9a4",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/671//#testresult/61577d12ac67f9a4",
+        "status" : "broken",
+        "statusDetails" : "Expecting a stackmap frame at branch target 65\nException Details:\n  Location:\n    org/neonlabs/e2e/web3j/Connection.createConnection()Lorg/web3j/protocol/Web3j; @16: aload_1\n  Reason:\n    Expected stackmap frame at this location.\n  Bytecode:\n    0000000: 126d c000 6f4c b200 2e2a 2ab8 0034 3a04\n    0000010: 2b04 0454 b800 3a19 04b6 003e bb00 0759\n    0000020: b700 094d 2b05 0454 bb00 0a59 2cb6 000c\n    0000030: b700 10b8 0013 4e2b 0604 542d 3a06 a700\n    0000040: 143a 05b8 003a 1905 b600 4219 052b 0704\n    0000050: 54bf b800 3ab6 0045 1906 2b08 0454 b0  \n  Exception Handler Table:\n    bci [16, 65] => handler: 65\n",
+        "time" : {
+          "start" : 1641850986372,
+          "stop" : 1641850986470,
+          "duration" : 98
+        }
+      }, {
+        "uid" : "a0c44b4d7437d3ea",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/670//#testresult/a0c44b4d7437d3ea",
+        "status" : "broken",
+        "statusDetails" : "Expecting a stackmap frame at branch target 65\nException Details:\n  Location:\n    org/neonlabs/e2e/web3j/Connection.createConnection()Lorg/web3j/protocol/Web3j; @16: aload_1\n  Reason:\n    Expected stackmap frame at this location.\n  Bytecode:\n    0000000: 126d c000 6f4c b200 2e2a 2ab8 0034 3a04\n    0000010: 2b04 0454 b800 3a19 04b6 003e bb00 0759\n    0000020: b700 094d 2b05 0454 bb00 0a59 2cb6 000c\n    0000030: b700 10b8 0013 4e2b 0604 542d 3a06 a700\n    0000040: 143a 05b8 003a 1905 b600 4219 052b 0704\n    0000050: 54bf b800 3ab6 0045 1906 2b08 0454 b0  \n  Exception Handler Table:\n    bci [16, 65] => handler: 65\n",
+        "time" : {
+          "start" : 1641849298688,
+          "stop" : 1641849298818,
+          "duration" : 130
+        }
+      }, {
+        "uid" : "52dd820a60359f39",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/668//#testresult/52dd820a60359f39",
+        "status" : "broken",
+        "statusDetails" : "Expecting a stackmap frame at branch target 65\nException Details:\n  Location:\n    org/neonlabs/e2e/web3j/Connection.createConnection()Lorg/web3j/protocol/Web3j; @16: aload_1\n  Reason:\n    Expected stackmap frame at this location.\n  Bytecode:\n    0000000: 126d c000 6f4c b200 2e2a 2ab8 0034 3a04\n    0000010: 2b04 0454 b800 3a19 04b6 003e bb00 0759\n    0000020: b700 094d 2b05 0454 bb00 0a59 2cb6 000c\n    0000030: b700 10b8 0013 4e2b 0604 542d 3a06 a700\n    0000040: 143a 05b8 003a 1905 b600 4219 052b 0704\n    0000050: 54bf b800 3ab6 0045 1906 2b08 0454 b0  \n  Exception Handler Table:\n    bci [16, 65] => handler: 65\n",
+        "time" : {
+          "start" : 1641847877084,
+          "stop" : 1641847877187,
+          "duration" : 103
+        }
+      }, {
+        "uid" : "f9bef3af247d1812",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/667//#testresult/f9bef3af247d1812",
+        "status" : "broken",
+        "statusDetails" : "Expecting a stackmap frame at branch target 65\nException Details:\n  Location:\n    org/neonlabs/e2e/web3j/Connection.createConnection()Lorg/web3j/protocol/Web3j; @16: aload_1\n  Reason:\n    Expected stackmap frame at this location.\n  Bytecode:\n    0000000: 126d c000 6f4c b200 2e2a 2ab8 0034 3a04\n    0000010: 2b04 0454 b800 3a19 04b6 003e bb00 0759\n    0000020: b700 094d 2b05 0454 bb00 0a59 2cb6 000c\n    0000030: b700 10b8 0013 4e2b 0604 542d 3a06 a700\n    0000040: 143a 05b8 003a 1905 b600 4219 052b 0704\n    0000050: 54bf b800 3ab6 0045 1906 2b08 0454 b0  \n  Exception Handler Table:\n    bci [16, 65] => handler: 65\n",
+        "time" : {
+          "start" : 1641847816727,
+          "stop" : 1641847816853,
+          "duration" : 126
+        }
+      }, {
+        "uid" : "76ee576755a091ac",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/665//#testresult/76ee576755a091ac",
+        "status" : "broken",
+        "statusDetails" : "Expecting a stackmap frame at branch target 65\nException Details:\n  Location:\n    org/neonlabs/e2e/web3j/Connection.createConnection()Lorg/web3j/protocol/Web3j; @16: aload_1\n  Reason:\n    Expected stackmap frame at this location.\n  Bytecode:\n    0000000: 126d c000 6f4c b200 2e2a 2ab8 0034 3a04\n    0000010: 2b04 0454 b800 3a19 04b6 003e bb00 0759\n    0000020: b700 094d 2b05 0454 bb00 0a59 2cb6 000c\n    0000030: b700 10b8 0013 4e2b 0604 542d 3a06 a700\n    0000040: 143a 05b8 003a 1905 b600 4219 052b 0704\n    0000050: 54bf b800 3ab6 0045 1906 2b08 0454 b0  \n  Exception Handler Table:\n    bci [16, 65] => handler: 65\n",
+        "time" : {
+          "start" : 1641847180354,
+          "stop" : 1641847180437,
+          "duration" : 83
+        }
+      }, {
+        "uid" : "5085f2c354f85722",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/664//#testresult/5085f2c354f85722",
+        "status" : "broken",
+        "statusDetails" : "Expecting a stackmap frame at branch target 65\nException Details:\n  Location:\n    org/neonlabs/e2e/web3j/Connection.createConnection()Lorg/web3j/protocol/Web3j; @16: aload_1\n  Reason:\n    Expected stackmap frame at this location.\n  Bytecode:\n    0000000: 126d c000 6f4c b200 2e2a 2ab8 0034 3a04\n    0000010: 2b04 0454 b800 3a19 04b6 003e bb00 0759\n    0000020: b700 094d 2b05 0454 bb00 0a59 2cb6 000c\n    0000030: b700 10b8 0013 4e2b 0604 542d 3a06 a700\n    0000040: 143a 05b8 003a 1905 b600 4219 052b 0704\n    0000050: 54bf b800 3ab6 0045 1906 2b08 0454 b0  \n  Exception Handler Table:\n    bci [16, 65] => handler: 65\n",
+        "time" : {
+          "start" : 1641844881934,
+          "stop" : 1641844882020,
+          "duration" : 86
+        }
+      }, {
+        "uid" : "62e14d4f3f317a68",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/663//#testresult/62e14d4f3f317a68",
+        "status" : "broken",
+        "statusDetails" : "Expecting a stackmap frame at branch target 65\nException Details:\n  Location:\n    org/neonlabs/e2e/web3j/Connection.createConnection()Lorg/web3j/protocol/Web3j; @16: aload_1\n  Reason:\n    Expected stackmap frame at this location.\n  Bytecode:\n    0000000: 126d c000 6f4c b200 2e2a 2ab8 0034 3a04\n    0000010: 2b04 0454 b800 3a19 04b6 003e bb00 0759\n    0000020: b700 094d 2b05 0454 bb00 0a59 2cb6 000c\n    0000030: b700 10b8 0013 4e2b 0604 542d 3a06 a700\n    0000040: 143a 05b8 003a 1905 b600 4219 052b 0704\n    0000050: 54bf b800 3ab6 0045 1906 2b08 0454 b0  \n  Exception Handler Table:\n    bci [16, 65] => handler: 65\n",
+        "time" : {
+          "start" : 1641844796065,
+          "stop" : 1641844796165,
+          "duration" : 100
+        }
+      }, {
+        "uid" : "8bb9fd90054ea528",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/662//#testresult/8bb9fd90054ea528",
+        "status" : "broken",
+        "statusDetails" : "Expecting a stackmap frame at branch target 65\nException Details:\n  Location:\n    org/neonlabs/e2e/web3j/Connection.createConnection()Lorg/web3j/protocol/Web3j; @16: aload_1\n  Reason:\n    Expected stackmap frame at this location.\n  Bytecode:\n    0000000: 126d c000 6f4c b200 2e2a 2ab8 0034 3a04\n    0000010: 2b04 0454 b800 3a19 04b6 003e bb00 0759\n    0000020: b700 094d 2b05 0454 bb00 0a59 2cb6 000c\n    0000030: b700 10b8 0013 4e2b 0604 542d 3a06 a700\n    0000040: 143a 05b8 003a 1905 b600 4219 052b 0704\n    0000050: 54bf b800 3ab6 0045 1906 2b08 0454 b0  \n  Exception Handler Table:\n    bci [16, 65] => handler: 65\n",
+        "time" : {
+          "start" : 1641842410186,
+          "stop" : 1641842410282,
+          "duration" : 96
+        }
+      }, {
+        "uid" : "856bc771066be719",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/659//#testresult/856bc771066be719",
+        "status" : "broken",
+        "statusDetails" : "Expecting a stackmap frame at branch target 65\nException Details:\n  Location:\n    org/neonlabs/e2e/web3j/Connection.createConnection()Lorg/web3j/protocol/Web3j; @16: aload_1\n  Reason:\n    Expected stackmap frame at this location.\n  Bytecode:\n    0000000: 126d c000 6f4c b200 2e2a 2ab8 0034 3a04\n    0000010: 2b04 0454 b800 3a19 04b6 003e bb00 0759\n    0000020: b700 094d 2b05 0454 bb00 0a59 2cb6 000c\n    0000030: b700 10b8 0013 4e2b 0604 542d 3a06 a700\n    0000040: 143a 05b8 003a 1905 b600 4219 052b 0704\n    0000050: 54bf b800 3ab6 0045 1906 2b08 0454 b0  \n  Exception Handler Table:\n    bci [16, 65] => handler: 65\n",
+        "time" : {
+          "start" : 1641829757821,
+          "stop" : 1641829757922,
+          "duration" : 101
+        }
+      }, {
+        "uid" : "8a9122e607ff46cd",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/655//#testresult/8a9122e607ff46cd",
+        "status" : "broken",
+        "statusDetails" : "Expecting a stackmap frame at branch target 65\nException Details:\n  Location:\n    org/neonlabs/e2e/web3j/Connection.createConnection()Lorg/web3j/protocol/Web3j; @16: aload_1\n  Reason:\n    Expected stackmap frame at this location.\n  Bytecode:\n    0000000: 126d c000 6f4c b200 2e2a 2ab8 0034 3a04\n    0000010: 2b04 0454 b800 3a19 04b6 003e bb00 0759\n    0000020: b700 094d 2b05 0454 bb00 0a59 2cb6 000c\n    0000030: b700 10b8 0013 4e2b 0604 542d 3a06 a700\n    0000040: 143a 05b8 003a 1905 b600 4219 052b 0704\n    0000050: 54bf b800 3ab6 0045 1906 2b08 0454 b0  \n  Exception Handler Table:\n    bci [16, 65] => handler: 65\n",
+        "time" : {
+          "start" : 1641829667826,
+          "stop" : 1641829667921,
+          "duration" : 95
+        }
+      }, {
+        "uid" : "f531262e04feb27b",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/661//#testresult/f531262e04feb27b",
+        "status" : "broken",
+        "statusDetails" : "Expecting a stackmap frame at branch target 65\nException Details:\n  Location:\n    org/neonlabs/e2e/web3j/Connection.createConnection()Lorg/web3j/protocol/Web3j; @16: aload_1\n  Reason:\n    Expected stackmap frame at this location.\n  Bytecode:\n    0000000: 126d c000 6f4c b200 2e2a 2ab8 0034 3a04\n    0000010: 2b04 0454 b800 3a19 04b6 003e bb00 0759\n    0000020: b700 094d 2b05 0454 bb00 0a59 2cb6 000c\n    0000030: b700 10b8 0013 4e2b 0604 542d 3a06 a700\n    0000040: 143a 05b8 003a 1905 b600 4219 052b 0704\n    0000050: 54bf b800 3ab6 0045 1906 2b08 0454 b0  \n  Exception Handler Table:\n    bci [16, 65] => handler: 65\n",
+        "time" : {
+          "start" : 1641829885501,
+          "stop" : 1641829885563,
+          "duration" : 62
+        }
+      }, {
+        "uid" : "b7b14a40f6a0e112",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/660//#testresult/b7b14a40f6a0e112",
+        "status" : "broken",
+        "statusDetails" : "Expecting a stackmap frame at branch target 65\nException Details:\n  Location:\n    org/neonlabs/e2e/web3j/Connection.createConnection()Lorg/web3j/protocol/Web3j; @16: aload_1\n  Reason:\n    Expected stackmap frame at this location.\n  Bytecode:\n    0000000: 126d c000 6f4c b200 2e2a 2ab8 0034 3a04\n    0000010: 2b04 0454 b800 3a19 04b6 003e bb00 0759\n    0000020: b700 094d 2b05 0454 bb00 0a59 2cb6 000c\n    0000030: b700 10b8 0013 4e2b 0604 542d 3a06 a700\n    0000040: 143a 05b8 003a 1905 b600 4219 052b 0704\n    0000050: 54bf b800 3ab6 0045 1906 2b08 0454 b0  \n  Exception Handler Table:\n    bci [16, 65] => handler: 65\n",
+        "time" : {
+          "start" : 1641829765987,
+          "stop" : 1641829766102,
+          "duration" : 115
+        }
+      }, {
+        "uid" : "817db3a708031dac",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/653//#testresult/817db3a708031dac",
+        "status" : "broken",
+        "statusDetails" : "Expecting a stackmap frame at branch target 65\nException Details:\n  Location:\n    org/neonlabs/e2e/web3j/Connection.createConnection()Lorg/web3j/protocol/Web3j; @16: aload_1\n  Reason:\n    Expected stackmap frame at this location.\n  Bytecode:\n    0000000: 126d c000 6f4c b200 2e2a 2ab8 0034 3a04\n    0000010: 2b04 0454 b800 3a19 04b6 003e bb00 0759\n    0000020: b700 094d 2b05 0454 bb00 0a59 2cb6 000c\n    0000030: b700 10b8 0013 4e2b 0604 542d 3a06 a700\n    0000040: 143a 05b8 003a 1905 b600 4219 052b 0704\n    0000050: 54bf b800 3ab6 0045 1906 2b08 0454 b0  \n  Exception Handler Table:\n    bci [16, 65] => handler: 65\n",
+        "time" : {
+          "start" : 1641829612536,
+          "stop" : 1641829612631,
+          "duration" : 95
+        }
+      }, {
+        "uid" : "4bd23569e13c3633",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/652//#testresult/4bd23569e13c3633",
+        "status" : "broken",
+        "statusDetails" : "Expecting a stackmap frame at branch target 65\nException Details:\n  Location:\n    org/neonlabs/e2e/web3j/Connection.createConnection()Lorg/web3j/protocol/Web3j; @16: aload_1\n  Reason:\n    Expected stackmap frame at this location.\n  Bytecode:\n    0000000: 126d c000 6f4c b200 2e2a 2ab8 0034 3a04\n    0000010: 2b04 0454 b800 3a19 04b6 003e bb00 0759\n    0000020: b700 094d 2b05 0454 bb00 0a59 2cb6 000c\n    0000030: b700 10b8 0013 4e2b 0604 542d 3a06 a700\n    0000040: 143a 05b8 003a 1905 b600 4219 052b 0704\n    0000050: 54bf b800 3ab6 0045 1906 2b08 0454 b0  \n  Exception Handler Table:\n    bci [16, 65] => handler: 65\n",
+        "time" : {
+          "start" : 1641758019863,
+          "stop" : 1641758019959,
+          "duration" : 96
+        }
+      }, {
+        "uid" : "1b09bcd9e9720c8b",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/649//#testresult/1b09bcd9e9720c8b",
+        "status" : "broken",
+        "statusDetails" : "Expecting a stackmap frame at branch target 65\nException Details:\n  Location:\n    org/neonlabs/e2e/web3j/Connection.createConnection()Lorg/web3j/protocol/Web3j; @16: aload_1\n  Reason:\n    Expected stackmap frame at this location.\n  Bytecode:\n    0000000: 126d c000 6f4c b200 2e2a 2ab8 0034 3a04\n    0000010: 2b04 0454 b800 3a19 04b6 003e bb00 0759\n    0000020: b700 094d 2b05 0454 bb00 0a59 2cb6 000c\n    0000030: b700 10b8 0013 4e2b 0604 542d 3a06 a700\n    0000040: 143a 05b8 003a 1905 b600 4219 052b 0704\n    0000050: 54bf b800 3ab6 0045 1906 2b08 0454 b0  \n  Exception Handler Table:\n    bci [16, 65] => handler: 65\n",
+        "time" : {
+          "start" : 1641737150430,
+          "stop" : 1641737150545,
+          "duration" : 115
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "517b14339e52f17.json",
+  "parameterValues" : [ ]
+}
