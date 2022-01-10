@@ -41,7 +41,8 @@ jobs:
           python-version: 3.8
           cache: 'pipenv'
           # cache-dependency-path: Pipfile.lock
-      - run: pipenv install
+      # - run: pipenv install
+      - run: pipenv sync
       # - name: Install dependencies
       #   run: |
       #     # python -m pip install --upgrade pip

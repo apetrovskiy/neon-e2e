@@ -1,6 +1,7 @@
 namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
 {
   using System;
+  using Allure.Xunit;
   using dotenv.net.Utilities;
   using Nethereum.Web3;
 
@@ -8,20 +9,18 @@ namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
   {
     public static Web3 Connect()
     {
-      // new Config();
-      // TODO: improve it
-      Config.Init();
+      return Steps.Step("Loading config", () => {
+        Config.Init();
 
-      // TODO: logging
-      Console.WriteLine("===================");
-      // Console.WriteLine(EnvReader.GetStringValue("PROXY_URL"));
-      Console.WriteLine(Config.ProxyUrl);
+        // TODO: logging
+        Console.WriteLine("===================");
+        Console.WriteLine(Config.ProxyUrl);
 
-      // var web3 = new Web3(EnvReader.GetStringValue("PROXY_URL"));
-      var web3 = new Web3(Config.ProxyUrl);
-      // TODO: logging
-      Console.WriteLine(web3);
-      return web3;
+        var web3 = new Web3(Config.ProxyUrl);
+        // TODO: logging
+        Console.WriteLine(web3);
+        return web3;
+      });
     }
   }
 }

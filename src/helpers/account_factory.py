@@ -5,7 +5,7 @@ from src.helpers.faucet.faucet_requester import request_faucet
 
 
 class AccountFactory():
-    @allure.step("creating an account")
+    @allure.step("creating an account with id")
     async def create_with_specific_id(self, id: str, amount: int) -> Account:
         url = config.PROXY_URL
         w3 = Web3(HTTPProvider(url))
