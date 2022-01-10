@@ -1,6 +1,7 @@
 namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
 {
   using System;
+  using Allure.Xunit;
   using Allure.Xunit.Attributes;
   using NeonEndToEnd.org.neonlabs.e2e.nethereum;
   using Nethereum.RPC.Eth;
@@ -17,7 +18,9 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
     public void ShouldConnect()
     {
       var web3 = Connection.Connect();
-      Assert.NotNull(web3);
+      Steps.Step("Testing the result against null", () => {
+        Assert.NotNull(web3);
+      });
     }
     [AllureStory(new string[] { StoryConnection })]
     [AllureXunit(DisplayName = "Subprojects are filled in")]

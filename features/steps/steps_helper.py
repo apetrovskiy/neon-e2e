@@ -5,11 +5,12 @@ from src.helpers.web3.web3_helper import get_web3
 w3 = get_web3()
 
 TEST_DATA = "test_data"
+ASYNC_CONTEXT = "async_context1"
 
 
 @allure.step("getting balance")
 async def get_balance(address: str) -> int:
-    balance = await w3.eth.get_balance(address)
+    balance = w3.eth.get_balance(address)
     return balance
 
 
