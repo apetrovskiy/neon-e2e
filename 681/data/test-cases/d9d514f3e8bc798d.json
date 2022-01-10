@@ -1,0 +1,199 @@
+{
+  "uid" : "d9d514f3e8bc798d",
+  "name" : "Subsequest Faucet Request",
+  "fullName" : "/home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth/faucet_test.go:TestSubsequestFaucetRequest",
+  "time" : {
+    "start" : 1641856161502,
+    "stop" : 1641856161504,
+    "duration" : 2
+  },
+  "description" : "Subsequent requests to faucet",
+  "descriptionHtml" : "<p>Subsequent requests to faucet</p>\n",
+  "status" : "broken",
+  "statusMessage" : "runtime error: invalid memory address or nil pointer dereference",
+  "statusTrace" : "goroutine 22 [running]:\nruntime/debug.Stack()\n\t/opt/hostedtoolcache/go/1.17.5/x64/src/runtime/debug/stack.go:24 +0x65\npanic({0x74eb00, 0xa0ce50})\n\t/opt/hostedtoolcache/go/1.17.5/x64/src/runtime/panic.go:1038 +0x215\npanic({0x74eb00, 0xa0ce50})\n\t/opt/hostedtoolcache/go/1.17.5/x64/src/runtime/panic.go:1038 +0x215\npanic({0x74eb00, 0xa0ce50})\n\t/opt/hostedtoolcache/go/1.17.5/x64/src/runtime/panic.go:1038 +0x215\ngithub.com/neonlabsorg/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth.requestFaucet.func1()\n\t/home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth/faucet.go:37 +0x150\ngithub.com/jtolds/gls.(*ContextManager).SetValues.func1(0x0)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/context.go:97 +0x476\ngithub.com/jtolds/gls.EnsureGoroutineId(0xc00032cbd0)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/gid.go:19 +0xfb\ngithub.com/jtolds/gls.(*ContextManager).SetValues(0xc000026520, 0xc00032cb70, 0xc00039a680)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/context.go:63 +0x16a\ngithub.com/neonlabsorg/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth.requestFaucet({0xc000293620, 0x2a}, 0x0)\n\t/home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth/faucet.go:21 +0x1da\ngithub.com/neonlabsorg/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth.createWallet.func1()\n\t/home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth/wallet.go:53 +0x2dc\ngithub.com/jtolds/gls.(*ContextManager).SetValues.func1(0x0)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/context.go:97 +0x476\ngithub.com/jtolds/gls.EnsureGoroutineId(0xc00032c8d0)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/gid.go:19 +0xfb\ngithub.com/jtolds/gls.(*ContextManager).SetValues(0xc000026520, 0xc00032c870, 0xc000384090)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/context.go:63 +0x16a\ngithub.com/neonlabsorg/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth.createWallet({0x0, 0xc0002811e0, 0x0})\n\t/home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth/wallet.go:34 +0xfc\ngithub.com/neonlabsorg/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth.TestSubsequestFaucetRequest.func1()\n\t/home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth/faucet_test.go:60 +0x225\ngithub.com/jtolds/gls.(*ContextManager).SetValues.func1(0x0)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/context.go:97 +0x476\ngithub.com/jtolds/gls.EnsureGoroutineId.func1()\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/gid.go:24 +0x22\ngithub.com/jtolds/gls._m(0x76bba0, 0xc000049d01)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/stack_tags.go:108 +0x22\ngithub.com/jtolds/gls.github_com_jtolds_gls_markS(0xc00032c360, 0x0)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/stack_tags.go:56 +0x19\ngithub.com/jtolds/gls.addStackTag(...)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/stack_tags.go:49\ngithub.com/jtolds/gls.EnsureGoroutineId(0xc00032c360)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/gid.go:24 +0xd8\ngithub.com/jtolds/gls.(*ContextManager).SetValues(0xc000026520, 0xc00032c2d0, 0xc000199680)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/context.go:63 +0x16a\ngithub.com/neonlabsorg/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth.TestSubsequestFaucetRequest(0xc0002811e0)\n\t/home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth/faucet_test.go:48 +0x1cb\ntesting.tRunner(0xc0002811e0, 0x7c38e0)\n\t/opt/hostedtoolcache/go/1.17.5/x64/src/testing/testing.go:1259 +0x102\ncreated by testing.(*T).Run\n\t/opt/hostedtoolcache/go/1.17.5/x64/src/testing/testing.go:1306 +0x35a\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "Subsequent requests to faucet",
+    "status" : "broken",
+    "statusMessage" : "runtime error: invalid memory address or nil pointer dereference",
+    "statusTrace" : "goroutine 22 [running]:\nruntime/debug.Stack()\n\t/opt/hostedtoolcache/go/1.17.5/x64/src/runtime/debug/stack.go:24 +0x65\npanic({0x74eb00, 0xa0ce50})\n\t/opt/hostedtoolcache/go/1.17.5/x64/src/runtime/panic.go:1038 +0x215\npanic({0x74eb00, 0xa0ce50})\n\t/opt/hostedtoolcache/go/1.17.5/x64/src/runtime/panic.go:1038 +0x215\npanic({0x74eb00, 0xa0ce50})\n\t/opt/hostedtoolcache/go/1.17.5/x64/src/runtime/panic.go:1038 +0x215\ngithub.com/neonlabsorg/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth.requestFaucet.func1()\n\t/home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth/faucet.go:37 +0x150\ngithub.com/jtolds/gls.(*ContextManager).SetValues.func1(0x0)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/context.go:97 +0x476\ngithub.com/jtolds/gls.EnsureGoroutineId(0xc00032cbd0)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/gid.go:19 +0xfb\ngithub.com/jtolds/gls.(*ContextManager).SetValues(0xc000026520, 0xc00032cb70, 0xc00039a680)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/context.go:63 +0x16a\ngithub.com/neonlabsorg/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth.requestFaucet({0xc000293620, 0x2a}, 0x0)\n\t/home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth/faucet.go:21 +0x1da\ngithub.com/neonlabsorg/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth.createWallet.func1()\n\t/home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth/wallet.go:53 +0x2dc\ngithub.com/jtolds/gls.(*ContextManager).SetValues.func1(0x0)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/context.go:97 +0x476\ngithub.com/jtolds/gls.EnsureGoroutineId(0xc00032c8d0)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/gid.go:19 +0xfb\ngithub.com/jtolds/gls.(*ContextManager).SetValues(0xc000026520, 0xc00032c870, 0xc000384090)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/context.go:63 +0x16a\ngithub.com/neonlabsorg/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth.createWallet({0x0, 0xc0002811e0, 0x0})\n\t/home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth/wallet.go:34 +0xfc\ngithub.com/neonlabsorg/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth.TestSubsequestFaucetRequest.func1()\n\t/home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth/faucet_test.go:60 +0x225\ngithub.com/jtolds/gls.(*ContextManager).SetValues.func1(0x0)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/context.go:97 +0x476\ngithub.com/jtolds/gls.EnsureGoroutineId.func1()\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/gid.go:24 +0x22\ngithub.com/jtolds/gls._m(0x76bba0, 0xc000049d01)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/stack_tags.go:108 +0x22\ngithub.com/jtolds/gls.github_com_jtolds_gls_markS(0xc00032c360, 0x0)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/stack_tags.go:56 +0x19\ngithub.com/jtolds/gls.addStackTag(...)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/stack_tags.go:49\ngithub.com/jtolds/gls.EnsureGoroutineId(0xc00032c360)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/gid.go:24 +0xd8\ngithub.com/jtolds/gls.(*ContextManager).SetValues(0xc000026520, 0xc00032c2d0, 0xc000199680)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/context.go:63 +0x16a\ngithub.com/neonlabsorg/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth.TestSubsequestFaucetRequest(0xc0002811e0)\n\t/home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth/faucet_test.go:48 +0x1cb\ntesting.tRunner(0xc0002811e0, 0x7c38e0)\n\t/opt/hostedtoolcache/go/1.17.5/x64/src/testing/testing.go:1259 +0x102\ncreated by testing.(*T).Run\n\t/opt/hostedtoolcache/go/1.17.5/x64/src/testing/testing.go:1306 +0x35a\n",
+    "steps" : [ {
+      "name" : "Loading the .env file",
+      "time" : {
+        "start" : 1641856161503,
+        "stop" : 1641856161503,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Connecting to network http://proxy.night.stand.neontest.xyz/solana",
+      "time" : {
+        "start" : 1641856161503,
+        "stop" : 1641856161503,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Loading the .env file",
+        "time" : {
+          "start" : 1641856161503,
+          "stop" : 1641856161503,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Loading the .env file",
+      "time" : {
+        "start" : 1641856161503,
+        "stop" : 1641856161503,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Creating a wallet",
+      "time" : {
+        "start" : 1641856161503,
+        "stop" : 1641856161504,
+        "duration" : 1
+      },
+      "status" : "broken",
+      "steps" : [ {
+        "name" : "Loading the .env file",
+        "time" : {
+          "start" : 1641856161503,
+          "stop" : 1641856161503,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Loading the .env file",
+        "time" : {
+          "start" : 1641856161503,
+          "stop" : 1641856161503,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Requesting faucet http://proxy.night.stand.neontest.xyz/request_eth_token for 0 to address 0x15b4dbFB817e2870Da4d95d3be68b129FCAc1759",
+        "time" : {
+          "start" : 1641856161503,
+          "stop" : 1641856161503,
+          "duration" : 0
+        },
+        "status" : "failed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 8,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "home.runner.work.neon-e2e.neon-e2e.src.main.java.org.neonlabs.e2e.go-eth.faucet_test"
+  }, {
+    "name" : "testClass",
+    "value" : "home.runner.work.neon-e2e.neon-e2e.src.main.java.org.neonlabs.e2e.go-eth.faucet_test"
+  }, {
+    "name" : "testMethod",
+    "value" : "TestSubsequestFaucetRequest"
+  }, {
+    "name" : "host",
+    "value" : "fv-az193-83"
+  }, {
+    "name" : "language",
+    "value" : "golang"
+  }, {
+    "name" : "epic",
+    "value" : "go-ethereum"
+  }, {
+    "name" : "feature",
+    "value" : "Externally Owned Accounts"
+  }, {
+    "name" : "story",
+    "value" : "Faucet"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "d9d514f3e8bc798d.json",
+  "parameterValues" : [ ]
+}
