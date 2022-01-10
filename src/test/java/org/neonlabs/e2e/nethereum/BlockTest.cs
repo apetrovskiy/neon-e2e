@@ -1,6 +1,7 @@
 namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
 {
   using System;
+  using Allure.Xunit;
   using Allure.Xunit.Attributes;
   using NeonEndToEnd.org.neonlabs.e2e.nethereum;
   using Nethereum.RPC.Eth;
@@ -17,8 +18,10 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
     [AllureXunit(DisplayName = "Latest block number test")]
     public async void ShouldGetLatestBlockNumber()
     {
-      var latestBlockNumber = await Block.GetLatestBlockNumber();
-      Assert.NotNull(latestBlockNumber);
+      await Steps.Step("Getting the latest block number", async () => { 
+        var latestBlockNumber = await Block.GetLatestBlockNumber();
+        Assert.NotNull(latestBlockNumber);
+      });
     }
     [AllureSubSuite(StoryQueryBlock)]
     [AllureStory(new string[] { StoryQueryBlock })]

@@ -1,18 +1,16 @@
-from requests import post
+import httpx
 from config.config import FAUCET_URL, USE_FAUCET
-from src.helpers.faucet.faucet_request import FaucetRequest
 
 
 async def request_faucet(wallet: str, amount: int):
     if not USE_FAUCET or FAUCET_URL == '':
         print("Skipping faucet request")
         return
-    data: FaucetRequest = FaucetRequest(amount=amount, wallet=wallet)
-    print(FAUCET_URL)
-    print(data)
+    data = {'amount': int(amount), 'wallet': wallet}
     try:
-        response = post(FAUCET_URL, data)
+        async with httpx.AsyncClient() as client:
+            response = await client.post(FAUCET_URL, json=data, timeout=20)
+            assert response.status_code == 200, "The response status is not OK"
     except Exception as e:
-        print(f"Failed to obtain token from faucet {FAUCET_URL}")
         print(e)
-    assert response.status_code == 200
+        print(f"Failed to obtain tokens from faucet {FAUCET_URL}")
