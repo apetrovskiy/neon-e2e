@@ -20,12 +20,12 @@ func TestGetLatestBalance(t *testing.T) {
 		allure.Description("Get the latest block balance"),
 		allure.Action(func() {
 			client, err := connect()
-			assert.Nil(t, err, fmt.Sprintf(FaileToConnectTo, GetConfig().ProxyURL, err))
+			assert.Nil(t, err, fmt.Sprintf(FailedToConnectTo, GetConfig().ProxyURL, err))
 			if err != nil {
-				t.Errorf(FaileToConnectTo, GetConfig().ProxyURL, err)
+				t.Errorf(FailedToConnectTo, GetConfig().ProxyURL, err)
 			}
 
-			account := createWallet()
+			account := createWallet(GetConfig().RequestAmount)
 			assert.NotEqual(t, 0, len(account.Address.Hash()), FailedToCreateWallet)
 			if len(account.Address) == 0 {
 				t.Error(FailedToCreateWallet)
@@ -33,7 +33,11 @@ func TestGetLatestBalance(t *testing.T) {
 
 			balance := getLastBlockBalance(client, account.Address.Hex())
 			log.Println(balance)
-			assert.Equal(t, GetConfig().InitialBalance, balance, InitialBalanceIsWrong)
+
+			expectedBalance := ToWei(GetConfig().RequestAmount, 18)
+			allure.Step(allure.Description("Checking that the last block balance "+balance.String()+" equals "+expectedBalance.String()), allure.Action(func() {
+				assert.Equal(t, expectedBalance, balance, InitialBalanceIsWrong)
+			}))
 		}))
 }
 func TestGetSpecificBlockBalance(t *testing.T) {
@@ -44,12 +48,12 @@ func TestGetSpecificBlockBalance(t *testing.T) {
 		allure.Description("Get a specific block balance"),
 		allure.Action(func() {
 			client, err := connect()
-			assert.Nil(t, err, fmt.Sprintf(FaileToConnectTo, GetConfig().ProxyURL, err))
+			assert.Nil(t, err, fmt.Sprintf(FailedToConnectTo, GetConfig().ProxyURL, err))
 			if err != nil {
-				t.Errorf(FaileToConnectTo, GetConfig().ProxyURL, err)
+				t.Errorf(FailedToConnectTo, GetConfig().ProxyURL, err)
 			}
 
-			account := createWallet()
+			account := createWallet(GetConfig().RequestAmount)
 			assert.NotEqual(t, 0, len(account.Address.Hash()), FailedToCreateWallet)
 			if len(account.Address) == 0 {
 				t.Error(FailedToCreateWallet)
@@ -58,7 +62,11 @@ func TestGetSpecificBlockBalance(t *testing.T) {
 			blockNumber := big.NewInt(1001)
 			balance := getSpecificBlockBalance(client, account.Address.Hex(), blockNumber)
 			log.Println(balance)
-			assert.Equal(t, GetConfig().InitialBalance, balance, InitialBalanceIsWrong)
+
+			expectedBalance := ToWei(GetConfig().RequestAmount, 18)
+			allure.Step(allure.Description("Checking that the specific block balance "+balance.String()+" equals "+expectedBalance.String()), allure.Action(func() {
+				assert.Equal(t, expectedBalance, balance, ResultingBalanceIsWrong)
+			}))
 		}))
 }
 func TestGetPendingBalance(t *testing.T) {
@@ -69,12 +77,12 @@ func TestGetPendingBalance(t *testing.T) {
 		allure.Description("Get pending balance"),
 		allure.Action(func() {
 			client, err := connect()
-			assert.Nil(t, err, fmt.Sprintf(FaileToConnectTo, GetConfig().ProxyURL, err))
+			assert.Nil(t, err, fmt.Sprintf(FailedToConnectTo, GetConfig().ProxyURL, err))
 			if err != nil {
-				t.Errorf(FaileToConnectTo, GetConfig().ProxyURL, err)
+				t.Errorf(FailedToConnectTo, GetConfig().ProxyURL, err)
 			}
 
-			account := createWallet()
+			account := createWallet(GetConfig().RequestAmount)
 			assert.NotEqual(t, 0, len(account.Address.Hash()), FailedToCreateWallet)
 			if len(account.Address) == 0 {
 				t.Error(FailedToCreateWallet)
@@ -82,6 +90,10 @@ func TestGetPendingBalance(t *testing.T) {
 
 			balance := getPendingBalance(client, account.Address.Hex())
 			log.Println(balance)
-			assert.Equal(t, GetConfig().InitialBalance, balance, InitialBalanceIsWrong)
+
+			expectedBalance := ToWei(GetConfig().RequestAmount, 18)
+			allure.Step(allure.Description("Checking that the pending balance "+balance.String()+" equals "+expectedBalance.String()), allure.Action(func() {
+				assert.Equal(t, expectedBalance, balance, ResultingBalanceIsWrong)
+			}))
 		}))
 }

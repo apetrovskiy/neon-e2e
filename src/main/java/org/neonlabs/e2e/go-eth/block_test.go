@@ -4,7 +4,6 @@ import (
 	"context"
 	"fmt"
 	"github.com/dailymotion/allure-go"
-	log "github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
 	"math/big"
 	"testing"
@@ -20,12 +19,10 @@ func TestQueryBlockHeader(t *testing.T) {
 		allure.Action(func() {
 			// TODO: move to the before block
 			client, err := connect()
-			assert.Nil(t, err, fmt.Sprintf(FaileToConnectTo, GetConfig().ProxyURL, err))
+			assert.Nil(t, err, fmt.Sprintf(FailedToConnectTo, GetConfig().ProxyURL, err))
 			header, err := client.HeaderByNumber(context.Background(), nil)
 			assert.Nil(t, err, "Failed to get block header")
-			if err != nil {
-				log.Fatal(err)
-			}
+			ReportErrorInAllure(err)
 			assert.Greater(t, 0, header.Number, "Block header number greater than 0")
 		}))
 }
@@ -39,13 +36,11 @@ func TestQueryFullBlock(t *testing.T) {
 		allure.Action(func() {
 			// TODO: move to the before block
 			client, err := connect()
-			assert.Nil(t, err, fmt.Sprintf(FaileToConnectTo, GetConfig().ProxyURL, err))
+			assert.Nil(t, err, fmt.Sprintf(FailedToConnectTo, GetConfig().ProxyURL, err))
 			blockNumber := big.NewInt(5671744)
 			block, err := client.BlockByNumber(context.Background(), blockNumber)
 			assert.Nil(t, err, "Failed to get full block")
-			if err != nil {
-				log.Fatal(err)
-			}
+			ReportErrorInAllure(err)
 			assert.Greater(t, 0, block.Number().Uint64())
 			// assert.Greater(t, 0, block.Time().Uint64())
 			assert.Greater(t, 0, block.Difficulty().Uint64())

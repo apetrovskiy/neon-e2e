@@ -2,7 +2,6 @@ package go_eth
 
 import (
 	"fmt"
-	"math/big"
 
 	log "github.com/sirupsen/logrus"
 
@@ -22,41 +21,55 @@ func TestTransferEther(t *testing.T) {
 		allure.Description("Transfer Ether"),
 		allure.Action(func() {
 			client, err := connect()
-			assert.Nil(t, err, fmt.Sprintf(FaileToConnectTo, GetConfig().ProxyURL, err))
+			assert.Nil(t, err, fmt.Sprintf(FailedToConnectTo, GetConfig().ProxyURL, err))
 			if err != nil {
-				t.Errorf(FaileToConnectTo, GetConfig().ProxyURL, err)
+				t.Errorf(FailedToConnectTo, GetConfig().ProxyURL, err)
 			}
 
-			senderAccount := createWallet()
-			assert.NotEqual(t, 0, len(senderAccount.Address.Hash()), FailedToCreateWallet)
-			if len(senderAccount.Address) == 0 {
-				t.Error(FailedToCreateWallet)
-			}
+			initialAmount := 10
+			transferAmount := "1000000000000000000"
+			senderAccount := createWallet(initialAmount)
+			allure.Step(allure.Description("Checking that sender's wallet is created"), allure.Action(func() {
+				assert.NotEqual(t, 0, len(senderAccount.Address.Hash()), FailedToCreateWallet)
+				if len(senderAccount.Address) == 0 {
+					t.Error(FailedToCreateWallet)
+				}
+			}))
 
 			senderBalance := getLastBlockBalance(client, senderAccount.Address.Hex())
-			log.Println(senderBalance)
-			assert.Equal(t, GetConfig().InitialBalance, senderBalance, "Sender's initial balance is wrong")
+			allure.Step(allure.Description("Checking sender's initial balance"), allure.Action(func() {
+				log.Println(senderBalance)
+				assert.Equal(t, ToWei(initialAmount, 18), senderBalance, SenderInitialBalanceIsWrong)
+			}))
 
-			recipientAccount := createWallet()
-			assert.NotEqual(t, 0, len(recipientAccount.Address.Hash()), FailedToCreateWallet)
-			if len(recipientAccount.Address) == 0 {
-				t.Error(FailedToCreateWallet)
-			}
+			recipientAccount := createWallet(initialAmount)
+			allure.Step(allure.Description("Checking that recipient's wallet is created"), allure.Action(func() {
+				assert.NotEqual(t, 0, len(recipientAccount.Address.Hash()), FailedToCreateWallet)
+				if len(recipientAccount.Address) == 0 {
+					t.Error(FailedToCreateWallet)
+				}
+			}))
 
 			recipientBalance := getLastBlockBalance(client, recipientAccount.Address.Hex())
-			log.Println(recipientBalance)
-			assert.Equal(t, GetConfig().InitialBalance, recipientBalance, "Recipient's initial balance is wrong")
+			allure.Step(allure.Description("Checking recipient's initial balance"), allure.Action(func() {
+				log.Println(recipientBalance)
+				assert.Equal(t, ToWei(initialAmount, 18), recipientBalance, RecipientInitialBalanceIsWrong)
+			}))
 
-			transferEther(client, *senderAccount, *recipientAccount, "10000000000000000000")
+			transferEther(client, *senderAccount, *recipientAccount, transferAmount)
 
 			senderBalance = getLastBlockBalance(client, senderAccount.Address.Hex())
-			log.Println(senderBalance)
-			expectedSenderBalance, _ := new(big.Int).SetString("90000000000000000000", 0)
-			assert.Equal(t, expectedSenderBalance, senderBalance, "Sender's initial balance is wrong")
+			allure.Step(allure.Description("Checking sender's resulting balance"), allure.Action(func() {
+				log.Println(senderBalance)
+				expectedSenderBalance := ToWei(initialAmount-1, 18)
+				assert.Equal(t, expectedSenderBalance, senderBalance, SenderResultingBalanceIsWrong)
+			}))
 
 			recipientBalance = getLastBlockBalance(client, recipientAccount.Address.Hex())
-			log.Println(recipientBalance)
-			expectedRecipientBalance, _ := new(big.Int).SetString("110000000000000000000", 0)
-			assert.Equal(t, expectedRecipientBalance, recipientBalance, "Recipient's initial balance is wrong")
+			allure.Step(allure.Description("Checking recipient's resulting balance"), allure.Action(func() {
+				log.Println(recipientBalance)
+				expectedRecipientBalance := ToWei(initialAmount+1, 18)
+				assert.Equal(t, expectedRecipientBalance, recipientBalance, RecipientResultingBalanceIsWrong)
+			}))
 		}))
 }

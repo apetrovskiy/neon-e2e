@@ -17,4 +17,5 @@ const (
 	StoryQueryBlock                = "Query block"
 	StoryTransfer                  = "Transfer"
 	StoryWallet                    = "Wallet"
+	StoryFaucet                    = "Faucet"
 )
