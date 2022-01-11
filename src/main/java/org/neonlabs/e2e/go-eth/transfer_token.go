@@ -53,11 +53,7 @@ func transferToken(client *ethclient.Client, senderAccount Account, recipientAcc
 
 	value := big.NewInt(1000000000000000000) // in wei (1 eth)
 	// gasPrice, err := client.SuggestGasPrice(context.Background())
-	// if err != nil {
-	// 	log.Println("=================================================================== 02 e")
-	//   log.Println(err)
-	// 	log.Fatal(err)
-	// }
+	// ReportErrorInAllure(err)
 	gasPrice := big.NewInt(21000)
 
 	/*
@@ -66,26 +62,14 @@ func transferToken(client *ethclient.Client, senderAccount Account, recipientAcc
 		tx := types.NewTransaction(nonce, toAddress, value, gasLimit, gasPrice, data)
 
 		// chainID, err := client.NetworkID(context.Background())
-		// if err != nil {
-		// 	log.Println("=================================================================== 03 e")
-		//   log.Println(err)
-		// 	log.Fatal(err)
-		// }
+		// ReportErrorInAllure(err)
 		chainID := big.NewInt(111)
 
 		signedTx, err := types.SignTx(tx, types.NewEIP155Signer(chainID), senderAccount.PrivateKey)
-		if err != nil {
-			log.Println("=================================================================== 04 e")
-			log.Println(err)
-			log.Fatal(err)
-		}
+		ReportErrorInAllure(err)
 
 		err = client.SendTransaction(context.Background(), signedTx)
-		if err != nil {
-			log.Println("=================================================================== 05 e")
-			log.Println(err)
-			log.Fatal(err)
-		}
+		ReportErrorInAllure(err)
 
 		log.Printf("tx sent: %s", signedTx.Hash().Hex())
 	*/
@@ -121,9 +105,7 @@ func transferToken(client *ethclient.Client, senderAccount Account, recipientAcc
 			To:   &tokenAddress,
 			Data: data,
 		})
-		if err != nil {
-			log.Fatal(err)
-		}
+		ReportErrorInAllure(err)
 		log.Println(gasLimit) // 23256
 	*/
 	gasLimit := estimateGasLimit(client, data, tokenAddress)
@@ -132,25 +114,19 @@ func transferToken(client *ethclient.Client, senderAccount Account, recipientAcc
 
 	/*
 		chainID, err := client.NetworkID(context.Background())
-		if err != nil {
-			log.Fatal(err)
-		}
+		ReportErrorInAllure(err)
 	*/
 	chainID := getChainId(client)
 
 	/*
 		signedTx, err := types.SignTx(tx, types.NewEIP155Signer(chainID), senderAccount.PrivateKey)
-		if err != nil {
-			log.Fatal(err)
-		}
+		ReportErrorInAllure(err)
 	*/
 	signedTx := signTransaction(tx, types.NewEIP155Signer(chainID), senderAccount.PrivateKey)
 
 	/*
 		err = client.SendTransaction(context.Background(), signedTx)
-		if err != nil {
-			log.Fatal(err)
-		}
+		ReportErrorInAllure(err)
 	*/
 	sendTransaction(client, signedTx)
 

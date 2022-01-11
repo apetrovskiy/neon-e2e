@@ -1,7 +1,6 @@
 package go_eth
 
 import (
-	"math/big"
 	"os"
 	"regexp"
 	"strconv"
@@ -21,7 +20,6 @@ type Config struct {
 	AddressFrom, AddressTo, PrivateKey                          string
 	SolanaExplorer, SolanaUrl                                   string
 	UsersNumber                                                 int
-	InitialBalance                                              *big.Int
 }
 
 func loadEnv() {
@@ -33,9 +31,7 @@ func loadEnv() {
 
 	err := godotenv.Load(string(rootPath) + `/.env`)
 
-	if err != nil {
-		log.Fatalf("Error loading .env file")
-	}
+	ReportErrorInAllure(err)
 }
 
 func GetConfig() *Config {
@@ -56,8 +52,6 @@ func GetConfig() *Config {
 		solanaExplorer := os.Getenv("SOLANA_EXPLORER")
 		solanaUrl := os.Getenv("SOLANA_URL")
 		usersNumber, _ := strconv.Atoi(os.Getenv("USERS_NUMBER"))
-		initialBalance := new(big.Int)
-		initialBalance, _ = initialBalance.SetString(os.Getenv("INITIAL_BALANCE"), 0)
 
 		config = Config{
 			NetworkName:    networkName,
@@ -72,7 +66,6 @@ func GetConfig() *Config {
 			SolanaExplorer: solanaExplorer,
 			SolanaUrl:      solanaUrl,
 			UsersNumber:    usersNumber,
-			InitialBalance: initialBalance,
 		}
 	}))
 	return &config

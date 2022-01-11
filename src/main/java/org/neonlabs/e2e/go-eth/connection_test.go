@@ -17,9 +17,9 @@ func TestConnection(t *testing.T) {
 		allure.Description("Connection to network"),
 		allure.Action(func() {
 			_, err := connect()
-			assert.Nil(t, err, fmt.Sprintf(FaileToConnectTo, GetConfig().ProxyURL, err))
+			assert.Nil(t, err, fmt.Sprintf(FailedToConnectTo, GetConfig().ProxyURL, err))
 			if err != nil {
-				t.Errorf(FaileToConnectTo, GetConfig().ProxyURL, err)
+				t.Errorf(FailedToConnectTo, GetConfig().ProxyURL, err)
 			}
 		}))
 }
