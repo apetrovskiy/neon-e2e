@@ -22,12 +22,14 @@ func TestTransferToken(t *testing.T) {
 		allure.Description("Transfer tokens"),
 		allure.Action(func() {
 			client, err := connect()
-			assert.Nil(t, err, fmt.Sprintf(FaileToConnectTo, GetConfig().ProxyURL, err))
+			assert.Nil(t, err, fmt.Sprintf(FailedToConnectTo, GetConfig().ProxyURL, err))
 			if err != nil {
-				t.Errorf(FaileToConnectTo, GetConfig().ProxyURL, err)
+				t.Errorf(FailedToConnectTo, GetConfig().ProxyURL, err)
 			}
 
-			senderAccount := createWallet()
+			initialAmount := 10
+			transferAmount := "10000000000000000000"
+			senderAccount := createWallet(initialAmount)
 			assert.NotEqual(t, 0, len(senderAccount.Address.Hash()), FailedToCreateWallet)
 			if len(senderAccount.Address) == 0 {
 				t.Error(FailedToCreateWallet)
@@ -35,9 +37,9 @@ func TestTransferToken(t *testing.T) {
 
 			senderBalance := getLastBlockBalance(client, senderAccount.Address.Hex())
 			log.Println(senderBalance)
-			assert.Equal(t, GetConfig().InitialBalance, senderBalance, "Sender's initial balance is wrong")
+			assert.Equal(t, GetConfig().RequestAmount, senderBalance, SenderInitialBalanceIsWrong)
 
-			recipientAccount := createWallet()
+			recipientAccount := createWallet(initialAmount)
 			assert.NotEqual(t, 0, len(recipientAccount.Address.Hash()), FailedToCreateWallet)
 			if len(recipientAccount.Address) == 0 {
 				t.Error(FailedToCreateWallet)
@@ -45,17 +47,17 @@ func TestTransferToken(t *testing.T) {
 
 			recipientBalance := getLastBlockBalance(client, recipientAccount.Address.Hex())
 			log.Println(recipientBalance)
-			assert.Equal(t, GetConfig().InitialBalance, recipientBalance, "Recipient's initial balance is wrong")
+			assert.Equal(t, GetConfig().RequestAmount, recipientBalance, RecipientInitialBalanceIsWrong)
 
-			transferToken(client, *senderAccount, *recipientAccount, "1000000000000000000")
+			transferToken(client, *senderAccount, *recipientAccount, transferAmount)
 
 			// TODO: change to the right amounts
 			senderBalance = getLastBlockBalance(client, senderAccount.Address.Hex())
 			log.Println(senderBalance)
-			assert.Equal(t, GetConfig().InitialBalance, senderBalance, "Sender's initial balance is wrong")
+			assert.Equal(t, GetConfig().RequestAmount, senderBalance, SenderResultingBalanceIsWrong)
 
 			recipientBalance = getLastBlockBalance(client, recipientAccount.Address.Hex())
 			log.Println(recipientBalance)
-			assert.Equal(t, GetConfig().InitialBalance, recipientBalance, "Recipient's initial balance is wrong")
+			assert.Equal(t, GetConfig().RequestAmount, recipientBalance, RecipientResultingBalanceIsWrong)
 		}))
 }

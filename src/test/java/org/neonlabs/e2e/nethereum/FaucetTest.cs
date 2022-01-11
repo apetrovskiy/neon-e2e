@@ -27,7 +27,7 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
 
     [AllureSubSuite(StoryFaucet)]
     [AllureStory(new string[] { StoryFaucet })]
-    [AllureXunit(DisplayName = "Consequent requests to faucet")]
+    [AllureXunit(DisplayName = "Subsequent requests to faucet")]
     public async void ShouldProvideTokensRequestedInTwoRequests()
     {
       int firstAmountRequested = 5, secondAmountRequested = 3, expectedBalance = 8;
