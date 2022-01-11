@@ -49,7 +49,7 @@ class BalanceTest {
      * 
      * balance := getLastBlockBalance(client, account.Address.Hex())
      * log.Println(balance)
-     * assert.Equal(t, GetConfig().InitialBalance, balance, InitialBalanceIsWrong)
+     * assert.Equal(t, GetConfig().RequestAmount, balance, InitialBalanceIsWrong)
      */
     assertEquals(new Config().getRequestAmount(), balance,
         "Balance is not equal to the initial balance");
@@ -98,7 +98,7 @@ class BalanceTest {
  * 
  * balance := getLastBlockBalance(client, account.Address.Hex())
  * log.Println(balance)
- * assert.Equal(t, GetConfig().InitialBalance, balance, InitialBalanceIsWrong)
+ * assert.Equal(t, GetConfig().RequestAmount, balance, InitialBalanceIsWrong)
  * }))
  * }
  */
