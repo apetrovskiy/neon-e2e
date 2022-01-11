@@ -12,7 +12,8 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
   [AllureFeature(new string[] { FeatureBlocks })]
   public class CallStateFromPreviousBlock
   {
-    [AllureXunit(DisplayName = "Should Transfer And GetState From Previous Block test")]
+    // [AllureXunit(DisplayName = "Should Transfer And GetState From Previous Block test")]
+    [Fact(Skip = "eth_sendTransaction is not supported. please use eth_sendRawTransaction: eth_sendTransaction")]
     public async void ShouldTransferAndGetStateFromPreviousBlock()
     {
       var contractByteCode =
@@ -22,7 +23,8 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
 
       var web3 = Connection.Connect();
       ulong totalSupply = 1000000;
-      var address = AccountFactory.CreateAccount().Address;
+      var account = await AccountFactory.CreateAccount(10);
+      var address = account.Address;
       var newAddress = "0x12890d2cce102216644c59dae5baed380d848301";
 
       var receipt = await web3.Eth.DeployContract.SendRequestAndWaitForReceiptAsync(abi, contractByteCode,

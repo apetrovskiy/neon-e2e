@@ -23,9 +23,7 @@ func getPendingNonce(client *ethclient.Client, senderAccount Account) uint64 {
 	allure.Step(allure.Description("Getting pending nonce"), allure.Action(func() {
 
 		nonce, err = client.PendingNonceAt(context.Background(), senderAccount.Address)
-		if err != nil {
-			log.Fatal(err)
-		}
+		ReportErrorInAllure(err)
 	}))
 
 	return nonce
@@ -39,9 +37,7 @@ func getChainId(client *ethclient.Client) *big.Int {
 	allure.Step(allure.Description("Getting chain id"), allure.Action(func() {
 
 		chainId, err = client.NetworkID(context.Background())
-		if err != nil {
-			log.Fatal(err)
-		}
+		ReportErrorInAllure(err)
 
 	}))
 
@@ -55,9 +51,7 @@ func signTransaction(tx *types.Transaction, signer types.EIP155Signer, privateKe
 	allure.Step(allure.Description("Siging transaction"), allure.Action(func() {
 
 		signedTx, err = types.SignTx(tx, signer, privateKey)
-		if err != nil {
-			log.Fatal(err)
-		}
+		ReportErrorInAllure(err)
 
 	}))
 
@@ -69,9 +63,7 @@ func sendTransaction(client *ethclient.Client, signedTx *types.Transaction) {
 	allure.Step(allure.Description("Sending transaction"), allure.Action(func() {
 
 		err := client.SendTransaction(context.Background(), signedTx)
-		if err != nil {
-			log.Fatal(err)
-		}
+		ReportErrorInAllure(err)
 
 	}))
 
@@ -81,15 +73,13 @@ func estimateGasLimit(client *ethclient.Client, data []byte, tokenAddress common
 	var gasLimit uint64
 	var err error
 
-	allure.Step(allure.Description("Sending transaction"), allure.Action(func() {
+	allure.Step(allure.Description("Estimating gas limit"), allure.Action(func() {
 
 		gasLimit, err = client.EstimateGas(context.Background(), ethereum.CallMsg{
 			To:   &tokenAddress,
 			Data: data,
 		})
-		if err != nil {
-			log.Fatal(err)
-		}
+		ReportErrorInAllure(err)
 		log.Println(gasLimit) // 23256
 	}))
 

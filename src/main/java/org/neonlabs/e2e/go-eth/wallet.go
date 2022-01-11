@@ -23,16 +23,18 @@ type Account struct {
 	Hash            hash.Hash
 }
 
-func createWallet() *Account {
+func createWallet(amount ...int) *Account {
+	wantedAmount := 0
+	for _, n := range amount {
+		wantedAmount += n
+	}
 
 	var accountData Account
 
 	allure.Step(allure.Description("Creating a wallet"), allure.Action(func() {
 
 		privateKey, err := crypto.GenerateKey()
-		if err != nil {
-			log.Fatal(err)
-		}
+		ReportErrorInAllure(err)
 		privateKeyBytes := crypto.FromECDSA(privateKey)
 		hexString := hexutil.Encode(privateKeyBytes)[:2]
 		publicKey := privateKey.Public()
@@ -45,8 +47,8 @@ func createWallet() *Account {
 		hash := sha3.NewLegacyKeccak256()
 		hash.Write(publicKeyBytes[1:])
 
-		if GetConfig().UseFaucet {
-			requestFaucet(GetConfig().RequestAmount*10, address.String())
+		if wantedAmount > 0 {
+			requestFaucet(address.String(), wantedAmount)
 		}
 
 		log.Println(hexString)

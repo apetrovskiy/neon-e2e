@@ -38,6 +38,7 @@ class BlockTest {
      * }
      * assert.Greater(t, 0, header.Number, "Block header number greater than 0")
      */
+
     assertAll(
         () -> assertNotNull(1, ""),
         () -> assertEquals(1, 1, ""));

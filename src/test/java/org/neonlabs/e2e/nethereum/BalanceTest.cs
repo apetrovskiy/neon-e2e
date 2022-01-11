@@ -16,14 +16,16 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
     [AllureXunit(DisplayName = "GetBalance Async")]
     public async void ShouldGetBalanceAsync()
     {
-      var balance = await Balance.GetBalance();
-      Assert.NotNull(balance);
+      const int initialBalance = 10;
+      var account = await AccountFactory.CreateAccount(initialBalance);
+      var balance = await Balance.GetBalanceInEther(account);
+      Assert.Equal(initialBalance, balance); //, "Actual balance does not equal the expected balance");
     }
     [AllureStory(new string[] { StoryBalance })]
     [AllureXunit(DisplayName = "Initial balance")]
-    public void ShouldGetInitialBalanceAsync()
+    public async void ShouldGetInitialBalanceAsync()
     {
-      var account = AccountFactory.CreateAccount();
+      var account = await AccountFactory.CreateAccount(0);
       // TODO: logging
       Console.WriteLine(account.ChainId);
       // Console.WriteLine(account.TransactionManager.Client.GetType().Name);

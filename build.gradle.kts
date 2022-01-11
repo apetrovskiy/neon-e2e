@@ -169,6 +169,7 @@ repositories {
 dependencies {
   // https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib
   implementation("org.jetbrains.kotlin:kotlin-stdlib:${Version.KOTLIN.id}")
+  // implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:${Version.KOTLIN.id}")
 
   // Align versions of all Kotlin components
   implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
@@ -260,6 +261,10 @@ dependencies {
   runtimeOnly("com.github.komputing.kethereum:crypto_api:${Version.KETHEREUM.id}")
   runtimeOnly("com.github.komputing.kethereum:model:${Version.KETHEREUM.id}")
   runtimeOnly("com.github.komputing.kethereum:extensions_kotlin:${Version.KETHEREUM.id}")
+
+  implementation("com.squareup.retrofit2:retrofit:${Version.RETROFIT.id}")
+  implementation("com.squareup.retrofit2:converter-gson:${Version.RETROFIT.id}")
+  implementation("com.squareup.okhttp3:okhttp:${Version.OKHTTP3.id}")
 }
 
 // TODO: needed for Kotlin and kotlin.test 1.5.0
@@ -400,6 +405,8 @@ enum class Version(val id: String) {
   JAVAFAKER("1.0.2"),
   AWAITILITY("4.1.0"),
   KETHEREUM("0.83.4"),
+  RETROFIT("2.9.0"),
+  OKHTTP3("4.0.3"),
   CUCUMBER("6.11.0"),
   CUCUMBER_JUNIT("6.11.0"),
   ALLURE("2.15.0"),
