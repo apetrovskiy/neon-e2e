@@ -17,5 +17,8 @@ A clear and concise description of the bug.
 **Expected Behavior**
 A clear and concise description of what you expected to happen.
 
+**Actual Behavior**
+A clear and concise description of what really happened.
+
 **Additional Context**
 Add any other context about the problem here (screenshots, whether the bug only occurs only in certain mobile/desktop/browser environments, etc.)
