@@ -30,7 +30,10 @@ on:
 
 jobs:
   python:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, ubuntu-latest, ubuntu-latest]
     steps:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/allure-prep
@@ -100,7 +103,10 @@ jobs:
           folder-name: report/allure-results
 
   node-cucumber:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, ubuntu-latest, ubuntu-latest]
     steps:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/allure-prep
@@ -143,7 +149,10 @@ jobs:
           folder-name: report/allure-results
 
   golang:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, ubuntu-latest, ubuntu-latest]
     steps:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/allure-prep
@@ -176,7 +185,10 @@ jobs:
           folder-name: report/allure-results
 
   dotnet:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, ubuntu-latest, ubuntu-latest]
     timeout-minutes: 30
     # needs:
     # - build
