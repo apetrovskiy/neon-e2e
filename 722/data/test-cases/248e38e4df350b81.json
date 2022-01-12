@@ -1,0 +1,325 @@
+{
+  "uid" : "248e38e4df350b81",
+  "name" : "Single request to faucet",
+  "fullName" : "Single request to faucet",
+  "historyId" : "Single request to faucet",
+  "time" : {
+    "start" : 1641965962940,
+    "stop" : 1641966023708,
+    "duration" : 60768
+  },
+  "status" : "failed",
+  "statusMessage" : "Response status code does not indicate success: 504 (Gateway Time-out).",
+  "statusTrace" : "   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()\n   at NeonEndToEnd.org.neonlabs.e2e.nethereum.FaucetRequester.<>c__DisplayClass0_0.<<RequestFaucetAsync>b__0>d.MoveNext() in /home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/nethereum/FaucetRequester.cs:line 31\n--- End of stack trace from previous location ---\n   at Allure.Xunit.Steps.Execute[T](Func`1 action)\n   at NeonEndToEnd.org.neonlabs.e2e.nethereum.FaucetRequester.RequestFaucetAsync(FaucetRequest requestDto) in /home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/nethereum/FaucetRequester.cs:line 15\n   at NeonEndToEnd.org.neonlabs.e2e.nethereum.AccountFactory.<>c__DisplayClass0_0.<<CreateAccount>b__0>d.MoveNext() in /home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/nethereum/AccountFactory.cs:line 22\n--- End of stack trace from previous location ---\n   at Allure.Xunit.Steps.Execute[T](Func`1 action)\n   at NeonEndToEnd.org.neonlabs.e2e.nethereum.AccountFactory.CreateAccount(Int32 amount) in /home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/nethereum/AccountFactory.cs:line 14\n   at NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum.FaucetTest.ShouldProvideTokensRequested() in /home/runner/work/neon-e2e/neon-e2e/src/test/java/org/neonlabs/e2e/nethereum/FaucetTest.cs:line 23\n   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_0(Object state)\n   at Xunit.Sdk.AsyncTestSyncContext.<>c__DisplayClass7_0.<Post>b__1(Object _) in C:\\Dev\\xunit\\xunit\\src\\xunit.execution\\Sdk\\AsyncTestSyncContext.cs:line 75",
+  "flaky" : true,
+  "newFailed" : true,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "Response status code does not indicate success: 504 (Gateway Time-out).",
+    "statusTrace" : "   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()\n   at NeonEndToEnd.org.neonlabs.e2e.nethereum.FaucetRequester.<>c__DisplayClass0_0.<<RequestFaucetAsync>b__0>d.MoveNext() in /home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/nethereum/FaucetRequester.cs:line 31\n--- End of stack trace from previous location ---\n   at Allure.Xunit.Steps.Execute[T](Func`1 action)\n   at NeonEndToEnd.org.neonlabs.e2e.nethereum.FaucetRequester.RequestFaucetAsync(FaucetRequest requestDto) in /home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/nethereum/FaucetRequester.cs:line 15\n   at NeonEndToEnd.org.neonlabs.e2e.nethereum.AccountFactory.<>c__DisplayClass0_0.<<CreateAccount>b__0>d.MoveNext() in /home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/nethereum/AccountFactory.cs:line 22\n--- End of stack trace from previous location ---\n   at Allure.Xunit.Steps.Execute[T](Func`1 action)\n   at NeonEndToEnd.org.neonlabs.e2e.nethereum.AccountFactory.CreateAccount(Int32 amount) in /home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/nethereum/AccountFactory.cs:line 14\n   at NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum.FaucetTest.ShouldProvideTokensRequested() in /home/runner/work/neon-e2e/neon-e2e/src/test/java/org/neonlabs/e2e/nethereum/FaucetTest.cs:line 23\n   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_0(Object state)\n   at Xunit.Sdk.AsyncTestSyncContext.<>c__DisplayClass7_0.<Post>b__1(Object _) in C:\\Dev\\xunit\\xunit\\src\\xunit.execution\\Sdk\\AsyncTestSyncContext.cs:line 75",
+    "steps" : [ {
+      "name" : "Creating an account",
+      "time" : {
+        "start" : 1641965962941,
+        "stop" : 1641966023707,
+        "duration" : 60766
+      },
+      "status" : "failed",
+      "steps" : [ {
+        "name" : "Requesting faucet",
+        "time" : {
+          "start" : 1641965962944,
+          "stop" : 1641966023707,
+          "duration" : 60763
+        },
+        "status" : "failed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : ".NET Long Running Task"
+  }, {
+    "name" : "host",
+    "value" : "fv-az272-674"
+  }, {
+    "name" : "testClass",
+    "value" : "NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum.FaucetTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "Single request to faucet"
+  }, {
+    "name" : "package",
+    "value" : "NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum.FaucetTest"
+  }, {
+    "name" : "epic",
+    "value" : "Nethereum"
+  }, {
+    "name" : "feature",
+    "value" : "Faucet"
+  }, {
+    "name" : "suite",
+    "value" : "Nethereum"
+  }, {
+    "name" : "story",
+    "value" : "Faucet"
+  }, {
+    "name" : "subSuite",
+    "value" : "Faucet"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 4,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 65,
+        "unknown" : 0,
+        "total" : 69
+      },
+      "items" : [ {
+        "uid" : "e9ecbcdf0c1f7485",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/723//#testresult/e9ecbcdf0c1f7485",
+        "status" : "passed",
+        "statusDetails" : "",
+        "time" : {
+          "start" : 1641965933844,
+          "stop" : 1641965948717,
+          "duration" : 14873
+        }
+      }, {
+        "uid" : "ee7fb7f087f7bbc2",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/724//#testresult/ee7fb7f087f7bbc2",
+        "status" : "failed",
+        "statusDetails" : "Response status code does not indicate success: 429 (Too Many Requests).",
+        "time" : {
+          "start" : 1641965937139,
+          "stop" : 1641965937631,
+          "duration" : 492
+        }
+      }, {
+        "uid" : "e72ea0ef83700dc6",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/720//#testresult/e72ea0ef83700dc6",
+        "status" : "passed",
+        "statusDetails" : "",
+        "time" : {
+          "start" : 1641935209953,
+          "stop" : 1641935224177,
+          "duration" : 14224
+        }
+      }, {
+        "uid" : "3bb2194eb14d4676",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/721//#testresult/3bb2194eb14d4676",
+        "status" : "passed",
+        "statusDetails" : "",
+        "time" : {
+          "start" : 1641935257394,
+          "stop" : 1641935271337,
+          "duration" : 13943
+        }
+      }, {
+        "uid" : "e0ade30116d9b4fc",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/718//#testresult/e0ade30116d9b4fc",
+        "status" : "passed",
+        "statusDetails" : "",
+        "time" : {
+          "start" : 1641935182994,
+          "stop" : 1641935196940,
+          "duration" : 13946
+        }
+      }, {
+        "uid" : "8a42c7d1819d3880",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/715//#testresult/8a42c7d1819d3880",
+        "status" : "passed",
+        "statusDetails" : "",
+        "time" : {
+          "start" : 1641928528362,
+          "stop" : 1641928542826,
+          "duration" : 14464
+        }
+      }, {
+        "uid" : "dc28103f314b6975",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/714//#testresult/dc28103f314b6975",
+        "status" : "passed",
+        "statusDetails" : "",
+        "time" : {
+          "start" : 1641926345496,
+          "stop" : 1641926360818,
+          "duration" : 15322
+        }
+      }, {
+        "uid" : "bc480025a4a12b2b",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/713//#testresult/bc480025a4a12b2b",
+        "status" : "passed",
+        "statusDetails" : "",
+        "time" : {
+          "start" : 1641926321630,
+          "stop" : 1641926336402,
+          "duration" : 14772
+        }
+      }, {
+        "uid" : "c067b7c901429811",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/712//#testresult/c067b7c901429811",
+        "status" : "passed",
+        "statusDetails" : "",
+        "time" : {
+          "start" : 1641925237706,
+          "stop" : 1641925252413,
+          "duration" : 14707
+        }
+      }, {
+        "uid" : "72a80d382694dc25",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/710//#testresult/72a80d382694dc25",
+        "status" : "passed",
+        "statusDetails" : "",
+        "time" : {
+          "start" : 1641920694733,
+          "stop" : 1641920709501,
+          "duration" : 14768
+        }
+      }, {
+        "uid" : "8e479898b7a5fbe5",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/707//#testresult/8e479898b7a5fbe5",
+        "status" : "passed",
+        "statusDetails" : "",
+        "time" : {
+          "start" : 1641920087565,
+          "stop" : 1641920101901,
+          "duration" : 14336
+        }
+      }, {
+        "uid" : "b99fba6010921096",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/706//#testresult/b99fba6010921096",
+        "status" : "passed",
+        "statusDetails" : "",
+        "time" : {
+          "start" : 1641918631356,
+          "stop" : 1641918646072,
+          "duration" : 14716
+        }
+      }, {
+        "uid" : "17f9c96f207ac6fe",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/705//#testresult/17f9c96f207ac6fe",
+        "status" : "passed",
+        "statusDetails" : "",
+        "time" : {
+          "start" : 1641918610073,
+          "stop" : 1641918624533,
+          "duration" : 14460
+        }
+      }, {
+        "uid" : "9f9d722f4d69bfbc",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/704//#testresult/9f9d722f4d69bfbc",
+        "status" : "passed",
+        "statusDetails" : "",
+        "time" : {
+          "start" : 1641917914162,
+          "stop" : 1641917928908,
+          "duration" : 14746
+        }
+      }, {
+        "uid" : "b27a6c58458502e3",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/703//#testresult/b27a6c58458502e3",
+        "status" : "passed",
+        "statusDetails" : "",
+        "time" : {
+          "start" : 1641916001711,
+          "stop" : 1641916016286,
+          "duration" : 14575
+        }
+      }, {
+        "uid" : "70d019b5db914eba",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/702//#testresult/70d019b5db914eba",
+        "status" : "passed",
+        "statusDetails" : "",
+        "time" : {
+          "start" : 1641914781001,
+          "stop" : 1641914795457,
+          "duration" : 14456
+        }
+      }, {
+        "uid" : "4f7714107707a3d1",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/701//#testresult/4f7714107707a3d1",
+        "status" : "passed",
+        "statusDetails" : "",
+        "time" : {
+          "start" : 1641914033837,
+          "stop" : 1641914048298,
+          "duration" : 14461
+        }
+      }, {
+        "uid" : "19fc76fc8db58740",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/700//#testresult/19fc76fc8db58740",
+        "status" : "passed",
+        "statusDetails" : "",
+        "time" : {
+          "start" : 1641913084933,
+          "stop" : 1641913099655,
+          "duration" : 14722
+        }
+      }, {
+        "uid" : "ee69e33bef209af1",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/699//#testresult/ee69e33bef209af1",
+        "status" : "passed",
+        "statusDetails" : "",
+        "time" : {
+          "start" : 1641913062027,
+          "stop" : 1641913076952,
+          "duration" : 14925
+        }
+      }, {
+        "uid" : "c175e8daddb7e320",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/698//#testresult/c175e8daddb7e320",
+        "status" : "passed",
+        "statusDetails" : "",
+        "time" : {
+          "start" : 1641912133728,
+          "stop" : 1641912148002,
+          "duration" : 14274
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "248e38e4df350b81.json",
+  "parameterValues" : [ ]
+}
