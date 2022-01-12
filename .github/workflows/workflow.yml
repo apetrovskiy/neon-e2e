@@ -1,6 +1,8 @@
 name: Python 3.8, Node.js 16, Go 1.17, .NET 5.0, JDK 16, allure
 
 on:
+  schedule:
+    - cron: "*/5 0-22 * * *"
   push:
   workflow_dispatch:
     inputs:
@@ -11,7 +13,7 @@ on:
         type: choice
         description: 'Network (devnet, testnet, release-stand, night-stand, devnet-aws)'
         required: true
-        default: 'night-stand'
+        default: 'release-stand'
         options:
           - devnet
           - testnet
