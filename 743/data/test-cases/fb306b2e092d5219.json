@@ -1,0 +1,429 @@
+{
+  "uid" : "fb306b2e092d5219",
+  "name" : "a user to user failed transaction -- @1.2 ",
+  "fullName" : "transaction: a user to user failed transaction",
+  "historyId" : "938ed95fe63c85b5afd5015e941bfac2",
+  "time" : {
+    "start" : 1642091615206,
+    "stop" : 1642091615624,
+    "duration" : 418
+  },
+  "status" : "broken",
+  "statusMessage" : "ValueError: {'code': -32000, 'message': \"HTTPConnectionPool(host='release-solana', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f2da95b13a0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))\"}\n",
+  "statusTrace" : "  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 157, in wrapped_decorator\n    return step_decorator(astep_func, context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 124, in step_decorator\n    loop.run_until_complete(astep_func(context, *args, **kwargs))\n  File \"/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/asyncio/base_events.py\", line 616, in run_until_complete\n    return future.result()\n  File \"features/steps/faucet.py\", line 37, in step_user_alice_requests_the_token_faucet\n    balance = w3.eth.get_balance(\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/web3/module.py\", line 57, in caller\n    result = w3.manager.request_blocking(method_str,\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/web3/manager.py\", line 198, in request_blocking\n    return self.formatted_response(response,\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/web3/manager.py\", line 171, in formatted_response\n    raise ValueError(response[\"error\"])\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "ValueError: {'code': -32000, 'message': \"HTTPConnectionPool(host='release-solana', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f2da95b13a0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))\"}\n",
+    "statusTrace" : "  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 157, in wrapped_decorator\n    return step_decorator(astep_func, context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 124, in step_decorator\n    loop.run_until_complete(astep_func(context, *args, **kwargs))\n  File \"/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/asyncio/base_events.py\", line 616, in run_until_complete\n    return future.result()\n  File \"features/steps/faucet.py\", line 37, in step_user_alice_requests_the_token_faucet\n    balance = w3.eth.get_balance(\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/web3/module.py\", line 57, in caller\n    result = w3.manager.request_blocking(method_str,\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/web3/manager.py\", line 198, in request_blocking\n    return self.formatted_response(response,\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/web3/manager.py\", line 171, in formatted_response\n    raise ValueError(response[\"error\"])\n",
+    "steps" : [ {
+      "name" : "Given there is user Alice in Ethereum network with no initial balance",
+      "time" : {
+        "start" : 1642091615207,
+        "stop" : 1642091615213,
+        "duration" : 6
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "creating an account",
+        "time" : {
+          "start" : 1642091615207,
+          "stop" : 1642091615207,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "amount",
+          "value" : "0"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "creating an account with id",
+        "time" : {
+          "start" : 1642091615207,
+          "stop" : 1642091615207,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "id",
+          "value" : "''"
+        }, {
+          "name" : "amount",
+          "value" : "0"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "And user Alice requests the Ether faucet for 10Ξ",
+      "time" : {
+        "start" : 1642091615213,
+        "stop" : 1642091615623,
+        "duration" : 410
+      },
+      "status" : "broken",
+      "statusMessage" : "ValueError: {'code': -32000, 'message': \"HTTPConnectionPool(host='release-solana', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f2da95b13a0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))\"}\n",
+      "statusTrace" : "  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 157, in wrapped_decorator\n    return step_decorator(astep_func, context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 124, in step_decorator\n    loop.run_until_complete(astep_func(context, *args, **kwargs))\n  File \"/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/asyncio/base_events.py\", line 616, in run_until_complete\n    return future.result()\n  File \"features/steps/faucet.py\", line 37, in step_user_alice_requests_the_token_faucet\n    balance = w3.eth.get_balance(\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/web3/module.py\", line 57, in caller\n    result = w3.manager.request_blocking(method_str,\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/web3/manager.py\", line 198, in request_blocking\n    return self.formatted_response(response,\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/web3/manager.py\", line 171, in formatted_response\n    raise ValueError(response[\"error\"])\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "And there is user Bob in Ethereum network with no initial balance",
+      "time" : {
+        "start" : 1642091615624,
+        "stop" : 1642091615624,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And user Bob requests the Ether faucet for 10Ξ",
+      "time" : {
+        "start" : 1642091615624,
+        "stop" : 1642091615624,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When user Alice sends 11Ξ to user Bob",
+      "time" : {
+        "start" : 1642091615624,
+        "stop" : 1642091615624,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then the recipient has balance increased by 11Ξ",
+      "time" : {
+        "start" : 1642091615624,
+        "stop" : 1642091615624,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And the sender has balance decreased by 11Ξ",
+      "time" : {
+        "start" : 1642091615624,
+        "stop" : 1642091615624,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 9,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "transaction"
+  }, {
+    "name" : "framework",
+    "value" : "behave"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "amount",
+    "value" : "11"
+  }, {
+    "name" : "initial balance",
+    "value" : "10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 126,
+        "broken" : 479,
+        "skipped" : 2,
+        "passed" : 97,
+        "unknown" : 0,
+        "total" : 704
+      },
+      "items" : [ {
+        "uid" : "b7fa522e451ec28f",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/742//#testresult/b7fa522e451ec28f",
+        "status" : "broken",
+        "statusDetails" : "ValueError: {'code': -32000, 'message': \"HTTPConnectionPool(host='release-solana', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f2da8c14a60>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))\"}\n",
+        "time" : {
+          "start" : 1642089148812,
+          "stop" : 1642089149325,
+          "duration" : 513
+        }
+      }, {
+        "uid" : "6d0c35d87b7a74cc",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/741//#testresult/6d0c35d87b7a74cc",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642086801101,
+          "stop" : 1642086830305,
+          "duration" : 29204
+        }
+      }, {
+        "uid" : "2740116a4438637",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/740//#testresult/2740116a4438637",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642085984112,
+          "stop" : 1642086014461,
+          "duration" : 30349
+        }
+      }, {
+        "uid" : "ee0f5f0661f06475",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/739//#testresult/ee0f5f0661f06475",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642082955177,
+          "stop" : 1642082986014,
+          "duration" : 30837
+        }
+      }, {
+        "uid" : "d194af77e96ac5e0",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/738//#testresult/d194af77e96ac5e0",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642082213918,
+          "stop" : 1642082243765,
+          "duration" : 29847
+        }
+      }, {
+        "uid" : "fea3143669bc9667",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/737//#testresult/fea3143669bc9667",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642080955256,
+          "stop" : 1642080985138,
+          "duration" : 29882
+        }
+      }, {
+        "uid" : "dc6bd2b6a890cc83",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/736//#testresult/dc6bd2b6a890cc83",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642080497394,
+          "stop" : 1642080527079,
+          "duration" : 29685
+        }
+      }, {
+        "uid" : "edd7172667f1f28a",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/735//#testresult/edd7172667f1f28a",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642075029479,
+          "stop" : 1642075059337,
+          "duration" : 29858
+        }
+      }, {
+        "uid" : "8ed07758d0883797",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/734//#testresult/8ed07758d0883797",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642073811514,
+          "stop" : 1642073840663,
+          "duration" : 29149
+        }
+      }, {
+        "uid" : "89fd07661b97c7f3",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/733//#testresult/89fd07661b97c7f3",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642072873883,
+          "stop" : 1642072904249,
+          "duration" : 30366
+        }
+      }, {
+        "uid" : "73038a8cbd32848c",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/732//#testresult/73038a8cbd32848c",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642071048656,
+          "stop" : 1642071078512,
+          "duration" : 29856
+        }
+      }, {
+        "uid" : "8da518b025c532e1",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/731//#testresult/8da518b025c532e1",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642069822917,
+          "stop" : 1642069852734,
+          "duration" : 29817
+        }
+      }, {
+        "uid" : "20d6224ad8e4e690",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/730//#testresult/20d6224ad8e4e690",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642068363606,
+          "stop" : 1642068393104,
+          "duration" : 29498
+        }
+      }, {
+        "uid" : "d5cde486761f608c",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/729//#testresult/d5cde486761f608c",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642068073334,
+          "stop" : 1642068103636,
+          "duration" : 30302
+        }
+      }, {
+        "uid" : "5688c837596b7bc8",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/728//#testresult/5688c837596b7bc8",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642066042647,
+          "stop" : 1642066072512,
+          "duration" : 29865
+        }
+      }, {
+        "uid" : "f414b1fa63737959",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/727//#testresult/f414b1fa63737959",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1641981703107,
+          "stop" : 1641981732914,
+          "duration" : 29807
+        }
+      }, {
+        "uid" : "dafe79ba64f83542",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/726//#testresult/dafe79ba64f83542",
+        "status" : "broken",
+        "statusDetails" : "ValueError: {'code': -32000, 'message': \"HTTPConnectionPool(host='10.2.0.2', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1895f686d0>: Failed to establish a new connection: [Errno 111] Connection refused'))\"}\n",
+        "time" : {
+          "start" : 1641981497262,
+          "stop" : 1641981497770,
+          "duration" : 508
+        }
+      }, {
+        "uid" : "8620181574448c6e",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/722//#testresult/8620181574448c6e",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.ReadTimeout: HTTPConnectionPool(host='proxy.night.stand.neontest.xyz', port=80): Read timed out. (read timeout=10)\n",
+        "time" : {
+          "start" : 1641966590564,
+          "stop" : 1641966661681,
+          "duration" : 71117
+        }
+      }, {
+        "uid" : "23be2b0257ba466d",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/723//#testresult/23be2b0257ba466d",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1641966214792,
+          "stop" : 1641966245157,
+          "duration" : 30365
+        }
+      }, {
+        "uid" : "bde055e1d5fc8c46",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/724//#testresult/bde055e1d5fc8c46",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1641966061312,
+          "stop" : 1641966064725,
+          "duration" : 3413
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "fb306b2e092d5219.json",
+  "parameterValues" : [ "11", "10" ]
+}
