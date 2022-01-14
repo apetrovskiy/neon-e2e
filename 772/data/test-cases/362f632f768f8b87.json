@@ -1,0 +1,388 @@
+{
+  "uid" : "362f632f768f8b87",
+  "name" : "a user to user failed transaction",
+  "fullName" : "features/transaction.feature:transaction:a user to user failed transaction",
+  "historyId" : "80dd77e8290a680663e804112d7d2de8",
+  "time" : {
+    "start" : 1642157927085,
+    "stop" : 1642157960829,
+    "duration" : 33744
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "time" : { },
+    "status" : "broken",
+    "steps" : [ {
+      "name" : "Before: tests/step-definitions/hooks.ts:12",
+      "time" : {
+        "start" : 1642157927085,
+        "stop" : 1642157927086,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given there is user Alice in Ethereum network with no initial balance",
+      "time" : {
+        "start" : 1642157927086,
+        "stop" : 1642157927413,
+        "duration" : 327
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And user Alice requests the Ether faucet for <10>Ξ",
+      "time" : {
+        "start" : 1642157927413,
+        "stop" : 1642157941810,
+        "duration" : 14397
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And there is user Bob in Ethereum network with no initial balance",
+      "time" : {
+        "start" : 1642157941810,
+        "stop" : 1642157942152,
+        "duration" : 342
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And user Bob requests the Ether faucet for <10>Ξ",
+      "time" : {
+        "start" : 1642157942153,
+        "stop" : 1642157956536,
+        "duration" : 14383
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When user Alice sends <10>Ξ to user Bob",
+      "time" : {
+        "start" : 1642157956536,
+        "stop" : 1642157960159,
+        "duration" : 3623
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then the recipient has balance increased by <10>Ξ",
+      "time" : {
+        "start" : 1642157960159,
+        "stop" : 1642157960495,
+        "duration" : 336
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And the sender has balance decreased by <10>Ξ",
+      "time" : {
+        "start" : 1642157960495,
+        "stop" : 1642157960829,
+        "duration" : 334
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 7,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "2716"
+  }, {
+    "name" : "feature",
+    "value" : "transaction"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "amount",
+    "value" : "10"
+  }, {
+    "name" : "initial balance",
+    "value" : "10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 493,
+        "broken" : 22,
+        "skipped" : 0,
+        "passed" : 166,
+        "unknown" : 0,
+        "total" : 681
+      },
+      "items" : [ {
+        "uid" : "65132e691dae39a",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/771//#testresult/65132e691dae39a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642157520883,
+          "stop" : 1642157554825,
+          "duration" : 33942
+        }
+      }, {
+        "uid" : "42ab4d014f07bfec",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/770//#testresult/42ab4d014f07bfec",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642157021199,
+          "stop" : 1642157054483,
+          "duration" : 33284
+        }
+      }, {
+        "uid" : "c9fe93ad9fee0e0d",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/769//#testresult/c9fe93ad9fee0e0d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642156439177,
+          "stop" : 1642156472585,
+          "duration" : 33408
+        }
+      }, {
+        "uid" : "6011586e8dbf5953",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/768//#testresult/6011586e8dbf5953",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642156398279,
+          "stop" : 1642156432180,
+          "duration" : 33901
+        }
+      }, {
+        "uid" : "eaa7d9a55ef84da8",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/767//#testresult/eaa7d9a55ef84da8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642146300956,
+          "stop" : 1642146334277,
+          "duration" : 33321
+        }
+      }, {
+        "uid" : "7eac67438edfdca8",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/765//#testresult/7eac67438edfdca8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642140284995,
+          "stop" : 1642140330513,
+          "duration" : 45518
+        }
+      }, {
+        "uid" : "39fb624f6850ae35",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/763//#testresult/39fb624f6850ae35",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642135748182,
+          "stop" : 1642135781089,
+          "duration" : 32907
+        }
+      }, {
+        "uid" : "79c0c7b4dbc415c",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/762//#testresult/79c0c7b4dbc415c",
+        "status" : "failed",
+        "statusDetails" : "function timed out, ensure the promise resolves within 30000 milliseconds",
+        "time" : {
+          "start" : 1642112130368,
+          "stop" : 1642112160403,
+          "duration" : 30035
+        }
+      }, {
+        "uid" : "6c734f924343ee41",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/761//#testresult/6c734f924343ee41",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642112124133,
+          "stop" : 1642112157674,
+          "duration" : 33541
+        }
+      }, {
+        "uid" : "7d15f94103997cfb",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/760//#testresult/7d15f94103997cfb",
+        "status" : "failed",
+        "statusDetails" : "function timed out, ensure the promise resolves within 30000 milliseconds",
+        "time" : {
+          "start" : 1642109628287,
+          "stop" : 1642109658319,
+          "duration" : 30032
+        }
+      }, {
+        "uid" : "f483bb538f1d2e27",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/758//#testresult/f483bb538f1d2e27",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642106143584,
+          "stop" : 1642106181186,
+          "duration" : 37602
+        }
+      }, {
+        "uid" : "7c91fe35c6193e1f",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/757//#testresult/7c91fe35c6193e1f",
+        "status" : "failed",
+        "statusDetails" : "Returned error: HTTPConnectionPool(host='release-solana', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f2da842d130>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))",
+        "time" : {
+          "start" : 1642105959813,
+          "stop" : 1642105960211,
+          "duration" : 398
+        }
+      }, {
+        "uid" : "7d199927fad4bb86",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/756//#testresult/7d199927fad4bb86",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642104512345,
+          "stop" : 1642104545559,
+          "duration" : 33214
+        }
+      }, {
+        "uid" : "8044bb02eb868a42",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/755//#testresult/8044bb02eb868a42",
+        "status" : "failed",
+        "statusDetails" : "Returned error: HTTPConnectionPool(host='release-solana', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f2da94a6310>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))",
+        "time" : {
+          "start" : 1642104308542,
+          "stop" : 1642104308770,
+          "duration" : 228
+        }
+      }, {
+        "uid" : "c2020ceb26674f7c",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/754//#testresult/c2020ceb26674f7c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642103151865,
+          "stop" : 1642103184635,
+          "duration" : 32770
+        }
+      }, {
+        "uid" : "7aabc14aa67bab3b",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/753//#testresult/7aabc14aa67bab3b",
+        "status" : "failed",
+        "statusDetails" : "Returned error: HTTPConnectionPool(host='release-solana', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f2da95987f0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))",
+        "time" : {
+          "start" : 1642102948923,
+          "stop" : 1642102949172,
+          "duration" : 249
+        }
+      }, {
+        "uid" : "64c732f921a28ed2",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/752//#testresult/64c732f921a28ed2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642101443222,
+          "stop" : 1642101476707,
+          "duration" : 33485
+        }
+      }, {
+        "uid" : "5b3f32600ce151cd",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/751//#testresult/5b3f32600ce151cd",
+        "status" : "failed",
+        "statusDetails" : "Returned error: HTTPConnectionPool(host='release-solana', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f2da94bde50>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))",
+        "time" : {
+          "start" : 1642101217269,
+          "stop" : 1642101217494,
+          "duration" : 225
+        }
+      }, {
+        "uid" : "d052f634296f78c4",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/750//#testresult/d052f634296f78c4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642099683040,
+          "stop" : 1642099716476,
+          "duration" : 33436
+        }
+      }, {
+        "uid" : "fab66dd71a0f9682",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/749//#testresult/fab66dd71a0f9682",
+        "status" : "failed",
+        "statusDetails" : "Returned error: HTTPConnectionPool(host='release-solana', port=8899): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f2da94c0760>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))",
+        "time" : {
+          "start" : 1642099451951,
+          "stop" : 1642099452322,
+          "duration" : 371
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "362f632f768f8b87.json",
+  "parameterValues" : [ "10", "10" ]
+}
