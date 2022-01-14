@@ -9,11 +9,11 @@ import (
 )
 
 func TestConnection(t *testing.T) {
-
+	t.Parallel()
 	allure.Test(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureCommon),
-		allure.Story(StoryConnection),
+		allure.Epic(FeatureCommon),
+		allure.Feature(StoryConnection),
+		// allure.Story(StoryConnection),
 		allure.Description("Connection to network"),
 		allure.Action(func() {
 			_, err := connect()

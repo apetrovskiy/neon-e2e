@@ -8,8 +8,8 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
   using static NeonEndToEnd.org.neonlabs.e2e.nethereum.Constants;
 
   [AllureSuite(Suite)]
-  [AllureEpic(Epic)]
-  [AllureFeature(new string[] { FeatureEvents })]
+  [AllureEpic(FeatureEvents)]
+  // [AllureFeature(new string[] { FeatureEvents })]
   public class EventsTest
   {
     [AllureStory(new string[] { "Subscription to new blocks" })]

@@ -16,11 +16,11 @@ const (
 )
 
 func TestSingleFaucetRequest(t *testing.T) {
-
+	t.Parallel()
 	allure.Test(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureExternallyOwnedAccounts),
-		allure.Story(StoryFaucet),
+		allure.Epic(FeatureExternallyOwnedAccounts),
+		allure.Feature(StoryFaucet),
+		// allure.Story(StoryFaucet),
 		allure.Description("Single request to faucet"),
 		allure.Action(func() {
 			client, err := connect()
@@ -51,11 +51,11 @@ func TestSingleFaucetRequest(t *testing.T) {
 		}))
 }
 func TestSubsequestFaucetRequest(t *testing.T) {
-
+	t.Parallel()
 	allure.Test(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureExternallyOwnedAccounts),
-		allure.Story(StoryFaucet),
+		allure.Epic(FeatureExternallyOwnedAccounts),
+		allure.Feature(StoryFaucet),
+		// allure.Story(StoryFaucet),
 		allure.Description("Subsequent requests to faucet"),
 		allure.Action(func() {
 			client, err := connect()

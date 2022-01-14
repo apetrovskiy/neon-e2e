@@ -10,11 +10,11 @@ import (
 )
 
 func TestNewBlocksSubscription(t *testing.T) {
-
+	t.Parallel()
 	allure.SkipTest(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureEvents),
-		allure.Story("Subscription to new blocks"),
+		allure.Epic(FeatureEvents),
+		allure.Feature("Subscription to new blocks"),
+		// allure.Story("Subscription to new blocks"),
 		allure.Description("Subscription to new blocks"),
 		allure.Action(func() {
 			log.Println("111")
@@ -22,11 +22,11 @@ func TestNewBlocksSubscription(t *testing.T) {
 		}))
 }
 func TestEventLogSubscription(t *testing.T) {
-
+	t.Parallel()
 	allure.SkipTest(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureEvents),
-		allure.Story("Subscription to event logs"),
+		allure.Epic(FeatureEvents),
+		allure.Feature("Subscription to event logs"),
+		// allure.Story("Subscription to event logs"),
 		allure.Description("Subscription to event logs"),
 		allure.Action(func() {
 			log.Println("111")
@@ -34,11 +34,11 @@ func TestEventLogSubscription(t *testing.T) {
 		}))
 }
 func TestReadEventLogs(t *testing.T) {
-
+	t.Parallel()
 	allure.SkipTest(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureEvents),
-		allure.Story("Read event logs"),
+		allure.Epic(FeatureEvents),
+		allure.Feature("Read event logs"),
+		// allure.Story("Read event logs"),
 		allure.Description("Read event logs"),
 		allure.Action(func() {
 			log.Println("111")
@@ -46,11 +46,11 @@ func TestReadEventLogs(t *testing.T) {
 		}))
 }
 func TestReadERC20TokenEventLogs(t *testing.T) {
-
+	t.Parallel()
 	allure.SkipTest(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureEvents),
-		allure.Story("Read ERC20 token event logs"),
+		allure.Epic(FeatureEvents),
+		allure.Feature("Read ERC20 token event logs"),
+		// allure.Story("Read ERC20 token event logs"),
 		allure.Description("Read ERC20 token event logs"),
 		allure.Action(func() {
 			log.Println("111")
@@ -58,11 +58,11 @@ func TestReadERC20TokenEventLogs(t *testing.T) {
 		}))
 }
 func TestRead0xProtocolEventLogs(t *testing.T) {
-
+	t.Parallel()
 	allure.SkipTest(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureEvents),
-		allure.Story("Read 0x protocol event logs"),
+		allure.Epic(FeatureEvents),
+		allure.Feature("Read 0x protocol event logs"),
+		// allure.Story("Read 0x protocol event logs"),
 		allure.Description("Read 0x protocol event logs"),
 		allure.Action(func() {
 			log.Println("111")

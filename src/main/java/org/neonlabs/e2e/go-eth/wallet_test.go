@@ -8,11 +8,11 @@ import (
 )
 
 func TestNewWallet(t *testing.T) {
-
+	t.Parallel()
 	allure.Test(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureExternallyOwnedAccounts),
-		allure.Story(StoryWallet),
+		allure.Epic(FeatureExternallyOwnedAccounts),
+		allure.Feature(StoryWallet),
+		// allure.Story(StoryWallet),
 		allure.Description("Creating a new wallet"),
 		allure.Action(func() {
 			account := createWallet(GetConfig().RequestAmount)

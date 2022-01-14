@@ -8,8 +8,8 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
   using static NeonEndToEnd.org.neonlabs.e2e.nethereum.Constants;
 
   [AllureSuite(Suite)]
-  [AllureEpic(Epic)]
-  [AllureFeature(new string[] { FeatureBlocks })]
+  [AllureEpic(FeatureBlocks)]
+  // [AllureFeature(new string[] { FeatureBlocks })]
   public class CallStateFromPreviousBlock
   {
     // [AllureXunit(DisplayName = "Should Transfer And GetState From Previous Block test")]

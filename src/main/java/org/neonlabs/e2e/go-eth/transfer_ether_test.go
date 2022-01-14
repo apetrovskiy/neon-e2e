@@ -50,13 +50,14 @@ var bidirectionalTransferTestData = []struct {
 }
 
 func TestTransferEther(t *testing.T) {
+	t.Parallel()
 	for _, td := range transferTestData {
 		t.Run(fmt.Sprintf("Run, data = sender %d, recipient %d, transfer %d", td.senderBalance, td.recipientBalance, td.transferAmountInEther), func(t *testing.T) {
 			allure.Test(t,
-				allure.Epic(Epic),
+				allure.Epic(FeatureExternallyOwnedAccounts),
 				allure.Lead(FeatureExternallyOwnedAccounts),
-				allure.Feature(FeatureExternallyOwnedAccounts),
-				allure.Story(StoryTransfer),
+				allure.Feature(StoryTransfer),
+				// allure.Story(StoryTransfer),
 				allure.Description("Transfer Ether"),
 				allure.Action(func() {
 					client, err := connect()
@@ -118,13 +119,14 @@ func TestTransferEther(t *testing.T) {
 }
 
 func TestTwoTransfersOfEther(t *testing.T) {
+	t.Parallel()
 	for _, td := range transferTestData {
 		t.Run(fmt.Sprintf("Run, data = sender %d, recipient %d, transfers %d", td.senderBalance, td.recipientBalance, td.transferAmountInEther), func(t *testing.T) {
 			allure.Test(t,
-				allure.Epic(Epic),
+				allure.Epic(FeatureExternallyOwnedAccounts),
 				allure.Lead(FeatureExternallyOwnedAccounts),
-				allure.Feature(FeatureExternallyOwnedAccounts),
-				allure.Story(StoryTransfer),
+				allure.Feature(StoryTransfer),
+				// allure.Story(StoryTransfer),
 				allure.Description("Transfer Ether"),
 				allure.Action(func() {
 					client, err := connect()
@@ -187,13 +189,14 @@ func TestTwoTransfersOfEther(t *testing.T) {
 }
 
 func TestBidirectionalTransfersOfEther(t *testing.T) {
+	t.Parallel()
 	for _, td := range bidirectionalTransferTestData {
 		t.Run(fmt.Sprintf("Run, data = sender %d, recipient %d, transfer s->r %d, transfer r->s %d", td.senderBalance, td.recipientBalance, td.directTransferAmountInEther, td.backwardTransferAmountInEther), func(t *testing.T) {
 			allure.Test(t,
-				allure.Epic(Epic),
+				allure.Epic(FeatureExternallyOwnedAccounts),
 				allure.Lead(FeatureExternallyOwnedAccounts),
-				allure.Feature(FeatureExternallyOwnedAccounts),
-				allure.Story(StoryTransfer),
+				allure.Feature(StoryTransfer),
+				// allure.Story(StoryTransfer),
 				allure.Description("Transfer Ether"),
 				allure.Action(func() {
 					client, err := connect()

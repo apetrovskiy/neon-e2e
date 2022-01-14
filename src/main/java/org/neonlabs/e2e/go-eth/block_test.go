@@ -10,11 +10,11 @@ import (
 )
 
 func TestQueryBlockHeader(t *testing.T) {
-
+	t.Parallel()
 	allure.SkipTest(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureBlocks),
-		allure.Story(StoryQueryBlock),
+		allure.Epic(FeatureBlocks),
+		allure.Feature(StoryQueryBlock),
+		// allure.Story(StoryQueryBlock),
 		allure.Description("Block header"),
 		allure.Action(func() {
 			// TODO: move to the before block
@@ -27,11 +27,11 @@ func TestQueryBlockHeader(t *testing.T) {
 		}))
 }
 func TestQueryFullBlock(t *testing.T) {
-
+	t.Parallel()
 	allure.SkipTest(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureBlocks),
-		allure.Story(StoryQueryBlock),
+		allure.Epic(FeatureBlocks),
+		allure.Feature(StoryQueryBlock),
+		// allure.Story(StoryQueryBlock),
 		allure.Description("Full block"),
 		allure.Action(func() {
 			// TODO: move to the before block

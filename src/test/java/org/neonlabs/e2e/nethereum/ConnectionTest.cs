@@ -9,8 +9,8 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
   using static NeonEndToEnd.org.neonlabs.e2e.nethereum.Constants;
 
   [AllureSuite(Suite)]
-  [AllureEpic(Epic)]
-  [AllureFeature(new string[] { FeatureCommon })]
+  [AllureEpic(FeatureCommon)]
+  // [AllureFeature(new string[] { FeatureCommon })]
   public class ConnectionTest
   {
     [AllureStory(new string[] { StoryConnection })]

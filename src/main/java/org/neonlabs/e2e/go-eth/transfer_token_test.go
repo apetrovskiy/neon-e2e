@@ -12,13 +12,13 @@ import (
 
 // TODO: finish it
 func TestTransferToken(t *testing.T) {
-
+	t.Parallel()
 	allure.SkipTest(t,
 		// allure.Suite(Epic),
-		allure.Epic(Epic),
+		allure.Epic(FeatureExternallyOwnedAccounts),
 		allure.Lead(FeatureExternallyOwnedAccounts),
-		allure.Feature(FeatureExternallyOwnedAccounts),
-		allure.Story(StoryTransfer),
+		allure.Feature(StoryTransfer),
+		// allure.Story(StoryTransfer),
 		allure.Description("Transfer tokens"),
 		allure.Action(func() {
 			client, err := connect()

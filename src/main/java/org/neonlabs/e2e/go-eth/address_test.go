@@ -10,11 +10,11 @@ import (
 )
 
 func TestAddressIsValid(t *testing.T) {
-
+	t.Parallel()
 	allure.SkipTest(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureAddress),
-		allure.Story(StoryAddressValidation),
+		allure.Epic(FeatureAddress),
+		allure.Feature(StoryAddressValidation),
+		// allure.Story(StoryAddressValidation),
 		allure.Description("Address is valid"),
 		allure.Action(func() {
 			log.Println("111")
@@ -22,11 +22,11 @@ func TestAddressIsValid(t *testing.T) {
 		}))
 }
 func TestAddressIsAccount(t *testing.T) {
-
+	t.Parallel()
 	allure.SkipTest(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureAddress),
-		allure.Story(StoryAddressValidation),
+		allure.Epic(FeatureAddress),
+		allure.Feature(StoryAddressValidation),
+		// allure.Story(StoryAddressValidation),
 		allure.Description("Address is account"),
 		allure.Action(func() {
 			log.Println("111")
@@ -34,11 +34,11 @@ func TestAddressIsAccount(t *testing.T) {
 		}))
 }
 func TestAddressIsSmartConstract(t *testing.T) {
-
+	t.Parallel()
 	allure.SkipTest(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureAddress),
-		allure.Story(StoryAddressValidation),
+		allure.Epic(FeatureAddress),
+		allure.Feature(StoryAddressValidation),
+		// allure.Story(StoryAddressValidation),
 		allure.Description("Address is smart contract"),
 		allure.Action(func() {
 			log.Println("111")

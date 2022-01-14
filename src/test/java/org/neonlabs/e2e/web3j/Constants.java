@@ -9,7 +9,7 @@ public class Constants {
   public static final String FeatureBlocks = "Blocks";
   public static final String FeatureCommon = "Common";
   public static final String FeatureEvents = "Events";
-  public static final String FeatureExternallyOwnedAccounts = "Externally Owned Accounts";
+  public static final String FeatureExternallyOwnedAccounts = "Externally-owned Accounts";
   public static final String FeatureSmartContracts = "Smart contracts";
   public static final String FeatureSwarm = "Swarm";
   public static final String FeatureTransaction = "Transaction";
@@ -17,7 +17,7 @@ public class Constants {
   public static final String StoryAddressValidation = "Address validation";
   public static final String StoryBalance = "Balance";
   public static final String StoryConnection = "Connection";
-  public static final String StoryQueryBlock = "Query Block";
+  public static final String StoryQueryBlock = "Query block";
   public static final String StoryTransfer = "Transfer";
   public static final String StoryWallet = "Wallet";
 

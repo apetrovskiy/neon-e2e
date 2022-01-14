@@ -23,7 +23,7 @@ import org.web3j.crypto.WalletFile;
 @SuppressWarnings({ "PMD.GuardLogStatement", "PMD.SystemPrintln" })
 public class Wallet {
   /**
-   * Creates an externally owned account.
+   * Creates an externally-owned account.
    */
   @SneakyThrows
   @Step

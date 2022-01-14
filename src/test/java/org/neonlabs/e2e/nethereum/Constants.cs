@@ -8,7 +8,7 @@ namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
     public const string FeatureBlocks = "Blocks";
     public const string FeatureCommon = "Common";
     public const string FeatureEvents = "Events";
-    public const string FeatureExternallyOwnedAccounts = "Externally Owned Accounts";
+    public const string FeatureExternallyOwnedAccounts = "Externally-owned Accounts";
     public const string FeatureFaucet = "Faucet";
     public const string FeatureSmartContracts = "Smart contracts";
     public const string FeatureSwarm = "Swarm";
@@ -18,7 +18,7 @@ namespace NeonEndToEnd.org.neonlabs.e2e.nethereum
     public const string StoryBalance = "Balance";
     public const string StoryConnection = "Connection";
     public const string StoryFaucet = "Faucet";
-    public const string StoryQueryBlock = "Query Block";
+    public const string StoryQueryBlock = "Query block";
     public const string StoryTransfer = "Transfer";
     public const string StoryWallet = "Wallet";
   }

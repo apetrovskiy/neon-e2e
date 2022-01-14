@@ -6,7 +6,7 @@ const (
 	FeatureBlocks                  = "Blocks"
 	FeatureCommon                  = "Common"
 	FeatureEvents                  = "Events"
-	FeatureExternallyOwnedAccounts = "Externally Owned Accounts"
+	FeatureExternallyOwnedAccounts = "Externally-owned Accounts"
 	FeatureSmartContracts          = "Smart contracts"
 	FeatureSwarm                   = "Swarm"
 	FeatureTransaction             = "Transaction"

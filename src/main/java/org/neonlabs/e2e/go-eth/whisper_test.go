@@ -10,11 +10,11 @@ import (
 )
 
 func TestWhisperConnection(t *testing.T) {
-
+	t.Parallel()
 	allure.SkipTest(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureWhisper),
-		allure.Story("Connect Whisper client"),
+		allure.Epic(FeatureWhisper),
+		allure.Feature("Connect Whisper client"),
+		// allure.Story("Connect Whisper client"),
 		allure.Description("Connect Whisper client"),
 		allure.Action(func() {
 			log.Println("111")
@@ -22,11 +22,11 @@ func TestWhisperConnection(t *testing.T) {
 		}))
 }
 func TestGenerateWhisperKeyPair(t *testing.T) {
-
+	t.Parallel()
 	allure.SkipTest(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureWhisper),
-		allure.Story("Generate Whisper key pair"),
+		allure.Epic(FeatureWhisper),
+		allure.Feature("Generate Whisper key pair"),
+		// allure.Story("Generate Whisper key pair"),
 		allure.Description("Generate Whisper key pair"),
 		allure.Action(func() {
 			log.Println("111")
@@ -34,11 +34,11 @@ func TestGenerateWhisperKeyPair(t *testing.T) {
 		}))
 }
 func TestSendMessageOnWhisper(t *testing.T) {
-
+	t.Parallel()
 	allure.SkipTest(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureWhisper),
-		allure.Story("Send message on Whisper"),
+		allure.Epic(FeatureWhisper),
+		allure.Feature("Send message on Whisper"),
+		// allure.Story("Send message on Whisper"),
 		allure.Description("Send message on Whisper"),
 		allure.Action(func() {
 			log.Println("111")
@@ -46,11 +46,11 @@ func TestSendMessageOnWhisper(t *testing.T) {
 		}))
 }
 func TestSubscribeToWhisperMessages(t *testing.T) {
-
+	t.Parallel()
 	allure.SkipTest(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureWhisper),
-		allure.Story("Subscribe to Whisper messages"),
+		allure.Epic(FeatureWhisper),
+		allure.Feature("Subscribe to Whisper messages"),
+		// allure.Story("Subscribe to Whisper messages"),
 		allure.Description("Subscribe to Whisper messages"),
 		allure.Action(func() {
 			log.Println("111")

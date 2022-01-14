@@ -8,8 +8,8 @@ namespace NeonEndToEnd.Tests.org.neonlabs.e2e.nethereum
   using static NeonEndToEnd.org.neonlabs.e2e.nethereum.Constants;
 
   [AllureSuite(Suite)]
-  [AllureEpic(Epic)]
-  [AllureFeature(new string[] { FeatureExternallyOwnedAccounts })]
+  [AllureEpic(FeatureExternallyOwnedAccounts)]
+  // [AllureFeature(new string[] { FeatureExternallyOwnedAccounts })]
   public class TransferTokenTest
   {
     [AllureStory(new string[] { StoryTransfer })]

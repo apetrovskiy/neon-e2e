@@ -10,11 +10,11 @@ import (
 )
 
 func TestUploadToSwarm(t *testing.T) {
-
+	t.Parallel()
 	allure.SkipTest(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureSwarm),
-		allure.Story("Upload files to swarm"),
+		allure.Epic(FeatureSwarm),
+		allure.Feature("Upload files to swarm"),
+		// allure.Story("Upload files to swarm"),
 		allure.Description("Upload files to swarm"),
 		allure.Action(func() {
 			log.Println("111")
@@ -22,11 +22,11 @@ func TestUploadToSwarm(t *testing.T) {
 		}))
 }
 func TestDownloadFromSwarm(t *testing.T) {
-
+	t.Parallel()
 	allure.SkipTest(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureSwarm),
-		allure.Story("Download files from swarm"),
+		allure.Epic(FeatureSwarm),
+		allure.Feature("Download files from swarm"),
+		// allure.Story("Download files from swarm"),
 		allure.Description("Download files from swarm"),
 		allure.Action(func() {
 			log.Println("111")

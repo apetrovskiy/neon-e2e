@@ -10,11 +10,11 @@ import (
 )
 
 func TestDeploySmartContract(t *testing.T) {
-
+	t.Parallel()
 	allure.SkipTest(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureSmartContracts),
-		allure.Story("Deploy smart contracts"),
+		allure.Epic(FeatureSmartContracts),
+		allure.Feature("Deploy smart contracts"),
+		// allure.Story("Deploy smart contracts"),
 		allure.Description("Deploy smart contracts"),
 		allure.Action(func() {
 			log.Println("111")
@@ -22,11 +22,11 @@ func TestDeploySmartContract(t *testing.T) {
 		}))
 }
 func TestLoadSmartContract(t *testing.T) {
-
+	t.Parallel()
 	allure.SkipTest(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureSmartContracts),
-		allure.Story("Load smart contracts"),
+		allure.Epic(FeatureSmartContracts),
+		allure.Feature("Load smart contracts"),
+		// allure.Story("Load smart contracts"),
 		allure.Description("Load smart contracts"),
 		allure.Action(func() {
 			log.Println("111")
@@ -34,11 +34,11 @@ func TestLoadSmartContract(t *testing.T) {
 		}))
 }
 func TestQuerySmartConstract(t *testing.T) {
-
+	t.Parallel()
 	allure.SkipTest(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureSmartContracts),
-		allure.Story("Query smart contracts"),
+		allure.Epic(FeatureSmartContracts),
+		allure.Feature("Query smart contracts"),
+		// allure.Story("Query smart contracts"),
 		allure.Description("Query smart contracts"),
 		allure.Action(func() {
 			log.Println("111")
@@ -46,11 +46,11 @@ func TestQuerySmartConstract(t *testing.T) {
 		}))
 }
 func TestWriteToSmartConstract(t *testing.T) {
-
+	t.Parallel()
 	allure.SkipTest(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureSmartContracts),
-		allure.Story("Write to smart contracts"),
+		allure.Epic(FeatureSmartContracts),
+		allure.Feature("Write to smart contracts"),
+		// allure.Story("Write to smart contracts"),
 		allure.Description("Write to smart contracts"),
 		allure.Action(func() {
 			log.Println("111")
@@ -58,11 +58,11 @@ func TestWriteToSmartConstract(t *testing.T) {
 		}))
 }
 func TestReadSmartConstractBytecode(t *testing.T) {
-
+	t.Parallel()
 	allure.SkipTest(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureSmartContracts),
-		allure.Story("Read smart contract bytecode"),
+		allure.Epic(FeatureSmartContracts),
+		allure.Feature("Read smart contract bytecode"),
+		// allure.Story("Read smart contract bytecode"),
 		allure.Description("Read smart contract bytecode"),
 		allure.Action(func() {
 			log.Println("111")
@@ -70,11 +70,11 @@ func TestReadSmartConstractBytecode(t *testing.T) {
 		}))
 }
 func TestQueryERC20TokenSmartConstract(t *testing.T) {
-
+	t.Parallel()
 	allure.SkipTest(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureSmartContracts),
-		allure.Story("Query smart contracts"),
+		allure.Epic(FeatureSmartContracts),
+		allure.Feature("Query smart contracts"),
+		// allure.Story("Query smart contracts"),
 		allure.Description("Query ERC20 token smart contracts"),
 		allure.Action(func() {
 			log.Println("111")

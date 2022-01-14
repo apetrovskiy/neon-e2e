@@ -3,7 +3,7 @@ package org.neonlabs.e2e.web3j;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.neonlabs.e2e.web3j.Constants.Epic;
+// import static org.neonlabs.e2e.web3j.Constants.Epic;
 import static org.neonlabs.e2e.web3j.Constants.FeatureExternallyOwnedAccounts;
 import static org.neonlabs.e2e.web3j.Constants.NotYetDone;
 import static org.neonlabs.e2e.web3j.Constants.StoryBalance;
@@ -11,20 +11,23 @@ import static org.neonlabs.e2e.web3j.Constants.StoryBalance;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
-import io.qameta.allure.Story;
+// import io.qameta.allure.Story;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 /**
  * Balance tests.
  */
-@Epic(Epic)
-@Feature(FeatureExternallyOwnedAccounts)
+@Epic(FeatureExternallyOwnedAccounts)
+@Feature(StoryBalance)
+@DisplayName(FeatureExternallyOwnedAccounts)
 @SuppressWarnings("PMD.JUnitTestContainsTooManyAsserts")
 class BalanceTest {
   @Test
-  @Story(StoryBalance)
+  // @Story(StoryBalance)
+  // @DisplayName(FeatureExternallyOwnedAccounts)
   @Description("Get the latest block balance")
   @SneakyThrows
   void shouldGetLatestBlockBalance() {
@@ -56,7 +59,8 @@ class BalanceTest {
   }
 
   @Test
-  @Story(StoryBalance)
+  // @Story(StoryBalance)
+  // @DisplayName(FeatureExternallyOwnedAccounts)
   @Description("Get a specific block balance")
   void test02() {
     assertAll(
@@ -65,7 +69,8 @@ class BalanceTest {
   }
 
   @Test
-  @Story(StoryBalance)
+  // @Story(StoryBalance)
+  // @DisplayName(FeatureExternallyOwnedAccounts)
   @Description("Get pending balance")
   @Disabled(NotYetDone)
   void test03() {

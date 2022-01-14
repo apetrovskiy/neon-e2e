@@ -12,11 +12,11 @@ import (
 )
 
 func TestGetLatestBalance(t *testing.T) {
-
+	t.Parallel()
 	allure.Test(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureExternallyOwnedAccounts),
-		allure.Story(StoryBalance),
+		allure.Epic(FeatureExternallyOwnedAccounts),
+		allure.Feature(StoryBalance),
+		// allure.Story(StoryBalance),
 		allure.Description("Get the latest block balance"),
 		allure.Action(func() {
 			client, err := connect()
@@ -41,10 +41,11 @@ func TestGetLatestBalance(t *testing.T) {
 		}))
 }
 func TestGetSpecificBlockBalance(t *testing.T) {
+	t.Parallel()
 	allure.Test(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureExternallyOwnedAccounts),
-		allure.Story(StoryBalance),
+		allure.Epic(FeatureExternallyOwnedAccounts),
+		allure.Feature(StoryBalance),
+		// allure.Story(StoryBalance),
 		allure.Description("Get a specific block balance"),
 		allure.Action(func() {
 			client, err := connect()
@@ -70,10 +71,11 @@ func TestGetSpecificBlockBalance(t *testing.T) {
 		}))
 }
 func TestGetPendingBalance(t *testing.T) {
+	t.Parallel()
 	allure.Test(t,
-		allure.Epic(Epic),
-		allure.Feature(FeatureExternallyOwnedAccounts),
-		allure.Story(StoryBalance),
+		allure.Epic(FeatureExternallyOwnedAccounts),
+		allure.Feature(StoryBalance),
+		// allure.Story(StoryBalance),
 		allure.Description("Get pending balance"),
 		allure.Action(func() {
 			client, err := connect()
