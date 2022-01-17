@@ -1,0 +1,477 @@
+{
+  "uid" : "1797c7b5e030dd03",
+  "name" : "a user to user successful transaction -- @1.2 ",
+  "fullName" : "transaction: a user to user successful transaction",
+  "historyId" : "c9d2e1cdd6334f02871155773931b3d3",
+  "time" : {
+    "start" : 1642456348029,
+    "stop" : 1642456378931,
+    "duration" : 30902
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Failed to send a raw transaction\n",
+  "statusTrace" : "  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 157, in wrapped_decorator\n    return step_decorator(astep_func, context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 124, in step_decorator\n    loop.run_until_complete(astep_func(context, *args, **kwargs))\n  File \"/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/asyncio/base_events.py\", line 616, in run_until_complete\n    return future.result()\n  File \"features/steps/transaction.py\", line 143, in step_transaction\n    assert 1 == 2, \"Failed to send a raw transaction\"\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Failed to send a raw transaction\n",
+    "statusTrace" : "  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 157, in wrapped_decorator\n    return step_decorator(astep_func, context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 124, in step_decorator\n    loop.run_until_complete(astep_func(context, *args, **kwargs))\n  File \"/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/asyncio/base_events.py\", line 616, in run_until_complete\n    return future.result()\n  File \"features/steps/transaction.py\", line 143, in step_transaction\n    assert 1 == 2, \"Failed to send a raw transaction\"\n",
+    "steps" : [ {
+      "name" : "Given there is user Alice in Ethereum network with no initial balance",
+      "time" : {
+        "start" : 1642456348030,
+        "stop" : 1642456348039,
+        "duration" : 9
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "creating an account",
+        "time" : {
+          "start" : 1642456348031,
+          "stop" : 1642456348031,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "amount",
+          "value" : "0"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "creating an account with id",
+        "time" : {
+          "start" : 1642456348031,
+          "stop" : 1642456348031,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "id",
+          "value" : "''"
+        }, {
+          "name" : "amount",
+          "value" : "0"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "And user Alice requests the Ether faucet for 10Ξ",
+      "time" : {
+        "start" : 1642456348039,
+        "stop" : 1642456363148,
+        "duration" : 15109
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And there is user Bob in Ethereum network with no initial balance",
+      "time" : {
+        "start" : 1642456363149,
+        "stop" : 1642456363156,
+        "duration" : 7
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "creating an account",
+        "time" : {
+          "start" : 1642456363149,
+          "stop" : 1642456363149,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "amount",
+          "value" : "0"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "creating an account with id",
+        "time" : {
+          "start" : 1642456363149,
+          "stop" : 1642456363149,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "id",
+          "value" : "''"
+        }, {
+          "name" : "amount",
+          "value" : "0"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "And user Bob requests the Ether faucet for 10Ξ",
+      "time" : {
+        "start" : 1642456363156,
+        "stop" : 1642456378251,
+        "duration" : 15095
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When user Alice sends 2Ξ to user Bob",
+      "time" : {
+        "start" : 1642456378251,
+        "stop" : 1642456378930,
+        "duration" : 679
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: Failed to send a raw transaction\n",
+      "statusTrace" : "  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 157, in wrapped_decorator\n    return step_decorator(astep_func, context, *args, **kwargs)\n  File \"/home/runner/.local/share/virtualenvs/neon-e2e-CR8dVugf/lib/python3.8/site-packages/behave/api/async_step.py\", line 124, in step_decorator\n    loop.run_until_complete(astep_func(context, *args, **kwargs))\n  File \"/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/asyncio/base_events.py\", line 616, in run_until_complete\n    return future.result()\n  File \"features/steps/transaction.py\", line 143, in step_transaction\n    assert 1 == 2, \"Failed to send a raw transaction\"\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "Then the recipient has balance increased by 2Ξ",
+      "time" : {
+        "start" : 1642456378930,
+        "stop" : 1642456378930,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And the sender has balance decreased by 2Ξ",
+      "time" : {
+        "start" : 1642456378930,
+        "stop" : 1642456378931,
+        "duration" : 1
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 11,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "transaction"
+  }, {
+    "name" : "framework",
+    "value" : "behave"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "amount",
+    "value" : "2"
+  }, {
+    "name" : "initial balance",
+    "value" : "10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "239d17746dd16201",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+      "time" : {
+        "start" : 1642456344577,
+        "stop" : 1642456375093,
+        "duration" : 30516
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 636,
+        "broken" : 487,
+        "skipped" : 2,
+        "passed" : 99,
+        "unknown" : 0,
+        "total" : 1224
+      },
+      "items" : [ {
+        "uid" : "52361fb052c0bcb0",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1286//#testresult/52361fb052c0bcb0",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642455932791,
+          "stop" : 1642455962493,
+          "duration" : 29702
+        }
+      }, {
+        "uid" : "6761d33358d76899",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1285//#testresult/6761d33358d76899",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642455471584,
+          "stop" : 1642455502427,
+          "duration" : 30843
+        }
+      }, {
+        "uid" : "e75aad54e029cd66",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1284//#testresult/e75aad54e029cd66",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642454985045,
+          "stop" : 1642455015091,
+          "duration" : 30046
+        }
+      }, {
+        "uid" : "2821361e1bb96221",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1283//#testresult/2821361e1bb96221",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642454388881,
+          "stop" : 1642454419955,
+          "duration" : 31074
+        }
+      }, {
+        "uid" : "d7e5f71fb8e1d48a",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1282//#testresult/d7e5f71fb8e1d48a",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642453788268,
+          "stop" : 1642453819289,
+          "duration" : 31021
+        }
+      }, {
+        "uid" : "581549922071d004",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1281//#testresult/581549922071d004",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642453295707,
+          "stop" : 1642453325862,
+          "duration" : 30155
+        }
+      }, {
+        "uid" : "37ade5cd8cf43143",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1280//#testresult/37ade5cd8cf43143",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642452884607,
+          "stop" : 1642452914791,
+          "duration" : 30184
+        }
+      }, {
+        "uid" : "6155e77ac2499c31",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1279//#testresult/6155e77ac2499c31",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642452471468,
+          "stop" : 1642452502328,
+          "duration" : 30860
+        }
+      }, {
+        "uid" : "1770b61a30439b67",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1278//#testresult/1770b61a30439b67",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642451985866,
+          "stop" : 1642452015576,
+          "duration" : 29710
+        }
+      }, {
+        "uid" : "6457a0d905768173",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1277//#testresult/6457a0d905768173",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642451393643,
+          "stop" : 1642451422805,
+          "duration" : 29162
+        }
+      }, {
+        "uid" : "5c61ee4daf648352",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1276//#testresult/5c61ee4daf648352",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642450638358,
+          "stop" : 1642450668047,
+          "duration" : 29689
+        }
+      }, {
+        "uid" : "2c8f4e3a70b15502",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1275//#testresult/2c8f4e3a70b15502",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642450117209,
+          "stop" : 1642450150105,
+          "duration" : 32896
+        }
+      }, {
+        "uid" : "7ce848ada64603a2",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1274//#testresult/7ce848ada64603a2",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642449571774,
+          "stop" : 1642449604105,
+          "duration" : 32331
+        }
+      }, {
+        "uid" : "12fcf69ea2e6af15",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1273//#testresult/12fcf69ea2e6af15",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642449175727,
+          "stop" : 1642449206096,
+          "duration" : 30369
+        }
+      }, {
+        "uid" : "e70a4bc7a4dd6bb5",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1272//#testresult/e70a4bc7a4dd6bb5",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642448754148,
+          "stop" : 1642448784519,
+          "duration" : 30371
+        }
+      }, {
+        "uid" : "204824f0e96174a0",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1271//#testresult/204824f0e96174a0",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642448342524,
+          "stop" : 1642448372352,
+          "duration" : 29828
+        }
+      }, {
+        "uid" : "f099ed91693599d9",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1269//#testresult/f099ed91693599d9",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642447504004,
+          "stop" : 1642447536398,
+          "duration" : 32394
+        }
+      }, {
+        "uid" : "5206925715583459",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1268//#testresult/5206925715583459",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642446940887,
+          "stop" : 1642446971729,
+          "duration" : 30842
+        }
+      }, {
+        "uid" : "2322c64a60ddce4e",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1267//#testresult/2322c64a60ddce4e",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642446403593,
+          "stop" : 1642446433916,
+          "duration" : 30323
+        }
+      }, {
+        "uid" : "110f380af6d29ade",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1266//#testresult/110f380af6d29ade",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Failed to send a raw transaction\n",
+        "time" : {
+          "start" : 1642445966534,
+          "stop" : 1642445997396,
+          "duration" : 30862
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "1797c7b5e030dd03.json",
+  "parameterValues" : [ "2", "10" ]
+}
