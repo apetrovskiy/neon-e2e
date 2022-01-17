@@ -1,0 +1,166 @@
+{
+  "uid" : "8e711445e1952a71",
+  "name" : "Query Transaction For Sender Address",
+  "fullName" : "/home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth/transaction_test.go:TestQueryTransactionForSenderAddress",
+  "time" : {
+    "start" : 1642412414139,
+    "stop" : 1642412414300,
+    "duration" : 161
+  },
+  "description" : "Query transaction for common data",
+  "descriptionHtml" : "<p>Query transaction for common data</p>\n",
+  "status" : "broken",
+  "statusMessage" : "runtime error: invalid memory address or nil pointer dereference",
+  "statusTrace" : "goroutine 44 [running]:\nruntime/debug.Stack()\n\t/opt/hostedtoolcache/go/1.17.6/x64/src/runtime/debug/stack.go:24 +0x65\npanic({0x7590c0, 0xa25e50})\n\t/opt/hostedtoolcache/go/1.17.6/x64/src/runtime/panic.go:1038 +0x215\npanic({0x7590c0, 0xa25e50})\n\t/opt/hostedtoolcache/go/1.17.6/x64/src/runtime/panic.go:1038 +0x215\npanic({0x7590c0, 0xa25e50})\n\t/opt/hostedtoolcache/go/1.17.6/x64/src/runtime/panic.go:1038 +0x215\ngithub.com/ethereum/go-ethereum/core/types.(*Block).Transactions(...)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/ethereum/go-ethereum/core/types/block.go:275\ngithub.com/neonlabsorg/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth.TestQueryTransactionForSenderAddress.func1.1.1.1()\n\t/home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth/transaction_test.go:75 +0x48\ngithub.com/jtolds/gls.(*ContextManager).SetValues.func1(0x0)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/context.go:97 +0x476\ngithub.com/jtolds/gls.EnsureGoroutineId(0xc000296f00)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/gid.go:19 +0xfb\ngithub.com/jtolds/gls.(*ContextManager).SetValues(0xc000092500, 0xc000296ea0, 0xc00047bc20)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/context.go:63 +0x16a\ngithub.com/neonlabsorg/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth.TestQueryTransactionForSenderAddress.func1.1.1()\n\t/home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth/transaction_test.go:74 +0x18a\ngithub.com/neonlabsorg/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth.TestQueryTransactionForSenderAddress.func1.1()\n\t/home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth/transaction_test.go:82 +0x8d\ngithub.com/jtolds/gls.(*ContextManager).SetValues.func1(0x0)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/context.go:97 +0x476\ngithub.com/jtolds/gls.EnsureGoroutineId(0xc000296e70)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/gid.go:19 +0xfb\ngithub.com/jtolds/gls.(*ContextManager).SetValues(0xc000092500, 0xc000296e10, 0xc000296de0)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/context.go:63 +0x16a\ngithub.com/neonlabsorg/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth.TestQueryTransactionForSenderAddress.func1()\n\t/home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth/transaction_test.go:69 +0x8f\ngithub.com/jtolds/gls.(*ContextManager).SetValues.func1(0x0)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/context.go:97 +0x476\ngithub.com/jtolds/gls.EnsureGoroutineId.func1()\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/gid.go:24 +0x22\ngithub.com/jtolds/gls._m(0x776740, 0xc000143d01)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/stack_tags.go:108 +0x22\ngithub.com/jtolds/gls.github_com_jtolds_gls_markS(0xc000335ce0, 0x0)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/stack_tags.go:56 +0x19\ngithub.com/jtolds/gls.addStackTag(...)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/stack_tags.go:49\ngithub.com/jtolds/gls.EnsureGoroutineId(0xc000335ce0)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/gid.go:24 +0xd8\ngithub.com/jtolds/gls.(*ContextManager).SetValues(0xc000092500, 0xc000335bc0, 0xc00057dd80)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/context.go:63 +0x16a\ngithub.com/neonlabsorg/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth.TestQueryTransactionForSenderAddress(0xc000140ea0)\n\t/home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth/transaction_test.go:57 +0x172\ntesting.tRunner(0xc000140ea0, 0x7d0b68)\n\t/opt/hostedtoolcache/go/1.17.6/x64/src/testing/testing.go:1259 +0x102\ncreated by testing.(*T).Run\n\t/opt/hostedtoolcache/go/1.17.6/x64/src/testing/testing.go:1306 +0x35a\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "Query transaction for common data",
+    "status" : "broken",
+    "statusMessage" : "runtime error: invalid memory address or nil pointer dereference",
+    "statusTrace" : "goroutine 44 [running]:\nruntime/debug.Stack()\n\t/opt/hostedtoolcache/go/1.17.6/x64/src/runtime/debug/stack.go:24 +0x65\npanic({0x7590c0, 0xa25e50})\n\t/opt/hostedtoolcache/go/1.17.6/x64/src/runtime/panic.go:1038 +0x215\npanic({0x7590c0, 0xa25e50})\n\t/opt/hostedtoolcache/go/1.17.6/x64/src/runtime/panic.go:1038 +0x215\npanic({0x7590c0, 0xa25e50})\n\t/opt/hostedtoolcache/go/1.17.6/x64/src/runtime/panic.go:1038 +0x215\ngithub.com/ethereum/go-ethereum/core/types.(*Block).Transactions(...)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/ethereum/go-ethereum/core/types/block.go:275\ngithub.com/neonlabsorg/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth.TestQueryTransactionForSenderAddress.func1.1.1.1()\n\t/home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth/transaction_test.go:75 +0x48\ngithub.com/jtolds/gls.(*ContextManager).SetValues.func1(0x0)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/context.go:97 +0x476\ngithub.com/jtolds/gls.EnsureGoroutineId(0xc000296f00)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/gid.go:19 +0xfb\ngithub.com/jtolds/gls.(*ContextManager).SetValues(0xc000092500, 0xc000296ea0, 0xc00047bc20)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/context.go:63 +0x16a\ngithub.com/neonlabsorg/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth.TestQueryTransactionForSenderAddress.func1.1.1()\n\t/home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth/transaction_test.go:74 +0x18a\ngithub.com/neonlabsorg/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth.TestQueryTransactionForSenderAddress.func1.1()\n\t/home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth/transaction_test.go:82 +0x8d\ngithub.com/jtolds/gls.(*ContextManager).SetValues.func1(0x0)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/context.go:97 +0x476\ngithub.com/jtolds/gls.EnsureGoroutineId(0xc000296e70)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/gid.go:19 +0xfb\ngithub.com/jtolds/gls.(*ContextManager).SetValues(0xc000092500, 0xc000296e10, 0xc000296de0)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/context.go:63 +0x16a\ngithub.com/neonlabsorg/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth.TestQueryTransactionForSenderAddress.func1()\n\t/home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth/transaction_test.go:69 +0x8f\ngithub.com/jtolds/gls.(*ContextManager).SetValues.func1(0x0)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/context.go:97 +0x476\ngithub.com/jtolds/gls.EnsureGoroutineId.func1()\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/gid.go:24 +0x22\ngithub.com/jtolds/gls._m(0x776740, 0xc000143d01)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/stack_tags.go:108 +0x22\ngithub.com/jtolds/gls.github_com_jtolds_gls_markS(0xc000335ce0, 0x0)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/stack_tags.go:56 +0x19\ngithub.com/jtolds/gls.addStackTag(...)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/stack_tags.go:49\ngithub.com/jtolds/gls.EnsureGoroutineId(0xc000335ce0)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/gid.go:24 +0xd8\ngithub.com/jtolds/gls.(*ContextManager).SetValues(0xc000092500, 0xc000335bc0, 0xc00057dd80)\n\t/home/runner/work/neon-e2e/neon-e2e/vendor/github.com/jtolds/gls/context.go:63 +0x16a\ngithub.com/neonlabsorg/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth.TestQueryTransactionForSenderAddress(0xc000140ea0)\n\t/home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth/transaction_test.go:57 +0x172\ntesting.tRunner(0xc000140ea0, 0x7d0b68)\n\t/opt/hostedtoolcache/go/1.17.6/x64/src/testing/testing.go:1259 +0x102\ncreated by testing.(*T).Run\n\t/opt/hostedtoolcache/go/1.17.6/x64/src/testing/testing.go:1306 +0x35a\n",
+    "steps" : [ {
+      "name" : "Loading the .env file",
+      "time" : {
+        "start" : 1642412414139,
+        "stop" : 1642412414140,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Connecting to network http://proxy.release.stand.neontest.xyz/solana",
+      "time" : {
+        "start" : 1642412414140,
+        "stop" : 1642412414140,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Loading the .env file",
+        "time" : {
+          "start" : 1642412414140,
+          "stop" : 1642412414140,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Getting chain id",
+      "time" : {
+        "start" : 1642412414140,
+        "stop" : 1642412414299,
+        "duration" : 159
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Getting the highest block by number",
+      "time" : {
+        "start" : 1642412414299,
+        "stop" : 1642412414300,
+        "duration" : 1
+      },
+      "status" : "broken",
+      "steps" : [ {
+        "name" : "Checking block's transactions",
+        "time" : {
+          "start" : 1642412414299,
+          "stop" : 1642412414299,
+          "duration" : 0
+        },
+        "status" : "failed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "home.runner.work.neon-e2e.neon-e2e.src.main.java.org.neonlabs.e2e.go-eth.transaction_test"
+  }, {
+    "name" : "testClass",
+    "value" : "home.runner.work.neon-e2e.neon-e2e.src.main.java.org.neonlabs.e2e.go-eth.transaction_test"
+  }, {
+    "name" : "testMethod",
+    "value" : "TestQueryTransactionForSenderAddress"
+  }, {
+    "name" : "host",
+    "value" : "fv-az278-37"
+  }, {
+    "name" : "language",
+    "value" : "golang"
+  }, {
+    "name" : "epic",
+    "value" : "Transaction"
+  }, {
+    "name" : "feature",
+    "value" : "Query transaction"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "8e711445e1952a71.json",
+  "parameterValues" : [ ]
+}
