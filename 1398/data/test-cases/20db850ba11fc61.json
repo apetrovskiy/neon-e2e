@@ -1,0 +1,1106 @@
+{
+  "uid" : "20db850ba11fc61",
+  "name" : "Bidirectional Transfers Of Ether / Run ,_ data _=_ sender _ 10 ,_ recipient _ 3 ,_ transfer _ s -> r _ 1 ,_ transfer _ r -> s _ 2",
+  "fullName" : "/home/runner/work/neon-e2e/neon-e2e/src/main/java/org/neonlabs/e2e/go-eth/transfer_ether_test.go:TestBidirectionalTransfersOfEther/Run,_data_=_sender_10,_recipient_3,_transfer_s->r_1,_transfer_r->s_2",
+  "time" : {
+    "start" : 1642526475145,
+    "stop" : 1642526506395,
+    "duration" : 31250
+  },
+  "description" : "Transfer Ether",
+  "descriptionHtml" : "<p>Transfer Ether</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "Transfer Ether",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Loading the .env file",
+      "time" : {
+        "start" : 1642526475145,
+        "stop" : 1642526475145,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Connecting to network http://proxy.release.stand.neontest.xyz/solana",
+      "time" : {
+        "start" : 1642526475145,
+        "stop" : 1642526475146,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Loading the .env file",
+        "time" : {
+          "start" : 1642526475145,
+          "stop" : 1642526475146,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "hasContent" : false,
+        "stepsCount" : 0,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Creating a wallet",
+      "time" : {
+        "start" : 1642526475146,
+        "stop" : 1642526489829,
+        "duration" : 14683
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Loading the .env file",
+        "time" : {
+          "start" : 1642526475146,
+          "stop" : 1642526475146,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "hasContent" : false,
+        "stepsCount" : 0,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "Requesting faucet http://proxy.release.stand.neontest.xyz/request_eth_token for 10 to address 0x667E4Ac28003653258bca9924C261B8996E49A8E",
+        "time" : {
+          "start" : 1642526475146,
+          "stop" : 1642526489828,
+          "duration" : 14682
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Loading the .env file",
+          "time" : {
+            "start" : 1642526475146,
+            "stop" : 1642526475146,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "hasContent" : false,
+          "stepsCount" : 0,
+          "attachmentsCount" : 0
+        }, {
+          "name" : "Loading the .env file",
+          "time" : {
+            "start" : 1642526475146,
+            "stop" : 1642526475146,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "hasContent" : false,
+          "stepsCount" : 0,
+          "attachmentsCount" : 0
+        }, {
+          "name" : "Checking useFaucet=true and faucetUrl=http://proxy.release.stand.neontest.xyz/request_eth_token",
+          "time" : {
+            "start" : 1642526475146,
+            "stop" : 1642526475147,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Loading the .env file",
+            "time" : {
+              "start" : 1642526475146,
+              "stop" : 1642526475147,
+              "duration" : 1
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "shouldDisplayMessage" : false,
+            "hasContent" : false,
+            "stepsCount" : 0,
+            "attachmentsCount" : 0
+          }, {
+            "name" : "Loading the .env file",
+            "time" : {
+              "start" : 1642526475147,
+              "stop" : 1642526475147,
+              "duration" : 0
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "shouldDisplayMessage" : false,
+            "hasContent" : false,
+            "stepsCount" : 0,
+            "attachmentsCount" : 0
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "hasContent" : true,
+          "stepsCount" : 2,
+          "attachmentsCount" : 0
+        }, {
+          "name" : "Preparing to POST request",
+          "time" : {
+            "start" : 1642526475147,
+            "stop" : 1642526475147,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "hasContent" : false,
+          "stepsCount" : 0,
+          "attachmentsCount" : 0
+        }, {
+          "name" : "Checking error",
+          "time" : {
+            "start" : 1642526475147,
+            "stop" : 1642526475147,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "hasContent" : false,
+          "stepsCount" : 0,
+          "attachmentsCount" : 0
+        }, {
+          "name" : "Checking the request body",
+          "time" : {
+            "start" : 1642526475147,
+            "stop" : 1642526475147,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Checking the request body as string(reqBody)",
+            "time" : {
+              "start" : 1642526475147,
+              "stop" : 1642526475147,
+              "duration" : 0
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "shouldDisplayMessage" : false,
+            "hasContent" : false,
+            "stepsCount" : 0,
+            "attachmentsCount" : 0
+          }, {
+            "name" : "Checking the request body as bytes.NewBuffer(reqBody).String()",
+            "time" : {
+              "start" : 1642526475147,
+              "stop" : 1642526475147,
+              "duration" : 0
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "shouldDisplayMessage" : false,
+            "hasContent" : false,
+            "stepsCount" : 0,
+            "attachmentsCount" : 0
+          }, {
+            "name" : "Checking the request body as reqBody",
+            "time" : {
+              "start" : 1642526475147,
+              "stop" : 1642526475147,
+              "duration" : 0
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "shouldDisplayMessage" : false,
+            "hasContent" : false,
+            "stepsCount" : 0,
+            "attachmentsCount" : 0
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "hasContent" : true,
+          "stepsCount" : 3,
+          "attachmentsCount" : 0
+        }, {
+          "name" : "Sending POST request with body {\"wallet\":\"0x667E4Ac28003653258bca9924C261B8996E49A8E\",\"amount\":10}",
+          "time" : {
+            "start" : 1642526475147,
+            "stop" : 1642526489828,
+            "duration" : 14681
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Loading the .env file",
+            "time" : {
+              "start" : 1642526475147,
+              "stop" : 1642526475147,
+              "duration" : 0
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "shouldDisplayMessage" : false,
+            "hasContent" : false,
+            "stepsCount" : 0,
+            "attachmentsCount" : 0
+          }, {
+            "name" : "Checking error",
+            "time" : {
+              "start" : 1642526489828,
+              "stop" : 1642526489828,
+              "duration" : 0
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "shouldDisplayMessage" : false,
+            "hasContent" : false,
+            "stepsCount" : 0,
+            "attachmentsCount" : 0
+          }, {
+            "name" : "Checking status code 200",
+            "time" : {
+              "start" : 1642526489828,
+              "stop" : 1642526489828,
+              "duration" : 0
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "shouldDisplayMessage" : false,
+            "hasContent" : false,
+            "stepsCount" : 0,
+            "attachmentsCount" : 0
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "hasContent" : true,
+          "stepsCount" : 3,
+          "attachmentsCount" : 0
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "hasContent" : true,
+        "stepsCount" : 15,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 17,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Checking that sender's wallet is created",
+      "time" : {
+        "start" : 1642526489829,
+        "stop" : 1642526489829,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Getting last block balance",
+      "time" : {
+        "start" : 1642526489829,
+        "stop" : 1642526489926,
+        "duration" : 97
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Checking sender's initial balance",
+      "time" : {
+        "start" : 1642526489926,
+        "stop" : 1642526489926,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Creating a wallet",
+      "time" : {
+        "start" : 1642526489926,
+        "stop" : 1642526504599,
+        "duration" : 14673
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Loading the .env file",
+        "time" : {
+          "start" : 1642526489926,
+          "stop" : 1642526489926,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "hasContent" : false,
+        "stepsCount" : 0,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "Requesting faucet http://proxy.release.stand.neontest.xyz/request_eth_token for 3 to address 0xCf8a357dceA94Ad50439FabA12773efbdab608a0",
+        "time" : {
+          "start" : 1642526489926,
+          "stop" : 1642526504598,
+          "duration" : 14672
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Loading the .env file",
+          "time" : {
+            "start" : 1642526489926,
+            "stop" : 1642526489927,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "hasContent" : false,
+          "stepsCount" : 0,
+          "attachmentsCount" : 0
+        }, {
+          "name" : "Loading the .env file",
+          "time" : {
+            "start" : 1642526489927,
+            "stop" : 1642526489927,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "hasContent" : false,
+          "stepsCount" : 0,
+          "attachmentsCount" : 0
+        }, {
+          "name" : "Checking useFaucet=true and faucetUrl=http://proxy.release.stand.neontest.xyz/request_eth_token",
+          "time" : {
+            "start" : 1642526489927,
+            "stop" : 1642526489927,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Loading the .env file",
+            "time" : {
+              "start" : 1642526489927,
+              "stop" : 1642526489927,
+              "duration" : 0
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "shouldDisplayMessage" : false,
+            "hasContent" : false,
+            "stepsCount" : 0,
+            "attachmentsCount" : 0
+          }, {
+            "name" : "Loading the .env file",
+            "time" : {
+              "start" : 1642526489927,
+              "stop" : 1642526489927,
+              "duration" : 0
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "shouldDisplayMessage" : false,
+            "hasContent" : false,
+            "stepsCount" : 0,
+            "attachmentsCount" : 0
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "hasContent" : true,
+          "stepsCount" : 2,
+          "attachmentsCount" : 0
+        }, {
+          "name" : "Preparing to POST request",
+          "time" : {
+            "start" : 1642526489927,
+            "stop" : 1642526489927,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "hasContent" : false,
+          "stepsCount" : 0,
+          "attachmentsCount" : 0
+        }, {
+          "name" : "Checking error",
+          "time" : {
+            "start" : 1642526489927,
+            "stop" : 1642526489927,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "hasContent" : false,
+          "stepsCount" : 0,
+          "attachmentsCount" : 0
+        }, {
+          "name" : "Checking the request body",
+          "time" : {
+            "start" : 1642526489927,
+            "stop" : 1642526489928,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Checking the request body as string(reqBody)",
+            "time" : {
+              "start" : 1642526489927,
+              "stop" : 1642526489928,
+              "duration" : 1
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "shouldDisplayMessage" : false,
+            "hasContent" : false,
+            "stepsCount" : 0,
+            "attachmentsCount" : 0
+          }, {
+            "name" : "Checking the request body as bytes.NewBuffer(reqBody).String()",
+            "time" : {
+              "start" : 1642526489928,
+              "stop" : 1642526489928,
+              "duration" : 0
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "shouldDisplayMessage" : false,
+            "hasContent" : false,
+            "stepsCount" : 0,
+            "attachmentsCount" : 0
+          }, {
+            "name" : "Checking the request body as reqBody",
+            "time" : {
+              "start" : 1642526489928,
+              "stop" : 1642526489928,
+              "duration" : 0
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "shouldDisplayMessage" : false,
+            "hasContent" : false,
+            "stepsCount" : 0,
+            "attachmentsCount" : 0
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "hasContent" : true,
+          "stepsCount" : 3,
+          "attachmentsCount" : 0
+        }, {
+          "name" : "Sending POST request with body {\"wallet\":\"0xCf8a357dceA94Ad50439FabA12773efbdab608a0\",\"amount\":3}",
+          "time" : {
+            "start" : 1642526489928,
+            "stop" : 1642526504598,
+            "duration" : 14670
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Loading the .env file",
+            "time" : {
+              "start" : 1642526489928,
+              "stop" : 1642526489928,
+              "duration" : 0
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "shouldDisplayMessage" : false,
+            "hasContent" : false,
+            "stepsCount" : 0,
+            "attachmentsCount" : 0
+          }, {
+            "name" : "Checking error",
+            "time" : {
+              "start" : 1642526504598,
+              "stop" : 1642526504598,
+              "duration" : 0
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "shouldDisplayMessage" : false,
+            "hasContent" : false,
+            "stepsCount" : 0,
+            "attachmentsCount" : 0
+          }, {
+            "name" : "Checking status code 200",
+            "time" : {
+              "start" : 1642526504598,
+              "stop" : 1642526504598,
+              "duration" : 0
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "shouldDisplayMessage" : false,
+            "hasContent" : false,
+            "stepsCount" : 0,
+            "attachmentsCount" : 0
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "hasContent" : true,
+          "stepsCount" : 3,
+          "attachmentsCount" : 0
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "hasContent" : true,
+        "stepsCount" : 15,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 17,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Checking that recipient's wallet is created",
+      "time" : {
+        "start" : 1642526504599,
+        "stop" : 1642526504599,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Getting last block balance",
+      "time" : {
+        "start" : 1642526504599,
+        "stop" : 1642526504696,
+        "duration" : 97
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Checking recipient's initial balance",
+      "time" : {
+        "start" : 1642526504696,
+        "stop" : 1642526504696,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Transferring Ether",
+      "time" : {
+        "start" : 1642526504696,
+        "stop" : 1642526505393,
+        "duration" : 697
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Getting pending nonce",
+        "time" : {
+          "start" : 1642526504696,
+          "stop" : 1642526504793,
+          "duration" : 97
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "hasContent" : false,
+        "stepsCount" : 0,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "Creating a transaction",
+        "time" : {
+          "start" : 1642526504885,
+          "stop" : 1642526504885,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "hasContent" : false,
+        "stepsCount" : 0,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "Getting chain id",
+        "time" : {
+          "start" : 1642526504885,
+          "stop" : 1642526504976,
+          "duration" : 91
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Getting chain id",
+          "time" : {
+            "start" : 1642526504885,
+            "stop" : 1642526504976,
+            "duration" : 91
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "hasContent" : false,
+          "stepsCount" : 0,
+          "attachmentsCount" : 0
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "hasContent" : true,
+        "stepsCount" : 1,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "Signing the transaction",
+        "time" : {
+          "start" : 1642526504976,
+          "stop" : 1642526504977,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Siging transaction",
+          "time" : {
+            "start" : 1642526504976,
+            "stop" : 1642526504977,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "hasContent" : false,
+          "stepsCount" : 0,
+          "attachmentsCount" : 0
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "hasContent" : true,
+        "stepsCount" : 1,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "Sending the transaction",
+        "time" : {
+          "start" : 1642526504977,
+          "stop" : 1642526505393,
+          "duration" : 416
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Sending transaction",
+          "time" : {
+            "start" : 1642526504977,
+            "stop" : 1642526505393,
+            "duration" : 416
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "hasContent" : false,
+          "stepsCount" : 0,
+          "attachmentsCount" : 0
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "hasContent" : true,
+        "stepsCount" : 1,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "Logging the result",
+        "time" : {
+          "start" : 1642526505393,
+          "stop" : 1642526505393,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "hasContent" : false,
+        "stepsCount" : 0,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 9,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Transferring Ether",
+      "time" : {
+        "start" : 1642526505393,
+        "stop" : 1642526506202,
+        "duration" : 809
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Getting pending nonce",
+        "time" : {
+          "start" : 1642526505393,
+          "stop" : 1642526505493,
+          "duration" : 100
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "hasContent" : false,
+        "stepsCount" : 0,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "Creating a transaction",
+        "time" : {
+          "start" : 1642526505584,
+          "stop" : 1642526505584,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "hasContent" : false,
+        "stepsCount" : 0,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "Getting chain id",
+        "time" : {
+          "start" : 1642526505584,
+          "stop" : 1642526505676,
+          "duration" : 92
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Getting chain id",
+          "time" : {
+            "start" : 1642526505584,
+            "stop" : 1642526505676,
+            "duration" : 92
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "hasContent" : false,
+          "stepsCount" : 0,
+          "attachmentsCount" : 0
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "hasContent" : true,
+        "stepsCount" : 1,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "Signing the transaction",
+        "time" : {
+          "start" : 1642526505676,
+          "stop" : 1642526505676,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Siging transaction",
+          "time" : {
+            "start" : 1642526505676,
+            "stop" : 1642526505676,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "hasContent" : false,
+          "stepsCount" : 0,
+          "attachmentsCount" : 0
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "hasContent" : true,
+        "stepsCount" : 1,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "Sending the transaction",
+        "time" : {
+          "start" : 1642526505676,
+          "stop" : 1642526506202,
+          "duration" : 526
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Sending transaction",
+          "time" : {
+            "start" : 1642526505676,
+            "stop" : 1642526506202,
+            "duration" : 526
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "hasContent" : false,
+          "stepsCount" : 0,
+          "attachmentsCount" : 0
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "hasContent" : true,
+        "stepsCount" : 1,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "Logging the result",
+        "time" : {
+          "start" : 1642526506202,
+          "stop" : 1642526506202,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "hasContent" : false,
+        "stepsCount" : 0,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 9,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Getting last block balance",
+      "time" : {
+        "start" : 1642526506202,
+        "stop" : 1642526506299,
+        "duration" : 97
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Checking sender's resulting balance",
+      "time" : {
+        "start" : 1642526506299,
+        "stop" : 1642526506299,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Getting last block balance",
+      "time" : {
+        "start" : 1642526506299,
+        "stop" : 1642526506395,
+        "duration" : 96
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Checking recipient's resulting balance",
+      "time" : {
+        "start" : 1642526506395,
+        "stop" : 1642526506395,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 69,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "home.runner.work.neon-e2e.neon-e2e.src.main.java.org.neonlabs.e2e.go-eth.transfer_ether_test"
+  }, {
+    "name" : "testClass",
+    "value" : "home.runner.work.neon-e2e.neon-e2e.src.main.java.org.neonlabs.e2e.go-eth.transfer_ether_test"
+  }, {
+    "name" : "testMethod",
+    "value" : "TestBidirectionalTransfersOfEther/Run,_data_=_sender_10,_recipient_3,_transfer_s->r_1,_transfer_r->s_2"
+  }, {
+    "name" : "host",
+    "value" : "fv-az196-926"
+  }, {
+    "name" : "language",
+    "value" : "golang"
+  }, {
+    "name" : "epic",
+    "value" : "Externally-owned Accounts"
+  }, {
+    "name" : "lead",
+    "value" : "Externally-owned Accounts"
+  }, {
+    "name" : "feature",
+    "value" : "Transfer"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "20db850ba11fc61.json",
+  "parameterValues" : [ ]
+}
