@@ -27,20 +27,6 @@ func requestFaucet(wallet string, amount int) (statusCode int) {
 			}
 		}))
 
-		/*
-		   reqBody, err := json.Marshal(map[string]string{
-		     "amount": strconv.Itoa(amount),
-		     "wallet": wallet,
-		   })
-		*/
-
-		// faucetRequest := &FaucetRequest{Wallet: wallet, Amount: amount}
-		/*
-		   user := User{
-		     Name: "Test User",
-		     Job: "Go lang Developer",
-		   }
-		*/
 		var faucetRequest FaucetRequest
 		var reqBody []byte
 		var err error

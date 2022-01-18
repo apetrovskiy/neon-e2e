@@ -16,3 +16,10 @@ func connect() (*ethclient.Client, error) {
 	}))
 	return client, err
 }
+func getClient() *ethclient.Client {
+	client, err := connect()
+	if err != nil {
+		ReportErrorInAllure(err)
+	}
+	return client
+}

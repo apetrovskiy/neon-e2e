@@ -1,7 +1,6 @@
 package go_eth
 
 import (
-	"fmt"
 	"math/big"
 	"testing"
 
@@ -19,11 +18,8 @@ func TestGetLatestBalance(t *testing.T) {
 		// allure.Story(StoryBalance),
 		allure.Description("Get the latest block balance"),
 		allure.Action(func() {
-			client, err := connect()
-			assert.Nil(t, err, fmt.Sprintf(FailedToConnectTo, GetConfig().ProxyURL, err))
-			if err != nil {
-				t.Errorf(FailedToConnectTo, GetConfig().ProxyURL, err)
-			}
+
+			client := getClient()
 
 			account := createWallet(GetConfig().RequestAmount)
 			assert.NotEqual(t, 0, len(account.Address.Hash()), FailedToCreateWallet)
@@ -48,11 +44,8 @@ func TestGetSpecificBlockBalance(t *testing.T) {
 		// allure.Story(StoryBalance),
 		allure.Description("Get a specific block balance"),
 		allure.Action(func() {
-			client, err := connect()
-			assert.Nil(t, err, fmt.Sprintf(FailedToConnectTo, GetConfig().ProxyURL, err))
-			if err != nil {
-				t.Errorf(FailedToConnectTo, GetConfig().ProxyURL, err)
-			}
+
+			client := getClient()
 
 			account := createWallet(GetConfig().RequestAmount)
 			assert.NotEqual(t, 0, len(account.Address.Hash()), FailedToCreateWallet)
@@ -78,11 +71,8 @@ func TestGetPendingBalance(t *testing.T) {
 		// allure.Story(StoryBalance),
 		allure.Description("Get pending balance"),
 		allure.Action(func() {
-			client, err := connect()
-			assert.Nil(t, err, fmt.Sprintf(FailedToConnectTo, GetConfig().ProxyURL, err))
-			if err != nil {
-				t.Errorf(FailedToConnectTo, GetConfig().ProxyURL, err)
-			}
+
+			client := getClient()
 
 			account := createWallet(GetConfig().RequestAmount)
 			assert.NotEqual(t, 0, len(account.Address.Hash()), FailedToCreateWallet)

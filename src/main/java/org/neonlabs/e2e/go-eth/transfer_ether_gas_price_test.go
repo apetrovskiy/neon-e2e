@@ -40,11 +40,8 @@ func TestTransferEtherWithGasPrice(t *testing.T) {
 				allure.Story(StoryTransfer),
 				allure.Description("Transfer Ether"),
 				allure.Action(func() {
-					client, err := connect()
-					assert.Nil(t, err, fmt.Sprintf(FailedToConnectTo, GetConfig().ProxyURL, err))
-					if err != nil {
-						t.Errorf(FailedToConnectTo, GetConfig().ProxyURL, err)
-					}
+
+          client:=getClient()
 
 					senderAccount := createWallet(td.senderBalance)
 					allure.Step(allure.Description("Checking that sender's wallet is created"), allure.Action(func() {

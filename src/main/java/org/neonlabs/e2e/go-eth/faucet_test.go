@@ -1,7 +1,6 @@
 package go_eth
 
 import (
-	"fmt"
 	"strconv"
 	"testing"
 
@@ -23,11 +22,8 @@ func TestSingleFaucetRequest(t *testing.T) {
 		// allure.Story(StoryFaucet),
 		allure.Description("Single request to faucet"),
 		allure.Action(func() {
-			client, err := connect()
-			assert.Nil(t, err, fmt.Sprintf(FailedToConnectTo, GetConfig().ProxyURL, err))
-			if err != nil {
-				t.Errorf(FailedToConnectTo, GetConfig().ProxyURL, err)
-			}
+
+			client := getClient()
 
 			account := createWallet()
 			assert.NotEqual(t, 0, len(account.Address.Hash()), FailedToCreateWallet)
@@ -58,11 +54,8 @@ func TestSubsequestFaucetRequest(t *testing.T) {
 		// allure.Story(StoryFaucet),
 		allure.Description("Subsequent requests to faucet"),
 		allure.Action(func() {
-			client, err := connect()
-			assert.Nil(t, err, fmt.Sprintf(FailedToConnectTo, GetConfig().ProxyURL, err))
-			if err != nil {
-				t.Errorf(FailedToConnectTo, GetConfig().ProxyURL, err)
-			}
+
+			client := getClient()
 
 			account := createWallet()
 			assert.NotEqual(t, 0, len(account.Address.Hash()), FailedToCreateWallet)

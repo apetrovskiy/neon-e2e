@@ -2,10 +2,10 @@ package go_eth
 
 import (
 	"context"
-	"fmt"
+	// "fmt"
 	"github.com/dailymotion/allure-go"
 	"github.com/stretchr/testify/assert"
-	"math/big"
+	// "math/big"
 	"testing"
 )
 
@@ -17,9 +17,7 @@ func TestQueryBlockHeader(t *testing.T) {
 		// allure.Story(StoryQueryBlock),
 		allure.Description("Block header"),
 		allure.Action(func() {
-			// TODO: move to the before block
-			client, err := connect()
-			assert.Nil(t, err, fmt.Sprintf(FailedToConnectTo, GetConfig().ProxyURL, err))
+			client := getClient()
 			header, err := client.HeaderByNumber(context.Background(), nil)
 			assert.Nil(t, err, "Failed to get block header")
 			ReportErrorInAllure(err)
@@ -28,19 +26,19 @@ func TestQueryBlockHeader(t *testing.T) {
 }
 func TestQueryFullBlock(t *testing.T) {
 	t.Parallel()
-	allure.SkipTest(t,
+	allure.Test(t,
 		allure.Epic(FeatureBlocks),
 		allure.Feature(StoryQueryBlock),
 		// allure.Story(StoryQueryBlock),
 		allure.Description("Full block"),
 		allure.Action(func() {
-			// TODO: move to the before block
-			client, err := connect()
-			assert.Nil(t, err, fmt.Sprintf(FailedToConnectTo, GetConfig().ProxyURL, err))
-			blockNumber := big.NewInt(5671744)
-			block, err := client.BlockByNumber(context.Background(), blockNumber)
-			assert.Nil(t, err, "Failed to get full block")
-			ReportErrorInAllure(err)
+			client := getClient()
+			// blockNumber := big.NewInt(5671744)
+			blockNumber := GetHighestBlockNumber(client)
+			// block, err := client.BlockByNumber(context.Background(), blockNumber)
+			// assert.Nil(t, err, "Failed to get full block")
+			// ReportErrorInAllure(err)
+			block := GetBlockByNumber(client, blockNumber)
 			assert.Greater(t, 0, block.Number().Uint64())
 			// assert.Greater(t, 0, block.Time().Uint64())
 			assert.Greater(t, 0, block.Difficulty().Uint64())

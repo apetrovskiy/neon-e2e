@@ -1,7 +1,6 @@
 package go_eth
 
 import (
-	"fmt"
 	"testing"
 
 	log "github.com/sirupsen/logrus"
@@ -21,11 +20,8 @@ func TestTransferToken(t *testing.T) {
 		// allure.Story(StoryTransfer),
 		allure.Description("Transfer tokens"),
 		allure.Action(func() {
-			client, err := connect()
-			assert.Nil(t, err, fmt.Sprintf(FailedToConnectTo, GetConfig().ProxyURL, err))
-			if err != nil {
-				t.Errorf(FailedToConnectTo, GetConfig().ProxyURL, err)
-			}
+
+			client := getClient()
 
 			initialAmount := 10
 			transferAmount := "10000000000000000000"
