@@ -34,7 +34,8 @@ Feature: transaction
 
     Examples:
       | initial balance | amount |
-      # | 10              | 0      |
+      | 10              | 0      |
       # | 10              | 0.1    |
       | 10              | 10     |
       | 10              | 11     |
+      | 10              | -1     |
