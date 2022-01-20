@@ -1,0 +1,397 @@
+{
+  "uid" : "5d43f017818ac6b",
+  "name" : "a user to user failed transaction",
+  "fullName" : "features/transaction.feature:transaction:a user to user failed transaction",
+  "historyId" : "80dd77e8290a680663e804112d7d2de8",
+  "time" : {
+    "start" : 1642660663456,
+    "stop" : 1642660696410,
+    "duration" : 32954
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 2,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "time" : { },
+    "status" : "broken",
+    "steps" : [ {
+      "name" : "Before: tests/step-definitions/hooks.ts:12",
+      "time" : {
+        "start" : 1642660663456,
+        "stop" : 1642660663457,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given there is user Alice in Ethereum network with no initial balance",
+      "time" : {
+        "start" : 1642660663457,
+        "stop" : 1642660663660,
+        "duration" : 203
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And user Alice requests the Ether faucet for <10>Ξ",
+      "time" : {
+        "start" : 1642660663660,
+        "stop" : 1642660678431,
+        "duration" : 14771
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And there is user Bob in Ethereum network with no initial balance",
+      "time" : {
+        "start" : 1642660678432,
+        "stop" : 1642660678633,
+        "duration" : 201
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And user Bob requests the Ether faucet for <10>Ξ",
+      "time" : {
+        "start" : 1642660678634,
+        "stop" : 1642660692881,
+        "duration" : 14247
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When user Alice sends <10>Ξ to user Bob",
+      "time" : {
+        "start" : 1642660692881,
+        "stop" : 1642660696015,
+        "duration" : 3134
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then the recipient has balance increased by <10>Ξ",
+      "time" : {
+        "start" : 1642660696015,
+        "stop" : 1642660696214,
+        "duration" : 199
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And the sender has balance decreased by <10>Ξ",
+      "time" : {
+        "start" : 1642660696214,
+        "stop" : 1642660696410,
+        "duration" : 196
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 7,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "2783"
+  }, {
+    "name" : "feature",
+    "value" : "transaction"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "amount",
+    "value" : "10"
+  }, {
+    "name" : "initial balance",
+    "value" : "10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "ab0ae0af2cfb037b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1642660646269,
+        "stop" : 1642660680309,
+        "duration" : 34040
+      }
+    }, {
+      "uid" : "8838e7c36960c63f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1642660645439,
+        "stop" : 1642660679439,
+        "duration" : 34000
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 493,
+        "broken" : 22,
+        "skipped" : 0,
+        "passed" : 994,
+        "unknown" : 0,
+        "total" : 1509
+      },
+      "items" : [ {
+        "uid" : "7b81314a8550d4a",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1624//#testresult/7b81314a8550d4a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642659964313,
+          "stop" : 1642659997958,
+          "duration" : 33645
+        }
+      }, {
+        "uid" : "e77045de1754cf89",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1623//#testresult/e77045de1754cf89",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642659284610,
+          "stop" : 1642659318150,
+          "duration" : 33540
+        }
+      }, {
+        "uid" : "273da21bbf2616dc",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1622//#testresult/273da21bbf2616dc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642658728713,
+          "stop" : 1642658761384,
+          "duration" : 32671
+        }
+      }, {
+        "uid" : "d5452090f855647d",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1621//#testresult/d5452090f855647d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642658282605,
+          "stop" : 1642658316319,
+          "duration" : 33714
+        }
+      }, {
+        "uid" : "53bd040e85bd66c5",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1620//#testresult/53bd040e85bd66c5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642657878797,
+          "stop" : 1642657912609,
+          "duration" : 33812
+        }
+      }, {
+        "uid" : "c2fe17acdde9614a",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1619//#testresult/c2fe17acdde9614a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642657463002,
+          "stop" : 1642657496368,
+          "duration" : 33366
+        }
+      }, {
+        "uid" : "a668a09aff3018e4",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1618//#testresult/a668a09aff3018e4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642657035999,
+          "stop" : 1642657068953,
+          "duration" : 32954
+        }
+      }, {
+        "uid" : "3b5ab305998fb661",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1617//#testresult/3b5ab305998fb661",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642656640359,
+          "stop" : 1642656675082,
+          "duration" : 34723
+        }
+      }, {
+        "uid" : "97a59195c51f1370",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1616//#testresult/97a59195c51f1370",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642656116442,
+          "stop" : 1642656151893,
+          "duration" : 35451
+        }
+      }, {
+        "uid" : "2c828a551d2c6d62",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1615//#testresult/2c828a551d2c6d62",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642655519504,
+          "stop" : 1642655555662,
+          "duration" : 36158
+        }
+      }, {
+        "uid" : "a9fdbab754ce0c61",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1614//#testresult/a9fdbab754ce0c61",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642654988500,
+          "stop" : 1642655025136,
+          "duration" : 36636
+        }
+      }, {
+        "uid" : "39cc51b543ba01e3",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1613//#testresult/39cc51b543ba01e3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642654576537,
+          "stop" : 1642654609885,
+          "duration" : 33348
+        }
+      }, {
+        "uid" : "fc6bf3cd98747cf7",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1612//#testresult/fc6bf3cd98747cf7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642654077373,
+          "stop" : 1642654111116,
+          "duration" : 33743
+        }
+      }, {
+        "uid" : "2548609f368b038a",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1611//#testresult/2548609f368b038a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642653443191,
+          "stop" : 1642653476763,
+          "duration" : 33572
+        }
+      }, {
+        "uid" : "f9e854476dd119c2",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1610//#testresult/f9e854476dd119c2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642652706993,
+          "stop" : 1642652740548,
+          "duration" : 33555
+        }
+      }, {
+        "uid" : "7a2206ac273c767d",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1609//#testresult/7a2206ac273c767d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642652024756,
+          "stop" : 1642652058659,
+          "duration" : 33903
+        }
+      }, {
+        "uid" : "6d9ec76780807a5f",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1608//#testresult/6d9ec76780807a5f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642651440949,
+          "stop" : 1642651473882,
+          "duration" : 32933
+        }
+      }, {
+        "uid" : "13a0212499b57b03",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1607//#testresult/13a0212499b57b03",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642651026050,
+          "stop" : 1642651059782,
+          "duration" : 33732
+        }
+      }, {
+        "uid" : "f860eaab01c0a772",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1606//#testresult/f860eaab01c0a772",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642650608940,
+          "stop" : 1642650641660,
+          "duration" : 32720
+        }
+      }, {
+        "uid" : "ba1f46f128b39c30",
+        "reportUrl" : "https://apetrovskiy.github.io/neon-e2e/1605//#testresult/ba1f46f128b39c30",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642650218658,
+          "stop" : 1642650252090,
+          "duration" : 33432
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "5d43f017818ac6b.json",
+  "parameterValues" : [ "10", "10" ]
+}
