@@ -1,0 +1,194 @@
+{
+  "uid" : "6c799a8b259dbd55",
+  "name" : "a user to user failed transaction",
+  "fullName" : "features/transaction.feature:transaction:a user to user failed transaction",
+  "historyId" : "52f0e342c8c61c8a8125f48173d3818c",
+  "time" : {
+    "start" : 1642665506923,
+    "stop" : 1642665538125,
+    "duration" : 31202
+  },
+  "description" : "",
+  "status" : "failed",
+  "statusMessage" : "error happened during the operation: expected 'Returned error: Command \\'[\\'neon-cli\\', \\'--commitment=recent\\', \\'--url\\', \\'http://release-solana:8899\\', \\'--evm_loader=53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io\\', \\'-vvv\\', \\'emulate\\', \\'--token_mint\\', \\'HPsV9Deocecw3GeZv1FkAPNCBRfuVyfw9MMwjwRe1xaU\\', \\'7452b92376464d959f5d3a075b28f1e6040c8bcb\\', \\'ac3938eac2e039551c34ba756d3a7f8889891cae\\', \\'none\\', \\'0x98a7d9b8314c0000\\']\\' returned non-zero exit status 1.' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'",
+  "statusTrace" : "AssertionError: error happened during the operation: expected 'Returned error: Command \\'[\\'neon-cli\\', \\'--commitment=recent\\', \\'--url\\', \\'http://release-solana:8899\\', \\'--evm_loader=53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io\\', \\'-vvv\\', \\'emulate\\', \\'--token_mint\\', \\'HPsV9Deocecw3GeZv1FkAPNCBRfuVyfw9MMwjwRe1xaU\\', \\'7452b92376464d959f5d3a075b28f1e6040c8bcb\\', \\'ac3938eac2e039551c34ba756d3a7f8889891cae\\', \\'none\\', \\'0x98a7d9b8314c0000\\']\\' returned non-zero exit status 1.' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:96:69\n    at runNextTicks (node:internal/process/task_queues:61:5)\n    at listOnTimeout (node:internal/timers:526:9)\n    at processTimers (node:internal/timers:500:7)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "time" : { },
+    "status" : "broken",
+    "steps" : [ {
+      "name" : "Before: tests/step-definitions/hooks.ts:12",
+      "time" : {
+        "start" : 1642665506923,
+        "stop" : 1642665506925,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "",
+    "status" : "failed",
+    "statusMessage" : "error happened during the operation: expected 'Returned error: Command \\'[\\'neon-cli\\', \\'--commitment=recent\\', \\'--url\\', \\'http://release-solana:8899\\', \\'--evm_loader=53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io\\', \\'-vvv\\', \\'emulate\\', \\'--token_mint\\', \\'HPsV9Deocecw3GeZv1FkAPNCBRfuVyfw9MMwjwRe1xaU\\', \\'7452b92376464d959f5d3a075b28f1e6040c8bcb\\', \\'ac3938eac2e039551c34ba756d3a7f8889891cae\\', \\'none\\', \\'0x98a7d9b8314c0000\\']\\' returned non-zero exit status 1.' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'",
+    "statusTrace" : "AssertionError: error happened during the operation: expected 'Returned error: Command \\'[\\'neon-cli\\', \\'--commitment=recent\\', \\'--url\\', \\'http://release-solana:8899\\', \\'--evm_loader=53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io\\', \\'-vvv\\', \\'emulate\\', \\'--token_mint\\', \\'HPsV9Deocecw3GeZv1FkAPNCBRfuVyfw9MMwjwRe1xaU\\', \\'7452b92376464d959f5d3a075b28f1e6040c8bcb\\', \\'ac3938eac2e039551c34ba756d3a7f8889891cae\\', \\'none\\', \\'0x98a7d9b8314c0000\\']\\' returned non-zero exit status 1.' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:96:69\n    at runNextTicks (node:internal/process/task_queues:61:5)\n    at listOnTimeout (node:internal/timers:526:9)\n    at processTimers (node:internal/timers:500:7)",
+    "steps" : [ {
+      "name" : "Given there is user Alice in Ethereum network with no initial balance",
+      "time" : {
+        "start" : 1642665506926,
+        "stop" : 1642665507264,
+        "duration" : 338
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And user Alice requests the Ether faucet for <10>Ξ",
+      "time" : {
+        "start" : 1642665507264,
+        "stop" : 1642665522668,
+        "duration" : 15404
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And there is user Bob in Ethereum network with no initial balance",
+      "time" : {
+        "start" : 1642665522668,
+        "stop" : 1642665523015,
+        "duration" : 347
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And user Bob requests the Ether faucet for <10>Ξ",
+      "time" : {
+        "start" : 1642665523015,
+        "stop" : 1642665537404,
+        "duration" : 14389
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When user Alice sends <11>Ξ to user Bob",
+      "time" : {
+        "start" : 1642665537405,
+        "stop" : 1642665538124,
+        "duration" : 719
+      },
+      "status" : "failed",
+      "statusMessage" : "error happened during the operation: expected 'Returned error: Command \\'[\\'neon-cli\\', \\'--commitment=recent\\', \\'--url\\', \\'http://release-solana:8899\\', \\'--evm_loader=53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io\\', \\'-vvv\\', \\'emulate\\', \\'--token_mint\\', \\'HPsV9Deocecw3GeZv1FkAPNCBRfuVyfw9MMwjwRe1xaU\\', \\'7452b92376464d959f5d3a075b28f1e6040c8bcb\\', \\'ac3938eac2e039551c34ba756d3a7f8889891cae\\', \\'none\\', \\'0x98a7d9b8314c0000\\']\\' returned non-zero exit status 1.' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'",
+      "statusTrace" : "AssertionError: error happened during the operation: expected 'Returned error: Command \\'[\\'neon-cli\\', \\'--commitment=recent\\', \\'--url\\', \\'http://release-solana:8899\\', \\'--evm_loader=53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io\\', \\'-vvv\\', \\'emulate\\', \\'--token_mint\\', \\'HPsV9Deocecw3GeZv1FkAPNCBRfuVyfw9MMwjwRe1xaU\\', \\'7452b92376464d959f5d3a075b28f1e6040c8bcb\\', \\'ac3938eac2e039551c34ba756d3a7f8889891cae\\', \\'none\\', \\'0x98a7d9b8314c0000\\']\\' returned non-zero exit status 1.' to include 'Returned error: Transaction simulation failed: Error processing Instruction 1: invalid instruction data'\n    at /home/runner/work/neon-e2e/neon-e2e/tests/step-definitions/transaction-steps.ts:96:69\n    at runNextTicks (node:internal/process/task_queues:61:5)\n    at listOnTimeout (node:internal/timers:526:9)\n    at processTimers (node:internal/timers:500:7)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "Then the recipient has balance increased by <11>Ξ",
+      "time" : {
+        "start" : 1642665538125,
+        "stop" : 1642665538125,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And the sender has balance decreased by <11>Ξ",
+      "time" : {
+        "start" : 1642665538125,
+        "stop" : 1642665538125,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 7,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "2794"
+  }, {
+    "name" : "feature",
+    "value" : "transaction"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "amount",
+    "value" : "11"
+  }, {
+    "name" : "initial balance",
+    "value" : "10"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "6c799a8b259dbd55.json",
+  "parameterValues" : [ "11", "10" ]
+}
