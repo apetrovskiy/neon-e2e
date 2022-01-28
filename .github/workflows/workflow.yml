@@ -145,7 +145,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest]
+        os: [ubuntu-latest, ubuntu-latest, ubuntu-latest]
     steps:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/allure-prep
@@ -335,7 +335,7 @@ jobs:
           echo "Network: ${{ github.event.inputs.network }}"
           if [ -z "${{ github.event.inputs.network }}" ]
           then
-            NETWORK='night-stand'
+            NETWORK='release-stand'
           else
             NETWORK="${{ github.event.inputs.network }}"
           fi
