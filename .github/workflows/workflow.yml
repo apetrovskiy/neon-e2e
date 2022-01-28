@@ -20,13 +20,6 @@ on:
           - release-stand
           - night-stand
           - devnet-aws
-      # message:
-      #   required: true
-      # use-emoji:
-      #   type: boolean
-      #   description: Include 🎉🤣 emojis
-      # environment:
-      #   type: environment
 
 jobs:
   python:
@@ -152,19 +145,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os:
-          [
-            ubuntu-latest,
-            ubuntu-latest,
-            ubuntu-latest,
-            ubuntu-latest,
-            ubuntu-latest,
-            ubuntu-latest,
-            ubuntu-latest,
-            ubuntu-latest,
-            ubuntu-latest,
-            ubuntu-latest
-          ]
+        os: [ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest]
     steps:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/allure-prep
