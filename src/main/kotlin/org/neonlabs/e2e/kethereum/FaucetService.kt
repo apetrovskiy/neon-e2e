@@ -6,5 +6,5 @@ import retrofit2.http.Body
 import retrofit2.http.POST
 
 public interface FaucetService {
-  @POST("/") fun requestFaucet(@Body faucetRequest: Model.FaucetRequest): Call<Model.FaucetRequest>
+    @POST("/") fun requestFaucet(@Body faucetRequest: Model.FaucetRequest): Call<Model.FaucetRequest>
 }

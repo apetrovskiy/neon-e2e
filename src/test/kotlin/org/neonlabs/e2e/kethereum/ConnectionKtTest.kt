@@ -16,27 +16,27 @@ import org.junit.jupiter.api.Test
 @Feature("Connection")
 @DisplayName("Common")
 class ConnectionKtTest {
-  @Test
-  @DisplayName("Connection Kethereum")
-  @Description("Connection Kethereum")
-  // @Story("Connection")
-  @Disabled("not yet done")
-  fun shouldWork() {
-    assertEquals(1, ConnectionKt().getId(), "kotlin")
-  }
+    @Test
+    @DisplayName("Connection Kethereum")
+    @Description("Connection Kethereum")
+    // @Story("Connection")
+    @Disabled("not yet done")
+    fun shouldWork() {
+        assertEquals(1, ConnectionKt().getId(), "kotlin")
+    }
 
-  @Test
-  @DisplayName("Connection Kethereum 2")
-  @Description("Connection Kethereum 2")
-  // @Story("Connection")
-  @Disabled("not yet done")
-  fun shouldConnectToNetwork() {
-    assertNotNull(ConfigKt.proxyUrl)
-    assertNotNull(ConfigKt.faucetUrl)
-    // val connection = HttpProvider() // RPCTransport(ConfigKt.proxyUrl) //
-    //     HttpTransport(ConfigKt.proxyUrl)
-    // assertNotNull(connection)
-    // println(connection)
-    // connection.
-  }
+    @Test
+    @DisplayName("Connection Kethereum 2")
+    @Description("Connection Kethereum 2")
+    // @Story("Connection")
+    @Disabled("not yet done")
+    fun shouldConnectToNetwork() {
+        assertNotNull(ConfigKt.proxyUrl)
+        assertNotNull(ConfigKt.faucetUrl)
+        // val connection = HttpProvider() // RPCTransport(ConfigKt.proxyUrl) //
+        //     HttpTransport(ConfigKt.proxyUrl)
+        // assertNotNull(connection)
+        // println(connection)
+        // connection.
+    }
 }

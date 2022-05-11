@@ -6,15 +6,13 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * Is a model for accounts.
- */
+/** Is a model for accounts. */
 @AllArgsConstructor
 @Builder
 @Data
 @NoArgsConstructor
 public class Account {
-  private String address;
-  private String privateKey;
-  private BigInteger privateKeyDec;
+    private String address;
+    private String privateKey;
+    private BigInteger privateKeyDec;
 }

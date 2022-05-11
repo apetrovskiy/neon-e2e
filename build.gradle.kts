@@ -355,32 +355,30 @@ scalafmt {
 }
 
 configure<com.diffplug.gradle.spotless.SpotlessExtension> {
-  // optional: limit format enforcement to just the files changed by this feature branch
-  // ratchetFrom("origin/main")
+    // optional: limit format enforcement to just the files changed by this feature branch
+    // ratchetFrom("origin/main")
 
-  format(
-    "misc",
-    {
-      // define the files to apply `misc` to
-      target("*.gradle", "*.md", ".gitignore")
+    format(
+        "misc",
+        {
+            // define the files to apply `misc` to
+            target("*.gradle", "*.md", ".gitignore")
 
-      // define the steps to apply to those files
-      trimTrailingWhitespace()
-      indentWithTabs() // or spaces. Takes an integer argument if you don't like 4
-      endWithNewline()
+            // define the steps to apply to those files
+            trimTrailingWhitespace()
+            indentWithSpaces(4)
+            endWithNewline()
+        }
+    )
+
+    java {
+        importOrder()
+        googleJavaFormat("1.11.0").aosp().reflowLongStrings()
     }
-  )
 
-  // java {
-  //   // don't need to set target, it is inferred from java
-
-  //   // apply a specific flavor of google-java-format
-  //   googleJavaFormat("1.11.0").aosp().reflowLongStrings()
-  //   // make sure every file has the following copyright header.
-  //   // optionally, Spotless can set copyright years by digging
-  //   // through git history (see "license" section below)
-  //   // licenseHeader("/* (C)$YEAR */")
-  // }
+    kotlin {
+        ktlint()
+    }
 }
 
 tasks.named<Wrapper>("wrapper") {
@@ -390,36 +388,36 @@ tasks.named<Wrapper>("wrapper") {
 
 enum class Version(val id: String) {
   GATLING("3.6.1"),
-  JUNIT_JUPITER("5.8.1"),
-  JUNIT_PLATFORM("1.8.1"),
+    JUNIT_JUPITER("5.8.2"),
+    JUNIT_PLATFORM("1.8.2"),
   JUNIT4("4.13.2"),
   SCALA("2.13.6"),
   SCALA_TEST("3.2.10"),
   SCALA_TEST_PLUS("3.2.0.0"),
-  JACKSON("2.12.5"),
-  SNAKEYAML("1.29"),
-  JOOQ("3.15.3"),
+    JACKSON("2.13.2"),
+    SNAKEYAML("1.30"),
+    JOOQ("3.16.6"),
   POSTGRESQL("42.2.24"),
-  REST_ASSURED("4.4.0"),
-  HAMCREST("2.2"),
+    REST_ASSURED("5.0.1"),
+    HAMCREST("2.2"),
   JAVAFAKER("1.0.2"),
-  AWAITILITY("4.1.0"),
+    AWAITILITY("4.2.0"),
   KETHEREUM("0.83.4"),
-  RETROFIT("2.9.0"),
-  OKHTTP3("4.0.3"),
+    RETROFIT("2.9.0"),
+    OKHTTP3("4.9.3"),
   CUCUMBER("6.11.0"),
   CUCUMBER_JUNIT("6.11.0"),
-  ALLURE("2.15.0"),
+    ALLURE("2.17.3"),
   ALLURE_GRADLE("2.8.1"),
   JAVA("16"),
   JAVA_FOR_SCALA("11"),
   KOTLIN("1.5.31"),
-  LOMBOK("1.18.20"),
+    LOMBOK("1.18.24"),
   WEB3J("5.0.0"),
-  GRADLE("7.2"),
-  PMD("6.39.0"),
+  GRADLE("7.4.1"),
+    PMD("6.45.0"),
   KTLINT_GRADLE_PLUGIN("10.0.0"),
-  KTLINT("0.42.1"),
+    KTLINT("0.45.2"),
   SCALA_FMT("1.16.2");
 }
 
